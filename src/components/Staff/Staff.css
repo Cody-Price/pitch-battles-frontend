@@ -3,7 +3,7 @@
   height: 150px;
   background: url("./staff/staff.png");
   background-size: cover;
-  margin: auto;
+  margin: 3rem auto;
   image-rendering: pixelated;
   position: relative;
 }
@@ -27,5 +27,48 @@
   image-rendering: pixelated;
   background-size: cover;
   left: 150px;
+  top: 123px;
+}
+
+.pitch.below-space-one {
+  top: 123px;
+}
+.pitch.line-one {
+  top: 111px;
+}
+
+.pitch.space-one {
   top: 99px;
+}
+
+.pitch.line-two {
+  top: 87px;
+}
+
+.pitch.space-two {
+  top: 75px;
+}
+
+.pitch.line-three {
+  top: 63px;
+}
+
+.pitch.space-three {
+  top: 51px;
+}
+
+.pitch.line-four {
+  top: 39px;
+}
+
+.pitch.space-four {
+  top: 27px;
+}
+
+.pitch.line-five {
+  top: 15px;
+}
+
+.pitch.above-space-one {
+  top: 3px;
 }
