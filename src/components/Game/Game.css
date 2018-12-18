@@ -3,6 +3,79 @@
   overflow: hidden;
 }
 
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.game-header h4 {
+  margin: 1rem;
+}
+
+.avatar-border {
+  background: rgba(0, 0, 0, 0.3);
+  height: 80px;
+  width: 80px;
+  margin: 1rem 0 0 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.header-avatar {
+  margin: auto;
+  height: 62px;
+  width: 37px;
+}
+
+.header-avatar.one {
+  background: url(./pcs/char1/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.two {
+  background: url(./pcs/char2/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.three {
+  background: url(./pcs/char3/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.four {
+  background: url(./pcs/char4/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.five {
+  background: url(./pcs/char5/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.six {
+  background: url(./pcs/char6/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.timer {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
 .game-background {
   background: url(./path.png);
   width: 1500px;
