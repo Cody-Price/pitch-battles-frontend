@@ -14,6 +14,19 @@
   animation: boar-idle infinite 2s linear;
 }
 
+.boar.attack {
+  animation: boar-idle infinite 2s linear, monster-attack 1s linear;
+}
+
+.boar.hit {
+  animation: boar-idle infinite 2s linear, monster-hit 1s linear;
+}
+
+.boar.dead {
+  opacity: 0;
+  animation: boar-idle infinite 2s linear, monster-dead 3s linear;
+}
+
 @keyframes boar-idle {
   0% {
     background: url("../monsters/boar/monster1.png");
