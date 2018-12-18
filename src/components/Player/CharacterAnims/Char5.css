@@ -1,0 +1,268 @@
+.player.five {
+  background: url(../pcs/char5/idle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player.five.idle {
+  animation: five-idle infinite 1.3s linear;
+}
+
+.player.five.attack {
+  animation: five-attack 0.75s linear;
+}
+
+.player.five.hit {
+  animation: five-hit 0.75s linear;
+}
+
+.player.five.victory {
+  animation: five-victory 1s linear;
+  background: url("../pcs/char5/victory3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1);
+}
+
+.player.five.dead {
+  animation: five-dead 1s linear;
+  background: url(../pcs/char5/dead.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-iteration-count: 3;
+}
+
+@keyframes five-idle {
+  0% {
+    background: url("../pcs/char5/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char5/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char5/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char5/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes five-attack {
+  0% {
+    background: url("../pcs/char5/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char5/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char5/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char5/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char5/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char5/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes five-hit {
+  0% {
+    background: url("../pcs/char5/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+  33% {
+    background: url("../pcs/char5/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char5/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char5/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+  66% {
+    background: url("../pcs/char5/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char5/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char5/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+  82.01% {
+    background: url("../pcs/char5/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char5/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+}
+
+@keyframes five-victory {
+  0% {
+    background: url("../pcs/char5/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char5/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char5/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char5/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char5/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char5/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes five-dead {
+  0% {
+    background: url("../pcs/char5/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char5/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char5/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char5/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char5/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char5/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

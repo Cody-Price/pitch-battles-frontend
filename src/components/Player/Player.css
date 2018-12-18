@@ -1,0 +1,9 @@
+.player {
+  transform: scaleX(-1);
+
+  position: absolute;
+  height: 144px;
+  width: 144px;
+  top: 55px;
+  left: 10px;
+}

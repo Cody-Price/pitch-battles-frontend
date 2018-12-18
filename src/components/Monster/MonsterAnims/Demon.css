@@ -1,0 +1,79 @@
+.demon {
+  width: 72px;
+  height: 96px;
+  background: url("../monsters/demon/monster1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  position: absolute;
+  bottom: 110px;
+  left: 150px;
+}
+
+.demon.idle {
+  animation: demon-idle infinite 2s linear;
+}
+
+.demon.attack {
+  animation: demon-idle infinite 2s linear, monster-attack 1s linear;
+}
+
+.demon.hit {
+  animation: demon-idle infinite 2s linear, monster-hit 1s linear;
+}
+
+.demon.dead {
+  opacity: 0;
+  animation: demon-idle infinite 2s linear, monster-dead 3s linear;
+}
+
+@keyframes demon-idle {
+  0% {
+    background: url("../monsters/demon/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/demon/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/demon/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/demon/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/demon/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/demon/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/demon/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/demon/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}

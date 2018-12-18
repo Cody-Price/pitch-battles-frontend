@@ -1,0 +1,31 @@
+.staff {
+  width: 345px;
+  height: 150px;
+  background: url("./staff/staff.png");
+  background-size: cover;
+  margin: auto;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+.clef {
+  position: absolute;
+  background: url("./staff/trebleclef.png");
+  top: 25px;
+  left: 52px;
+  height: 117px;
+  width: 48px;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.pitch {
+  position: absolute;
+  background: url("./staff/notehead3.png");
+  width: 39px;
+  height: 21px;
+  image-rendering: pixelated;
+  background-size: cover;
+  left: 150px;
+  top: 99px;
+}
