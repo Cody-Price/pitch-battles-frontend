@@ -9,7 +9,7 @@ class Game extends Component {
       <main className="game-main">
         <section className="game-background">
           <section className="gameplay-frame">
-            <Player avatar="4" status="idle" />
+            <Player avatar="4" status="victory" />
           </section>
         </section>
       </main>
