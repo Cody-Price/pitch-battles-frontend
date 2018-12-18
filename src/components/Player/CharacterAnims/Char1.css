@@ -14,6 +14,7 @@
 
 .player.one.hit {
   animation: one-hit 0.75s linear;
+  animation-delay: 0.3s;
 }
 
 .player.one.victory {
