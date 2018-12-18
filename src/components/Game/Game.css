@@ -1,0 +1,23 @@
+.game-main {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.game-background {
+  background: url(./path.png);
+  width: 1500px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.gameplay-frame {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+}
