@@ -1,0 +1,60 @@
+.player.one {
+  background: url(../pcs/char1/idle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player.one.idle {
+  animation: one-idle infinite 1s linear;
+}
+
+@keyframes one-idle {
+  0% {
+    background: url("../pcs/char1/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char1/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char1/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char1/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char1/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char1/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char1/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char1/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
