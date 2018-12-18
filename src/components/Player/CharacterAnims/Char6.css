@@ -1,0 +1,268 @@
+.player.six {
+  background: url(../pcs/char6/idle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player.six.idle {
+  animation: six-idle infinite 1s linear;
+}
+
+.player.six.attack {
+  animation: six-attack 0.75s linear;
+}
+
+.player.six.hit {
+  animation: six-hit 0.75s linear;
+}
+
+.player.six.victory {
+  animation: six-victory 1s linear;
+  background: url("../pcs/char6/victory3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1);
+}
+
+.player.six.dead {
+  animation: six-dead 1s linear;
+  background: url(../pcs/char6/dead.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-iteration-count: 3;
+}
+
+@keyframes six-idle {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes six-attack {
+  0% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes six-hit {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+  33% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+  66% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+  82.01% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10px;
+  }
+}
+
+@keyframes six-victory {
+  0% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes six-dead {
+  0% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
