@@ -5,7 +5,7 @@
 }
 
 .player.three.idle {
-  animation: three-idle infinite 1s linear;
+  animation: three-idle infinite 1.3s linear;
 }
 
 .player.three.attack {

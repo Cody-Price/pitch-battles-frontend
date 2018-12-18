@@ -5,7 +5,7 @@
 }
 
 .player.five.idle {
-  animation: five-idle infinite 1s linear;
+  animation: five-idle infinite 1.3s linear;
 }
 
 .player.five.attack {

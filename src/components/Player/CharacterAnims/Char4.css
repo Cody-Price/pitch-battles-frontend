@@ -5,7 +5,7 @@
 }
 
 .player.four.idle {
-  animation: four-idle infinite 1s linear;
+  animation: four-idle infinite 1.3s linear;
 }
 
 .player.four.attack {

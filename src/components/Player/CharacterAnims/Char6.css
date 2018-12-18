@@ -5,7 +5,7 @@
 }
 
 .player.six.idle {
-  animation: six-idle infinite 1s linear;
+  animation: six-idle infinite 1.3s linear;
 }
 
 .player.six.attack {

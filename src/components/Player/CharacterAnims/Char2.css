@@ -5,7 +5,7 @@
 }
 
 .player.two.idle {
-  animation: two-idle infinite 1s linear;
+  animation: two-idle infinite 1.3s linear;
 }
 
 .player.two.attack {
