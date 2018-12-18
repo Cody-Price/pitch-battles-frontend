@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
+import Staff from "../Staff/Staff";
 import "./Game.css";
 
 import avatars from "../../utilities/avatars";
@@ -11,12 +12,12 @@ class Game extends Component {
     super();
 
     this.state = {
-      currentLevel: 4
+      currentLevel: 1
     };
   }
 
   render() {
-    const avatar = "1";
+    const avatar = "4";
     return (
       <main className="game-main">
         <header className="game-header">
@@ -32,6 +33,7 @@ class Game extends Component {
             <Monster level={this.state.currentLevel} status="idle" />
           </section>
         </section>
+        <Staff />
       </main>
     );
   }
