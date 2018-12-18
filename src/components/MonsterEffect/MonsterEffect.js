@@ -4,7 +4,7 @@ import "./MonsterEffect.css";
 
 class MonsterEffect extends Component {
   render() {
-    return <div />;
+    return <div className="monster-effect" />;
   }
 }
 

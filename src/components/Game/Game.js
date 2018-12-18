@@ -14,12 +14,12 @@ class Game extends Component {
     super();
 
     this.state = {
-      currentLevel: 4
+      currentLevel: 2
     };
   }
 
   render() {
-    const avatar = "4";
+    const avatar = "6";
     return (
       <main className="game-main">
         <header className="game-header">
@@ -32,9 +32,9 @@ class Game extends Component {
         <section className="game-background">
           <section className="gameplay-frame">
             <Player avatar={avatar} status="idle" />
-            <PlayerEffect />
+            {/* <PlayerEffect /> */}
             <Monster level={this.state.currentLevel} status="idle" />
-            <MonsterEffect />
+            {/* <MonsterEffect /> */}
           </section>
         </section>
         <Staff />

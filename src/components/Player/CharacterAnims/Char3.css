@@ -14,6 +14,7 @@
 
 .player.three.hit {
   animation: three-hit 0.75s linear;
+  animation-delay: 0.3s;
 }
 
 .player.three.victory {

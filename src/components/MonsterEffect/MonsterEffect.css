@@ -1,0 +1,126 @@
+.monster-effect {
+  animation: 1s monster-slash linear;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 80px;
+}
+
+@keyframes monster-slash {
+  0% {
+    background-image: none;
+  }
+  33.33% {
+    background-image: none;
+  }
+  33.34% {
+    background-image: url("./effects/slash/slash1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  46.01% {
+    background-image: url("./effects/slash/slash1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  46.02% {
+    background-image: url("./effects/slash/slash2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  58% {
+    background-image: url("./effects/slash/slash2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  58.01% {
+    background-image: url("./effects/slash/slash3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  70% {
+    background-image: url("./effects/slash/slash3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  70.01% {
+    background-image: url("./effects/slash/slash4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  82% {
+    background-image: url("./effects/slash/slash4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  82.01% {
+    background-image: url("./effects/slash/slash5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+  100% {
+    background-image: url("./effects/slash/slash5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimizeSpeed;
+
+    transform: scaleX(-1);
+  }
+}
