@@ -1,0 +1,79 @@
+.minotaur {
+  width: 84px;
+  height: 126px;
+  background: url("../monsters/minotaur/monster1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  position: absolute;
+  bottom: 110px;
+  left: 150px;
+}
+
+.minotaur.idle {
+  animation: minotaur-idle infinite 2s linear;
+}
+
+.minotaur.attack {
+  animation: minotaur-idle infinite 2s linear, monster-attack 1s linear;
+}
+
+.minotaur.hit {
+  animation: minotaur-idle infinite 2s linear, monster-hit 1s linear;
+}
+
+.minotaur.dead {
+  opacity: 0;
+  animation: minotaur-idle infinite 2s linear, monster-dead 3s linear;
+}
+
+@keyframes minotaur-idle {
+  0% {
+    background: url("../monsters/minotaur/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/minotaur/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/minotaur/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/minotaur/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/minotaur/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/minotaur/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/minotaur/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/minotaur/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}

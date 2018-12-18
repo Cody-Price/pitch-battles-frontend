@@ -11,7 +11,7 @@ class Game extends Component {
     super();
 
     this.state = {
-      currentLevel: 1
+      currentLevel: 4
     };
   }
 
