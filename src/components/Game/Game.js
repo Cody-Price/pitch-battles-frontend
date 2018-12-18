@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
 import Staff from "../Staff/Staff";
+import MonsterEffect from "../MonsterEffect/MonsterEffect";
+import PlayerEffect from "../PlayerEffect/PlayerEffect";
 import "./Game.css";
 
 import avatars from "../../utilities/avatars";
@@ -12,7 +14,7 @@ class Game extends Component {
     super();
 
     this.state = {
-      currentLevel: 1
+      currentLevel: 4
     };
   }
 
@@ -30,7 +32,9 @@ class Game extends Component {
         <section className="game-background">
           <section className="gameplay-frame">
             <Player avatar={avatar} status="idle" />
+            <PlayerEffect />
             <Monster level={this.state.currentLevel} status="idle" />
+            <MonsterEffect />
           </section>
         </section>
         <Staff />
