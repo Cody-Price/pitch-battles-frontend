@@ -15,6 +15,7 @@ class Monster extends Component {
 
     return <div className={`monster ${currentMonster} ${this.props.status}`} />;
   }
+  1;
 }
 
 export default Monster;

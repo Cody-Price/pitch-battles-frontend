@@ -1,0 +1,66 @@
+.boar {
+  width: 102px;
+  height: 81px;
+  background: url("../monsters/boar/monster1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  position: absolute;
+  top: 110px;
+  left: 150px;
+}
+
+.boar.idle {
+  animation: boar-idle infinite 2s linear;
+}
+
+@keyframes boar-idle {
+  0% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
