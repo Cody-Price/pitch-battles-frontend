@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 
 import Player from "../Player/Player";
+import Monster from "../Monster/Monster";
 import "./Game.css";
 
 import avatars from "../../utilities/avatars";
 
 class Game extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentLevel: 1
+    };
+  }
+
   render() {
     const avatar = "1";
     return (
@@ -20,6 +29,7 @@ class Game extends Component {
         <section className="game-background">
           <section className="gameplay-frame">
             <Player avatar={avatar} status="idle" />
+            <Monster level={this.state.currentLevel} status="idle" />
           </section>
         </section>
       </main>
