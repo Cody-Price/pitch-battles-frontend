@@ -3,7 +3,7 @@
   height: 150px;
   background: url("./staff/staff.png");
   background-size: cover;
-  margin: auto;
+  margin: 4rem auto 5rem;
   image-rendering: pixelated;
   position: relative;
 }
@@ -27,5 +27,102 @@
   image-rendering: pixelated;
   background-size: cover;
   left: 150px;
+  top: 123px;
+}
+
+.pitch.below-space-one {
+  top: 123px;
+}
+.pitch.line-one {
+  top: 111px;
+}
+
+.pitch.space-one {
   top: 99px;
+}
+
+.pitch.line-two {
+  top: 87px;
+}
+
+.pitch.space-two {
+  top: 75px;
+}
+
+.pitch.line-three {
+  top: 63px;
+}
+
+.pitch.space-three {
+  top: 51px;
+}
+
+.pitch.line-four {
+  top: 39px;
+}
+
+.pitch.space-four {
+  top: 27px;
+}
+
+.pitch.line-five {
+  top: 15px;
+}
+
+.pitch.above-space-one {
+  top: 3px;
+}
+
+.pitch.above-space-two {
+  background: url("./staff/notehead-one-ledger-above.png");
+  top: -15px;
+  width: 39px;
+  height: 21px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.above-line-one {
+  background: url("./staff/notehead-one-ledger.png");
+  top: -8px;
+  width: 39px;
+  height: 18px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-line-one {
+  background: url("./staff/notehead-one-ledger.png");
+  top: 133px;
+  width: 39px;
+  height: 18px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-space-two {
+  background: url("./staff/notehead-two-ledger-below-space.png");
+  top: 145px;
+  width: 39px;
+  height: 45px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-line-three {
+  background: url("./staff/notehead-three-ledger-below.png");
+  top: 145px;
+  width: 39px;
+  height: 55px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.above-line-three {
+  background: url("./staff/notehead-three-ledger-above.png");
+  top: -50px;
+  width: 39px;
+  height: 55px;
+  image-rendering: pixelated;
+  background-size: cover;
 }

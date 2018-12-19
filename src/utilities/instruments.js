@@ -1,4 +1,4 @@
-const instruments = [
+export const instruments = [
   {
     instrument: "flute",
     clef: "treble",
