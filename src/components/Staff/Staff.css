@@ -3,7 +3,7 @@
   height: 150px;
   background: url("./staff/staff.png");
   background-size: cover;
-  margin: 3rem auto;
+  margin: 3rem auto 5rem;
   image-rendering: pixelated;
   position: relative;
 }
@@ -71,4 +71,40 @@
 
 .pitch.above-space-one {
   top: 3px;
+}
+
+.pitch.above-space-two {
+  background: url("./staff/notehead-one-ledger-above.png");
+  top: -15px;
+  width: 39px;
+  height: 21px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.above-line-one {
+  background: url("./staff/notehead-one-ledger.png");
+  top: -8px;
+  width: 39px;
+  height: 18px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-line-one {
+  background: url("./staff/notehead-one-ledger.png");
+  top: 133px;
+  width: 39px;
+  height: 18px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch {
+  background: url("./staff/notehead-two-ledger-below-space.png");
+  top: 145px;
+  width: 39px;
+  height: 45px;
+  image-rendering: pixelated;
+  background-size: cover;
 }
