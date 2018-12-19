@@ -1,11 +1,24 @@
 .staff {
-  width: 345px;
+  width: 315px;
   height: 150px;
-  background: url("./staff/staff.png");
+  background: url("./staff/cropped-staff.png");
   background-size: cover;
-  margin: 4rem auto 5rem;
+  margin: 4rem 0 5rem 15px;
   image-rendering: pixelated;
   position: relative;
+}
+
+.staff-buffer {
+  background: url("./staff/staff-frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  width: 345px;
+  height: 294px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 
 .clef {
