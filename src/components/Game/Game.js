@@ -19,24 +19,25 @@ class Game extends Component {
   }
 
   render() {
-    const avatar = "6";
+    const avatar = "1";
     return (
       <main className="game-main">
-        <header className="game-header">
-          <div className="avatar-border">
-            <div className={`header-avatar ${avatars[avatar]}`} />
-          </div>
-          <h4 className="exit-btn">exit</h4>
-        </header>
-        <h3 className="timer">25.01</h3>
-        <section className="game-background">
+        <div className="game-area-wrapper">
+          <header className="game-header">
+            <div className="avatar-border">
+              <div className={`header-avatar ${avatars[avatar]}`} />
+            </div>
+            <h3 className="timer">25.01</h3>
+
+            <h4 className="exit-btn">exit</h4>
+          </header>
           <section className="gameplay-frame">
             <Player avatar={avatar} status="idle" />
             {/* <PlayerEffect /> */}
             <Monster level={this.state.currentLevel} status="idle" />
             {/* <MonsterEffect /> */}
           </section>
-        </section>
+        </div>
         <Staff />
       </main>
     );
