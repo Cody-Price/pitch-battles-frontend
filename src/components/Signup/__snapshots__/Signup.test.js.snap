@@ -1,0 +1,709 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup should render like snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Signup />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <form>
+          <p>
+            First Name
+          </p>
+          <input
+            name="firstName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <p>
+            Last Name
+          </p>
+          <input
+            name="lastName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <p>
+            Email
+          </p>
+          <input
+            name="email"
+            onChange={[Function]}
+            type="email"
+            value=""
+          />
+          <p>
+            Password
+          </p>
+          <input
+            name="passwordOne"
+            onChange={[Function]}
+            type="password"
+            value=""
+          />
+          <p>
+            Confirm Password
+          </p>
+          <input
+            name="passwordTwo"
+            onChange={[Function]}
+            type="password"
+            value=""
+          />
+          <div
+            aria-label="choose student role"
+            className="student-button student"
+            onClick={[Function]}
+          >
+            Student
+          </div>
+          <div
+            aria-label="choose teacher role"
+            className="teacher-button student"
+            onClick={[Function]}
+          >
+            Teacher
+          </div>
+          <button
+            type="submit"
+          >
+            Sign Up
+          </button>
+        </form>,
+        <button>
+          Login
+        </button>,
+      ],
+      "className": "signup-form undefined",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              First Name
+            </p>,
+            <input
+              name="firstName"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />,
+            <p>
+              Last Name
+            </p>,
+            <input
+              name="lastName"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />,
+            <p>
+              Email
+            </p>,
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+            />,
+            <p>
+              Password
+            </p>,
+            <input
+              name="passwordOne"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />,
+            <p>
+              Confirm Password
+            </p>,
+            <input
+              name="passwordTwo"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />,
+            <div
+              aria-label="choose student role"
+              className="student-button student"
+              onClick={[Function]}
+            >
+              Student
+            </div>,
+            <div
+              aria-label="choose teacher role"
+              className="teacher-button student"
+              onClick={[Function]}
+            >
+              Teacher
+            </div>,
+            <button
+              type="submit"
+            >
+              Sign Up
+            </button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "First Name",
+            },
+            "ref": null,
+            "rendered": "First Name",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "firstName",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Last Name",
+            },
+            "ref": null,
+            "rendered": "Last Name",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "lastName",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Email",
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "email",
+              "onChange": [Function],
+              "type": "email",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Password",
+            },
+            "ref": null,
+            "rendered": "Password",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "passwordOne",
+              "onChange": [Function],
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Confirm Password",
+            },
+            "ref": null,
+            "rendered": "Confirm Password",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "passwordTwo",
+              "onChange": [Function],
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "choose student role",
+              "children": "Student",
+              "className": "student-button student",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Student",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-label": "choose teacher role",
+              "children": "Teacher",
+              "className": "teacher-button student",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Teacher",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign Up",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Sign Up",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Login",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "Login",
+        "type": "button",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <form>
+            <p>
+              First Name
+            </p>
+            <input
+              name="firstName"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <p>
+              Last Name
+            </p>
+            <input
+              name="lastName"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <p>
+              Email
+            </p>
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+            <p>
+              Password
+            </p>
+            <input
+              name="passwordOne"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+            <p>
+              Confirm Password
+            </p>
+            <input
+              name="passwordTwo"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+            <div
+              aria-label="choose student role"
+              className="student-button student"
+              onClick={[Function]}
+            >
+              Student
+            </div>
+            <div
+              aria-label="choose teacher role"
+              className="teacher-button student"
+              onClick={[Function]}
+            >
+              Teacher
+            </div>
+            <button
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </form>,
+          <button>
+            Login
+          </button>,
+        ],
+        "className": "signup-form undefined",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                First Name
+              </p>,
+              <input
+                name="firstName"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />,
+              <p>
+                Last Name
+              </p>,
+              <input
+                name="lastName"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />,
+              <p>
+                Email
+              </p>,
+              <input
+                name="email"
+                onChange={[Function]}
+                type="email"
+                value=""
+              />,
+              <p>
+                Password
+              </p>,
+              <input
+                name="passwordOne"
+                onChange={[Function]}
+                type="password"
+                value=""
+              />,
+              <p>
+                Confirm Password
+              </p>,
+              <input
+                name="passwordTwo"
+                onChange={[Function]}
+                type="password"
+                value=""
+              />,
+              <div
+                aria-label="choose student role"
+                className="student-button student"
+                onClick={[Function]}
+              >
+                Student
+              </div>,
+              <div
+                aria-label="choose teacher role"
+                className="teacher-button student"
+                onClick={[Function]}
+              >
+                Teacher
+              </div>,
+              <button
+                type="submit"
+              >
+                Sign Up
+              </button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "First Name",
+              },
+              "ref": null,
+              "rendered": "First Name",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "firstName",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Last Name",
+              },
+              "ref": null,
+              "rendered": "Last Name",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "lastName",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Email",
+              },
+              "ref": null,
+              "rendered": "Email",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "email",
+                "onChange": [Function],
+                "type": "email",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Password",
+              },
+              "ref": null,
+              "rendered": "Password",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "passwordOne",
+                "onChange": [Function],
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Confirm Password",
+              },
+              "ref": null,
+              "rendered": "Confirm Password",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "passwordTwo",
+                "onChange": [Function],
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "choose student role",
+                "children": "Student",
+                "className": "student-button student",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Student",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-label": "choose teacher role",
+                "children": "Teacher",
+                "className": "teacher-button student",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Teacher",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign Up",
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Sign Up",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Login",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Login",
+          "type": "button",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

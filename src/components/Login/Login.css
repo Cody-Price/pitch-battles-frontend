@@ -1,0 +1,19 @@
+.login-form {
+	width: 400px;
+	margin: auto;
+}
+
+.email-input,
+.password-input {
+	height: 20px;
+	display: flex;
+	padding-bottom: 10px;
+}
+
+button {
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+
+
