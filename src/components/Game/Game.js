@@ -27,18 +27,18 @@ class Game extends Component {
             <div className="avatar-border">
               <div className={`header-avatar ${avatars[avatar]}`} />
             </div>
-            <h3 className="timer">25.01</h3>
-
-            <h4 className="exit-btn">exit</h4>
+            <div className="timer-frame">
+              <h3 className="timer">25.01</h3>
+            </div>
           </header>
           <section className="gameplay-frame">
-            <Player avatar={avatar} status="idle" />
-            {/* <PlayerEffect /> */}
-            <Monster level={this.state.currentLevel} status="idle" />
+            <Player avatar={avatar} status="hit" />
+            <PlayerEffect />
+            <Monster level={this.state.currentLevel} status="attack" />
             {/* <MonsterEffect /> */}
           </section>
+          <Staff />
         </div>
-        <Staff />
       </main>
     );
   }
