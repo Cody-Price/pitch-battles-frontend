@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Login from '../Login/Login';
-import Signup from '../Signup/Singup';
+import Signup from '../Signup/Signup';
 
 class Landing extends Component {
 	constructor() {

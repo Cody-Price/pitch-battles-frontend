@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Signup.css';
 
 class Signup extends Component {
 	constructor() {
@@ -29,19 +30,29 @@ class Signup extends Component {
 		return (
 			<section className={`signup-form ${this.props.status}`}>
 				<form>
-					<p>First Name</p>
+				  <div className='firstname-input'>
+					<aria-label>first name</aria-label>
 					<input type='text' name='firstName' onChange={this.handleChange} value={this.state.firstName} />
-					<p>Last Name</p>
+				  </div>
+				  <div className='lastname-input'>
+					<label>last name</label>
 					<input type='text' name='lastName' onChange={this.handleChange} value={this.state.lastName} />
-					<p>Email</p>
+				  </div>
+				  <div className='email-input'>
+					<label>email</label>
 					<input type='email' name='email' onChange={this.handleChange} value={this.state.email} />
-					<p>Password</p>
+				  </div>
+				  <div className='password-input'>
+					<label>password</label>
 					<input type='password' name='passwordOne' onChange={this.handleChange} value={this.state.passwordOne} />
-					<p>Confirm Password</p>
+				  </div>
+				  <div className='confirmpassword-input'>
+					<label>confirm password</label>
 					<input type='password' name='passwordTwo' onChange={this.handleChange} value={this.state.passwordTwo} />
-					<div aria-label='choose student role' className={`student-button ${this.state.role}`} onClick={() => this.changeRole('student')}>Student</div>
-					<div aria-label='choose teacher role' className={`teacher-button ${this.state.role}`} onClick={() => this.changeRole('teacher')}>Teacher</div>
-					<button type='submit'>Sign Up</button>
+				  </div>
+					<div aria-label='choose student role' className={`student-button ${this.state.role}`} onClick={() => this.changeRole('student')}>student</div>
+					<div aria-label='choose teacher role' className={`teacher-button ${this.state.role}`} onClick={() => this.changeRole('teacher')}>teacher</div>
+					<button type='submit'>sign up</button>
 				</form>
 				<button onClick={this.props.landingChange}>Login</button>
 			</section>
