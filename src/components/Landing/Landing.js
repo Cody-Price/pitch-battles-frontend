@@ -17,6 +17,7 @@ class Landing extends Component {
     this.setState({ login: !this.state.login, signup: !this.state.signup });
   };
 
+
   render() {
     return (
       <main>
@@ -29,6 +30,7 @@ class Landing extends Component {
           <Signup
             landingChange={this.landingChange}
             status={this.state.signup}
+            signUpUser={this.props.signUpUser}
           />
         </section>
       </main>

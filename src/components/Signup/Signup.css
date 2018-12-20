@@ -35,6 +35,7 @@
 
 .sign-up-button {
   margin-bottom: 1rem;
+  border-radius: 50%;
 }
 
 .signup-form button:hover {

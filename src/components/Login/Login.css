@@ -15,9 +15,12 @@
 .login-form input {
   display: block;
   margin: 1rem auto;
+  border: 2px solid red;
+  border-radius: 4px;
 }
 
 .login-form button {
   cursor: pointer;
   margin-bottom: 1rem;
+  border-radius: 50%;
 }
