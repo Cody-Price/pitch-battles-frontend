@@ -10,7 +10,7 @@ script:
 deploy:
   provider: heroku
   skip_cleanup: true
-  domain: <my_name_here>.surge.sh
+  domain: pitchbattles.herokuapp.com
   project: ./build/
 on:
   branch: master
