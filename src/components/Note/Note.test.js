@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PlayerEffect from "./PlayerEffect";
+import Note from "./Note";
 
 it("is a test", () => {});

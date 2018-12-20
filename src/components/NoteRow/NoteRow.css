@@ -1,0 +1,12 @@
+.note-row {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  list-style: none;
+  width: 300px;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+}

@@ -1,6 +1,6 @@
 .game-main {
-  width: 100vw;
   overflow: hidden;
+  height: 100vh;
 }
 
 .game-area-wrapper {
@@ -85,14 +85,28 @@
   background-repeat: no-repeat;
 }
 
+.hearts-and-timer {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
 .timer {
   font-family: "chronotype";
+  font-size: 3rem;
   line-height: 50px;
-  padding-top: 0.7rem;
+  padding-top: 0.6rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .timer-frame {
   background: url("./clockframe.png");
+  image-rendering: pixelated;
+
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -111,5 +125,5 @@
   margin-left: auto;
   margin-right: auto;
   width: 300px;
-  height: 300px;
+  height: 250px;
 }

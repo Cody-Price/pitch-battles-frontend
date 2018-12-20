@@ -18,9 +18,19 @@ class Game extends Component {
     this.state = {
       currentLevel: 2,
       userModal: false,
-      playerHearts: [0, 0, 0],
-      monsterHearts: [0, 0, 0, 0, 0]
+      playerHearts: [0, 1, 2],
+      monsterHearts: ["a", "b", "c", "d", "e"],
+      currentTime: 0,
+      start: 0,
+      running: false,
+      milliseconds: 0,
+      playerHit: false,
+      monsterHit: false
     };
+  }
+
+  componentDidMount() {
+    this.startTimer();
   }
 
   toggleUserModal = () => {
@@ -28,6 +38,22 @@ class Game extends Component {
       userModal: !this.state.userModal
     });
   };
+
+  startTimer() {
+    this.setState({
+      currentTime: this.state.currentTime / 1000,
+      start: Date.now() - this.state.currentTime,
+      isOn: true
+    });
+    this.timer = setInterval(
+      () =>
+        this.setState({
+          currentTime: Math.ceil((Date.now() - this.state.start) / 1000),
+          milliseconds: Date.now() - this.state.start
+        }),
+      500
+    );
+  }
 
   render() {
     const avatar = "1";
@@ -39,24 +65,25 @@ class Game extends Component {
               <div className={`header-avatar ${avatars[avatar]}`} />
             </div>
             <GameUserModal status={this.state.userModal} />
-            <div className="timer-frame">
-              <h3 className="timer">25.01</h3>
-            </div>
+            <section className="hearts-and-timer">
+              <Hearts
+                hearts={this.state.playerHearts}
+                character="player-hearts"
+              />
+              <div className="timer-frame">
+                <h3 className="timer">{this.state.currentTime}</h3>
+              </div>
+              <Hearts
+                hearts={this.state.monsterHearts}
+                character="monster-hearts"
+              />
+            </section>
           </header>
           <section className="gameplay-frame">
-            <Hearts
-              hearts={this.state.playerHearts}
-              character="player-hearts"
-            />
             <Player avatar={avatar} status="idle" />
-            {/* <PlayerEffect /> */}
+            {this.state.playerHit && <PlayerEffect />}
             <Monster level={this.state.currentLevel} status="idle" />
-            <Hearts
-              hearts={this.state.monsterHearts}
-              character="monster-hearts"
-            />
-
-            {/* <MonsterEffect /> */}
+            {this.state.monsterHit && <MonsterEffect />}
           </section>
           <Staff />
         </div>

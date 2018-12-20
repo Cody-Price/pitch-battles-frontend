@@ -1,20 +1,22 @@
 .hearts {
-  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .heart {
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 24px;
   background: url("./heart.png");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 2px;
+  margin: 2px;
 }
 
 .hearts.player-hearts {
-  left: -10px;
+  justify-self: end;
+  margin-left: 2rem;
 }
 
 .hearts.monster-hearts {
-  right: -10px;
+  margin-right: 2rem;
 }

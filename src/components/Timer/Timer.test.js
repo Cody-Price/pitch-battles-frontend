@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PlayerEffect from "./PlayerEffect";
+import Timer from "./Timer";
 
 it("is a test", () => {});
