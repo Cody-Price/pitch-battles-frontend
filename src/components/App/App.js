@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Game from "../Game/Game";
-import Landing from "../Landing/Landing";
+// import Landing from "../Landing/Landing";
 
 import "./App.css";
 
