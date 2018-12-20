@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 
+import "./Landing.css";
+
 class Landing extends Component {
   constructor() {
     super();
@@ -19,7 +21,7 @@ class Landing extends Component {
     return (
       <main>
         <header>
-          <h1>Pitch Battles</h1>
+          <h1 className="game-title">Pitch Battles</h1>
           <div className="logo" />
         </header>
         <section className="login-signup-container">

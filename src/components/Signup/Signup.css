@@ -1,31 +1,42 @@
 .signup-form {
-	width: 400px;
-	margin: auto;
+  position: absolute;
+  width: 300px;
+  left: 300px;
+  margin: auto;
+  transition: 0.3s;
+  top: 0;
 }
 
-.firstname-input,
-.lastname-input,
-.email-input,
-.password-input,
-.confirmpassword-input {
-	height: 20px;
-	display: flex;
-	padding-bottom: 10px;
+.signup-form.true {
+  left: 0px;
 }
 
-.student-button {
-	cursor: pointer;
-	display: inline-flex;
-	justify-content: space-between;
+.signup-form input {
+  display: block;
+  margin: 1rem auto;
 }
 
+.student-teacher-radio {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  margin: 0 auto 1rem;
+}
+
+.student-button,
 .teacher-button {
-	cursor: pointer;
-	display: inline-flex;
-	justify-content: space-between;
+  font-size: 0.8rem;
 }
 
-button {
-	margin-top: 10px;
-	cursor: pointer;
+.student-button:hover,
+.teacher-button:hover {
+  cursor: pointer;
+}
+
+.sign-up-button {
+  margin-bottom: 1rem;
+}
+
+.signup-form button:hover {
+  cursor: pointer;
 }
