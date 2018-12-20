@@ -9,7 +9,7 @@ class Staff extends Component {
       <div className="staff-buffer">
         <section className="staff">
           <div className="clef" />
-          <div className="pitch" />
+          <div className={`pitch ${this.props.currentPitch}`} />
         </section>
         <NoteRow />
       </div>

@@ -893,7 +893,7 @@ export const instruments = [
         pitch: "a",
         position: "below-line-two",
         level: 3
-      }
+      },
       {
         pitch: "g",
         position: "below-space-three",

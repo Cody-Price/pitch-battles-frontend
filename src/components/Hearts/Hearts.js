@@ -4,7 +4,7 @@ import "./Hearts.css";
 class Hearts extends Component {
   render() {
     const hearts = this.props.hearts.map(heart => {
-      return <div key={heart} className="heart" />;
+      return <div key={heart.position} className="heart" />;
     });
     return (
       <section className={`hearts ${this.props.character}`}>{hearts}</section>
