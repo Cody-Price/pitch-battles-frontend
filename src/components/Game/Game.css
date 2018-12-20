@@ -12,6 +12,7 @@
   image-rendering: pixelated;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
 .game-header {
@@ -19,12 +20,6 @@
   display: flex;
   justify-content: space-between;
   height: 82px;
-}
-
-.game-header h4 {
-  position: absolute;
-  right: 0;
-  margin: 1rem;
 }
 
 .avatar-border {
@@ -36,6 +31,10 @@
   display: flex;
   align-items: center;
   border-radius: 50%;
+}
+
+.avatar-border:hover {
+  cursor: pointer;
 }
 
 .header-avatar {
