@@ -7,6 +7,7 @@ import MonsterEffect from "../MonsterEffect/MonsterEffect";
 import PlayerEffect from "../PlayerEffect/PlayerEffect";
 import GameUserModal from "../GameUserModal/GameUserModal";
 import Hearts from "../Hearts/Hearts";
+import Victory from "../Victory/Victory";
 import "./Game.css";
 
 import avatars from "../../utilities/avatars";
@@ -30,7 +31,9 @@ class Game extends Component {
       playerStatus: "idle",
       monsterStatus: "idle",
       currentPitch: null,
-      gameOver: false
+      gameOver: false,
+      victory: false,
+      finalVictory: false
     };
   }
 
@@ -62,7 +65,34 @@ class Game extends Component {
     );
   };
 
-  submitGuess = () => {};
+  submitGuess = (event, input) => {
+    let guess;
+
+    if (
+      event &&
+      (event.key === "a" ||
+        event.key === "b" ||
+        event.key === "c" ||
+        event.key === "d" ||
+        event.key === "e" ||
+        event.key === "f" ||
+        event.key === "g")
+    ) {
+      console.log("key");
+      guess = event.key;
+    } else if (event) {
+      return;
+    } else {
+      guess = input;
+      console.log("click", event);
+    }
+
+    if (guess === this.state.currentPitch.pitch) {
+      this.playerAttack();
+    } else {
+      this.monsterAttack();
+    }
+  };
 
   setPitch = (monsterHearts = this.state.monsterHearts) => {
     const index = Math.floor(Math.random() * monsterHearts.length);
@@ -74,17 +104,44 @@ class Game extends Component {
   };
 
   playerAttack = () => {
-    this.setState({
-      playerStatus: "attack",
-      monsterStatus: "hit",
-      monsterHit: true,
-      playerHit: false,
-      monsterHearts: this.state.monsterHearts.filter(
-        heart => heart !== this.state.currentPitch
-      )
-    });
+    if (this.state.monsterHearts.length === 1) {
+      this.setState(
+        {
+          playerStatus: "attack",
+          monsterStatus: "hit",
+          monsterHit: true,
+          playerHit: false,
+          monsterHearts: this.state.monsterHearts.filter(
+            heart => heart !== this.state.currentPitch
+          )
+        },
+        this.startVictory
+      );
+    } else {
+      this.setState({
+        playerStatus: "attack",
+        monsterStatus: "hit",
+        monsterHit: true,
+        playerHit: false,
+        monsterHearts: this.state.monsterHearts.filter(
+          heart => heart !== this.state.currentPitch
+        )
+      });
+    }
 
     setTimeout(this.setIdle, 1000);
+  };
+
+  startVictory = () => {
+    setTimeout(this.victory, 1000);
+  };
+
+  victory = () => {
+    if (this.state.currentLevel === 4) {
+      this.setState({ finalVictory: true });
+    } else {
+      this.setState({ victory: true });
+    }
   };
 
   monsterAttack = () => {
@@ -99,39 +156,15 @@ class Game extends Component {
   };
 
   setIdle = () => {
-    this.setState({
-      playerHit: false,
-      monsterHit: false,
-      playerStatus: "idle",
-      monsterStatus: "idle"
-    });
-  };
-
-  submitLetter = (event, input) => {
-    let guess;
-
-    if (
-      event &&
-      (event.key === "a" ||
-        event.key === "b" ||
-        event.key === "c" ||
-        event.key === "d" ||
-        event.key === "e" ||
-        event.key === "f" ||
-        event.key === "g")
-    ) {
-      guess = event.key;
-    } else if (event) {
-      return;
-    } else {
-      guess = input;
-    }
-
-    if (guess === this.state.currentPitch.pitch) {
-      this.playerAttack();
-    } else {
-      this.birdAttack();
-    }
+    this.setState(
+      {
+        playerHit: false,
+        monsterHit: false,
+        playerStatus: "idle",
+        monsterStatus: "idle"
+      },
+      this.setPitch
+    );
   };
 
   toggleUserModal = () => {
@@ -158,6 +191,20 @@ class Game extends Component {
       });
     }, 500);
   }
+
+  levelUp = () => {
+    this.setState(
+      {
+        currentLevel: this.state.currentLevel + 1,
+        playerHit: false,
+        monsterHit: false,
+        playerStatus: "idle",
+        monsterStatus: "idle",
+        victory: false
+      },
+      this.setupGame
+    );
+  };
 
   render() {
     const avatar = "4";
@@ -193,7 +240,17 @@ class Game extends Component {
             {this.state.monsterHit && <MonsterEffect />}
           </section>
           {this.state.currentPitch && (
-            <Staff currentPitch={this.state.currentPitch.position} />
+            <Staff
+              submitGuess={this.submitGuess}
+              currentPitch={this.state.currentPitch.position}
+            />
+          )}
+          {this.state.victory && (
+            <Victory
+              levelUp={this.levelUp}
+              finalVictory={this.state.finalVictory}
+              victory={this.state.victory}
+            />
           )}
         </div>
       </main>

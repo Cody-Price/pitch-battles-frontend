@@ -3,7 +3,16 @@ import "./Note.css";
 
 class Note extends Component {
   render() {
-    return <li className="note-name">{this.props.pitch}</li>;
+    return (
+      <li
+        onClick={event => {
+          this.props.submitGuess(null, this.props.pitch);
+        }}
+        className="note-name"
+      >
+        {this.props.pitch}
+      </li>
+    );
   }
 }
 
