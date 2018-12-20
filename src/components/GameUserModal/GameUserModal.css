@@ -1,0 +1,50 @@
+.game-user-modal {
+  width: 99px;
+  height: 180px;
+  padding-right: 12px;
+  position: absolute;
+  left: -300px;
+  top: 110px;
+  background: url("../Game/modal-frame.png");
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  font-family: "chronotype";
+}
+
+.game-user-modal.true {
+  left: 0px;
+}
+
+.game-user-modal button {
+  position: absolute;
+  font-family: "chronotype";
+  display: block;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.exit-game-button {
+  bottom: 20px;
+  width: 74px;
+  left: 13px;
+}
+
+.reset-game-button {
+  bottom: 45px;
+  width: 47px;
+  left: 27px;
+}
+
+.game-modal-username {
+  margin: 1rem 0 0;
+}
+
+.current-instrument-label {
+  margin: 0.5rem 0 0;
+}
+
+.current-instrument {
+  margin: 0;
+}
