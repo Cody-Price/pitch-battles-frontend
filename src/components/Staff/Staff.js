@@ -11,7 +11,7 @@ class Staff extends Component {
           <div className="clef" />
           <div className={`pitch ${this.props.currentPitch}`} />
         </section>
-        <NoteRow />
+        <NoteRow submitGuess={this.props.submitGuess} />
       </div>
     );
   }
