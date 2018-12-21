@@ -92,6 +92,15 @@
   background-repeat: no-repeat;
 }
 
+.header-avatar.seven {
+  background: url(./pcs/char7/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 62px;
+}
+
 .hearts-and-timer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;

@@ -311,7 +311,7 @@ class Game extends Component {
   };
 
   render() {
-    const avatar = "4";
+    const avatar = "7";
     return (
       <main className="game-main">
         <div className="game-area-wrapper">

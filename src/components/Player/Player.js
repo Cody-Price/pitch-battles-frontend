@@ -7,6 +7,7 @@ import "./CharacterAnims/Char3.css";
 import "./CharacterAnims/Char4.css";
 import "./CharacterAnims/Char5.css";
 import "./CharacterAnims/Char6.css";
+import "./CharacterAnims/Char7.css";
 
 class Player extends Component {
   render() {
