@@ -35,7 +35,8 @@ class Game extends Component {
       currentPitch: null,
       gameOver: false,
       victory: false,
-      finalVictory: false
+      finalVictory: false,
+      times: []
     };
   }
 
@@ -62,7 +63,11 @@ class Game extends Component {
         playerHit: false,
         monsterHit: false,
         playerStatus: "idle",
-        monsterStatus: "idle"
+        monsterStatus: "idle",
+        gameOver: false,
+        victory: false,
+        finalVictory: false,
+        times: []
       },
       this.setPitch(monsterHearts)
     );
@@ -96,8 +101,10 @@ class Game extends Component {
         currentTime: Math.ceil((Date.now() - this.state.start) / 1000),
         milliseconds: Date.now() - this.state.start
       });
-    }, 500);
+    }, 200);
   };
+
+  resumeTimer = () => {};
 
   resetGame = () => {
     this.setState(
@@ -205,6 +212,8 @@ class Game extends Component {
 
   monsterDeath = () => {
     this.setState({
+      times: [...this.state.times, this.state.milliseconds],
+      running: false,
       monsterHearts: [],
       monsterStatus: "dead"
     });
@@ -293,10 +302,12 @@ class Game extends Component {
         monsterHit: false,
         playerStatus: "idle",
         monsterStatus: "idle",
-        victory: false
+        victory: false,
+        running: true
       },
       this.setupGame
     );
+    this.startTimer();
   };
 
   render() {
@@ -349,7 +360,7 @@ class Game extends Component {
               levelUp={this.levelUp}
               finalVictory={this.state.finalVictory}
               victory={this.state.victory}
-              time={this.state.milliseconds}
+              time={this.state.times}
             />
           )}
         </div>

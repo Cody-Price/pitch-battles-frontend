@@ -35,6 +35,15 @@
   right: 0;
 }
 
+.victory-screen .level-time {
+  top: 150px;
+}
+
+.victory-screen .total-time {
+  position: absolute;
+  top: 200px;
+}
+
 @keyframes slide-in-victory {
   0% {
     left: -300px;
