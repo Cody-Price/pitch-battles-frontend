@@ -18,6 +18,7 @@ class Game extends Component {
     super();
 
     this.state = {
+      clef: "treble",
       currentLevel: 1,
       userModal: false,
       playerHearts: [0, 1, 2],
@@ -215,7 +216,10 @@ class Game extends Component {
             <div className="avatar-border" onClick={this.toggleUserModal}>
               <div className={`header-avatar ${avatars[avatar]}`} />
             </div>
-            <GameUserModal status={this.state.userModal} />
+            <GameUserModal
+              instrument={this.props.instrument}
+              status={this.state.userModal}
+            />
             <section className="hearts-and-timer">
               <Hearts
                 hearts={this.state.playerHearts}
@@ -241,6 +245,7 @@ class Game extends Component {
           </section>
           {this.state.currentPitch && (
             <Staff
+              clef={this.state.clef}
               submitGuess={this.submitGuess}
               currentPitch={this.state.currentPitch.position}
             />

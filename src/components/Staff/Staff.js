@@ -8,7 +8,7 @@ class Staff extends Component {
     return (
       <div className="staff-buffer">
         <section className="staff">
-          <div className="clef" />
+          <div className={`clef ${this.props.clef}`} />
           <div className={`pitch ${this.props.currentPitch}`} />
         </section>
         <NoteRow submitGuess={this.props.submitGuess} />

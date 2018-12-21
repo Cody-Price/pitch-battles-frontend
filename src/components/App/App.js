@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Landing signUpUser={this.signUpUser} /> */}
-        <Game instrument="flute" />
+        <Game instrument="mallet percussion (low)" />
       </div>
     );
   }
