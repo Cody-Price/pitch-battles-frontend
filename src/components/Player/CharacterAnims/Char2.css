@@ -209,13 +209,13 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-  50% {
+  40% {
     background: url("../pcs/char2/victory2.png");
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  50.01% {
+  40.01% {
     background: url("../pcs/char2/victory3.png");
     image-rendering: pixelated;
     background-size: cover;

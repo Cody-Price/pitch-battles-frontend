@@ -9,7 +9,9 @@ class GameUserModal extends Component {
         <p className="current-instrument-label">instrument</p>
         <p className="current-instrument">{this.props.instrument}</p>
 
-        <button className="reset-game-button">reset</button>
+        <button onClick={this.props.reset} className="reset-game-button">
+          reset
+        </button>
         <button className="exit-game-button">exit game</button>
       </aside>
     );
