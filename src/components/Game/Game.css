@@ -92,12 +92,37 @@
   background-repeat: no-repeat;
 }
 
+.header-avatar.nine {
+  background: url(./pcs/char9/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-avatar.ten {
+  background: url(./pcs/char10/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 62px;
+}
+
 .header-avatar.seven {
   background: url(./pcs/char7/stand.png);
   image-rendering: pixelated;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 41px;
+  width: 43px;
+  height: 62px;
+}
+
+.header-avatar.eight {
+  background: url(./pcs/char8/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 43px;
   height: 62px;
 }
 
