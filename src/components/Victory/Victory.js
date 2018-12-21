@@ -10,7 +10,7 @@ class Victory extends Component {
 
   render() {
     return (
-      <section onClick={this.handleClick} className="victory">
+      <section onClick={this.handleClick} className="victory-screen">
         <h3 className="victory-text">VICTORY!</h3>
         {this.props.victory && <p>Click to proceed to next level</p>}
         {this.props.finalVictory && <p>YOU WIN!</p>}

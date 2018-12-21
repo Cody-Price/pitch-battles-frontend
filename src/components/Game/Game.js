@@ -105,43 +105,26 @@ class Game extends Component {
   };
 
   playerAttack = () => {
-    if (this.state.monsterHearts.length === 1) {
-      this.setState(
-        {
-          playerStatus: "attack",
-          monsterStatus: "hit",
-          monsterHit: true,
-          playerHit: false,
-          monsterHearts: this.state.monsterHearts.filter(
-            heart => heart !== this.state.currentPitch
-          )
-        },
-        this.startVictory
-      );
-    } else {
-      this.setState({
-        playerStatus: "attack",
-        monsterStatus: "hit",
-        monsterHit: true,
-        playerHit: false,
-        monsterHearts: this.state.monsterHearts.filter(
-          heart => heart !== this.state.currentPitch
-        )
-      });
-    }
-
-    setTimeout(this.setIdle, 1000);
+    this.setState({
+      playerStatus: "attack",
+      monsterStatus: "hit",
+      monsterHit: true,
+      playerHit: false
+    });
+    setTimeout(this.monsterHitSetIdle, 1000);
   };
 
   startVictory = () => {
-    setTimeout(this.victory, 1000);
+    this.setState({
+      monsterStatus: "dead"
+    });
   };
 
   victory = () => {
     if (this.state.currentLevel === 4) {
-      this.setState({ finalVictory: true });
+      this.setState({ finalVictory: true, playerStatus: "victory" });
     } else {
-      this.setState({ victory: true });
+      this.setState({ victory: true, playerStatus: "victory" });
     }
   };
 
@@ -156,16 +139,27 @@ class Game extends Component {
     setTimeout(this.setIdle, 1000);
   };
 
-  setIdle = () => {
-    this.setState(
-      {
-        playerHit: false,
-        monsterHit: false,
-        playerStatus: "idle",
-        monsterStatus: "idle"
-      },
-      this.setPitch
-    );
+  monsterHitSetIdle = () => {
+    if (this.state.monsterHearts.length === 1) {
+      this.setState({
+        monsterHearts: [],
+        monsterStatus: "dead"
+      });
+      setTimeout(this.victory, 3000);
+    } else {
+      this.setState(
+        {
+          playerHit: false,
+          monsterHit: false,
+          playerStatus: "idle",
+          monsterStatus: "idle",
+          monsterHearts: this.state.monsterHearts.filter(
+            heart => heart !== this.state.currentPitch
+          )
+        },
+        this.setPitch
+      );
+    }
   };
 
   toggleUserModal = () => {
@@ -174,7 +168,7 @@ class Game extends Component {
     });
   };
 
-  startTimer() {
+  startTimer = () => {
     this.setState({
       currentTime: this.state.currentTime / 1000,
       start: Date.now() - this.state.currentTime,
@@ -191,7 +185,7 @@ class Game extends Component {
         milliseconds: Date.now() - this.state.start
       });
     }, 500);
-  }
+  };
 
   levelUp = () => {
     this.setState(

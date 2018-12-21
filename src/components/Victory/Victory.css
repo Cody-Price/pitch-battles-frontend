@@ -1,4 +1,4 @@
-.victory {
+.victory-screen {
   background: url("../Staff/staff/staff-frame.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   right: 0;
 }
 
-.victory p {
+.victory-screen p {
   text-align: center;
   font-family: "chronotype";
   width: 313px;
