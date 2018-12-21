@@ -26,22 +26,22 @@ class Signup extends Component {
     }
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
-    this.props.signUpUser({'first_name': this.state.firstName, 
-                          'last_name': this.state.lastName,
-                          'email': this.state.email,
-                          'password': this.state.passwordOne,
-                          'password_confirmation': this.state.passwordTwo,
-                          'role': this.state.role 
-                          })
-
-  }
+    this.props.signUpUser({
+      first_name: this.state.firstName,
+      last_name: this.state.lastName,
+      email: this.state.email,
+      password: this.state.passwordOne,
+      password_confirmation: this.state.passwordTwo,
+      role: this.state.role
+    });
+  };
 
   render() {
     return (
       <section className={`signup-form ${this.props.status}`}>
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <form onSubmit={e => this.handleSubmit(e)}>
           <input
             placeholder="first name"
             type="text"

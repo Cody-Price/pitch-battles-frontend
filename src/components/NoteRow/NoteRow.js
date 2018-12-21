@@ -6,7 +6,9 @@ class NoteRow extends Component {
   render() {
     const pitches = ["a", "b", "c", "d", "e", "f", "g"];
     const notes = pitches.map(pitch => {
-      return <Note pitch={pitch} key={pitch} />;
+      return (
+        <Note submitGuess={this.props.submitGuess} pitch={pitch} key={pitch} />
+      );
     });
 
     return <ul className="note-row">{notes}</ul>;

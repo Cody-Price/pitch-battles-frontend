@@ -18,20 +18,20 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <form>
+        <form
+          onSubmit={[Function]}
+        >
           <input
             name="firstName"
             onChange={[Function]}
             placeholder="first name"
             type="text"
-            value=""
           />
           <input
             name="lastName"
             onChange={[Function]}
             placeholder="last name"
             type="text"
-            value=""
           />
           <input
             name="email"
@@ -45,28 +45,26 @@ ShallowWrapper {
             onChange={[Function]}
             placeholder="password"
             type="password"
-            value=""
           />
           <input
             name="passwordTwo"
             onChange={[Function]}
             placeholder="confirm password"
             type="password"
-            value=""
           />
           <section
             className="student-teacher-radio"
           >
             <div
               aria-label="choose student role"
-              className="student-button student"
+              className="student-button 0"
               onClick={[Function]}
             >
               student
             </div>
             <div
               aria-label="choose teacher role"
-              className="teacher-button student"
+              className="teacher-button 0"
               onClick={[Function]}
             >
               teacher
@@ -98,14 +96,12 @@ ShallowWrapper {
               onChange={[Function]}
               placeholder="first name"
               type="text"
-              value=""
             />,
             <input
               name="lastName"
               onChange={[Function]}
               placeholder="last name"
               type="text"
-              value=""
             />,
             <input
               name="email"
@@ -119,28 +115,26 @@ ShallowWrapper {
               onChange={[Function]}
               placeholder="password"
               type="password"
-              value=""
             />,
             <input
               name="passwordTwo"
               onChange={[Function]}
               placeholder="confirm password"
               type="password"
-              value=""
             />,
             <section
               className="student-teacher-radio"
             >
               <div
                 aria-label="choose student role"
-                className="student-button student"
+                className="student-button 0"
                 onClick={[Function]}
               >
                 student
               </div>
               <div
                 aria-label="choose teacher role"
-                className="teacher-button student"
+                className="teacher-button 0"
                 onClick={[Function]}
               >
                 teacher
@@ -153,6 +147,7 @@ ShallowWrapper {
               sign up
             </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -165,7 +160,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "first name",
               "type": "text",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -180,7 +175,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "last name",
               "type": "text",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -210,7 +205,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "password",
               "type": "password",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -225,7 +220,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "confirm password",
               "type": "password",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -239,14 +234,14 @@ ShallowWrapper {
               "children": Array [
                 <div
                   aria-label="choose student role"
-                  className="student-button student"
+                  className="student-button 0"
                   onClick={[Function]}
                 >
                   student
                 </div>,
                 <div
                   aria-label="choose teacher role"
-                  className="teacher-button student"
+                  className="teacher-button 0"
                   onClick={[Function]}
                 >
                   teacher
@@ -263,7 +258,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-label": "choose student role",
                   "children": "student",
-                  "className": "student-button student",
+                  "className": "student-button 0",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -277,7 +272,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-label": "choose teacher role",
                   "children": "teacher",
-                  "className": "teacher-button student",
+                  "className": "teacher-button 0",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -325,20 +320,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <form>
+          <form
+            onSubmit={[Function]}
+          >
             <input
               name="firstName"
               onChange={[Function]}
               placeholder="first name"
               type="text"
-              value=""
             />
             <input
               name="lastName"
               onChange={[Function]}
               placeholder="last name"
               type="text"
-              value=""
             />
             <input
               name="email"
@@ -352,28 +347,26 @@ ShallowWrapper {
               onChange={[Function]}
               placeholder="password"
               type="password"
-              value=""
             />
             <input
               name="passwordTwo"
               onChange={[Function]}
               placeholder="confirm password"
               type="password"
-              value=""
             />
             <section
               className="student-teacher-radio"
             >
               <div
                 aria-label="choose student role"
-                className="student-button student"
+                className="student-button 0"
                 onClick={[Function]}
               >
                 student
               </div>
               <div
                 aria-label="choose teacher role"
-                className="teacher-button student"
+                className="teacher-button 0"
                 onClick={[Function]}
               >
                 teacher
@@ -405,14 +398,12 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="first name"
                 type="text"
-                value=""
               />,
               <input
                 name="lastName"
                 onChange={[Function]}
                 placeholder="last name"
                 type="text"
-                value=""
               />,
               <input
                 name="email"
@@ -426,28 +417,26 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="password"
                 type="password"
-                value=""
               />,
               <input
                 name="passwordTwo"
                 onChange={[Function]}
                 placeholder="confirm password"
                 type="password"
-                value=""
               />,
               <section
                 className="student-teacher-radio"
               >
                 <div
                   aria-label="choose student role"
-                  className="student-button student"
+                  className="student-button 0"
                   onClick={[Function]}
                 >
                   student
                 </div>
                 <div
                   aria-label="choose teacher role"
-                  className="teacher-button student"
+                  className="teacher-button 0"
                   onClick={[Function]}
                 >
                   teacher
@@ -460,6 +449,7 @@ ShallowWrapper {
                 sign up
               </button>,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -472,7 +462,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "first name",
                 "type": "text",
-                "value": "",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -487,7 +477,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "last name",
                 "type": "text",
-                "value": "",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -517,7 +507,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "password",
                 "type": "password",
-                "value": "",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -532,7 +522,7 @@ ShallowWrapper {
                 "onChange": [Function],
                 "placeholder": "confirm password",
                 "type": "password",
-                "value": "",
+                "value": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -546,14 +536,14 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     aria-label="choose student role"
-                    className="student-button student"
+                    className="student-button 0"
                     onClick={[Function]}
                   >
                     student
                   </div>,
                   <div
                     aria-label="choose teacher role"
-                    className="teacher-button student"
+                    className="teacher-button 0"
                     onClick={[Function]}
                   >
                     teacher
@@ -570,7 +560,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-label": "choose student role",
                     "children": "student",
-                    "className": "student-button student",
+                    "className": "student-button 0",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -584,7 +574,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-label": "choose teacher role",
                     "children": "teacher",
-                    "className": "teacher-button student",
+                    "className": "teacher-button 0",
                     "onClick": [Function],
                   },
                   "ref": null,

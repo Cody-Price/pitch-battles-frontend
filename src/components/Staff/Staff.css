@@ -23,13 +23,35 @@
 
 .clef {
   position: absolute;
-  background: url("./staff/trebleclef.png");
   top: 25px;
   left: 52px;
-  height: 117px;
-  width: 48px;
+}
+
+.clef.treble {
+  background: url("./staff/trebleclef.png");
   background-size: cover;
   image-rendering: pixelated;
+  height: 117px;
+  width: 48px;
+}
+
+.clef.bass {
+  background: url("./staff/bassclef.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  height: 80px;
+  width: 80px;
+  left: 36px;
+}
+
+.clef.alto {
+  background: url("./staff/altoclef.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  top: 27px;
+  left: 40px;
+  height: 96px;
+  width: 64px;
 }
 
 .pitch {
@@ -114,10 +136,11 @@
 }
 
 .pitch.below-space-two {
-  background: url("./staff/notehead-two-ledger-below-space.png");
+  background: url("./staff/notehead-one-ledger-above.png");
+  transform: rotate(180deg);
   top: 145px;
   width: 39px;
-  height: 45px;
+  height: 21px;
   image-rendering: pixelated;
   background-size: cover;
 }
@@ -136,6 +159,34 @@
   top: -50px;
   width: 39px;
   height: 55px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-line-two {
+  background: url("./staff/notehead-two-ledger-below.png");
+  top: 145px;
+  width: 39px;
+  height: 34px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.below-space-three {
+  background: url("./staff/notehead-two-ledger-below-space.png");
+  top: 145px;
+  width: 39px;
+  height: 50px;
+  image-rendering: pixelated;
+  background-size: cover;
+}
+
+.pitch.above-line-two {
+  background: url("./staff/notehead-two-ledger-below.png");
+  transform: rotate(180deg);
+  top: -26px;
+  width: 39px;
+  height: 34px;
   image-rendering: pixelated;
   background-size: cover;
 }

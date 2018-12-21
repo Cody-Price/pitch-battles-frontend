@@ -192,7 +192,7 @@ export const instruments = [
       },
       {
         pitch: "b",
-        position: "below-space-one",
+        position: "below-space-two",
         level: 2
       },
       {
@@ -288,12 +288,12 @@ export const instruments = [
       },
       {
         pitch: "a",
-        position: "above-space-two",
+        position: "above-line-one",
         level: 4
       },
       {
         pitch: "b",
-        position: "above-line-two",
+        position: "above-space-two",
         level: 4
       },
       {
@@ -440,12 +440,12 @@ export const instruments = [
       },
       {
         pitch: "a",
-        position: "above-space-two",
+        position: "above-line-one",
         level: 4
       },
       {
         pitch: "b",
-        position: "above-line-two",
+        position: "above-space-two",
         level: 4
       },
       {
@@ -754,7 +754,7 @@ export const instruments = [
       },
       {
         pitch: "e",
-        position: "aboce-line-two",
+        position: "above-line-two",
         level: 4
       }
     ]
@@ -836,8 +836,8 @@ export const instruments = [
     ]
   },
   {
-    instrument: 'violin',
-    clef: 'treble',
+    instrument: "violin",
+    clef: "treble",
     pitches: [
       {
         pitch: "d",
@@ -909,12 +909,11 @@ export const instruments = [
         position: "line-five",
         level: 4
       }
-    ],
-    
+    ]
   },
   {
-    instrument: 'viola',
-    clef: 'alto',
+    instrument: "viola",
+    clef: "alto",
     pitches: [
       {
         pitch: "d",
@@ -989,8 +988,8 @@ export const instruments = [
     ]
   },
   {
-    instrument: 'cello',
-    clef: 'bass',
+    instrument: "cello",
+    clef: "bass",
     pitches: [
       {
         pitch: "d",
@@ -1065,8 +1064,8 @@ export const instruments = [
     ]
   },
   {
-    instrument: 'string bass',
-    clef: 'bass',
+    instrument: "string bass",
+    clef: "bass",
     pitches: [
       {
         pitch: "d",
@@ -1287,9 +1286,9 @@ export const instruments = [
       },
       {
         pitch: "c",
-        position: "space-four",
+        position: "space-three",
         level: 4
       }
     ]
-  },
+  }
 ];
