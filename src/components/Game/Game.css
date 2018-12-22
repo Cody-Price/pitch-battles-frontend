@@ -4,9 +4,9 @@
 }
 
 .game-area-wrapper {
-  background: url(./images/giantbg.png);
+  background: url(./images/snow-bg.png);
   max-width: 1500px;
-  height: 750px;
+  height: 900px;
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: pixelated;
