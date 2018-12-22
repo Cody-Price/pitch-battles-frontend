@@ -43,8 +43,7 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    this.setupGame();
-    this.startTimer();
+    this.kickOff();
     window.addEventListener("keyup", this.submitGuess);
   }
 
@@ -53,6 +52,11 @@ class Game extends Component {
   }
 
   // -- GAME SETUP -- //
+
+  kickOff() {
+    this.setupGame();
+    this.startTimer();
+  }
 
   setupGame = () => {
     const instrument = this.findInstrument();
@@ -149,13 +153,11 @@ class Game extends Component {
         event.key === "f" ||
         event.key === "g")
     ) {
-      console.log("key");
       guess = event.key;
     } else if (event) {
       return;
     } else {
       guess = input;
-      console.log("click", event);
     }
 
     if (guess === this.state.currentPitch.pitch) {
