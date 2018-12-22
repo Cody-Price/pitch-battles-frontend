@@ -4,7 +4,7 @@
 }
 
 .game-area-wrapper {
-  background: url(./giantbg.png);
+  background: url(./images/giantbg.png);
   max-width: 1500px;
   height: 750px;
   background-repeat: no-repeat;
@@ -24,8 +24,7 @@
 
 .avatar-border {
   position: absolute;
-  background: #8ab6e2;
-  /* background: url(./avatar-backer.png); */
+  background: url(./images/offwhite-avatar-backer.png);
   background-size: cover;
   height: 80px;
   width: 80px;
@@ -145,7 +144,7 @@
 }
 
 .timer-frame {
-  background: url("./clockframe.png");
+  background: url("./images/clockframe.png");
   image-rendering: pixelated;
 
   background-size: cover;
