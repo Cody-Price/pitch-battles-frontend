@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
+import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
+
 import Game from "../Game/Game";
-// import Landing from "../Landing/Landing";
+import Landing from "../Landing/Landing";
 
 import "./App.css";
 
@@ -9,32 +11,87 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: undefined
+      user: undefined,
+      webToken: undefined,
+      newAcheivements: [],
+      newFastestTimes: [],
+      fetchError: false
     };
   }
 
-  // signUpUser = async body => {
-  //   console.log(body);
-  //   const url = "https://pitch-battles-api.herokuapp.com/api/v1/users";
-  //   const options = {
-  //     body: JSON.stringify(body),
-  //     method: "POST",
-  //     mode: "cors",
-  //     headers: {
-  //       "Content-Type": "application/json; charset-uts-8"
-  //     }
-  //   };
-  //   const response = await fetch(url, options);
+  // -- LOGIN AND SIGNUP -- //
 
-  //   const parseReponse = await response.json();
-  //   // console.log(parseReponse)
-  // };
+  loginUser = async body => {
+    try {
+      const data = await login(body);
+      this.setState({
+        webToken: data.access_token,
+        user: data.user,
+        fetchError: false
+      });
+      console.log(data);
+    } catch (error) {
+      this.setError();
+      console.log(error);
+    }
+  };
+
+  signUpUser = async body => {
+    if (body.role === "student") {
+      body.role = 0;
+    } else {
+      body.role = 1;
+    }
+
+    try {
+      const data = await signUp(body);
+      console.log(data);
+      this.setState({
+        fetchError: false
+      });
+    } catch (error) {
+      this.setError();
+      console.log(error);
+    }
+  };
+
+  // -- PROCESS GAME RESULTS -- //
+
+  clearAchievmentsAndTimes = () => {
+    this.setState({
+      newAcheivements: [],
+      newFastestTimes: []
+    });
+  };
+
+  processGame = async update => {
+    if (!this.state.user) {
+      return;
+    }
+    try {
+      const data = await postGameUserUpdate(update, this.state.user);
+      this.setState({
+        fetchError: false
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      this.setError();
+    }
+  };
+
+  // -- FETCH ERROR HANDLING -- //
+  setError = () => {
+    this.setState({
+      fetchError: true
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        {/* <Landing signUpUser={this.signUpUser} /> */}
-        <Game instrument="cello" />
+        {/* <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} /> */}
+        <Game processGame={this.processGame} instrument="horn" />
       </div>
     );
   }
