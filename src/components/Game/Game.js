@@ -92,13 +92,13 @@ class Game extends Component {
 
   startTimer = () => {
     this.setState({
-      currentTime: this.state.currentTime / 1000,
+      currentTime: this.state.milliseconds / 1000,
       start: Date.now() - this.state.currentTime,
       running: true
     });
+
     this.timer = setInterval(() => {
       if (!this.state.running) {
-        console.log("notrunning");
         clearInterval(this.timer);
         return;
       }
@@ -108,8 +108,6 @@ class Game extends Component {
       });
     }, 200);
   };
-
-  resumeTimer = () => {};
 
   resetGame = () => {
     this.setState(
@@ -277,14 +275,12 @@ class Game extends Component {
     if (this.state.currentLevel === 4) {
       this.setState({
         finalVictory: true,
-        playerStatus: "victory",
-        currentTime: "-"
+        playerStatus: "victory"
       });
     } else {
       this.setState({
         victory: true,
-        playerStatus: "victory",
-        currentTime: "-"
+        playerStatus: "victory"
       });
     }
 
@@ -303,8 +299,7 @@ class Game extends Component {
     this.setState(
       {
         gameOver: true,
-        running: false,
-        currentTime: "-"
+        running: false
       },
       this.processGame
     );
@@ -364,7 +359,10 @@ class Game extends Component {
                 character="player-hearts"
               />
               <div className="timer-frame">
-                <h3 className="timer">{this.state.currentTime}</h3>
+                {this.state.running && (
+                  <h3 className="timer">{this.state.currentTime}</h3>
+                )}
+                {!this.state.running && <h3 className="timer">-</h3>}
               </div>
               <Hearts
                 hearts={this.state.monsterHearts}
