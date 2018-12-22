@@ -1,279 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login should render like snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <form
-          onSubmit={[Function]}
-        >
-          <input
-            name="email"
-            onChange={[Function]}
-            placeholder="email"
-            type="email"
-            value=""
-          />
-          <input
-            name="password"
-            onChange={[Function]}
-            placeholder="password"
-            type="password"
-            value=""
-          />
-          <button>
-            Login
-          </button>
-        </form>,
-        <button>
-          Sign Up
-        </button>,
-      ],
-      "className": "login-form undefined",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <input
-              name="email"
-              onChange={[Function]}
-              placeholder="email"
-              type="email"
-              value=""
-            />,
-            <input
-              name="password"
-              onChange={[Function]}
-              placeholder="password"
-              type="password"
-              value=""
-            />,
-            <button>
-              Login
-            </button>,
-          ],
-          "onSubmit": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "email",
-              "onChange": [Function],
-              "placeholder": "email",
-              "type": "email",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "password",
-              "onChange": [Function],
-              "placeholder": "password",
-              "type": "password",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Login",
-            },
-            "ref": null,
-            "rendered": "Login",
-            "type": "button",
-          },
-        ],
-        "type": "form",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Sign Up",
-          "onClick": undefined,
-        },
-        "ref": null,
-        "rendered": "Sign Up",
-        "type": "button",
-      },
-    ],
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <form
-            onSubmit={[Function]}
-          >
-            <input
-              name="email"
-              onChange={[Function]}
-              placeholder="email"
-              type="email"
-              value=""
-            />
-            <input
-              name="password"
-              onChange={[Function]}
-              placeholder="password"
-              type="password"
-              value=""
-            />
-            <button>
-              Login
-            </button>
-          </form>,
-          <button>
-            Sign Up
-          </button>,
-        ],
-        "className": "login-form undefined",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <input
-                name="email"
-                onChange={[Function]}
-                placeholder="email"
-                type="email"
-                value=""
-              />,
-              <input
-                name="password"
-                onChange={[Function]}
-                placeholder="password"
-                type="password"
-                value=""
-              />,
-              <button>
-                Login
-              </button>,
-            ],
-            "onSubmit": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "email",
-                "onChange": [Function],
-                "placeholder": "email",
-                "type": "email",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "password",
-                "onChange": [Function],
-                "placeholder": "password",
-                "type": "password",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Login",
-              },
-              "ref": null,
-              "rendered": "Login",
-              "type": "button",
-            },
-          ],
-          "type": "form",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Sign Up",
-            "onClick": undefined,
-          },
-          "ref": null,
-          "rendered": "Sign Up",
-          "type": "button",
-        },
-      ],
-      "type": "section",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<section
+  className="login-form undefined"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="email"
+      onChange={[Function]}
+      placeholder="email"
+      type="email"
+      value=""
+    />
+    <input
+      name="password"
+      onChange={[Function]}
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <button>
+      Login
+    </button>
+  </form>
+  <button>
+    Sign Up
+  </button>
+</section>
 `;

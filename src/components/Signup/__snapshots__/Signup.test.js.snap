@@ -1,641 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Signup should render like snapshot 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Signup />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <form
-          onSubmit={[Function]}
-        >
-          <input
-            name="first_name"
-            onChange={[Function]}
-            placeholder="first name"
-            type="text"
-          />
-          <input
-            name="last_name"
-            onChange={[Function]}
-            placeholder="last name"
-            type="text"
-            value=""
-          />
-          <input
-            name="email"
-            onChange={[Function]}
-            placeholder="email"
-            type="email"
-            value=""
-          />
-          <input
-            name="passwordOne"
-            onChange={[Function]}
-            placeholder="password"
-            type="password"
-          />
-          <input
-            name="passwordTwo"
-            onChange={[Function]}
-            placeholder="confirm password"
-            type="password"
-          />
-          <section
-            className="student-teacher-radio"
-          >
-            <div
-              aria-label="choose student role"
-              className="student-button 0"
-              onClick={[Function]}
-            >
-              student
-            </div>
-            <div
-              aria-label="choose teacher role"
-              className="teacher-button 0"
-              onClick={[Function]}
-            >
-              teacher
-            </div>
-          </section>
-          <button
-            className="sign-up-button"
-            type="submit"
-          >
-            sign up
-          </button>
-        </form>,
-        <button>
-          Login
-        </button>,
-      ],
-      "className": "signup-form undefined",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <input
-              name="first_name"
-              onChange={[Function]}
-              placeholder="first name"
-              type="text"
-            />,
-            <input
-              name="last_name"
-              onChange={[Function]}
-              placeholder="last name"
-              type="text"
-              value=""
-            />,
-            <input
-              name="email"
-              onChange={[Function]}
-              placeholder="email"
-              type="email"
-              value=""
-            />,
-            <input
-              name="passwordOne"
-              onChange={[Function]}
-              placeholder="password"
-              type="password"
-            />,
-            <input
-              name="passwordTwo"
-              onChange={[Function]}
-              placeholder="confirm password"
-              type="password"
-            />,
-            <section
-              className="student-teacher-radio"
-            >
-              <div
-                aria-label="choose student role"
-                className="student-button 0"
-                onClick={[Function]}
-              >
-                student
-              </div>
-              <div
-                aria-label="choose teacher role"
-                className="teacher-button 0"
-                onClick={[Function]}
-              >
-                teacher
-              </div>
-            </section>,
-            <button
-              className="sign-up-button"
-              type="submit"
-            >
-              sign up
-            </button>,
-          ],
-          "onSubmit": [Function],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "first_name",
-              "onChange": [Function],
-              "placeholder": "first name",
-              "type": "text",
-              "value": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "last_name",
-              "onChange": [Function],
-              "placeholder": "last name",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "email",
-              "onChange": [Function],
-              "placeholder": "email",
-              "type": "email",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "passwordOne",
-              "onChange": [Function],
-              "placeholder": "password",
-              "type": "password",
-              "value": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "passwordTwo",
-              "onChange": [Function],
-              "placeholder": "confirm password",
-              "type": "password",
-              "value": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  aria-label="choose student role"
-                  className="student-button 0"
-                  onClick={[Function]}
-                >
-                  student
-                </div>,
-                <div
-                  aria-label="choose teacher role"
-                  className="teacher-button 0"
-                  onClick={[Function]}
-                >
-                  teacher
-                </div>,
-              ],
-              "className": "student-teacher-radio",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-label": "choose student role",
-                  "children": "student",
-                  "className": "student-button 0",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "student",
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-label": "choose teacher role",
-                  "children": "teacher",
-                  "className": "teacher-button 0",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "teacher",
-                "type": "div",
-              },
-            ],
-            "type": "section",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "sign up",
-              "className": "sign-up-button",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": "sign up",
-            "type": "button",
-          },
-        ],
-        "type": "form",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Login",
-          "onClick": undefined,
-        },
-        "ref": null,
-        "rendered": "Login",
-        "type": "button",
-      },
-    ],
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <form
-            onSubmit={[Function]}
-          >
-            <input
-              name="first_name"
-              onChange={[Function]}
-              placeholder="first name"
-              type="text"
-            />
-            <input
-              name="last_name"
-              onChange={[Function]}
-              placeholder="last name"
-              type="text"
-              value=""
-            />
-            <input
-              name="email"
-              onChange={[Function]}
-              placeholder="email"
-              type="email"
-              value=""
-            />
-            <input
-              name="passwordOne"
-              onChange={[Function]}
-              placeholder="password"
-              type="password"
-            />
-            <input
-              name="passwordTwo"
-              onChange={[Function]}
-              placeholder="confirm password"
-              type="password"
-            />
-            <section
-              className="student-teacher-radio"
-            >
-              <div
-                aria-label="choose student role"
-                className="student-button 0"
-                onClick={[Function]}
-              >
-                student
-              </div>
-              <div
-                aria-label="choose teacher role"
-                className="teacher-button 0"
-                onClick={[Function]}
-              >
-                teacher
-              </div>
-            </section>
-            <button
-              className="sign-up-button"
-              type="submit"
-            >
-              sign up
-            </button>
-          </form>,
-          <button>
-            Login
-          </button>,
-        ],
-        "className": "signup-form undefined",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <input
-                name="first_name"
-                onChange={[Function]}
-                placeholder="first name"
-                type="text"
-              />,
-              <input
-                name="last_name"
-                onChange={[Function]}
-                placeholder="last name"
-                type="text"
-                value=""
-              />,
-              <input
-                name="email"
-                onChange={[Function]}
-                placeholder="email"
-                type="email"
-                value=""
-              />,
-              <input
-                name="passwordOne"
-                onChange={[Function]}
-                placeholder="password"
-                type="password"
-              />,
-              <input
-                name="passwordTwo"
-                onChange={[Function]}
-                placeholder="confirm password"
-                type="password"
-              />,
-              <section
-                className="student-teacher-radio"
-              >
-                <div
-                  aria-label="choose student role"
-                  className="student-button 0"
-                  onClick={[Function]}
-                >
-                  student
-                </div>
-                <div
-                  aria-label="choose teacher role"
-                  className="teacher-button 0"
-                  onClick={[Function]}
-                >
-                  teacher
-                </div>
-              </section>,
-              <button
-                className="sign-up-button"
-                type="submit"
-              >
-                sign up
-              </button>,
-            ],
-            "onSubmit": [Function],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "first_name",
-                "onChange": [Function],
-                "placeholder": "first name",
-                "type": "text",
-                "value": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "last_name",
-                "onChange": [Function],
-                "placeholder": "last name",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "email",
-                "onChange": [Function],
-                "placeholder": "email",
-                "type": "email",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "passwordOne",
-                "onChange": [Function],
-                "placeholder": "password",
-                "type": "password",
-                "value": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "name": "passwordTwo",
-                "onChange": [Function],
-                "placeholder": "confirm password",
-                "type": "password",
-                "value": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <div
-                    aria-label="choose student role"
-                    className="student-button 0"
-                    onClick={[Function]}
-                  >
-                    student
-                  </div>,
-                  <div
-                    aria-label="choose teacher role"
-                    className="teacher-button 0"
-                    onClick={[Function]}
-                  >
-                    teacher
-                  </div>,
-                ],
-                "className": "student-teacher-radio",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "aria-label": "choose student role",
-                    "children": "student",
-                    "className": "student-button 0",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "student",
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "aria-label": "choose teacher role",
-                    "children": "teacher",
-                    "className": "teacher-button 0",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "teacher",
-                  "type": "div",
-                },
-              ],
-              "type": "section",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "sign up",
-                "className": "sign-up-button",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": "sign up",
-              "type": "button",
-            },
-          ],
-          "type": "form",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Login",
-            "onClick": undefined,
-          },
-          "ref": null,
-          "rendered": "Login",
-          "type": "button",
-        },
-      ],
-      "type": "section",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<section
+  className="signup-form undefined"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="first_name"
+      onChange={[Function]}
+      placeholder="first name"
+      type="text"
+    />
+    <input
+      name="last_name"
+      onChange={[Function]}
+      placeholder="last name"
+      type="text"
+      value=""
+    />
+    <input
+      name="email"
+      onChange={[Function]}
+      placeholder="email"
+      type="email"
+      value=""
+    />
+    <input
+      name="passwordOne"
+      onChange={[Function]}
+      placeholder="password"
+      type="password"
+    />
+    <input
+      name="passwordTwo"
+      onChange={[Function]}
+      placeholder="confirm password"
+      type="password"
+    />
+    <section
+      className="student-teacher-radio"
+    >
+      <div
+        aria-label="choose student role"
+        className="student-button 0"
+        onClick={[Function]}
+      >
+        student
+      </div>
+      <div
+        aria-label="choose teacher role"
+        className="teacher-button 0"
+        onClick={[Function]}
+      >
+        teacher
+      </div>
+    </section>
+    <button
+      className="sign-up-button"
+      type="submit"
+    >
+      sign up
+    </button>
+  </form>
+  <button>
+    Login
+  </button>
+</section>
 `;

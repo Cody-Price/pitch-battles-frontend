@@ -99,7 +99,6 @@ class Game extends Component {
 
     this.timer = setInterval(() => {
       if (!this.state.running) {
-        console.log("notrunning");
         clearInterval(this.timer);
         return;
       }
@@ -300,8 +299,7 @@ class Game extends Component {
     this.setState(
       {
         gameOver: true,
-        running: false,
-        currentTime: "-"
+        running: false
       },
       this.processGame
     );
