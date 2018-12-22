@@ -310,13 +310,12 @@ class Game extends Component {
 
   processGame = () => {
     // NEEDS LOGIC //
-    const results = {
-      times: this.state.times,
-      perfectScores: this.state.perfectScores
-    };
-
-    const response = postGameAnalysis(this.props.user);
-    this.props.processGame(response);
+    // const results = {
+    //   times: this.state.times,
+    //   perfectScores: this.state.perfectScores
+    // };
+    // const response = postGameAnalysis(this.props.user);
+    // this.props.processGame(response);
   };
 
   // -- MODAL HANDLING -- //

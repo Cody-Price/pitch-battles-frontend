@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
-import Landing from "../Landing/Landing";
+// import Landing from "../Landing/Landing";
 
 import "./App.css";
 

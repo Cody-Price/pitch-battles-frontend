@@ -3,4 +3,6 @@ export const postGameAnalysis = (user, results) => {
     update: false,
     changes: []
   };
+
+  return response;
 };
