@@ -13,7 +13,7 @@ import "./Game.css";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
-import { postGameAnalysis } from "../../utilities/postGameAnalysis";
+// import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
   constructor() {
