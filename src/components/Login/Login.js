@@ -22,6 +22,7 @@ class Login extends Component {
   render() {
     return (
       <section className={`login-form ${this.props.status}`}>
+        <h4 className="login-form-label">login</h4>
         <form
           className="login-form-form"
           onSubmit={e => {

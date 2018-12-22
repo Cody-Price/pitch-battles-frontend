@@ -43,6 +43,8 @@ class Signup extends Component {
   render() {
     return (
       <section className={`signup-form ${this.props.status}`}>
+        <h4 className="signup-form-label">signup</h4>
+
         <form className="signup-form-form" onSubmit={e => this.handleSubmit(e)}>
           <div className="fn-icon name-icon" />
           <input
@@ -87,9 +89,10 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.passwordTwo}
           />
-          <p className="role-label">I am a:</p>
 
           <section className="student-teacher-radio">
+            <p className="role-label">I am a</p>
+
             <div
               aria-label="choose student role"
               className={`student-button ${this.state.role}`}

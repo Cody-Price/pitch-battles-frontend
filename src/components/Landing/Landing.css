@@ -37,7 +37,6 @@
   image-rendering: pixelated;
   overflow: hidden;
   position: relative;
-  border-style: dashed;
   z-index: 2;
 }
 

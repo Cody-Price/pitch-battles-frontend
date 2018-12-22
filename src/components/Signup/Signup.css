@@ -13,6 +13,10 @@
   left: 0px;
 }
 
+.signup-form-label {
+  margin: 0.5rem 0;
+}
+
 .signup-form input {
   display: block;
   margin: 0.7rem auto;
@@ -24,21 +28,24 @@
 
 .role-label {
   font-size: 1.1rem;
-
-  margin: 1rem 0 0.4rem;
+  height: 16px;
+  margin: 0;
 }
 
 .student-teacher-radio {
   display: flex;
-  width: 150px;
+  /* width: 150px; */
   justify-content: space-between;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.5rem;
+  height: 16px;
+  padding: 0 3rem;
 }
 
 .student-button,
 .teacher-button {
   font-size: 1.1rem;
   font-family: "chronotype";
+  height: 16px;
 }
 
 .student-button:hover,
@@ -56,7 +63,7 @@
 }
 
 .return-to-login-button {
-  margin: 1rem 0 0 0;
+  margin: 1.5rem 0 0 0;
 }
 
 .signup-form button:hover {
