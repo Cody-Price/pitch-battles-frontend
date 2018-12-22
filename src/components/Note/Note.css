@@ -3,3 +3,11 @@
   font-size: 2rem;
   margin: 0 0.8rem 0 0.8rem;
 }
+
+.note-name:hover {
+  cursor: pointer;
+}
+
+.note-name:focus {
+  outline: none;
+}

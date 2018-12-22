@@ -13,6 +13,7 @@ import "./Game.css";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
+// import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
   constructor() {
@@ -21,7 +22,6 @@ class Game extends Component {
     this.state = {
       clef: "treble",
       currentLevel: 1,
-      userModal: false,
       playerHearts: [0, 1, 2],
       monsterHearts: [],
       currentTime: 0,
@@ -36,13 +36,14 @@ class Game extends Component {
       gameOver: false,
       victory: false,
       finalVictory: false,
-      times: []
+      times: [],
+      perfectScores: [],
+      userModal: false
     };
   }
 
   componentDidMount() {
-    this.setupGame();
-    this.startTimer();
+    this.kickOff();
     window.addEventListener("keyup", this.submitGuess);
   }
 
@@ -51,6 +52,11 @@ class Game extends Component {
   }
 
   // -- GAME SETUP -- //
+
+  kickOff() {
+    this.setupGame();
+    this.startTimer();
+  }
 
   setupGame = () => {
     const instrument = this.findInstrument();
@@ -66,8 +72,7 @@ class Game extends Component {
         monsterStatus: "idle",
         gameOver: false,
         victory: false,
-        finalVictory: false,
-        times: []
+        finalVictory: false
       },
       this.setPitch(monsterHearts)
     );
@@ -109,7 +114,9 @@ class Game extends Component {
   resetGame = () => {
     this.setState(
       {
-        currentLevel: 1
+        currentLevel: 1,
+        perfectScores: [],
+        times: []
       },
       this.setupGame
     );
@@ -146,13 +153,11 @@ class Game extends Component {
         event.key === "f" ||
         event.key === "g")
     ) {
-      console.log("key");
       guess = event.key;
     } else if (event) {
       return;
     } else {
       guess = input;
-      console.log("click", event);
     }
 
     if (guess === this.state.currentPitch.pitch) {
@@ -266,24 +271,53 @@ class Game extends Component {
     });
   };
 
-  // -- END LEVEL -- //
-
-  startVictory = () => {
-    this.setState({
-      monsterStatus: "dead"
-    });
-  };
+  // -- END LEVEL/GAME -- //
 
   victory = () => {
     if (this.state.currentLevel === 4) {
-      this.setState({ finalVictory: true, playerStatus: "victory" });
+      this.setState({
+        finalVictory: true,
+        playerStatus: "victory",
+        currentTime: "-"
+      });
     } else {
-      this.setState({ victory: true, playerStatus: "victory" });
+      this.setState({
+        victory: true,
+        playerStatus: "victory",
+        currentTime: "-"
+      });
     }
+
+    this.checkPerfect();
   };
 
+  checkPerfect() {
+    if (this.state.playerHearts.length === 3) {
+      this.setState({
+        perfectScores: [...this.state.perfectScores, this.state.currentLevel]
+      });
+    }
+  }
+
   gameOver = () => {
-    this.setState({});
+    this.setState(
+      {
+        gameOver: true,
+        running: false,
+        currentTime: "-"
+      },
+      this.processGame
+    );
+  };
+
+  processGame = () => {
+    // NEEDS LOGIC //
+    // const results = {
+    //   times: this.state.times,
+    //   perfectScores: this.state.perfectScores
+    // };
+    // const response = postGameAnalysis(this.props.user);
+    // this.props.processGame(response);
   };
 
   // -- MODAL HANDLING -- //
@@ -311,7 +345,7 @@ class Game extends Component {
   };
 
   render() {
-    const avatar = "10";
+    const avatar = "7";
     return (
       <main className="game-main">
         <div className="game-area-wrapper">

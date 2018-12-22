@@ -27,10 +27,12 @@ class Signup extends Component {
   };
 
   handleSubmit = e => {
+    // ADD VALIDATION //
+    // Unique Email, passwords match, passwords min 6 chars //
     e.preventDefault();
     this.props.signUpUser({
-      first_name: this.state.firstName,
-      last_name: this.state.lastName,
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
       email: this.state.email,
       password: this.state.passwordOne,
       password_confirmation: this.state.passwordTwo,
@@ -45,16 +47,16 @@ class Signup extends Component {
           <input
             placeholder="first name"
             type="text"
-            name="firstName"
+            name="first_name"
             onChange={this.handleChange}
-            value={this.state.firstName}
+            value={this.state.first_ame}
           />
           <input
             placeholder="last name"
             type="text"
-            name="lastName"
+            name="last_name"
             onChange={this.handleChange}
-            value={this.state.lastName}
+            value={this.state.last_name}
           />
           <input
             placeholder="email"

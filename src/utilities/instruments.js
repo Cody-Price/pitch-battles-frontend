@@ -639,7 +639,7 @@ export const instruments = [
       {
         pitch: "d",
         position: "line-four",
-        level: 1
+        level: 2
       },
       {
         pitch: "e",
@@ -654,7 +654,7 @@ export const instruments = [
       {
         pitch: "c",
         position: "below-line-one",
-        level: 2
+        level: 3
       },
       {
         pitch: "e",

@@ -1,0 +1,55 @@
+.game-over {
+  background: url("../Staff/staff/staff-frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  width: 345px;
+  height: 330px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.game-over-text {
+  text-align: center;
+  font-family: "chronotype";
+  font-size: 3rem;
+  animation: slide-in-victory 0.1s linear;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.victory-screen p {
+  text-align: center;
+  font-family: "chronotype";
+  width: 313px;
+  padding: 1rem;
+  font-size: 2rem;
+  animation: slide-in-victory 0.1s linear;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+.victory-screen .level-time {
+  top: 150px;
+}
+
+.victory-screen .total-time {
+  position: absolute;
+  top: 200px;
+}
+
+@keyframes slide-in-victory {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0;
+    right: 0;
+  }
+}

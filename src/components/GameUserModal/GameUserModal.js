@@ -12,7 +12,7 @@ class GameUserModal extends Component {
         <button onClick={this.props.reset} className="reset-game-button">
           reset
         </button>
-        <button className="exit-game-button">exit game</button>
+        <button className="exit-game-button">exit</button>
       </aside>
     );
   }

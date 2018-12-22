@@ -17,7 +17,6 @@ class Landing extends Component {
     this.setState({ login: !this.state.login, signup: !this.state.signup });
   };
 
-
   render() {
     return (
       <main>
@@ -26,7 +25,11 @@ class Landing extends Component {
           <div className="logo" />
         </header>
         <section className="login-signup-container">
-          <Login landingChange={this.landingChange} status={this.state.login} />
+          <Login
+            loginUser={this.props.loginUser}
+            landingChange={this.landingChange}
+            status={this.state.login}
+          />
           <Signup
             landingChange={this.landingChange}
             status={this.state.signup}

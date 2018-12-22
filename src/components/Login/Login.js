@@ -14,10 +14,19 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.loginUser(this.state);
+  };
+
   render() {
     return (
       <section className={`login-form ${this.props.status}`}>
-        <form>
+        <form
+          onSubmit={e => {
+            this.handleSubmit(e);
+          }}
+        >
           <input
             placeholder="email"
             type="email"

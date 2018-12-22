@@ -5,7 +5,7 @@ class GameOver extends Component {
   render() {
     return (
       <section className="game-over">
-        <div />
+        <h4 className="game-over-text">GAME OVER</h4>
       </section>
     );
   }
