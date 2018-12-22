@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <form>
+        <form
+          onSubmit={[Function]}
+        >
           <input
             name="email"
             onChange={[Function]}
@@ -69,6 +71,7 @@ ShallowWrapper {
               Login
             </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -138,7 +141,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <form>
+          <form
+            onSubmit={[Function]}
+          >
             <input
               name="email"
               onChange={[Function]}
@@ -189,6 +194,7 @@ ShallowWrapper {
                 Login
               </button>,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
