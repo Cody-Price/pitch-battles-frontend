@@ -19,10 +19,15 @@ class Landing extends Component {
 
   render() {
     return (
-      <main>
-        <header>
-          <h1 className="game-title">Pitch Battles</h1>
+      <main className="landing-page">
+        <div className="animated-landing-backer" />
+
+        <header className="landing-page-header">
           <div className="logo" />
+          <h1 className="game-title">
+            Pitch
+            <br /> Battles
+          </h1>
         </header>
         <section className="login-signup-container">
           <Login

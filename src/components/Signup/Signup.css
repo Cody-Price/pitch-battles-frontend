@@ -2,9 +2,11 @@
   position: absolute;
   width: 300px;
   left: 300px;
-  margin: auto;
+  margin: 1.2rem auto;
   transition: 0.3s;
   top: 0;
+  font-family: "chronotype";
+  font-size: 1.3rem;
 }
 
 .signup-form.true {
@@ -13,7 +15,17 @@
 
 .signup-form input {
   display: block;
-  margin: 1rem auto;
+  margin: 0.7rem auto;
+  font-family: "chronotype";
+  font-size: 1.1rem;
+  padding-left: 1.6rem;
+  padding-top: 4px;
+}
+
+.role-label {
+  font-size: 1.1rem;
+
+  margin: 1rem 0 0.4rem;
 }
 
 .student-teacher-radio {
@@ -25,7 +37,8 @@
 
 .student-button,
 .teacher-button {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
+  font-family: "chronotype";
 }
 
 .student-button:hover,
@@ -33,11 +46,72 @@
   cursor: pointer;
 }
 
-.sign-up-button {
-  margin-bottom: 1rem;
-  border-radius: 50%;
+.sign-up-button,
+.return-to-login-button {
+  margin: 0.6rem 0;
+  font-family: "chronotype";
+  font-size: 1.1rem;
+  padding-top: 4px;
+  border-radius: 1px;
+}
+
+.return-to-login-button {
+  margin: 1rem 0 0 0;
 }
 
 .signup-form button:hover {
   cursor: pointer;
+}
+
+.signup-form-form {
+  position: relative;
+}
+
+.name-icon {
+  position: absolute;
+  background: url(../Landing/images/user.png);
+  height: 16px;
+  width: 16px;
+  background-size: cover;
+  image-rendering: pixelated;
+  left: 58px;
+  top: 3px;
+}
+
+.ln-icon {
+  top: 38px;
+}
+
+.email-icon {
+  position: absolute;
+  background: url(../Landing/images/mail.png);
+  width: 17px;
+  height: 17px;
+  background-size: cover;
+  image-rendering: pixelated;
+  left: 56px;
+  top: 71px;
+}
+
+.pw-icon {
+  position: absolute;
+  background: url(../Landing/images/lock.png);
+  width: 13px;
+  height: 16px;
+  background-size: cover;
+  image-rendering: pixelated;
+  left: 58px;
+  top: 107px;
+}
+
+.pw2-icon {
+  top: 141px;
+}
+
+.student-button.student {
+  text-decoration: underline;
+}
+
+.teacher-button.teacher {
+  text-decoration: underline;
 }

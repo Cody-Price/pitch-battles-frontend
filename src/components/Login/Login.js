@@ -23,10 +23,12 @@ class Login extends Component {
     return (
       <section className={`login-form ${this.props.status}`}>
         <form
+          className="login-form-form"
           onSubmit={e => {
             this.handleSubmit(e);
           }}
         >
+          <div className="login-email-icon" />
           <input
             placeholder="email"
             type="email"
@@ -34,6 +36,7 @@ class Login extends Component {
             onChange={this.handleChange}
             value={this.state.email}
           />
+          <div className="login-pw-icon" />
           <input
             placeholder="password"
             type="password"
@@ -41,9 +44,14 @@ class Login extends Component {
             onChange={this.handleChange}
             value={this.state.password}
           />
-          <button>Login</button>
+          <button className="login-form-button">login</button>
         </form>
-        <button onClick={this.props.landingChange}>Sign Up</button>
+        <button
+          className="signup-form-switch-button"
+          onClick={this.props.landingChange}
+        >
+          sign up
+        </button>
       </section>
     );
   }

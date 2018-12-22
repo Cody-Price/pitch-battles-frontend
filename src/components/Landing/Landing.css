@@ -1,20 +1,125 @@
+@font-face {
+  font-family: "Scriptorium";
+  src: url("./Scriptorium.ttf") format("ttf"), url("./Scriptorium.woff2");
+}
+
 .game-title {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
+  font-family: "Scriptorium";
+  font-size: 3rem;
+  color: #e3e8d9;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.animated-landing-backer {
+  position: absolute;
+  height: 1500px;
+  width: 2500px;
+  animation: 60s background-move infinite linear;
+  background-size: cover;
+  z-index: 1;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
-  background: blue;
-  margin: 2rem auto;
+  width: 66px;
+  height: 120px;
+  margin: 2rem 1rem;
+  z-index: 10;
+  animation: bard 1s linear infinite;
 }
 
 .login-signup-container {
   width: 300px;
-  height: 300px;
+  height: 363px;
   margin: 2rem auto;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: url(./landingframe.png);
+  background-size: cover;
+  image-rendering: pixelated;
   overflow: hidden;
   position: relative;
   border-style: dashed;
+  z-index: 2;
+}
+
+.landing-page {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.landing-page-header {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes background-move {
+  0% {
+    top: 0;
+    left: 0;
+    background: url(../Game/images/snow-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  48% {
+    background: url(../Game/images/snow-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    top: -500px;
+    left: -500px;
+  }
+  52% {
+    background: url(../Game/images/forestpath-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96% {
+    background: url(../Game/images/forestpath-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(../Game/images/snow-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes bard {
+  0% {
+    background: url(./images/bard/bard-1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  33% {
+    background: url(./images/bard/bard-1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  33.01% {
+    background: url(./images/bard/bard-2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  66% {
+    background: url(./images/bard/bard-2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  66.01% {
+    background: url(./images/bard/bard-3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/bard/bard-3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
 }
