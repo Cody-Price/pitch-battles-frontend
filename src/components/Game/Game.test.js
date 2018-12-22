@@ -307,4 +307,178 @@ describe("Game", () => {
       expect(spyTwo).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe("checkStatus", () => {
+    it("should return false if conditions are met", () => {
+      wrapper.setState({
+        victory: true
+      });
+
+      const response = wrapper.instance().checkStatus();
+
+      expect(response).toEqual(false);
+    });
+
+    it("should return true if conditions arent met", () => {
+      const response = wrapper.instance().checkStatus();
+
+      expect(response).toEqual(true);
+    });
+  });
+
+  describe("playerAttack", () => {
+    it("should setsState", () => {
+      const expected = {
+        playerStatus: "attack",
+        monsterStatus: "hit",
+        monsterHit: true,
+        playerHit: false
+      };
+      wrapper.instance().playerAttack();
+
+      expect(wrapper.instance().state.playerStatus).toEqual(
+        expected.playerStatus
+      );
+      expect(wrapper.instance().state.monsterStatus).toEqual(
+        expected.monsterStatus
+      );
+      expect(wrapper.instance().state.monsterHit).toEqual(expected.monsterHit);
+      expect(wrapper.instance().state.playerHit).toEqual(expected.playerHit);
+    });
+
+    it("should call setTimeout", () => {
+      const spy = jest.spyOn(wrapper.instance(), "monsterHitResolve");
+
+      jest.useFakeTimers();
+
+      wrapper.instance().playerAttack();
+
+      expect(setTimeout).toHaveBeenCalledWith(spy, 1000);
+    });
+  });
+
+  describe("monsterAttack", () => {
+    it("should setsState", () => {
+      const expected = {
+        playerStatus: "hit",
+        monsterStatus: "attack",
+        monsterHit: false,
+        playerHit: true
+      };
+      wrapper.instance().monsterAttack();
+
+      expect(wrapper.instance().state.playerStatus).toEqual(
+        expected.playerStatus
+      );
+      expect(wrapper.instance().state.monsterStatus).toEqual(
+        expected.monsterStatus
+      );
+      expect(wrapper.instance().state.monsterHit).toEqual(expected.monsterHit);
+      expect(wrapper.instance().state.playerHit).toEqual(expected.playerHit);
+    });
+
+    it("should call setTimeout", () => {
+      const spy = jest.spyOn(wrapper.instance(), "playerHitResolve");
+
+      jest.useFakeTimers();
+
+      wrapper.instance().monsterAttack();
+
+      expect(setTimeout).toHaveBeenCalledWith(spy, 1000);
+    });
+  });
+
+  describe("monsterHitResolve", () => {
+    it("should call monsterDeath if monsterHearts.length === 1", () => {
+      wrapper.instance().setState({
+        monsterHearts: [0]
+      });
+
+      const spy = jest.spyOn(wrapper.instance(), "monsterDeath");
+
+      wrapper.instance().monsterHitResolve();
+
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it("should call monsterHitIdle if monsterHearts.length > 1", () => {
+      wrapper.instance().setState({
+        monsterHearts: [0, 1]
+      });
+
+      const spy = jest.spyOn(wrapper.instance(), "monsterHitIdle");
+
+      wrapper.instance().monsterHitResolve();
+
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
+  describe("monsterDeath", () => {
+    it("should setState", () => {
+      const expected = {
+        running: false,
+        monsterHearts: [],
+        monsterStatus: "dead"
+      };
+
+      wrapper.instance().monsterDeath();
+
+      expect(wrapper.instance().state.running).toEqual(expected.running);
+      expect(wrapper.instance().state.monsterHearts).toEqual(
+        expected.monsterHearts
+      );
+      expect(wrapper.instance().state.monsterStatus).toEqual(
+        expected.monsterStatus
+      );
+    });
+
+    it("should call setTimeout with the correct params", () => {
+      const spy = jest.spyOn(wrapper.instance(), "victory");
+
+      jest.useFakeTimers();
+
+      wrapper.instance().monsterDeath();
+
+      expect(setTimeout).toHaveBeenCalledWith(spy, 3000);
+    });
+  });
+
+  describe("monsterHitIdle", () => {
+    it("should call setState", () => {
+      const expected = {
+        playerHit: false,
+        monsterHit: false,
+        playerStatus: "idle",
+        monsterStatus: "idle",
+        monsterHearts: ["b", "a"]
+      };
+      wrapper.instance().setState({
+        monsterHearts: ["b", "a"],
+        currentPitch: ["b"]
+      });
+
+      wrapper.instance().monsterHitIdle();
+
+      expect(wrapper.instance().state.playerHit).toEqual(expected.playerHit);
+      expect(wrapper.instance().state.monsterHit).toEqual(expected.monsterHit);
+      expect(wrapper.instance().state.playerStatus).toEqual(
+        expected.playerStatus
+      );
+      expect(wrapper.instance().state.monsterStatus).toEqual(
+        expected.monsterStatus
+      );
+      expect(wrapper.instance().state.monsterHearts).toEqual(
+        expected.monsterHearts
+      );
+    });
+
+    it("should call setPitch", () => {
+      const spy = jest.spyOn(wrapper.instance(), "setPitch");
+
+      wrapper.instance().monsterHitIdle();
+
+      expect(spy).toHaveBeenCalled();
+    });
+  });
 });

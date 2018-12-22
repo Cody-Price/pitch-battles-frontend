@@ -110,8 +110,6 @@ class Game extends Component {
     }, 200);
   };
 
-  resumeTimer = () => {};
-
   resetGame = () => {
     this.setState(
       {
