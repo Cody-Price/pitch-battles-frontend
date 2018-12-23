@@ -90,8 +90,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} />
-        {/* <Game processGame={this.processGame} instrument="horn" /> */}
+        {/* <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} /> */}
+        <Game processGame={this.processGame} instrument="horn" />
       </div>
     );
   }
