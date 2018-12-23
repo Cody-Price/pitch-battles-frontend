@@ -36,7 +36,7 @@
   display: flex;
   /* width: 150px; */
   justify-content: space-between;
-  margin: 0 auto 0.5rem;
+  margin: 1rem auto 0.5rem;
   height: 16px;
   padding: 0 3rem;
 }
@@ -63,7 +63,7 @@
 }
 
 .return-to-login-button {
-  margin: 1.5rem 0 0 0;
+  margin: 1.3rem 0 0 0;
 }
 
 .signup-form button:hover {
