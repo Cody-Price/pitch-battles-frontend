@@ -85,6 +85,30 @@
   left: 700px;
 }
 
+.standing-char1 {
+  position: absolute;
+  z-index: 11;
+  height: 123px;
+  width: 62px;
+  top: 600px;
+  left: 675px;
+  image-rendering: pixelated;
+  background: url(./images/landing-standing-chars/stand.png);
+  background-size: cover;
+  animation: laughing-landing-char linear infinite 12s;
+}
+
+.standing-char2 {
+  position: absolute;
+  z-index: 11;
+  height: 124px;
+  width: 63px;
+  top: 600px;
+  left: 580px;
+  background: url(./images/landing-standing-chars/char2.png);
+  background-size: cover;
+}
+
 @keyframes landing-char1-move {
   0% {
     right: -100px;
@@ -317,5 +341,227 @@
   }
   100% {
     bottom: 1700px;
+  }
+}
+
+@keyframes laughing-landing-char {
+  0% {
+    width: 64px;
+
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/stand.png);
+    background-size: cover;
+  }
+  80% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/stand.png);
+    background-size: cover;
+    width: 64px;
+  }
+  80.01% {
+    width: 70px;
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  81% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  81.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  82% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  82.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  83% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  83.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  84% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  84.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  85% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  85.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  86% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  86.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  87% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  87.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  88% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  88.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  89% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  89.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  90% {
+    width: 70px;
+
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  90.01% {
+    width: 70px;
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  91% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  91.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  92% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  92.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  93% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  93.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  94% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  94.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  95% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  95.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  96% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  96.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  97% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  97.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  98% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh2.png);
+    background-size: cover;
+  }
+  98.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  99% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh3.png);
+    background-size: cover;
+  }
+  99.01% {
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+  100% {
+    width: 70px;
+
+    image-rendering: pixelated;
+    background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
   }
 }

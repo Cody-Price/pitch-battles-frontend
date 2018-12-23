@@ -24,6 +24,8 @@ class Landing extends Component {
           <div className="landing-char1" />
           <div className="landing-char2" />
           <div className="landing-birb" />
+          <div className="standing-char1" />
+          <div className="standing-char2" />
         </div>
 
         <header className="landing-page-header">
