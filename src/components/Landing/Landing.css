@@ -15,9 +15,10 @@
   position: absolute;
   height: 1500px;
   width: 2500px;
-  animation: 60s background-move infinite linear;
+  animation: 90s background-move infinite linear;
   background-size: cover;
   z-index: 1;
+  overflow: hidden;
 }
 
 .logo {
@@ -90,8 +91,8 @@
   z-index: 11;
   height: 123px;
   width: 62px;
-  top: 600px;
-  left: 675px;
+  top: 580px;
+  left: 635px;
   image-rendering: pixelated;
   background: url(./images/landing-standing-chars/stand.png);
   background-size: cover;
@@ -103,10 +104,70 @@
   z-index: 11;
   height: 124px;
   width: 63px;
-  top: 600px;
-  left: 580px;
+  top: 580px;
+  left: 540px;
   background: url(./images/landing-standing-chars/char2.png);
   background-size: cover;
+}
+
+.crystal1,
+.crystal2,
+.crystal3,
+.crystal4,
+.crystal5,
+.crystal6,
+.crystal7,
+.crystal8,
+.crystal9,
+.crystal10,
+.crystal11,
+.crystal12 {
+  position: absolute;
+  z-index: 18;
+  height: 186px;
+  width: 60px;
+  top: 1000px;
+  left: 1480px;
+  animation: crystals 90s infinite linear;
+}
+
+.crystal2,
+.crystal4,
+.crystal6,
+.crystal8,
+.crystal10,
+.crystal12 {
+  left: 1080px;
+}
+
+.crystal3,
+.crystal4 {
+  top: 1150px;
+  z-index: 19;
+}
+
+.crystal5,
+.crystal6 {
+  top: 1300px;
+  z-index: 20;
+}
+
+.crystal7,
+.crystal8 {
+  top: 850px;
+  z-index: 17;
+}
+
+.crystal9,
+.crystal10 {
+  top: 700px;
+  z-index: 16;
+}
+
+.crystal11,
+.crystal12 {
+  top: 550px;
+  z-index: 15;
 }
 
 @keyframes landing-char1-move {
@@ -221,22 +282,40 @@
     background-size: cover;
     image-rendering: pixelated;
   }
-  48% {
+  33% {
     background: url(../Game/images/snow-bg.png);
     background-size: cover;
     image-rendering: pixelated;
   }
-  50% {
+  25% {
     top: -500px;
     left: -500px;
   }
-  52% {
+  35% {
     background: url(../Game/images/forestpath-bg.png);
     background-size: cover;
     image-rendering: pixelated;
   }
-  96% {
+  50% {
+    top: 0;
+    left: 0;
+  }
+  64% {
     background: url(../Game/images/forestpath-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  66% {
+    background: url(../Game/images/dd-bg.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    top: -500px;
+    left: -500px;
+  }
+  96% {
+    background: url(../Game/images/dd-bg.png);
     background-size: cover;
     image-rendering: pixelated;
   }
@@ -562,6 +641,364 @@
 
     image-rendering: pixelated;
     background: url(./images/landing-standing-chars/laugh1.png);
+    background-size: cover;
+  }
+}
+
+@keyframes crystals {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  67% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  67.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  68% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  68.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  69% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  69.01% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  70% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  70.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  71% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  71.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  72% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  72.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  73% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  73.01% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  74% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  74.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  76% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  76.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  77% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  77.01% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  78% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  78.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  79% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  79.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  80% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  80.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  81% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  81.01% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  82% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  82.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  83% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  83.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  84% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  84.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  85% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  85.01% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  86% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  86.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  87% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  87.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  88% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  88.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  89% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  89.01% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  90% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  90.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  91% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  91.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  92% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  92.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  93% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  93.01% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  94% {
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  94.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  95% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  95.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  96% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  96.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  97% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  97.01% {
+    opacity: 1;
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  98% {
+    opacity: 1;
+
+    background: url(../Game/images/crystal1/cry3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  98.01% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  99% {
+    background: url(../Game/images/crystal1/cry2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  99.01% {
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  100% {
+    opacity: 0;
+    background: url(../Game/images/crystal1/cry1.png);
+    image-rendering: pixelated;
     background-size: cover;
   }
 }
