@@ -32,7 +32,7 @@
   width: 300px;
   height: 363px;
   margin: 2rem auto;
-  background: url(./landingframe.png);
+  background: url(./landingframe2.png);
   background-size: cover;
   image-rendering: pixelated;
   overflow: hidden;
@@ -70,10 +70,19 @@
   height: 124px;
   width: 63px;
   background: black;
-  top: 290px;
+  top: 300px;
   animation: landing-char2 1s linear infinite,
     landing-char2-move 60s linear infinite;
   z-index: 10;
+}
+
+.landing-birb {
+  position: absolute;
+  width: 122px;
+  height: 64px;
+  animation: birb-flap 1s linear infinite, birb-move 20s linear infinite;
+  z-index: 100;
+  left: 700px;
 }
 
 @keyframes landing-char1-move {
@@ -256,5 +265,57 @@
     background: url(./images/bard/bard-4.png);
     background-size: cover;
     image-rendering: pixelated;
+  }
+}
+
+@keyframes birb-flap {
+  0% {
+    background: url(./images/birdtho/birb1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url(./images/birdtho/birb1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url(./images/birdtho/birb2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url(./images/birdtho/birb2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url(./images/birdtho/birb1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url(./images/birdtho/birb1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url(./images/birdtho/birb3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/birdtho/birb3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@keyframes birb-move {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 1700px;
   }
 }

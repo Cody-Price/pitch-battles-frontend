@@ -23,6 +23,7 @@ class Landing extends Component {
         <div className="animated-landing-backer">
           <div className="landing-char1" />
           <div className="landing-char2" />
+          <div className="landing-birb" />
         </div>
 
         <header className="landing-page-header">

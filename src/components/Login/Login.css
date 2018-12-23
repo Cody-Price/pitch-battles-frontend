@@ -1,8 +1,8 @@
 .login-form {
   position: absolute;
   padding-top: 1rem;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 484px;
   top: 0;
   right: 300px;
   transition: 0.3s;
@@ -58,7 +58,7 @@
 }
 
 .signup-form-switch-button {
-  margin: 8.5rem 0 0 0;
+  margin: 8rem 0 0 0;
 }
 
 .login-form button:hover {
