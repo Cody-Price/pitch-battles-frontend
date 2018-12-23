@@ -54,6 +54,132 @@
   justify-content: center;
 }
 
+.landing-char1 {
+  position: absolute;
+  height: 124px;
+  width: 60px;
+  background: black;
+  top: 334px;
+  animation: landing-char1 1s linear infinite,
+    landing-char1-move 60s linear infinite;
+  z-index: 11;
+}
+
+.landing-char2 {
+  position: absolute;
+  height: 124px;
+  width: 63px;
+  background: black;
+  top: 290px;
+  animation: landing-char2 1s linear infinite,
+    landing-char2-move 60s linear infinite;
+  z-index: 10;
+}
+
+@keyframes landing-char1-move {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 2700px;
+  }
+}
+
+@keyframes landing-char2-move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 2700px;
+  }
+}
+
+@keyframes landing-char1 {
+  0% {
+    background: url(./images/landing-char1/left1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  25% {
+    background: url(./images/landing-char1/left1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  25.01% {
+    background: url(./images/landing-char1/left2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/landing-char1/left2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50.01% {
+    background: url(./images/landing-char1/left1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75% {
+    background: url(./images/landing-char1/left1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75.01% {
+    background: url(./images/landing-char1/left3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  100% {
+    background: url(./images/landing-char1/left3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+}
+
+@keyframes landing-char2 {
+  0% {
+    background: url(./images/landing-char2/right1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  25% {
+    background: url(./images/landing-char2/right1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  25.01% {
+    background: url(./images/landing-char2/right2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/landing-char2/right2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50.01% {
+    background: url(./images/landing-char2/right1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75% {
+    background: url(./images/landing-char2/right1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  75.01% {
+    background: url(./images/landing-char2/right3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  100% {
+    background: url(./images/landing-char2/right3.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+}
+
 @keyframes background-move {
   0% {
     top: 0;
@@ -96,28 +222,38 @@
     background-size: cover;
     image-rendering: pixelated;
   }
-  33% {
+  20% {
     background: url(./images/bard/bard-1.png);
     background-size: cover;
     image-rendering: pixelated;
   }
-  33.01% {
+  20.01% {
     background: url(./images/bard/bard-2.png);
     background-size: cover;
     image-rendering: pixelated;
   }
-  66% {
+  50% {
     background: url(./images/bard/bard-2.png);
     background-size: cover;
     image-rendering: pixelated;
   }
-  66.01% {
+  50.01% {
     background: url(./images/bard/bard-3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background: url(./images/bard/bard-3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background: url(./images/bard/bard-4.png);
     background-size: cover;
     image-rendering: pixelated;
   }
   100% {
-    background: url(./images/bard/bard-3.png);
+    background: url(./images/bard/bard-4.png);
     background-size: cover;
     image-rendering: pixelated;
   }
