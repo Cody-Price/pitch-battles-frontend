@@ -10,7 +10,7 @@ class Signup extends Component {
       email: "",
       password: "",
       password_confirmation: "",
-      role: 0
+      role: "student"
     };
   }
 
@@ -43,7 +43,10 @@ class Signup extends Component {
   render() {
     return (
       <section className={`signup-form ${this.props.status}`}>
-        <form onSubmit={e => this.handleSubmit(e)}>
+        <h4 className="signup-form-label">signup</h4>
+
+        <form className="signup-form-form" onSubmit={e => this.handleSubmit(e)}>
+          <div className="fn-icon name-icon" />
           <input
             placeholder="first name"
             type="text"
@@ -51,6 +54,7 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.first_ame}
           />
+          <div className="ln-icon name-icon" />
           <input
             placeholder="last name"
             type="text"
@@ -58,6 +62,8 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.last_name}
           />
+          <div className="email-icon" />
+
           <input
             placeholder="email"
             type="email"
@@ -65,6 +71,8 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.email}
           />
+          <div className="pw1-icon pw-icon" />
+
           <input
             placeholder="password"
             type="password"
@@ -72,6 +80,8 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.passwordOne}
           />
+          <div className="pw2-icon pw-icon" />
+
           <input
             placeholder="confirm password"
             type="password"
@@ -79,7 +89,10 @@ class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.passwordTwo}
           />
+
           <section className="student-teacher-radio">
+            <p className="role-label">I am a</p>
+
             <div
               aria-label="choose student role"
               className={`student-button ${this.state.role}`}
@@ -99,7 +112,12 @@ class Signup extends Component {
             sign up
           </button>
         </form>
-        <button onClick={this.props.landingChange}>Login</button>
+        <button
+          className="return-to-login-button"
+          onClick={this.props.landingChange}
+        >
+          login
+        </button>
       </section>
     );
   }

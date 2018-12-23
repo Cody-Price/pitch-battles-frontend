@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
-// import Landing from "../Landing/Landing";
+import Landing from "../Landing/Landing";
 
 import "./App.css";
 
@@ -90,8 +90,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} /> */}
-        <Game processGame={this.processGame} instrument="horn" />
+        <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} />
+        {/* <Game processGame={this.processGame} instrument="horn" /> */}
       </div>
     );
   }

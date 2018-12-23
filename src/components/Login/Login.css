@@ -1,8 +1,8 @@
 .login-form {
   position: absolute;
-  padding-top: 4rem;
-  width: 300px;
-  height: 300px;
+  padding-top: 1rem;
+  width: 400px;
+  height: 484px;
   top: 0;
   right: 300px;
   transition: 0.3s;
@@ -12,15 +12,81 @@
   right: 0;
 }
 
-.login-form input {
-  display: block;
-  margin: 1rem auto;
-  border: 2px solid red;
-  border-radius: 4px;
+.login-form {
+  padding-top: 0.5rem;
+
+  position: absolute;
+  width: 300px;
+  right: 300px;
+  margin: 1.2rem auto;
+  transition: 0.3s;
+  top: 0;
+  font-family: "chronotype";
+  font-size: 1.3rem;
 }
 
-.login-form button {
+.login-form-label {
+  margin-top: 0;
+}
+
+.signup-form.true {
+  left: 0px;
+}
+
+.login-form input {
+  display: block;
+  margin: 0.7rem auto;
+  font-family: "chronotype";
+  font-size: 1.1rem;
+  padding-left: 1.6rem;
+  padding-top: 4px;
+}
+
+.role-label {
+  font-size: 1.1rem;
+
+  margin: 1rem 0 0.4rem;
+}
+
+.login-form-button,
+.signup-form-switch-button {
+  margin: 0.6rem 0;
+  font-family: "chronotype";
+  font-size: 1.1rem;
+  padding-top: 4px;
+  border-radius: 1px;
+}
+
+.signup-form-switch-button {
+  margin: 8rem 0 0 0;
+}
+
+.login-form button:hover {
   cursor: pointer;
-  margin-bottom: 1rem;
-  border-radius: 50%;
+}
+
+.login-form-form {
+  position: relative;
+}
+
+.login-email-icon {
+  position: absolute;
+  background: url(../Landing/images/mail.png);
+  width: 17px;
+  height: 17px;
+  background-size: cover;
+  image-rendering: pixelated;
+  left: 56px;
+  top: 3px;
+}
+
+.login-pw-icon {
+  position: absolute;
+  background: url(../Landing/images/lock.png);
+  width: 13px;
+  height: 16px;
+  background-size: cover;
+  image-rendering: pixelated;
+  left: 58px;
+  top: 39px;
 }
