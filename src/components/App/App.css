@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Scriptorium";
+  src: url("../../fonts/Scriptorium.ttf") format("ttf"),
+    url("../../fonts/Scriptorium.woff2");
+}
+
+@font-face {
+  font-family: "ChronoType";
+  src: url("../../fonts/ChronoType.ttf") format("ttf"),
+    url("../../fonts/ChronoType.woff2");
+}
+
 .App {
   text-align: center;
   overflow: hidden;
