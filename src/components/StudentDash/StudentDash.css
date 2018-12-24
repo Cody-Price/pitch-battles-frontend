@@ -1,9 +1,19 @@
 .student-dash {
   font-family: "chronotype";
   min-height: 100vh;
-  display: grid;
+  display: flex;
   align-items: center;
   position: relative;
+}
+
+.snow-backer {
+  animation: snow 90s infinite linear;
+  position: absolute;
+  height: 6000px;
+  width: 10000px;
+  background: url(../Landing/images/snow/wsheet_snow_1.png);
+  background-size: 384px 96px;
+  z-index: 10000;
 }
 
 .student-dash-floating-backer {
@@ -18,10 +28,14 @@
 
 .student-dash-wrapper {
   width: 800px;
+  height: 600px;
+  background: url("../Game/images/char-dash-backer.png");
+  background-size: cover;
+  image-rendering: pixelated;
   margin: auto;
   position: relative;
   z-index: 1000;
-  background: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0.3);
 }
 
 .student-dash-header {
@@ -33,7 +47,7 @@
 
 .student-dash-avatar-backer {
   grid-row: 1/3;
-  margin: 1rem;
+  margin: 2rem 2rem 2rem 2rem;
   position: relative;
   height: 80px;
   width: 80px;
@@ -41,6 +55,8 @@
   background: url(../Game/images/offwhite-avatar-backer.png);
   background-size: cover;
   image-rendering: pixelated;
+  border: 2px solid #4776bb;
+  box-shadow: 1px 1px 1px#4776bb;
 }
 
 .student-dash-avatar {
@@ -147,7 +163,7 @@
   height: 20px;
   text-align: start;
   margin-bottom: 0;
-  margin-top: 2.2rem;
+  margin-top: 3.2rem;
   margin-left: 2rem;
 }
 
@@ -162,7 +178,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  margin: 1rem;
+  margin: 2.5rem 2.5rem;
   background: url(./images/help.png);
   width: 18px;
   height: 27px;
@@ -170,38 +186,259 @@
   background-repeat: no-repeat;
   border: none;
   image-rendering: pixelated;
+  transition: 0.1s;
+}
+
+.onboarding-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.onboarding-link:focus {
+  outline: none;
+}
+
+.onboarding-link:active {
+  transform: scale(1);
 }
 
 .new-game-section {
   display: flex;
-  justify-content: space-around;
-  width: 400px;
-  margin: auto;
   position: relative;
+  height: 40px;
+}
+
+.start-game {
+  font-family: "Scriptorium";
+  color: #4776bb;
+  font-size: 2rem;
+  background: #e3e8d9;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0.5);
+  box-shadow: 1px 1px 1px#4776bb;
+  margin-left: 3rem;
+  height: 4rem;
+  padding: 1rem;
+}
+
+.start-game:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px#4776bb;
+}
+
+.start-game:active {
+  box-shadow: none;
+}
+
+.start-game:focus {
+  outline: none;
+}
+
+.instrument-label {
+  margin: 1.5rem 1rem 0 8rem;
 }
 
 .instrument-dropdown {
-  width: 180px;
+  background: #4776bb;
+  width: 236px;
+  height: 24px;
+  line-height: 26px;
+  margin: 1.2rem 0 0;
+  padding-right: 2rem;
+  transition: 0.2s;
+  box-shadow: 1px 1px 1px#4776bb;
+}
+
+.instrument-dropdown:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px#000;
+}
+
+.instrument-dropdown:active {
+  box-shadow: none;
+}
+
+.deploy-arrow {
+  position: absolute;
+  top: 26px;
+  left: 702px;
+  width: 14px;
+  height: 10px;
+  background: url(./images/arrow.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  transition: 0.3s;
+  z-index: 30;
+}
+
+.deploy-arrow.true {
+  transform: rotate(90deg);
+}
+
+.deploy-arrow:hover {
+  cursor: pointer;
 }
 
 .instrument-dropdown-list {
+  margin: 0;
   height: 0;
   overflow: hidden;
   list-style: none;
   padding: 0;
   position: absolute;
-  left: 170px;
-  top: 30px;
+  left: 500px;
+  top: 49px;
   padding: 0 1rem;
-  background: white;
+  background: #e3e8d9;
   transition: 0.3s;
+  border: 0px solid #4776bb;
+  z-index: 400;
 }
 
 .instrument-dropdown-list.true {
-  height: 230px;
+  height: 338px;
   padding-bottom: 1rem;
+  box-shadow: 1px 1px 1px#4776bb;
+  border: 2px solid #4776bb;
 }
 
 .instrument-list-item {
+  margin-top: 0.4rem;
   width: 170px;
+  font-size: 1.1rem;
+}
+
+.instrument-list-item:hover {
+  cursor: pointer;
+}
+
+.total-games-played {
+  text-align: start;
+  margin: 5rem 0 2rem 3rem;
+}
+
+.most-recent-badges {
+  margin-top: 2rem;
+  text-align: start;
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes snow {
+  0% {
+    top: -3000px;
+    left: -3000px;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+
+  32% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+    top: 0;
+    left: -1000px;
+  }
+  100% {
+    opacity: 0;
+    top: -3000px;
+    left: -3000px;
+  }
+}
+
+.fastest-times {
+  text-align: start;
+  margin: 3rem 0 0 3rem;
+}
+
+.times-row {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.time-container {
+  margin: 0.3rem 1rem 0 0;
+}
+
+.time-label {
+  font-size: 1.3rem;
+  margin-top: 0;
+  text-align: start;
+}
+
+.badge-row {
+  display: flex;
+  margin-left: 3rem;
+  background: #4776bb;
+  width: 700px;
+}
+
+.badge {
+  width: 39px;
+  height: 33px;
+  image-rendering: pixelated;
+  background: url("./images/purple-gem.png");
+  background-size: cover;
+  margin: 1rem;
+  position: relative;
+}
+
+.badge:hover {
+  cursor: pointer;
+}
+
+.badge.level_one {
+  background: url("./images/green-gem.png");
+  background-size: cover;
+}
+
+.badge.level_one_perfect {
+  background: url("./images/green-gem-stars.png");
+  background-size: cover;
+}
+
+.badge.level_two {
+  background: url("./images/blue-gem.png");
+  background-size: cover;
+}
+
+.badge.level_two_perfect {
+  background: url("./images/blue-gem-stars.png");
+  background-size: cover;
+}
+
+.badge.level_three {
+  background: url("./images/red-gem.png");
+  background-size: cover;
+}
+
+.badge.level_three_perfect {
+  background: url("./images/red-gem-stars.png");
+  background-size: cover;
+}
+
+.badge.level_four {
+  background: url("./images/gold-gem.png");
+  background-size: cover;
+}
+
+.badge.level_four_perfect {
+  background: url("./images/gold-gem-stars.png");
+  background-size: cover;
+}
+
+.badge:hover .badge-descriptor {
+  display: block;
+}
+
+.badge-descriptor {
+  position: absolute;
+  display: none;
+  width: 100px;
+  background: #4776bb;
+  top: 20px;
+  padding: 0.5rem;
+  left: -40px;
 }
