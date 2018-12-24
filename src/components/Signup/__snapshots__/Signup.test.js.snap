@@ -4,14 +4,26 @@ exports[`Signup should render like snapshot 1`] = `
 <section
   className="signup-form undefined"
 >
+  <h4
+    className="signup-form-label"
+  >
+    signup
+  </h4>
   <form
+    className="signup-form-form"
     onSubmit={[Function]}
   >
+    <div
+      className="fn-icon name-icon"
+    />
     <input
       name="first_name"
       onChange={[Function]}
       placeholder="first name"
       type="text"
+    />
+    <div
+      className="ln-icon name-icon"
     />
     <input
       name="last_name"
@@ -20,6 +32,9 @@ exports[`Signup should render like snapshot 1`] = `
       type="text"
       value=""
     />
+    <div
+      className="email-icon"
+    />
     <input
       name="email"
       onChange={[Function]}
@@ -27,11 +42,17 @@ exports[`Signup should render like snapshot 1`] = `
       type="email"
       value=""
     />
+    <div
+      className="pw1-icon pw-icon"
+    />
     <input
       name="passwordOne"
       onChange={[Function]}
       placeholder="password"
       type="password"
+    />
+    <div
+      className="pw2-icon pw-icon"
     />
     <input
       name="passwordTwo"
@@ -42,16 +63,21 @@ exports[`Signup should render like snapshot 1`] = `
     <section
       className="student-teacher-radio"
     >
+      <p
+        className="role-label"
+      >
+        I am a
+      </p>
       <div
         aria-label="choose student role"
-        className="student-button 0"
+        className="student-button student"
         onClick={[Function]}
       >
         student
       </div>
       <div
         aria-label="choose teacher role"
-        className="teacher-button 0"
+        className="teacher-button student"
         onClick={[Function]}
       >
         teacher
@@ -64,8 +90,10 @@ exports[`Signup should render like snapshot 1`] = `
       sign up
     </button>
   </form>
-  <button>
-    Login
+  <button
+    className="return-to-login-button"
+  >
+    login
   </button>
 </section>
 `;

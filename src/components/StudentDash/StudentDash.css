@@ -20,8 +20,7 @@
   position: absolute;
   height: 1500px;
   width: 2500px;
-  animation: 90s background-move infinite linear;
-  background-size: cover;
+
   z-index: 1;
   overflow: hidden;
 }
@@ -36,6 +35,7 @@
   position: relative;
   z-index: 1000;
   box-shadow: 2px 2px 2px rgba(0, 0, 0.3);
+  animation: student-dash-slide 0.3s linear;
 }
 
 .student-dash-header {
@@ -233,7 +233,7 @@
 }
 
 .instrument-label {
-  margin: 1.5rem 1rem 0 8rem;
+  margin: 1.5rem 0.6rem 0 8.2rem;
 }
 
 .instrument-dropdown {
@@ -480,4 +480,13 @@
   padding: 0.5rem;
   left: -40px;
   transition: 0.2s;
+}
+
+@keyframes student-dash-slide {
+  0% {
+    left: 3000px;
+  }
+  100% {
+    left: 0px;
+  }
 }
