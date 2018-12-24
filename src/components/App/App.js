@@ -20,7 +20,8 @@ class App extends Component {
       newFastestTimes: [],
       fetchError: false,
       gameActive: false,
-      instrument: undefined
+      instrument: undefined,
+      activePage: ""
     };
   }
 
@@ -32,7 +33,8 @@ class App extends Component {
       this.setState({
         webToken: data.access_token,
         user: data.user,
-        fetchError: false
+        fetchError: false,
+        activePage: "student dash"
       });
       console.log(data);
     } catch (error) {
@@ -112,9 +114,10 @@ class App extends Component {
                 signUpUser={this.signUpUser}
               />
             )}
-            {this.state.user && (
+            {this.state.activePage === "student dash" && this.state.user && (
               <StudentDash startGame={this.toggleGame} user={mockUser} />
             )}
+            {/* {(this.state.active === 'onboarding' && this.state.user) && } */}
             }
           </section>
         )}
