@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import mockUser from "../../utilities/mockUser";
 
 import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
 import Landing from "../Landing/Landing";
+import StudentDash from "../StudentDash/StudentDash";
 
 import "./App.css";
 
@@ -90,8 +92,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} />
+        {/* <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} /> */}
         {/* <Game processGame={this.processGame} instrument="horn" /> */}
+        <StudentDash user={mockUser} />
       </div>
     );
   }

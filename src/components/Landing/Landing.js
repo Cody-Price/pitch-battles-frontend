@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
+import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 
 import "./Landing.css";
 
@@ -20,14 +21,7 @@ class Landing extends Component {
   render() {
     return (
       <main className="landing-page">
-        <div className="animated-landing-backer">
-          <div className="landing-char1" />
-          <div className="landing-char2" />
-          <div className="landing-birb" />
-          <div className="standing-char1" />
-          <div className="standing-char2" />
-        </div>
-
+        <AnimatedBackground instance="animated-landing-backer" />
         <header className="landing-page-header">
           <div className="logo" />
           <h1 className="game-title">
