@@ -339,16 +339,44 @@ class Game extends Component {
     this.startTimer();
   };
 
+  exitGame = () => {
+    this.setState(
+      {
+        currentLevel: 1,
+        playerHearts: [0, 1, 2],
+        monsterHearts: [],
+        currentTime: 0,
+        start: 0,
+        running: false,
+        milliseconds: 0,
+        playerHit: false,
+        monsterHit: false,
+        playerStatus: "idle",
+        monsterStatus: "idle",
+        currentPitch: null,
+        gameOver: false,
+        victory: false,
+        finalVictory: false,
+        times: [],
+        perfectScores: [],
+        userModal: false
+      },
+      this.props.endGame(false)
+    );
+  };
+
   render() {
-    const avatar = "7";
     return (
       <main className="game-main">
         <div className="game-area-wrapper">
           <header className="game-header">
             <div className="avatar-border" onClick={this.toggleUserModal}>
-              <div className={`header-avatar ${avatars[avatar]}`} />
+              <div
+                className={`header-avatar ${avatars[this.props.user.avatar]}`}
+              />
             </div>
             <GameUserModal
+              endGame={this.exitGame}
               instrument={this.props.instrument}
               status={this.state.userModal}
               reset={this.resetGame}
@@ -371,7 +399,10 @@ class Game extends Component {
             </section>
           </header>
           <section className="gameplay-frame">
-            <Player avatar={avatar} status={this.state.playerStatus} />
+            <Player
+              avatar={this.props.user.avatar}
+              status={this.state.playerStatus}
+            />
             {this.state.playerHit && <PlayerEffect />}
             <Monster
               level={this.state.currentLevel}

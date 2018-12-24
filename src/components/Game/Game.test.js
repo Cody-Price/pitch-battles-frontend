@@ -1,5 +1,7 @@
 import React from "react";
 import Game from "./Game";
+import mockUser from "../../utilities/mockUser";
+
 import Enzyme, { shallow } from "enzyme";
 const EnzymeAdapter = require("enzyme-adapter-react-16");
 
@@ -8,10 +10,22 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("Game", () => {
   let wrapper;
   const instrument = "flute";
+  let mockEndGame;
+  let mockProcessGame;
 
   beforeEach(() => {
+    mockEndGame = jest.fn();
+    mockProcessGame = jest.fn();
+    const user = mockUser;
     Date.now = jest.fn(() => 1482363367071);
-    wrapper = shallow(<Game instrument={instrument} />);
+    wrapper = shallow(
+      <Game
+        instrument={instrument}
+        user={mockUser}
+        endGame={mockEndGame}
+        processGame={mockProcessGame}
+      />
+    );
   });
 
   it("should match the snapshot", () => {

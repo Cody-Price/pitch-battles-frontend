@@ -15,10 +15,11 @@ exports[`Game should match the snapshot 1`] = `
         onClick={[Function]}
       >
         <div
-          className="header-avatar seven"
+          className="header-avatar nine"
         />
       </div>
       <GameUserModal
+        endGame={[Function]}
         instrument="flute"
         reset={[Function]}
         status={false}
@@ -83,7 +84,7 @@ exports[`Game should match the snapshot 1`] = `
       className="gameplay-frame"
     >
       <Player
-        avatar="7"
+        avatar={9}
         status="idle"
       />
       <Monster
