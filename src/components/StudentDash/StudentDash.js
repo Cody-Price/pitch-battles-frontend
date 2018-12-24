@@ -14,7 +14,8 @@ class StudentDash extends Component {
 
     this.state = {
       instrument: "choose your instrument...",
-      dropdownDeploy: false
+      dropdownDeploy: false,
+      noInstrumentError: false
     };
   }
 
@@ -30,6 +31,18 @@ class StudentDash extends Component {
       dropdownDeploy: false
     });
   };
+
+  handleNewGame = () => {
+    if (this.state.instrument === 'choose your instrument...') {
+      this.setState({noInstrumentError: true})
+      setTimeout(this.clearNoInstrumentError, 5000)
+      return
+    }
+  }
+
+  clearNoInstrumentError = () => {
+    this.setState({ noInstrumentError: false})
+  }
 
   render() {
     const instrumentList = instruments.map(instrument => {
