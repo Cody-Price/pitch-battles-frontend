@@ -6,16 +6,6 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.animated-landing-backer {
-  position: absolute;
-  height: 1500px;
-  width: 2500px;
-  animation: 90s background-move infinite linear;
-  background-size: cover;
-  z-index: 1;
-  overflow: hidden;
-}
-
 .logo {
   width: 66px;
   height: 120px;

@@ -6,6 +6,7 @@ import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
 import Game from "../Game/Game";
 import Landing from "../Landing/Landing";
 import StudentDash from "../StudentDash/StudentDash";
+import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 
 import "./App.css";
 
@@ -17,7 +18,9 @@ class App extends Component {
       webToken: undefined,
       newAcheivements: [],
       newFastestTimes: [],
-      fetchError: false
+      fetchError: false,
+      gameActive: false,
+      instrument: undefined
     };
   }
 
@@ -59,6 +62,14 @@ class App extends Component {
 
   // -- PROCESS GAME RESULTS -- //
 
+  toggleGame = (gameActive, instrument) => {
+    console.log(gameActive, instrument);
+    this.setState({
+      gameActive,
+      instrument
+    });
+  };
+
   clearAchievmentsAndTimes = () => {
     this.setState({
       newAcheivements: [],
@@ -92,9 +103,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Landing loginUser={this.loginUser} signUpUser={this.signUpUser} /> */}
-        {/* <Game processGame={this.processGame} instrument="horn" /> */}
-        <StudentDash user={mockUser} />
+        {!this.state.gameActive && (
+          <section className="name-game-student-wrapper">
+            <AnimatedBackground instance="main-floating-backer" />
+            {!this.state.user && (
+              <Landing
+                loginUser={this.loginUser}
+                signUpUser={this.signUpUser}
+              />
+            )}
+            {this.state.user && (
+              <StudentDash startGame={this.toggleGame} user={mockUser} />
+            )}
+            }
+          </section>
+        )}
+
+        {this.state.gameActive && (
+          <Game
+            user={mockUser}
+            processGame={this.processGame}
+            endGame={this.toggleGame}
+            instrument={this.state.instrument}
+          />
+        )}
       </div>
     );
   }

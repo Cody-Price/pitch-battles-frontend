@@ -4,7 +4,7 @@ const mockUser = {
   avatar: 9,
   role: 0,
   email: "cmanly@gmail.com",
-  games_played: 95,
+  games_played: 115,
   class: "6th-grade band",
   fastest_times: [
     { level_one: 11.01 },

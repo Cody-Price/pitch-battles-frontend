@@ -6,15 +6,14 @@ import { instruments } from "../../utilities/instruments";
 import { timesHelper } from "../../utilities/timesHelper";
 import { badgeHelper } from "../../utilities/badgeHelper";
 
-import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
-
 class StudentDash extends Component {
   constructor() {
     super();
 
     this.state = {
       instrument: "choose your instrument...",
-      dropdownDeploy: false
+      dropdownDeploy: false,
+      noInstrumentError: false
     };
   }
 
@@ -31,6 +30,19 @@ class StudentDash extends Component {
     });
   };
 
+  handleNewGame = () => {
+    if (this.state.instrument === "choose your instrument...") {
+      this.setState({ noInstrumentError: true });
+      setTimeout(this.clearNoInstrumentError, 5000);
+    } else {
+      this.props.startGame(true, this.state.instrument);
+    }
+  };
+
+  clearNoInstrumentError = () => {
+    this.setState({ noInstrumentError: false });
+  };
+
   render() {
     const instrumentList = instruments.map(instrument => {
       return (
@@ -38,7 +50,7 @@ class StudentDash extends Component {
           onClick={() => {
             this.selectInstrument(instrument.instrument);
           }}
-          className="instrument-list-item"
+          className={`instrument-list-item ${instrument.instrument}`}
           key={instrument.instrument}
         >
           {instrument.instrument}
@@ -88,7 +100,6 @@ class StudentDash extends Component {
 
     return (
       <main className="student-dash">
-        <AnimatedBackground instance="student-dash-floating-backer" />
         <section className="student-dash-wrapper">
           <header className="student-dash-header">
             <div className="student-dash-avatar-backer">
@@ -107,7 +118,9 @@ class StudentDash extends Component {
             <button className="onboarding-link" />
           </header>
           <section className="new-game-section">
-            <button className="start-game">to battle!</button>
+            <button className="start-game" onClick={this.handleNewGame}>
+              to battle!
+            </button>
             <h2 className="instrument-label">instrument:</h2>
             <h3
               onClick={this.handleInstrumentDropdown}

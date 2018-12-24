@@ -20,8 +20,7 @@
   position: absolute;
   height: 1500px;
   width: 2500px;
-  animation: 90s background-move infinite linear;
-  background-size: cover;
+
   z-index: 1;
   overflow: hidden;
 }
@@ -36,6 +35,7 @@
   position: relative;
   z-index: 1000;
   box-shadow: 2px 2px 2px rgba(0, 0, 0.3);
+  animation: student-dash-slide 0.3s linear;
 }
 
 .student-dash-header {
@@ -203,9 +203,9 @@
 }
 
 .new-game-section {
+  margin-top: 1rem;
   display: flex;
   position: relative;
-  height: 40px;
 }
 
 .start-game {
@@ -214,7 +214,7 @@
   font-size: 2rem;
   background: #e3e8d9;
   text-shadow: 1px 1px 1px rgba(0, 0, 0.5);
-  box-shadow: 1px 1px 1px#4776bb;
+  box-shadow: 2px 2px 2px#4776bb;
   margin-left: 3rem;
   height: 4rem;
   padding: 1rem;
@@ -222,7 +222,6 @@
 
 .start-game:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 2px#4776bb;
 }
 
 .start-game:active {
@@ -234,7 +233,7 @@
 }
 
 .instrument-label {
-  margin: 1.5rem 1rem 0 8rem;
+  margin: 1.5rem 0.6rem 0 8.2rem;
 }
 
 .instrument-dropdown {
@@ -245,12 +244,11 @@
   margin: 1.2rem 0 0;
   padding-right: 2rem;
   transition: 0.2s;
-  box-shadow: 1px 1px 1px#4776bb;
+  box-shadow: 2px 2px 2px#000;
 }
 
 .instrument-dropdown:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 2px#000;
 }
 
 .instrument-dropdown:active {
@@ -313,7 +311,7 @@
 
 .total-games-played {
   text-align: start;
-  margin: 5rem 0 2rem 3rem;
+  margin: 4rem 0 2rem 3rem;
 }
 
 .most-recent-badges {
@@ -429,16 +427,66 @@
   background-size: cover;
 }
 
+.badge.five_games {
+  background: url("./images/purple-gem5.png");
+  background-size: cover;
+}
+
+.badge.ten_games {
+  background: url("./images/purple-gem10.png");
+  background-size: cover;
+}
+
+.badge.twenty_games {
+  background: url("./images/purple-gem20.png");
+  background-size: cover;
+}
+
+.badge.fifty_games {
+  background: url("./images/purple-gem50.png");
+  background-size: cover;
+}
+
+.badge.one_hundred_games {
+  background: url("./images/purple-gem100.png");
+  background-size: cover;
+}
+
+.badge.two_hundred_games {
+  background: url("./images/purple-gem200.png");
+  background-size: cover;
+}
+
+.badge.five_hundred_games {
+  background: url("./images/purple-gem500.png");
+  background-size: cover;
+}
+
+.badge.one_thousand_games {
+  background: url("./images/purple-gem1000.png");
+  background-size: cover;
+}
+
 .badge:hover .badge-descriptor {
-  display: block;
+  opacity: 1;
 }
 
 .badge-descriptor {
   position: absolute;
-  display: none;
+  opacity: 0;
   width: 100px;
   background: #4776bb;
   top: 20px;
   padding: 0.5rem;
   left: -40px;
+  transition: 0.2s;
+}
+
+@keyframes student-dash-slide {
+  0% {
+    left: 3000px;
+  }
+  100% {
+    left: 0px;
+  }
 }

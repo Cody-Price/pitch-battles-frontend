@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentDash should match the snapshot 1`] = `
+<main
+  className="student-dash"
+>
+  <section
+    className="student-dash-wrapper"
+  >
+    <header
+      className="student-dash-header"
+    >
+      <div
+        className="student-dash-avatar-backer"
+      >
+        <div
+          className="student-dash-avatar nine"
+        />
+      </div>
+      <section
+        className="header-data"
+      >
+        <h2
+          className="student-name"
+        >
+          Chet
+           
+          Manly
+        </h2>
+        <h2
+          className="student-class-link"
+        >
+          6th-grade band
+        </h2>
+      </section>
+      <button
+        className="onboarding-link"
+      />
+    </header>
+    <section
+      className="new-game-section"
+    >
+      <button
+        className="start-game"
+        onClick={[Function]}
+      >
+        to battle!
+      </button>
+      <h2
+        className="instrument-label"
+      >
+        instrument:
+      </h2>
+      <h3
+        className="instrument-dropdown"
+        onClick={[Function]}
+      >
+        choose your instrument...
+      </h3>
+      <div
+        className="deploy-arrow false"
+        onClick={[Function]}
+      />
+      <ul
+        className="instrument-dropdown-list false"
+      >
+        <li
+          className="instrument-list-item flute"
+          key="flute"
+          onClick={[Function]}
+        >
+          flute
+        </li>
+        <li
+          className="instrument-list-item oboe"
+          key="oboe"
+          onClick={[Function]}
+        >
+          oboe
+        </li>
+        <li
+          className="instrument-list-item clarinet"
+          key="clarinet"
+          onClick={[Function]}
+        >
+          clarinet
+        </li>
+        <li
+          className="instrument-list-item alto saxophone"
+          key="alto saxophone"
+          onClick={[Function]}
+        >
+          alto saxophone
+        </li>
+        <li
+          className="instrument-list-item tenor saxophone"
+          key="tenor saxophone"
+          onClick={[Function]}
+        >
+          tenor saxophone
+        </li>
+        <li
+          className="instrument-list-item baritone saxophone"
+          key="baritone saxophone"
+          onClick={[Function]}
+        >
+          baritone saxophone
+        </li>
+        <li
+          className="instrument-list-item bassoon"
+          key="bassoon"
+          onClick={[Function]}
+        >
+          bassoon
+        </li>
+        <li
+          className="instrument-list-item trumpet"
+          key="trumpet"
+          onClick={[Function]}
+        >
+          trumpet
+        </li>
+        <li
+          className="instrument-list-item horn"
+          key="horn"
+          onClick={[Function]}
+        >
+          horn
+        </li>
+        <li
+          className="instrument-list-item trombone"
+          key="trombone"
+          onClick={[Function]}
+        >
+          trombone
+        </li>
+        <li
+          className="instrument-list-item baritone"
+          key="baritone"
+          onClick={[Function]}
+        >
+          baritone
+        </li>
+        <li
+          className="instrument-list-item violin"
+          key="violin"
+          onClick={[Function]}
+        >
+          violin
+        </li>
+        <li
+          className="instrument-list-item viola"
+          key="viola"
+          onClick={[Function]}
+        >
+          viola
+        </li>
+        <li
+          className="instrument-list-item cello"
+          key="cello"
+          onClick={[Function]}
+        >
+          cello
+        </li>
+        <li
+          className="instrument-list-item string bass"
+          key="string bass"
+          onClick={[Function]}
+        >
+          string bass
+        </li>
+        <li
+          className="instrument-list-item mallet percussion (high)"
+          key="mallet percussion (high)"
+          onClick={[Function]}
+        >
+          mallet percussion (high)
+        </li>
+        <li
+          className="instrument-list-item mallet percussion (low)"
+          key="mallet percussion (low)"
+          onClick={[Function]}
+        >
+          mallet percussion (low)
+        </li>
+      </ul>
+    </section>
+    <section
+      className="student-dash-stats"
+    >
+      <h2
+        className="total-games-played"
+      >
+        total battles fought: 
+        <span>
+          115
+        </span>
+      </h2>
+      <h2
+        className="fastest-times"
+      >
+        fastest times:
+      </h2>
+      <div
+        className="times-row"
+      >
+        <div
+          className="time-container {$Objecy.keys(time)}"
+          key="level_one"
+        >
+          <h3
+            className="time-label"
+          >
+            level one
+             - 
+            11.01
+          </h3>
+        </div>
+        <div
+          className="time-container {$Objecy.keys(time)}"
+          key="level_two"
+        >
+          <h3
+            className="time-label"
+          >
+            level two
+             - 
+            15.24
+          </h3>
+        </div>
+        <div
+          className="time-container {$Objecy.keys(time)}"
+          key="level_three"
+        >
+          <h3
+            className="time-label"
+          >
+            level three
+             - 
+            24.64
+          </h3>
+        </div>
+        <div
+          className="time-container {$Objecy.keys(time)}"
+          key="level_four"
+        >
+          <h3
+            className="time-label"
+          >
+            level four
+             - 
+            30.17
+          </h3>
+        </div>
+        <div
+          className="time-container {$Objecy.keys(time)}"
+          key="all"
+        >
+          <h3
+            className="time-label"
+          >
+            all levels
+             - 
+            83.16
+          </h3>
+        </div>
+      </div>
+      <h2
+        className="most-recent-badges"
+      >
+        most recent badges:
+      </h2>
+      <div
+        className="badge-row"
+      >
+        <div
+          className="badge one_hundred_games"
+          key="one_hundred_games"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            play 100 games
+          </h4>
+        </div>
+        <div
+          className="badge level_four"
+          key="level_four"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level four: completed
+          </h4>
+        </div>
+        <div
+          className="badge fifty_games"
+          key="fifty_games"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            play 50 games
+          </h4>
+        </div>
+        <div
+          className="badge twenty_games"
+          key="twenty_games"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            play 20 games
+          </h4>
+        </div>
+        <div
+          className="badge level_three"
+          key="level_three"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level three: completed
+          </h4>
+        </div>
+        <div
+          className="badge level_two_perfect"
+          key="level_two_perfect"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level two: perfect
+          </h4>
+        </div>
+        <div
+          className="badge ten_games"
+          key="ten_games"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            play 10 games
+          </h4>
+        </div>
+        <div
+          className="badge level_two"
+          key="level_two"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level two: completed
+          </h4>
+        </div>
+        <div
+          className="badge level_one_perfect"
+          key="level_one_perfect"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level one: perfect
+          </h4>
+        </div>
+        <div
+          className="badge level_one"
+          key="level_one"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            level one: completed
+          </h4>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+`;

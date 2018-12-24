@@ -14,3 +14,20 @@
   text-align: center;
   overflow: hidden;
 }
+
+.name-game-student-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-floating-backer {
+  position: absolute;
+  height: 1500px;
+  width: 2500px;
+  z-index: 1;
+  overflow: hidden;
+  animation: 90s background-move infinite linear;
+  background-size: cover;
+}
