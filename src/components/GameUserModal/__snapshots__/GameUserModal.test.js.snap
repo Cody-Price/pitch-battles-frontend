@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameUserModal should match the snapshot 1`] = `
+<aside
+  className="game-user-modal undefined"
+>
+  <h4
+    className="game-modal-username"
+  >
+    Steve
+  </h4>
+  <p
+    className="current-instrument-label"
+  >
+    instrument
+  </p>
+  <p
+    className="current-instrument"
+  />
+  <button
+    className="reset-game-button"
+  >
+    reset
+  </button>
+  <button
+    className="exit-game-button"
+    onClick={[Function]}
+  >
+    exit
+  </button>
+</aside>
+`;

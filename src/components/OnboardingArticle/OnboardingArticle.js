@@ -9,7 +9,7 @@ class OnboardingArticle extends Component {
         <img
           src={this.props.data.imageUrl}
           className="onboarding-image"
-          alt="onboarding-image"
+          alt={this.props.data.key}
         />
         <p className="onboarding-content">{this.props.data.content}</p>
       </article>

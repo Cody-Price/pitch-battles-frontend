@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing should match the snapshot 1`] = `
+<main
+  className="landing-page"
+>
+  <header
+    className="landing-page-header"
+  >
+    <div
+      className="logo"
+    />
+    <h1
+      className="game-title"
+    >
+      Pitch
+      <br />
+       Battles
+    </h1>
+  </header>
+  <section
+    className="login-signup-container"
+  >
+    <Login
+      landingChange={[Function]}
+      status={true}
+    />
+    <Signup
+      landingChange={[Function]}
+      status={false}
+    />
+  </section>
+</main>
+`;

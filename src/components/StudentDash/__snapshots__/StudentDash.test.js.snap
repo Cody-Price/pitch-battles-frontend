@@ -35,6 +35,7 @@ exports[`StudentDash should match the snapshot 1`] = `
       </section>
       <button
         className="onboarding-link"
+        onClick={[Function]}
       />
     </header>
     <section

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Victory should match the snapshot 1`] = `
+<section
+  className="victory-screen"
+  onClick={[Function]}
+>
+  <h3
+    className="victory-text"
+  >
+    VICTORY!
+  </h3>
+  <p
+    className="level-time"
+  >
+    level time: 
+    0.001
+  </p>
+</section>
+`;
