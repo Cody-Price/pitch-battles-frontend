@@ -2,12 +2,12 @@
 
 exports[`GameUserModal should match the snapshot 1`] = `
 <aside
-  className="game-user-modal undefined"
+  className="game-user-modal true"
 >
   <h4
     className="game-modal-username"
   >
-    Steve
+    Joey
   </h4>
   <p
     className="current-instrument-label"
@@ -16,9 +16,12 @@ exports[`GameUserModal should match the snapshot 1`] = `
   </p>
   <p
     className="current-instrument"
-  />
+  >
+    triangle
+  </p>
   <button
     className="reset-game-button"
+    onClick={[MockFunction]}
   >
     reset
   </button>

@@ -16,4 +16,12 @@ describe("Onboarding", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe('clickRight', () => {
+    it('should call setState if dot < 5', () => {
+      const expected = 2;
+
+      wrapper.
+    })
+  })
 });

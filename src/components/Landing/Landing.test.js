@@ -16,4 +16,13 @@ describe("Landing", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe("landingChange", () => {
+    it("should call setState", () => {
+      const expected = { login: false, signup: true };
+      wrapper.instance().landingChange();
+
+      expect(wrapper.state()).toEqual(expected);
+    });
+  });
 });

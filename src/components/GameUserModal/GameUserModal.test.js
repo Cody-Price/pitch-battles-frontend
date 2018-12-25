@@ -8,12 +8,40 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe("GameUserModal", () => {
   let wrapper;
+  const mockStatus = true;
+  const mockUsername = "Joey";
+  const mockInstrument = "triangle";
+  let mockReset;
+  let mockEndGame;
 
   beforeEach(() => {
-    wrapper = shallow(<GameUserModal />);
+    mockReset = jest.fn();
+    mockEndGame = jest.fn();
+
+    wrapper = shallow(
+      <GameUserModal
+        status={mockStatus}
+        username={mockUsername}
+        instrument={mockInstrument}
+        reset={mockReset}
+        endGame={mockEndGame}
+      />
+    );
   });
 
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should call reset on click", () => {
+    wrapper.find(".reset-game-button").simulate("click");
+
+    expect(mockReset).toHaveBeenCalled();
+  });
+
+  it("should call endGame on click", () => {
+    wrapper.find(".exit-game-button").simulate("click");
+
+    expect(mockEndGame).toHaveBeenCalledWith(false);
   });
 });
