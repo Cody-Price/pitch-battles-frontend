@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditAvatar should match the snapshot 1`] = `
+<section
+  className="edit-avatar-section true"
+>
+  <div
+    className="avatar-editor-current two"
+  />
+  <div
+    className="avatar-left-arrow"
+    onClick={[Function]}
+  />
+  <div
+    className="avatar-right-arrow"
+    onClick={[Function]}
+  />
+  <button
+    className="change-avatar-button"
+  >
+    choose avatar
+  </button>
+</section>
+`;
