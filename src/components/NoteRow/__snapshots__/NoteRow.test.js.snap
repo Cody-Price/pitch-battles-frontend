@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteRow should match the snapshot 1`] = `
+<ul
+  className="note-row"
+>
+  <Note
+    key="a"
+    pitch="a"
+  />
+  <Note
+    key="b"
+    pitch="b"
+  />
+  <Note
+    key="c"
+    pitch="c"
+  />
+  <Note
+    key="d"
+    pitch="d"
+  />
+  <Note
+    key="e"
+    pitch="e"
+  />
+  <Note
+    key="f"
+    pitch="f"
+  />
+  <Note
+    key="g"
+    pitch="g"
+  />
+</ul>
+`;

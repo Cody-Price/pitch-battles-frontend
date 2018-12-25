@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingArticle should match the snapshot 1`] = `
+<article
+  className="onboarding-article"
+>
+  <img
+    alt="intro"
+    className="onboarding-image"
+    src="./images/battle-ob.png"
+  />
+  <p
+    className="onboarding-content"
+  >
+    In Pitch Battles, musicians can test their pitch-naming mettle in combat against beasts of the wilds.
+  </p>
+</article>
+`;

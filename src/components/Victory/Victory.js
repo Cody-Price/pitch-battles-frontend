@@ -9,11 +9,8 @@ class Victory extends Component {
   };
 
   render() {
-    console.log(this.props.time);
     const totalTime = this.props.time.reduce((accu, num) => {
-      console.log(num);
       accu += num;
-      console.log(accu);
       return accu;
     }, 0);
 
