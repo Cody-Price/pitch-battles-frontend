@@ -7,6 +7,7 @@ import Game from "../Game/Game";
 import Landing from "../Landing/Landing";
 import StudentDash from "../StudentDash/StudentDash";
 import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
+import Onboarding from "../Onboarding/Onboarding";
 
 import "./App.css";
 
@@ -20,7 +21,8 @@ class App extends Component {
       newFastestTimes: [],
       fetchError: false,
       gameActive: false,
-      instrument: undefined
+      instrument: undefined,
+      activePage: ""
     };
   }
 
@@ -32,7 +34,8 @@ class App extends Component {
       this.setState({
         webToken: data.access_token,
         user: data.user,
-        fetchError: false
+        fetchError: false,
+        activePage: "onboarding"
       });
       console.log(data);
     } catch (error) {
@@ -60,8 +63,7 @@ class App extends Component {
     }
   };
 
-  // -- PROCESS GAME RESULTS -- //
-
+  // -- NAVIGATOR -- //
   toggleGame = (gameActive, instrument) => {
     console.log(gameActive, instrument);
     this.setState({
@@ -69,6 +71,14 @@ class App extends Component {
       instrument
     });
   };
+
+  navigate = location => {
+    this.setState({
+      activePage: location
+    });
+  };
+
+  // -- PROCESS GAME RESULTS -- //
 
   clearAchievmentsAndTimes = () => {
     this.setState({
@@ -112,9 +122,17 @@ class App extends Component {
                 signUpUser={this.signUpUser}
               />
             )}
-            {this.state.user && (
-              <StudentDash startGame={this.toggleGame} user={mockUser} />
+            {this.state.activePage === "onboarding" && this.state.user && (
+              <Onboarding navigate={this.navigate} />
             )}
+            {this.state.activePage === "student dash" && this.state.user && (
+              <StudentDash
+                navigate={this.navigate}
+                startGame={this.toggleGame}
+                user={mockUser}
+              />
+            )}
+            {/* {(this.state.active === 'onboarding' && this.state.user) && } */}
             }
           </section>
         )}

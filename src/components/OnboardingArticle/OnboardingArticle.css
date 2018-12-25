@@ -1,0 +1,14 @@
+.onboarding-article {
+  margin-top: 2rem;
+  width: 600px;
+}
+
+.onboarding-image {
+  height: 200px;
+  width: 200px;
+  box-shadow: 1px 1px 1px #4776bb;
+}
+
+.onboarding-content {
+  margin: 1rem 2rem;
+}
