@@ -38,10 +38,19 @@ class App extends Component {
         activePage: "onboarding"
       });
       console.log(data);
+      this.setState({
+        webToken: data.access_token
+      });
     } catch (error) {
       this.setError();
       console.log(error);
     }
+  };
+
+  updateWebToken = webToken => {
+    this.setState({
+      webToken
+    });
   };
 
   signUpUser = async body => {
