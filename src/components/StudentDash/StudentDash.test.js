@@ -10,12 +10,18 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("StudentDash", () => {
   let wrapper;
   let mockToggleGame;
+  let mockNavigate;
 
   beforeEach(() => {
     mockToggleGame = jest.fn();
+    mockNavigate = jest.fn();
 
     wrapper = shallow(
-      <StudentDash startGame={mockToggleGame} user={mockUser} />
+      <StudentDash
+        startGame={mockToggleGame}
+        user={mockUser}
+        navigate={mockNavigate}
+      />
     );
   });
 
@@ -112,6 +118,16 @@ describe("StudentDash", () => {
       wrapper.instance().clearNoInstrumentError();
 
       expect(wrapper.state().noInstrumentError).toEqual(false);
+    });
+  });
+
+  describe("navigate", () => {
+    it("should call navigate with the appropriate params", () => {
+      const expected = "onboarding";
+
+      wrapper.find(".onboarding-link").simulate("click");
+
+      expect(mockNavigate).toHaveBeenCalledWith(expected);
     });
   });
 });
