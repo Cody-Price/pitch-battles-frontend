@@ -71,6 +71,11 @@
   image-rendering: pixelated;
 }
 
+.arrow-left.false,
+.arrow-right.false {
+  display: none;
+}
+
 .dots-wrapper {
   position: absolute;
   bottom: 20px;

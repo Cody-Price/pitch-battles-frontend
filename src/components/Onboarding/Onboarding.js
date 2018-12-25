@@ -17,17 +17,32 @@ class Onboarding extends Component {
   }
 
   clickRight = () => {
-    if (this.state.dot < 5) {
+    if (this.state.dot === 4) {
       this.setState({
-        dot: this.state.dot + 1
+        dot: this.state.dot + 1,
+        right: false,
+        left: true
+      });
+    } else if (this.state.dot < 5) {
+      this.setState({
+        dot: this.state.dot + 1,
+        left: true
       });
     }
   };
 
   clickLeft = () => {
-    if (this.state.dot !== 0) {
+    if (this.state.dot === 1) {
       this.setState({
-        dot: this.state.dot - 1
+        dot: this.state.dot - 1,
+        right: true,
+        left: false
+      });
+    } else if (this.state.dot > 0) {
+      this.setState({
+        dot: this.state.dot - 1,
+        left: true,
+        right: true
       });
     }
   };

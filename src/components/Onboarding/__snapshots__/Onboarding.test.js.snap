@@ -57,7 +57,7 @@ exports[`Onboarding should match the snapshot 1`] = `
       <OnboardingArticle
         data={
           Object {
-            "content": "Once the game begins, you will be shown a staff with a single note. Identify it corrently by either clicking the pitch name or by entering it on the keyboard an you will strike the beast!",
+            "content": "Once the game begins, you will be shown a staff with a single note. Identify it corrently by either clicking the pitch name or by entering it on the keyboard and you will strike the beast!",
             "imageUrl": "./images/pitch-ob.png",
             "key": "play-the-game",
           }

@@ -5,7 +5,7 @@ class Note extends Component {
   render() {
     return (
       <li
-        onClick={event => {
+        onClick={() => {
           this.props.submitGuess(null, this.props.pitch);
         }}
         className="note-name"

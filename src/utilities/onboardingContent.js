@@ -9,19 +9,19 @@ export const onboardingContent = [
     imageUrl: "./images/join-class-ob.png",
     key: "join-class",
     content:
-      "Before charing in, students are encouraged to join a class on the student dashboard by clicking on the 'join a class' link and entering the key given to them by their teacher."
+      "Before charging in, students are encouraged to join a class on the student dashboard by clicking on the 'join a class' link and entering the key given to them by their teacher."
   },
   {
     imageUrl: "./images/db-ob.png",
     key: "start-game",
     content:
-      "To play pitch battle, choose your instrument from the menu and click 'to battle!'."
+      "To play Pitch Battles, choose your instrument from the menu and click 'to battle!'."
   },
   {
     imageUrl: "./images/pitch-ob.png",
     key: "play-the-game",
     content:
-      "Once the game begins, you will be shown a staff with a single note. Identify it corrently by either clicking the pitch name or by entering it on the keyboard an you will strike the beast!"
+      "Once the game begins, you will be shown a staff with a single note. Identify it correctly by either clicking the pitch name or by entering it on the keyboard and you will strike the beast!"
   },
   {
     imageUrl: "./images/main-game-ob.png",
