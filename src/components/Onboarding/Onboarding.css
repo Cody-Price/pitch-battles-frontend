@@ -1,0 +1,148 @@
+.onboarding {
+  font-family: "chronotype";
+  background: white;
+  width: 600px;
+  height: 360px;
+  background: url("./images/onboarding-frame.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  position: relative;
+  margin: 3rem auto;
+  z-index: 1000;
+  display: flex;
+  overflow: hidden;
+  font-size: 1.3rem;
+  animation: slide-onboarding 0.3s linear;
+}
+
+.article-wrapper {
+  position: relative;
+}
+
+.article-row {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.4s;
+}
+
+.skip-to-dash {
+  position: absolute;
+  right: 32px;
+  top: 0px;
+  z-index: 3000;
+}
+
+.skip-to-dash:hover {
+  cursor: pointer;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 130px;
+  z-index: 2000;
+
+  height: 21px;
+  width: 15px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  cursor: pointer;
+}
+
+.arrow-left:focus,
+.arrow-right:focus {
+  outline: none;
+}
+
+.arrow-left {
+  background: url(./images/arrow-left.png);
+  left: 50px;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.arrow-right {
+  background: url(./images/arrow-right.png);
+  right: 50px;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 20px;
+  height: 24px;
+  width: 104px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.dots {
+  position: absolute;
+  background: url("./images/dot-row.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  width: 190px;
+  height: 18px;
+  right: 0px;
+  transition: 0.4s;
+}
+
+.dots.two {
+  right: -18px;
+}
+
+.dots.three {
+  right: -36px;
+}
+
+.dots.four {
+  right: -54px;
+}
+
+.dots.five {
+  right: -70px;
+}
+
+.dots.six {
+  right: -86px;
+}
+
+.article-row.one {
+  left: 0;
+}
+
+.article-row.two {
+  left: -600px;
+}
+
+.article-row.three {
+  left: -1200px;
+}
+
+.article-row.four {
+  left: -1800px;
+}
+
+.article-row.five {
+  left: -2400px;
+}
+
+.article-row.six {
+  left: -3000px;
+}
+
+@keyframes slide-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}

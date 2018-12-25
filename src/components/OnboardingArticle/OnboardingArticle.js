@@ -6,8 +6,15 @@ class OnboardingArticle extends Component {
   render() {
     return (
       <article className="onboarding-article">
-        <div />
+        <img
+          src={this.props.data.imageUrl}
+          className="onboarding-image"
+          alt="onboarding-image"
+        />
+        <p className="onboarding-content">{this.props.data.content}</p>
       </article>
     );
   }
 }
+
+export default OnboardingArticle;

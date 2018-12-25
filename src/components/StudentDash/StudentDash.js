@@ -115,7 +115,12 @@ class StudentDash extends Component {
               </h2>
               <h2 className="student-class-link">{this.props.user.class}</h2>
             </section>
-            <button className="onboarding-link" />
+            <button
+              onClick={() => {
+                this.props.navigate("onboarding");
+              }}
+              className="onboarding-link"
+            />
           </header>
           <section className="new-game-section">
             <button className="start-game" onClick={this.handleNewGame}>
