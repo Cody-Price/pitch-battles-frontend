@@ -108,6 +108,7 @@ class StudentDash extends Component {
                   avatars[this.props.user.avatar]
                 }`}
               />
+              <h3 className="account-link-text">account page</h3>
             </div>
             <section className="header-data">
               <h2 className="student-name">
@@ -126,6 +127,13 @@ class StudentDash extends Component {
             <button className="start-game" onClick={this.handleNewGame}>
               to battle!
             </button>
+            <h2
+              className={`no-instrument-warning ${
+                this.state.noInstrumentError
+              }`}
+            >
+              you must select an instrument before playing...
+            </h2>
             <h2 className="instrument-label">instrument:</h2>
             <h3
               onClick={this.handleInstrumentDropdown}
