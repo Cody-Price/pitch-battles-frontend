@@ -33,6 +33,6 @@ export const onboardingContent = [
     imageUrl: "./images/db-ob.png",
     key: "badges-description",
     content:
-      "Playing games, beating levels, and improving your times will earn you badges. View your badges on your dashboard or see your entire class's progress on the class page (accessed from the dashboard"
+      "Playing games, beating levels, and improving your times will earn you badges. View your badges on your dashboard or see your entire class's progress on the class page (accessed from the dashboard)"
   }
 ];
