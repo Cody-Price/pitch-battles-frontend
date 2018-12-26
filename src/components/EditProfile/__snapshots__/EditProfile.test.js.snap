@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditProfile should match the snapshot 1`] = `
+<section
+  className="edit-profile"
+>
+  <form
+    className="edit-profile-form"
+  >
+    <input
+      className="profile-first-name-input"
+      name="first_name"
+      placeholder="first name"
+      value="Haley"
+    />
+    <input
+      className="profile-last-name-input"
+      name="last_name"
+      placeholder="last name"
+      value="Jacobs"
+    />
+    <input
+      className="profile-email-input"
+      name="email"
+      placeholder="email"
+      type="email"
+      value="hjacobs@gmail.com"
+    />
+    <button
+      className="profile-submit-btn"
+      type="submit"
+    >
+      submit new info
+    </button>
+  </form>
+</section>
+`;
