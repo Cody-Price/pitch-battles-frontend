@@ -64,6 +64,14 @@ class EditAvatar extends Component {
     }
   };
 
+  handleSubmit = () => {
+    if (this.props.user.avatar === this.state.avatar) {
+      return;
+    }
+
+    this.props.changeAvatar(this.state.avatar);
+  };
+
   render() {
     return (
       <section className={`edit-avatar-section ${this.props.status}`}>

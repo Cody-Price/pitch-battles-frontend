@@ -12,9 +12,17 @@ describe("EditAvatar", () => {
     avatar: 2
   };
   const mockStatus = true;
+  let changeAvatar;
 
   beforeEach(() => {
-    wrapper = shallow(<EditAvatar user={mockUser} status={mockStatus} />);
+    changeAvatar = jest.fn();
+    wrapper = shallow(
+      <EditAvatar
+        user={mockUser}
+        status={mockStatus}
+        changeAvatar={changeAvatar}
+      />
+    );
   });
 
   it("should match the snapshot", () => {
@@ -137,6 +145,28 @@ describe("EditAvatar", () => {
       wrapper.instance().handleLeftClick();
 
       expect(wrapper.state()).toEqual(expected);
+    });
+  });
+
+  describe("handleSubmit", () => {
+    it("should return if current avatar is the same as new avatar", () => {
+      const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
+
+      wrapper.instance().handleSubmit();
+
+      expect(spy).toReturn();
+    });
+
+    it("should call changeAvatar with the correct params", () => {
+      wrapper.setState({
+        avatar: 4
+      });
+
+      const expected = 4;
+
+      wrapper.instance().handleSubmit();
+
+      expect(changeAvatar).toHaveBeenCalledWith(expected);
     });
   });
 });
