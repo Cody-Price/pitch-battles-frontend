@@ -33,6 +33,16 @@ describe("StudentAccount", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("should call navigate on click with the correct params", () => {
+    const expected = "student dash";
+
+    wrapper.instance().forceUpdate();
+
+    wrapper.find(".back-to-dash-button").simulate("click");
+
+    expect(mockNavigate).toHaveBeenCalledWith(expected);
+  });
+
   describe("navigate", () => {
     it("should setState if the current page is not equal to the selected page", () => {
       const expected = "edit-avatar-active";
@@ -57,6 +67,28 @@ describe("StudentAccount", () => {
       wrapper.instance().forceUpdate();
 
       wrapper.find(".password-link").simulate("click");
+
+      expect(spy).toHaveBeenCalledWith(expected);
+    });
+
+    it("should call navigate on click with the correct params", () => {
+      const spy = jest.spyOn(wrapper.instance(), "navigate");
+      const expected = "edit-profile-active";
+
+      wrapper.instance().forceUpdate();
+
+      wrapper.find(".profile-link").simulate("click");
+
+      expect(spy).toHaveBeenCalledWith(expected);
+    });
+
+    it("should call navigate on click with the correct params", () => {
+      const spy = jest.spyOn(wrapper.instance(), "navigate");
+      const expected = "edit-avatar-active";
+
+      wrapper.instance().forceUpdate();
+
+      wrapper.find(".avatar-link").simulate("click");
 
       expect(spy).toHaveBeenCalledWith(expected);
     });
