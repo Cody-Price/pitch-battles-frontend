@@ -16,7 +16,8 @@ class ChangePassword extends Component {
     };
   }
 
-  handleSubmit = async () => {
+  handleSubmit = async event => {
+    event.preventDefault();
     if (
       !this.state.oldPassword ||
       !this.state.newPassword ||
@@ -74,7 +75,12 @@ class ChangePassword extends Component {
   render() {
     return (
       <section className={`change-password`}>
-        <form className="change-password-form" onSubmit={this.handleSubmit}>
+        <form
+          className="change-password-form"
+          onSubmit={event => {
+            this.handleSubmit(event);
+          }}
+        >
           <p className="password-component-text">old password</p>
           <input
             type="password"

@@ -30,7 +30,9 @@ class EditProfile extends Component {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault();
+
     if (
       this.state ===
       {
@@ -53,7 +55,12 @@ class EditProfile extends Component {
   render() {
     return (
       <section className="edit-profile">
-        <form className="edit-profile-form" onSubmit={this.handleSubmit}>
+        <form
+          className="edit-profile-form"
+          onSubmit={event => {
+            this.handleSubmit(event);
+          }}
+        >
           <p className="first-name-edit-label">first name:</p>
           <input
             name="first_name"

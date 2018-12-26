@@ -30,15 +30,51 @@ describe("ChangePassword", () => {
   });
 
   describe("handleSubmit", () => {
+    let mockPreventDefault;
+
+    it("should call preventDefault", () => {
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
+
+      wrapper.instance().handleSubmit(mockEvent);
+
+      expect(mockPreventDefault).toHaveBeenCalled();
+    });
+
     it("should set an error if fields are incomplete", () => {
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
       const expected = true;
 
-      wrapper.instance().handleSubmit();
+      wrapper.instance().handleSubmit(mockEvent);
 
       expect(wrapper.state().incompleteError).toEqual(expected);
     });
 
     it("should set an error if the new passwords do not match", () => {
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
       const expected = true;
 
       wrapper.setState({
@@ -47,15 +83,25 @@ describe("ChangePassword", () => {
         oldPassword: "What"
       });
 
-      wrapper.instance().handleSubmit();
+      wrapper.instance().handleSubmit(mockEvent);
 
       expect(wrapper.state().passwordMatchError).toEqual(true);
     });
 
     it("should call confirmOldPassword", async () => {
       const mockConfirmOldPassword = jest.fn().mockImplementation(() => {
-        return Promise.resolve(true);
+        return Promise.resolve();
       });
+
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
 
       wrapper.setState({
         newPassword: "Hello",
@@ -65,7 +111,7 @@ describe("ChangePassword", () => {
 
       wrapper.instance().confirmOldPassword = mockConfirmOldPassword;
 
-      await wrapper.instance().handleSubmit();
+      await wrapper.instance().handleSubmit(mockEvent);
 
       expect(mockConfirmOldPassword).toHaveBeenCalled();
     });
@@ -74,6 +120,16 @@ describe("ChangePassword", () => {
       const mockConfirmOldPassword = jest.fn().mockImplementation(() => {
         return Promise.resolve(false);
       });
+
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
 
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
 
@@ -85,12 +141,22 @@ describe("ChangePassword", () => {
 
       wrapper.instance().confirmOldPassword = mockConfirmOldPassword;
 
-      await wrapper.instance().handleSubmit();
+      await wrapper.instance().handleSubmit(mockEvent);
 
       expect(spy).toReturn();
     });
 
     it("should call updatePassword with the appropriate params", async () => {
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
+
       const mockConfirmOldPassword = jest.fn().mockImplementation(() => {
         return Promise.resolve(true);
       });
@@ -105,16 +171,25 @@ describe("ChangePassword", () => {
 
       wrapper.instance().confirmOldPassword = mockConfirmOldPassword;
 
-      await wrapper.instance().handleSubmit();
+      await wrapper.instance().handleSubmit(mockEvent);
 
       expect(mockUpdatePassword).toBeCalledWith(expected);
     });
 
     it("should call handleSubmit on submit", () => {
+      mockPreventDefault = jest.fn();
+
+      const mockEvent = {
+        target: {
+          name: "oldPassword",
+          value: "I am an old password"
+        },
+        preventDefault: mockPreventDefault
+      };
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".change-password-form").simulate("submit");
+      wrapper.find(".change-password-form").simulate("submit", mockEvent);
 
       expect(spy).toHaveBeenCalled();
     });
@@ -217,7 +292,8 @@ describe("ChangePassword", () => {
       const mockEvent = {
         target: {
           name: "oldPassword",
-          value: "I am an old password"
+          value: "I am an old password",
+          preventDefault: jest.fn()
         }
       };
 
@@ -232,7 +308,8 @@ describe("ChangePassword", () => {
       const mockEvent = {
         target: {
           name: "oldPassword",
-          value: "I am an old password"
+          value: "I am an old password",
+          preventDefault: jest.fn()
         }
       };
 
@@ -247,7 +324,8 @@ describe("ChangePassword", () => {
       const mockEvent = {
         target: {
           name: "newPassword",
-          value: "I am an new password"
+          value: "I am an new password",
+          preventDefault: jest.fn()
         }
       };
 
@@ -262,7 +340,8 @@ describe("ChangePassword", () => {
       const mockEvent = {
         target: {
           name: "confirmPassword",
-          value: "I am an new password"
+          value: "I am an new password",
+          preventDefault: jest.fn()
         }
       };
 
