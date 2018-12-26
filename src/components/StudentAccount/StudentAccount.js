@@ -14,10 +14,52 @@ class StudentAccount extends Component {
     };
   }
 
+  navigate = string => {
+    if (string !== this.state.activePage) {
+      this.setState({
+        activePage: string
+      });
+    }
+  };
+
   render() {
     return (
       <main className="student-account-page">
-        <nav className="student-account-nav" />
+        <button
+          onClick={() => {
+            this.props.navigate("student dash");
+          }}
+          className="back-to-dash-button"
+        >
+          back
+        </button>
+        <h3 className="student-account-label">user account settings</h3>
+        <ul className="student-account-nav">
+          <li
+            className={`profile-link ${this.state.activePage}`}
+            onClick={() => {
+              this.navigate("edit-profile-active");
+            }}
+          >
+            edit profile
+          </li>
+          <li
+            className={`avatar-link ${this.state.activePage}`}
+            onClick={() => {
+              this.navigate("edit-avatar-active");
+            }}
+          >
+            edit avatar
+          </li>
+          <li
+            className={`password-link ${this.state.activePage}`}
+            onClick={() => {
+              this.navigate("change-password-active");
+            }}
+          >
+            change password
+          </li>
+        </ul>
         <section className="student-account-active-tab">
           {this.state.activePage === "edit-profile-active" && (
             <EditProfile
