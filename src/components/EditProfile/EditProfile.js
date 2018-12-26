@@ -54,6 +54,7 @@ class EditProfile extends Component {
     return (
       <section className="edit-profile">
         <form className="edit-profile-form" onSubmit={this.handleSubmit}>
+          <p className="first-name-edit-label">first name:</p>
           <input
             name="first_name"
             className="profile-first-name-input"
@@ -63,6 +64,8 @@ class EditProfile extends Component {
               this.handleChange(event);
             }}
           />
+          <p className="last-name-edit-label">last name:</p>
+
           <input
             name="last_name"
             className="profile-last-name-input"
@@ -72,6 +75,8 @@ class EditProfile extends Component {
               this.handleChange(event);
             }}
           />
+          <p className="emai-edit-label">email:</p>
+
           <input
             type="email"
             name="email"
