@@ -102,12 +102,18 @@ class StudentDash extends Component {
       <main className="student-dash">
         <section className="student-dash-wrapper">
           <header className="student-dash-header">
-            <div className="student-dash-avatar-backer">
+            <div
+              className="student-dash-avatar-backer"
+              onClick={() => {
+                this.props.navigate("student account");
+              }}
+            >
               <div
                 className={`student-dash-avatar ${
                   avatars[this.props.user.avatar]
                 }`}
               />
+              <h3 className="account-link-text">account page</h3>
             </div>
             <section className="header-data">
               <h2 className="student-name">
@@ -126,6 +132,13 @@ class StudentDash extends Component {
             <button className="start-game" onClick={this.handleNewGame}>
               to battle!
             </button>
+            <h2
+              className={`no-instrument-warning ${
+                this.state.noInstrumentError
+              }`}
+            >
+              you must select an instrument before playing...
+            </h2>
             <h2 className="instrument-label">instrument:</h2>
             <h3
               onClick={this.handleInstrumentDropdown}
