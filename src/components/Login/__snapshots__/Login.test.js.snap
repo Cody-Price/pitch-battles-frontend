@@ -38,6 +38,11 @@ exports[`Login should render like snapshot 1`] = `
     >
       login
     </button>
+    <p
+      className="undefined login-warning"
+    >
+      invalid email/password combination
+    </p>
   </form>
   <button
     className="signup-form-switch-button"

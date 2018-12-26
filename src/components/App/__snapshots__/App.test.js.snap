@@ -11,7 +11,10 @@ exports[`App should match the snapshot 1`] = `
       instance="main-floating-backer"
     />
     <Landing
+      badLogin={false}
+      badSignUp={false}
       loginUser={[Function]}
+      signUpSuccessful={false}
       signUpUser={[Function]}
     />
     }
