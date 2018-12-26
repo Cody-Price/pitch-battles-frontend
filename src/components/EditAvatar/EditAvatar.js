@@ -75,9 +75,11 @@ class EditAvatar extends Component {
   render() {
     return (
       <section className={`edit-avatar-section ${this.props.status}`}>
-        <div
-          className={`avatar-editor-current ${avatars[this.state.avatar]}`}
-        />
+        <div className="avatar-editor-avatar-backer">
+          <div
+            className={`avatar-editor-current ${avatars[this.state.avatar]}`}
+          />
+        </div>
         <div
           className={`avatar-left-arrow ${this.state.left}`}
           onClick={this.handleLeftClick}

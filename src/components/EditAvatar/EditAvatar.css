@@ -1,0 +1,176 @@
+.edit-avatar-section {
+  position: relative;
+}
+
+.avatar-editor-avatar-backer {
+  grid-row: 1/3;
+  margin: auto;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: url(../Game/images/offwhite-avatar-backer.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  border: 2px solid #4776bb;
+  box-shadow: 1px 1px 1px#4776bb;
+}
+
+.avatar-editor-current-avatar-backer:hover {
+  cursor: pointer;
+}
+
+.avatar-editor-current {
+  margin: auto;
+  height: 60px;
+  width: 33px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 11px;
+  transition: 0.2s;
+}
+
+.avatar-editor-current.one {
+  background: url(../Game/pcs/char1/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-editor-current.two {
+  background: url(../Game/pcs/char2/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-editor-current.three {
+  background: url(../Game/pcs/char3/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-editor-current.four {
+  background: url(../Game/pcs/char4/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-editor-current.five {
+  background: url(../Game/pcs/char5/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 37px;
+}
+
+.avatar-editor-current.six {
+  background: url(../Game/pcs/char6/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 37px;
+}
+
+.avatar-editor-current.nine {
+  background: url(../Game/pcs/char9/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 60px;
+}
+
+.avatar-editor-current.ten {
+  background: url(../Game/pcs/char10/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 60px;
+}
+
+.avatar-editor-current.seven {
+  background: url(../Game/pcs/char7/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 62px;
+}
+
+.avatar-editor-current.eight {
+  background: url(../Game/pcs/char8/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 62px;
+}
+
+.avatar-left-arrow:hover,
+.avatar-right-arrow:hover {
+  cursor: pointer;
+}
+
+.avatar-left-arrow:focus,
+.avatar-right-arrow:focus {
+  outline: none;
+}
+
+.avatar-left-arrow,
+.avatar-right-arrow {
+  z-index: 2000;
+
+  height: 21px;
+  width: 15px;
+}
+
+.avatar-left-arrow {
+  position: absolute;
+  background: url(../Onboarding/images/arrow-left.png);
+  top: 30px;
+  left: 150px;
+  z-index: 100;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.avatar-right-arrow {
+  position: absolute;
+  background: url(../Onboarding/images/arrow-right.png);
+  top: 30px;
+  right: 150px;
+  z-index: 100;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.avatar-left-arrow.false,
+.avatar-right-arrow.false {
+  display: none;
+}
+
+.edit-avatar-section button {
+  grid-column: 1/3;
+  width: 150px;
+  height: 23px;
+  font-family: "chronotype";
+  font-size: 1rem;
+  margin: 2rem auto;
+  background: #6a9dd4;
+  border: 0;
+  display: block;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.edit-avatar-section *:focus {
+  outline: none;
+}
+
+.edit-avatar-section button:active {
+  box-shadow: none;
+}
