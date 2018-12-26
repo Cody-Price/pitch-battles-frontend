@@ -4,9 +4,18 @@ exports[`EditAvatar should match the snapshot 1`] = `
 <section
   className="edit-avatar-section true"
 >
+  <h3
+    className="avatar-editor-label"
+  >
+    change your avatar
+  </h3>
   <div
-    className="avatar-editor-current two"
-  />
+    className="avatar-editor-avatar-backer"
+  >
+    <div
+      className="avatar-editor-current two"
+    />
+  </div>
   <div
     className="avatar-left-arrow true"
     onClick={[Function]}

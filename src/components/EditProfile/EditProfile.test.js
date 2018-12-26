@@ -100,15 +100,21 @@ describe("EditProfile", () => {
   });
 
   describe("handleSubmit", () => {
+    let mockPreventDefault;
+
     it("should return if state is empty strings", () => {
+      mockPreventDefault = jest.fn();
+      const mockEvent = { preventDefault: mockPreventDefault };
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
 
-      wrapper.instance().handleSubmit();
+      wrapper.instance().handleSubmit(mockEvent);
 
       expect(spy).toReturn();
     });
 
     it("should call changeProfile if state is not empty strings with the correct params", () => {
+      mockPreventDefault = jest.fn();
+      const mockEvent = { preventDefault: mockPreventDefault };
       const expected = {
         first_name: "Kevin",
         last_name: "Simpson",
@@ -121,12 +127,15 @@ describe("EditProfile", () => {
         email: "ksimpson@mail.com"
       });
 
-      wrapper.instance().handleSubmit();
+      wrapper.instance().handleSubmit(mockEvent);
 
       expect(mockChangeProfile).toHaveBeenCalledWith(expected);
     });
 
     it("should call handleSubmit on submit", () => {
+      mockPreventDefault = jest.fn();
+      const mockEvent = { preventDefault: mockPreventDefault };
+
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
       wrapper.setState({
         first_name: "Kevin",
@@ -134,7 +143,7 @@ describe("EditProfile", () => {
         email: "ksimpson@mail.com"
       });
 
-      wrapper.find(".edit-profile-form").simulate("submit");
+      wrapper.find(".edit-profile-form").simulate("submit", mockEvent);
 
       expect(spy).toHaveBeenCalled();
     });
