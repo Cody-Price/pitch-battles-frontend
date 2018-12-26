@@ -23,13 +23,20 @@ class App extends Component {
       fetchError: false,
       gameActive: false,
       instrument: undefined,
-      activePage: ""
+      activePage: "",
+      badLogin: false,
+      signUpSuccessful: false,
+      badSignUp: false
     };
   }
 
   // -- LOGIN AND SIGNUP -- //
 
   loginUser = async body => {
+    this.setState({
+      fetchError: false,
+      badLogin: false
+    });
     try {
       const data = await login(body);
       this.setState({
@@ -39,12 +46,23 @@ class App extends Component {
         activePage: "onboarding"
       });
       console.log(data);
-      this.setState({
-        webToken: data.access_token
-      });
+      if (data.error) {
+        this.setState({
+          badLogin: true,
+          fetchError: false,
+          badSignUp: false
+        });
+      } else {
+        this.setState({
+          webToken: data.access_token,
+          fetchError: false,
+          badSignUp: false,
+          badLogin: false
+        });
+      }
     } catch (error) {
-      this.setError();
-      console.log(error);
+      this.setError(error);
+      // console.log(error);
     }
   };
 
@@ -64,9 +82,17 @@ class App extends Component {
     try {
       const data = await signUp(body);
       console.log(data);
-      this.setState({
-        fetchError: false
-      });
+      if (data.error) {
+        this.setState({
+          badSignUp: true
+        });
+      } else {
+        this.setState({
+          fetchError: false,
+          signUpSuccessful: true,
+          badSignUp: false
+        });
+      }
     } catch (error) {
       this.setError();
       console.log(error);
@@ -114,7 +140,8 @@ class App extends Component {
   };
 
   // -- FETCH ERROR HANDLING -- //
-  setError = () => {
+  setError = error => {
+    console.log(error.user_authentication);
     this.setState({
       fetchError: true
     });
@@ -137,6 +164,9 @@ class App extends Component {
               <Landing
                 loginUser={this.loginUser}
                 signUpUser={this.signUpUser}
+                badLogin={this.state.badLogin}
+                badSignUp={this.state.badSignUp}
+                signUpSuccessful={this.state.signUpSuccessful}
               />
             )}
             {this.state.activePage === "onboarding" && this.state.user && (

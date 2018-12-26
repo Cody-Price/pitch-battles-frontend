@@ -1,8 +1,8 @@
 .login-form {
   position: absolute;
   padding-top: 1rem;
-  width: 400px;
-  height: 484px;
+  width: 341px;
+  height: 431px;
   top: 0;
   right: 300px;
   transition: 0.3s;
@@ -16,7 +16,6 @@
   padding-top: 0.5rem;
 
   position: absolute;
-  width: 300px;
   right: 300px;
   margin: 1.2rem auto;
   transition: 0.3s;
@@ -40,6 +39,7 @@
   font-size: 1.1rem;
   padding-left: 1.6rem;
   padding-top: 4px;
+  width: 220px;
 }
 
 .role-label {
@@ -50,7 +50,7 @@
 
 .login-form-button,
 .signup-form-switch-button {
-  margin: 0.6rem 0;
+  margin: 1rem 0;
   font-family: "chronotype";
   font-size: 1.1rem;
   padding-top: 4px;
@@ -58,7 +58,7 @@
 }
 
 .signup-form-switch-button {
-  margin: 8rem 0 0 0;
+  margin: 11rem 0 0 0;
 }
 
 .login-form button:hover {
@@ -76,8 +76,8 @@
   height: 17px;
   background-size: cover;
   image-rendering: pixelated;
-  left: 56px;
-  top: 3px;
+  left: 50px;
+  top: 2px;
 }
 
 .login-pw-icon {
@@ -87,6 +87,20 @@
   height: 16px;
   background-size: cover;
   image-rendering: pixelated;
-  left: 58px;
-  top: 38px;
+  left: 50px;
+  top: 37px;
+}
+
+.login-warning {
+  font-size: 1rem;
+  position: absolute;
+  margin: auto;
+  left: -800px;
+  transition: 0.3s;
+  right: 0;
+  top: 65px;
+}
+
+.login-warning.true {
+  left: 0;
 }

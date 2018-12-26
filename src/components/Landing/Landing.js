@@ -32,11 +32,14 @@ class Landing extends Component {
             loginUser={this.props.loginUser}
             landingChange={this.landingChange}
             status={this.state.login}
+            badLogin={this.props.badLogin}
           />
           <Signup
             landingChange={this.landingChange}
             status={this.state.signup}
             signUpUser={this.props.signUpUser}
+            signUpSuccessful={this.props.signUpSuccessful}
+            badSignUp={this.props.badSignUp}
           />
         </section>
       </main>

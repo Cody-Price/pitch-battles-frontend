@@ -46,6 +46,9 @@ class Login extends Component {
             value={this.state.password}
           />
           <button className="login-form-button">login</button>
+          <p className={`${this.props.badLogin} login-warning`}>
+            invalid email/password combination
+          </p>
         </form>
         <button
           className="signup-form-switch-button"

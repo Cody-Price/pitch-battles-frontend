@@ -1,6 +1,7 @@
 .signup-form {
   position: absolute;
-  width: 300px;
+  width: 341px;
+  height: 431px;
   left: 300px;
   margin: 1.2rem auto;
   transition: 0.3s;
@@ -24,6 +25,7 @@
   font-size: 1.1rem;
   padding-left: 1.6rem;
   padding-top: 4px;
+  width: 220px;
 }
 
 .role-label {
@@ -63,7 +65,7 @@
 }
 
 .return-to-login-button {
-  margin: 0.7rem 0 0 0;
+  margin: 4.4rem 0 0 0;
 }
 
 .signup-form button:hover {
@@ -81,7 +83,7 @@
   width: 16px;
   background-size: cover;
   image-rendering: pixelated;
-  left: 58px;
+  left: 50px;
   top: 3px;
 }
 
@@ -96,8 +98,8 @@
   height: 17px;
   background-size: cover;
   image-rendering: pixelated;
-  left: 56px;
-  top: 71px;
+  left: 49px;
+  top: 72px;
 }
 
 .pw-icon {
@@ -107,7 +109,7 @@
   height: 16px;
   background-size: cover;
   image-rendering: pixelated;
-  left: 58px;
+  left: 50px;
   top: 107px;
 }
 
@@ -121,4 +123,18 @@
 
 .teacher-button.teacher {
   text-decoration: underline;
+}
+
+.bad-signup-warning,
+.signup-successful-message {
+  position: absolute;
+  margin: 0auto;
+  right: -1000px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.bad-signup-warning.true,
+.signup-successful-message.true {
+  right: 0;
 }
