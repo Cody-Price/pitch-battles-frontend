@@ -13,6 +13,10 @@ class EditAvatar extends Component {
     };
   }
   componentDidMount() {
+    this.checkAvatar();
+  }
+
+  checkAvatar = () => {
     if (this.props.user.avatar === 1) {
       this.setState({
         left: false,
@@ -30,7 +34,7 @@ class EditAvatar extends Component {
         avatar: this.props.user.avatar
       });
     }
-  }
+  };
 
   handleRightClick = () => {
     if (this.state.avatar === 9) {
@@ -66,8 +70,14 @@ class EditAvatar extends Component {
         <div
           className={`avatar-editor-current ${avatars[this.state.avatar]}`}
         />
-        <div className="avatar-left-arrow" onClick={this.handleLeftClick} />
-        <div className="avatar-right-arrow" onClick={this.handleRightClick} />
+        <div
+          className={`avatar-left-arrow ${this.state.left}`}
+          onClick={this.handleLeftClick}
+        />
+        <div
+          className={`avatar-right-arrow ${this.state.right}`}
+          onClick={this.handleRightClick}
+        />
         <button onClick={this.handleSelect} className="change-avatar-button">
           choose avatar
         </button>
