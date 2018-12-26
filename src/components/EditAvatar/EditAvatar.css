@@ -4,7 +4,7 @@
 
 .avatar-editor-avatar-backer {
   grid-row: 1/3;
-  margin: auto;
+  margin: 2rem auto;
   position: relative;
   height: 80px;
   width: 80px;
@@ -132,7 +132,7 @@
 .avatar-left-arrow {
   position: absolute;
   background: url(../Onboarding/images/arrow-left.png);
-  top: 30px;
+  top: 80px;
   left: 150px;
   z-index: 100;
   background-size: cover;
@@ -142,7 +142,7 @@
 .avatar-right-arrow {
   position: absolute;
   background: url(../Onboarding/images/arrow-right.png);
-  top: 30px;
+  top: 80px;
   right: 150px;
   z-index: 100;
   background-size: cover;
@@ -159,12 +159,13 @@
   width: 150px;
   height: 23px;
   font-family: "chronotype";
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 2rem auto;
   background: #6a9dd4;
   border: 0;
   display: block;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  padding-top: 4px;
 }
 
 .edit-avatar-section *:focus {
@@ -173,4 +174,10 @@
 
 .edit-avatar-section button:active {
   box-shadow: none;
+}
+
+.avatar-editor-label {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
 }
