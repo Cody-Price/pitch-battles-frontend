@@ -8,11 +8,11 @@ exports[`EditAvatar should match the snapshot 1`] = `
     className="avatar-editor-current two"
   />
   <div
-    className="avatar-left-arrow"
+    className="avatar-left-arrow true"
     onClick={[Function]}
   />
   <div
-    className="avatar-right-arrow"
+    className="avatar-right-arrow true"
     onClick={[Function]}
   />
   <button
