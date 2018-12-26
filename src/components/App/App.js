@@ -8,6 +8,7 @@ import Landing from "../Landing/Landing";
 import StudentDash from "../StudentDash/StudentDash";
 import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
+import StudentAccount from "../StudentAccount/StudentAccount";
 
 import "./App.css";
 
@@ -119,6 +120,13 @@ class App extends Component {
     });
   };
 
+  // -- ACCOUNT UPDATES -- //
+  changeProfile = () => {};
+
+  changeAvatar = () => {};
+
+  changePassword = () => {};
+
   render() {
     return (
       <div className="App">
@@ -141,7 +149,15 @@ class App extends Component {
                 user={mockUser}
               />
             )}
-            {/* {(this.state.active === 'onboarding' && this.state.user) && } */}
+            {this.state.activePage === "student account" && this.state.user && (
+              <StudentAccount
+                user={mockUser}
+                changeProfile={this.changeProfile}
+                changeAvatar={this.changeAvatar}
+                changePassword={this.changePassword}
+                navigate={this.navigate}
+              />
+            )}
             }
           </section>
         )}

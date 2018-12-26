@@ -102,7 +102,12 @@ class StudentDash extends Component {
       <main className="student-dash">
         <section className="student-dash-wrapper">
           <header className="student-dash-header">
-            <div className="student-dash-avatar-backer">
+            <div
+              className="student-dash-avatar-backer"
+              onClick={() => {
+                this.props.navigate("student account");
+              }}
+            >
               <div
                 className={`student-dash-avatar ${
                   avatars[this.props.user.avatar]
