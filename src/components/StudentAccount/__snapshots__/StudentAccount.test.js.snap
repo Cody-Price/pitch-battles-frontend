@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentAccount should match the snapshot 1`] = `
+<main
+  className="student-account-page"
+>
+  <button
+    className="back-to-dash-button"
+    onClick={[Function]}
+  >
+    back
+  </button>
+  <h3
+    className="student-account-label"
+  >
+    user account settings
+  </h3>
+  <ul
+    className="student-account-nav"
+  >
+    <li
+      className="profile-link edit-profile-active"
+      onClick={[Function]}
+    >
+      edit profile
+    </li>
+    <li
+      className="avatar-link edit-profile-active"
+      onClick={[Function]}
+    >
+      edit avatar
+    </li>
+    <li
+      className="password-link edit-profile-active"
+      onClick={[Function]}
+    >
+      change password
+    </li>
+  </ul>
+  <section
+    className="student-account-active-tab"
+  >
+    <EditProfile
+      changeProfile={[MockFunction]}
+      user={
+        Object {
+          "avatar": 9,
+          "badges": Array [
+            Object {
+              "level_one": true,
+            },
+            Object {
+              "level_one_perfect": true,
+            },
+            Object {
+              "level_two": true,
+            },
+            Object {
+              "level_two_perfect": true,
+            },
+            Object {
+              "level_three": true,
+            },
+            Object {
+              "level_three_perfect": false,
+            },
+            Object {
+              "level_four": true,
+            },
+            Object {
+              "level_four_perfect": false,
+            },
+            Object {
+              "all_perfect": false,
+            },
+            Object {
+              "five_games": true,
+            },
+            Object {
+              "ten_games": true,
+            },
+            Object {
+              "twenty_games": true,
+            },
+            Object {
+              "fifty_games": true,
+            },
+            Object {
+              "one_hundred_games": true,
+            },
+            Object {
+              "two_hundred_games": false,
+            },
+            Object {
+              "five_hundred_games": false,
+            },
+            Object {
+              "one_thousand_games": false,
+            },
+          ],
+          "class": "6th-grade band",
+          "email": "cmanly@gmail.com",
+          "fastest_times": Array [
+            Object {
+              "level_one": 11.01,
+            },
+            Object {
+              "level_two": 15.24,
+            },
+            Object {
+              "level_three": 24.64,
+            },
+            Object {
+              "level_four": 30.17,
+            },
+            Object {
+              "all": 83.16,
+            },
+          ],
+          "first_name": "Chet",
+          "games_played": 115,
+          "last_name": "Manly",
+          "role": 0,
+        }
+      }
+    />
+  </section>
+</main>
+`;

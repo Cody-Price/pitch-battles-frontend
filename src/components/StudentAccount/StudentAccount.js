@@ -19,6 +19,8 @@ class StudentAccount extends Component {
       this.setState({
         activePage: string
       });
+    } else {
+      return;
     }
   };
 
