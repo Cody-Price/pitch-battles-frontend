@@ -111,6 +111,16 @@ class Signup extends Component {
           <button className="sign-up-button" type="submit">
             sign up
           </button>
+          <p className={`bad-signup-warning ${this.props.badSignUp}`}>
+            signup failed
+          </p>
+          <p
+            className={`signup-successful-message ${
+              this.props.signUpSuccessful
+            }`}
+          >
+            signup successful - return to login
+          </p>
         </form>
         <button
           className="return-to-login-button"

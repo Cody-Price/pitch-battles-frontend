@@ -119,7 +119,7 @@ exports[`StudentAccount should match the snapshot 1`] = `
           ],
           "first_name": "Chet",
           "games_played": 115,
-          "last_name": "Manly",
+          "last_name": "Stanley",
           "role": 0,
         }
       }

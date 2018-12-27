@@ -1,0 +1,124 @@
+.loading-animation {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  background: url(./images/cloudbg.png);
+  background-size: cover;
+}
+
+.walkway {
+  width: 300px;
+  height: 100px;
+  background: url(./images/walkway.png);
+  position: absolute;
+  background-size: cover;
+  image-rendering: pixelated;
+  animation: walkway 8s linear infinite;
+  z-index: 4;
+}
+
+@keyframes walkway {
+  0% {
+    left: 0px;
+    top: 0;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+.cat {
+  position: absolute;
+  top: 22px;
+  left: 34px;
+  animation: catwalk 1s linear infinite;
+  height: 32px;
+  width: 30px;
+  z-index: 5;
+}
+
+@keyframes catwalk {
+  0% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+.cloud1 {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background: url("./images/cloud1.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  animation: cloud1 12s linear infinite;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: 0;
+    top: 10px;
+  }
+  100% {
+    left: -300px;
+    top: 10px;
+  }
+}
+
+.cloud2 {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background: url("./images/cloud2.png");
+  background-size: cover;
+  image-rendering: pixelated;
+  animation: cloud1 20s linear infinite;
+}
+
+@keyframes cloud2 {
+  0% {
+    left: 0;
+    top: 10px;
+  }
+  100% {
+    left: -300px;
+    top: 10px;
+  }
+}
