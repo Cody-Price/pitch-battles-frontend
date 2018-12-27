@@ -31,7 +31,7 @@ exports[`StudentDash should match the snapshot 1`] = `
         >
           Chet
            
-          Manly
+          Stanley
         </h2>
         <h2
           className="student-class-link"
