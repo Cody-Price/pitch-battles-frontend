@@ -124,9 +124,6 @@ class App extends Component {
   };
 
   processGame = async update => {
-    if (!this.state.user) {
-      return;
-    }
     try {
       const data = await postGameUserUpdate(update, this.state.user);
       this.setState({

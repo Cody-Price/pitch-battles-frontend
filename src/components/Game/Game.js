@@ -13,6 +13,7 @@ import "./Game.css";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
+import gameAnalysis from "../../utilities/postGameAnalysis";
 // import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
@@ -306,13 +307,23 @@ class Game extends Component {
   };
 
   processGame = () => {
-    // NEEDS LOGIC //
-    // const results = {
-    //   times: this.state.times,
-    //   perfectScores: this.state.perfectScores
-    // };
-    // const response = postGameAnalysis(this.props.user);
-    // this.props.processGame(response);
+    if (!this.props.user) {
+      return;
+    }
+
+    const gameResults = {
+      times: this.state.times,
+      perfectScores: this.state.perfectScores
+    };
+    const update = gameAnalysis.postGameAnalysis(this.props.user, gameResults);
+    console.log(update);
+    if (!update) {
+      return;
+    } else {
+      this.props.processGame(update);
+    }
+
+    // PUSH THESE RESULTS UP TO APP //
   };
 
   // -- MODAL HANDLING -- //

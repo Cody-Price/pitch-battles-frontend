@@ -1,6 +1,6 @@
 const mockUser = {
   first_name: "Chet",
-  last_name: "Manly",
+  last_name: "Stanley",
   avatar: 9,
   role: 0,
   email: "cmanly@gmail.com",

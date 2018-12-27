@@ -1,8 +1,12 @@
-export const postGameAnalysis = (user, results) => {
-  let response = {
-    update: false,
-    changes: []
-  };
+const postGameAnalysis = (user, results) => {
+  let update = [];
 
-  return response;
+  return update;
+  // RESPONSE SHOULD BE AN ARRAY
 };
+
+const gameAnalysis = {
+  postGameAnalysis
+};
+
+export default gameAnalysis;
