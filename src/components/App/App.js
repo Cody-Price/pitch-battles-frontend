@@ -9,6 +9,7 @@ import StudentDash from "../StudentDash/StudentDash";
 import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
 import StudentAccount from "../StudentAccount/StudentAccount";
+import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
 import "./App.css";
 
@@ -26,7 +27,8 @@ class App extends Component {
       activePage: "",
       badLogin: false,
       signUpSuccessful: false,
-      badSignUp: false
+      badSignUp: false,
+      loading: false
     };
   }
 
@@ -154,6 +156,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {this.state.loading && <LoadingAnimation />}
         {!this.state.gameActive && (
           <section className="name-game-student-wrapper">
             <AnimatedBackground instance="main-floating-backer" />
