@@ -19,11 +19,7 @@ class Signup extends Component {
   };
 
   changeRole = role => {
-    if (role === "student" && this.state.role !== "student") {
-      this.setState({ role });
-    } else if (role === "teacher" && this.state.role !== "teacher") {
-      this.setState({ role });
-    }
+    this.setState({ role });
   };
 
   handleSubmit = e => {
@@ -34,8 +30,8 @@ class Signup extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
-      password: this.state.passwordOne,
-      password_confirmation: this.state.passwordTwo,
+      password: this.state.password,
+      password_confirmation: this.state.password_confirmation,
       role: this.state.role
     });
   };
@@ -48,6 +44,7 @@ class Signup extends Component {
         <form className="signup-form-form" onSubmit={e => this.handleSubmit(e)}>
           <div className="fn-icon name-icon" />
           <input
+            className="signup-firstname-input"
             placeholder="first name"
             type="text"
             name="first_name"
@@ -56,6 +53,7 @@ class Signup extends Component {
           />
           <div className="ln-icon name-icon" />
           <input
+            className="signup-lastname-input"
             placeholder="last name"
             type="text"
             name="last_name"
@@ -65,6 +63,7 @@ class Signup extends Component {
           <div className="email-icon" />
 
           <input
+            className="signup-email-input"
             placeholder="email"
             type="email"
             name="email"
@@ -74,20 +73,22 @@ class Signup extends Component {
           <div className="pw1-icon pw-icon" />
 
           <input
+            className="signup-password-input"
             placeholder="password"
             type="password"
             name="passwordOne"
             onChange={this.handleChange}
-            value={this.state.passwordOne}
+            value={this.state.password}
           />
           <div className="pw2-icon pw-icon" />
 
           <input
+            className="signup-password-confirm-input"
             placeholder="confirm password"
             type="password"
             name="passwordTwo"
             onChange={this.handleChange}
-            value={this.state.passwordTwo}
+            value={this.state.password_confirmation}
           />
 
           <section className="student-teacher-radio">
