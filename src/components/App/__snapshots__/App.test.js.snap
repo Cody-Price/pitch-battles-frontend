@@ -2,7 +2,7 @@
 
 exports[`App should match the snapshot 1`] = `
 <div
-  className="App"
+  className="App false"
 >
   <section
     className="name-game-student-wrapper"

@@ -6,9 +6,9 @@
 }
 
 .game-area-wrapper {
-  background: url(./images/snow-bg.png);
-  max-width: 1500px;
-  height: 900px;
+  background: url(./images/snow-bg-big.png);
+  max-width: 2100px;
+  height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: pixelated;
@@ -22,6 +22,18 @@
   display: flex;
   justify-content: space-between;
   height: 82px;
+}
+
+.game-avatar-circle {
+  position: absolute;
+  height: 82px;
+  width: 82px;
+  background: url(../App/27circle.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  z-index: 300;
+  top: 15px;
+  left: 15px;
 }
 
 .avatar-border {

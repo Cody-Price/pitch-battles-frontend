@@ -11,8 +11,11 @@ exports[`StudentDash should match the snapshot 1`] = `
       className="student-dash-header"
     >
       <div
-        className="student-dash-avatar-backer"
+        className="avatar-circle"
         onClick={[Function]}
+      />
+      <div
+        className="student-dash-avatar-backer"
       >
         <div
           className="student-dash-avatar nine"

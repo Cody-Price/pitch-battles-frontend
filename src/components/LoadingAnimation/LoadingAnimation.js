@@ -3,13 +3,21 @@ import "./LoadingAnimation.css";
 
 class LoadingAnimation extends Component {
   render() {
+    const animals = {
+      duck: false,
+      cat: true
+    };
     return (
-      <div className="loading-animation">
-        <div className="cat" />
-        <div className="walkway" />
-        <div className="cloud1" />
-        <div className="cloud2" />
-      </div>
+      <section className="loading-animation-wrapper">
+        <div className="circle-border" />
+
+        <div className="loading-animation">
+          <div className={this.props.animal} />
+          <div className={`walkway ${animals[this.props.animal]}`} />
+          <div className="cloud1" />
+          <div className="cloud2" />
+        </div>
+      </section>
     );
   }
 }

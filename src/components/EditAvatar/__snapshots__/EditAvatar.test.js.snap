@@ -10,6 +10,9 @@ exports[`EditAvatar should match the snapshot 1`] = `
     change your avatar
   </h3>
   <div
+    className="edit-avatar-circle"
+  />
+  <div
     className="avatar-editor-avatar-backer"
   >
     <div
