@@ -11,8 +11,11 @@ exports[`Game should match the snapshot 1`] = `
       className="game-header"
     >
       <div
-        className="avatar-border"
+        className="game-avatar-circle"
         onClick={[Function]}
+      />
+      <div
+        className="avatar-border"
       >
         <div
           className="header-avatar nine"

@@ -76,6 +76,7 @@ class EditAvatar extends Component {
     return (
       <section className={`edit-avatar-section ${this.props.status}`}>
         <h3 className="avatar-editor-label">change your avatar</h3>
+        <div className="edit-avatar-circle" />
         <div className="avatar-editor-avatar-backer">
           <div
             className={`avatar-editor-current ${avatars[this.state.avatar]}`}

@@ -9,7 +9,7 @@ import StudentDash from "../StudentDash/StudentDash";
 import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
 import StudentAccount from "../StudentAccount/StudentAccount";
-import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
+// import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
 import "./App.css";
 
@@ -17,6 +17,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      loadingAnimal: "duck",
       user: undefined,
       webToken: undefined,
       newAcheivements: [],
@@ -37,7 +38,8 @@ class App extends Component {
   loginUser = async body => {
     this.setState({
       fetchError: false,
-      badLogin: false
+      badLogin: false,
+      loading: true
     });
     try {
       const data = await login(body);
@@ -45,21 +47,24 @@ class App extends Component {
         webToken: data.access_token,
         user: data.user,
         fetchError: false,
-        activePage: "onboarding"
+        activePage: "onboarding",
+        loading: false
       });
       console.log(data);
       if (data.error) {
         this.setState({
           badLogin: true,
           fetchError: false,
-          badSignUp: false
+          badSignUp: false,
+          loading: false
         });
       } else {
         this.setState({
           webToken: data.access_token,
           fetchError: false,
           badSignUp: false,
-          badLogin: false
+          badLogin: false,
+          loading: false
         });
       }
     } catch (error) {
@@ -99,6 +104,24 @@ class App extends Component {
       this.setError();
       console.log(error);
     }
+  };
+
+  logout = () => {
+    this.setState({
+      loadingAnimal: "duck",
+      user: undefined,
+      webToken: undefined,
+      newAcheivements: [],
+      newFastestTimes: [],
+      fetchError: false,
+      gameActive: false,
+      instrument: undefined,
+      activePage: "",
+      badLogin: false,
+      signUpSuccessful: false,
+      badSignUp: false,
+      loading: false
+    });
   };
 
   // -- NAVIGATOR -- //
@@ -142,7 +165,8 @@ class App extends Component {
   setError = error => {
     console.log(error.user_authentication);
     this.setState({
-      fetchError: true
+      fetchError: true,
+      loading: false
     });
   };
 
@@ -155,8 +179,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {this.state.loading && <LoadingAnimation />}
+      <div className={`App ${this.state.loading}`}>
         {!this.state.gameActive && (
           <section className="name-game-student-wrapper">
             <AnimatedBackground instance="main-floating-backer" />
@@ -186,6 +209,7 @@ class App extends Component {
                 changeAvatar={this.changeAvatar}
                 changePassword={this.changePassword}
                 navigate={this.navigate}
+                logout={this.logout}
               />
             )}
             }

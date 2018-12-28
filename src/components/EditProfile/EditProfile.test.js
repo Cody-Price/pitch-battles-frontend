@@ -107,6 +107,14 @@ describe("EditProfile", () => {
       const mockEvent = { preventDefault: mockPreventDefault };
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
 
+      wrapper.setState({
+        first_name: "",
+        last_name: "",
+        email: ""
+      });
+
+      wrapper.instance().forceUpdate();
+
       wrapper.instance().handleSubmit(mockEvent);
 
       expect(spy).toReturn();

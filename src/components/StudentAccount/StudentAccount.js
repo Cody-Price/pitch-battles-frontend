@@ -61,6 +61,9 @@ class StudentAccount extends Component {
           >
             change password
           </li>
+          <li className="logout-link" onClick={this.props.logout}>
+            logout
+          </li>
         </ul>
         <section className="student-account-active-tab">
           {this.state.activePage === "edit-profile-active" && (

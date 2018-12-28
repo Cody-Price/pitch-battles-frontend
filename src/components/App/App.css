@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.App.true:hover {
+  cursor: wait !important;
+}
+
 .name-game-student-wrapper {
   position: relative;
   overflow: hidden;

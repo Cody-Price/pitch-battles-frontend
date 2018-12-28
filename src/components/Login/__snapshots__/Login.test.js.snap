@@ -17,6 +17,7 @@ exports[`Login should render like snapshot 1`] = `
       className="login-email-icon"
     />
     <input
+      className="login-email-input"
       name="email"
       onChange={[Function]}
       placeholder="email"
@@ -27,6 +28,7 @@ exports[`Login should render like snapshot 1`] = `
       className="login-pw-icon"
     />
     <input
+      className="login-password-input"
       name="password"
       onChange={[Function]}
       placeholder="password"

@@ -381,7 +381,11 @@ class Game extends Component {
       <main className="game-main">
         <div className="game-area-wrapper">
           <header className="game-header">
-            <div className="avatar-border" onClick={this.toggleUserModal}>
+            <div
+              className="game-avatar-circle"
+              onClick={this.toggleUserModal}
+            />
+            <div className="avatar-border">
               <div
                 className={`header-avatar ${avatars[this.props.user.avatar]}`}
               />

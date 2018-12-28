@@ -36,6 +36,12 @@ exports[`StudentAccount should match the snapshot 1`] = `
     >
       change password
     </li>
+    <li
+      className="logout-link"
+      onClick={[MockFunction]}
+    >
+      logout
+    </li>
   </ul>
   <section
     className="student-account-active-tab"

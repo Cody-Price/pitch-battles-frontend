@@ -17,6 +17,7 @@ exports[`Signup should render like snapshot 1`] = `
       className="fn-icon name-icon"
     />
     <input
+      className="signup-firstname-input"
       name="first_name"
       onChange={[Function]}
       placeholder="first name"
@@ -26,6 +27,7 @@ exports[`Signup should render like snapshot 1`] = `
       className="ln-icon name-icon"
     />
     <input
+      className="signup-lastname-input"
       name="last_name"
       onChange={[Function]}
       placeholder="last name"
@@ -36,6 +38,7 @@ exports[`Signup should render like snapshot 1`] = `
       className="email-icon"
     />
     <input
+      className="signup-email-input"
       name="email"
       onChange={[Function]}
       placeholder="email"
@@ -46,19 +49,23 @@ exports[`Signup should render like snapshot 1`] = `
       className="pw1-icon pw-icon"
     />
     <input
+      className="signup-password-input"
       name="passwordOne"
       onChange={[Function]}
       placeholder="password"
       type="password"
+      value=""
     />
     <div
       className="pw2-icon pw-icon"
     />
     <input
+      className="signup-password-confirm-input"
       name="passwordTwo"
       onChange={[Function]}
       placeholder="confirm password"
       type="password"
+      value=""
     />
     <section
       className="student-teacher-radio"
@@ -102,6 +109,7 @@ exports[`Signup should render like snapshot 1`] = `
   </form>
   <button
     className="return-to-login-button"
+    onClick={[MockFunction]}
   >
     login
   </button>

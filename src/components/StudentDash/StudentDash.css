@@ -46,6 +46,18 @@
   position: relative;
 }
 
+.avatar-circle {
+  position: absolute;
+  height: 82px;
+  width: 82px;
+  background: url(../App/27circle.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  z-index: 300;
+  top: 31px;
+  left: 31px;
+}
+
 .student-dash-avatar-backer {
   grid-row: 1/3;
   margin: 2rem 2rem 2rem 2rem;
@@ -56,7 +68,7 @@
   background: url(../Game/images/offwhite-avatar-backer.png);
   background-size: cover;
   image-rendering: pixelated;
-  border: 2px solid #4776bb;
+  /* border: 2px solid #4776bb; */
   box-shadow: 1px 1px 1px#4776bb;
 }
 

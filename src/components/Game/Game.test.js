@@ -718,7 +718,7 @@ describe("Game", () => {
       const spy = jest.spyOn(wrapper.instance(), "toggleUserModal");
       wrapper.instance().forceUpdate();
 
-      wrapper.find(".avatar-border").simulate("click");
+      wrapper.find(".game-avatar-circle").simulate("click");
 
       expect(spy).toHaveBeenCalled();
     });

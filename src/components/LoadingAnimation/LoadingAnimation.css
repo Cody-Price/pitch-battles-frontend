@@ -1,21 +1,268 @@
-.loading-animation {
-  width: 100px;
-  height: 100px;
+.loading-animation-wrapper {
   position: relative;
-  overflow: hidden;
-  background: url(./images/cloudbg.png);
-  background-size: cover;
+  margin: 4rem auto;
+  width: 152px;
 }
 
-.walkway {
-  width: 300px;
-  height: 100px;
+.loading-animation {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.loading-animation.true {
+  background: url(./images/cloudbg.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.loading-animation.false {
+  animation: bridge 3s linear infinite;
+  z-index: 1;
+}
+
+.circle-border {
+  height: 152px;
+  width: 152px;
+  left: -1px;
+  top: -1px;
+  background: url(./images/circle.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  z-index: 1000;
+  position: absolute;
+}
+
+.duck {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  animation: duck 3s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes duck {
+  0% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  87% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  89.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+.walkway.true {
+  width: 450px;
+  height: 150px;
   background: url(./images/walkway.png);
   position: absolute;
   background-size: cover;
   image-rendering: pixelated;
-  animation: walkway 8s linear infinite;
   z-index: 4;
+  margin-top: 0.5rem;
+  animation: walkway 8s linear infinite;
+}
+
+.walkway.false {
+  display: none;
 }
 
 @keyframes walkway {
@@ -24,17 +271,17 @@
     top: 0;
   }
   100% {
-    left: -200px;
+    left: -300px;
   }
 }
 
 .cat {
   position: absolute;
-  top: 22px;
-  left: 34px;
+  top: 40px;
+  left: 52px;
   animation: catwalk 1s linear infinite;
-  height: 32px;
-  width: 30px;
+  height: 48px;
+  width: 45px;
   z-index: 5;
 }
 
@@ -81,35 +328,43 @@
   }
 }
 
-.cloud1 {
+.cloud1.true {
   position: absolute;
-  width: 300px;
-  height: 100px;
+  width: 450px;
+  height: 150px;
   background: url("./images/cloud1.png");
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 12s linear infinite;
 }
 
+.cloud1.false {
+  display: none;
+}
+
 @keyframes cloud1 {
   0% {
-    left: 0;
-    top: 10px;
+    left: 100px;
+    top: 0px;
   }
   100% {
     left: -300px;
-    top: 10px;
+    top: 0px;
   }
 }
 
-.cloud2 {
+.cloud2.true {
   position: absolute;
-  width: 300px;
-  height: 100px;
+  width: 450px;
+  height: 150px;
   background: url("./images/cloud2.png");
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 20s linear infinite;
+}
+
+.cloud2.false {
+  display: none;
 }
 
 @keyframes cloud2 {
@@ -120,5 +375,24 @@
   100% {
     left: -300px;
     top: 10px;
+  }
+}
+
+@keyframes bridge {
+  0% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/bridge2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+
+  100% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
   }
 }
