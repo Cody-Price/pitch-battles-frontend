@@ -16,7 +16,7 @@
 }
 
 .App.true:hover {
-  cursor: wait;
+  cursor: wait !important;
 }
 
 .name-game-student-wrapper {

@@ -11,12 +11,14 @@ import mockUser from "../../utilities/mockUser";
 describe("StudentAccount", () => {
   let wrapper;
   let mockNavigate;
+  let mockLogout;
 
   beforeEach(() => {
     mockNavigate = jest.fn();
     const mockChangeProfile = jest.fn();
     const mockChangeAvatar = jest.fn();
     const mockChangePassword = jest.fn();
+    mockLogout = jest.fn();
 
     wrapper = shallow(
       <StudentAccount
@@ -25,6 +27,7 @@ describe("StudentAccount", () => {
         changeAvatar={mockChangeAvatar}
         changePassword={mockChangePassword}
         user={mockUser}
+        logout={mockLogout}
       />
     );
   });
@@ -91,6 +94,14 @@ describe("StudentAccount", () => {
       wrapper.find(".avatar-link").simulate("click");
 
       expect(spy).toHaveBeenCalledWith(expected);
+    });
+  });
+
+  describe("logout", () => {
+    it("should call logout on click", () => {
+      wrapper.find(".logout-link").simulate("click");
+
+      expect(mockLogout).toHaveBeenCalled();
     });
   });
 });

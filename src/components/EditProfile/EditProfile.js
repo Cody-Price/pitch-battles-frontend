@@ -34,19 +34,16 @@ class EditProfile extends Component {
     event.preventDefault();
 
     if (
-      this.state ===
-      {
-        first_name: "",
-        last_name: "",
-        email: ""
-      }
+      this.state.first_name === "" &&
+      this.state.last_name === "" &&
+      this.state.email === ""
     ) {
       return;
     }
     const update = {
-      first_name: this.state.first_name || this.props.user.first_name,
-      last_name: this.state.last_name || this.props.user.last_name,
-      email: this.state.email || this.props.user.email
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email
     };
 
     this.props.changeProfile(update);

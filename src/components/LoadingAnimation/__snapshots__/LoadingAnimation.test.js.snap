@@ -8,17 +8,17 @@ exports[`LoadingAnimation should match the snapshot 1`] = `
     className="circle-border"
   />
   <div
-    className="loading-animation"
+    className="loading-animation undefined"
   >
     <div />
     <div
       className="walkway undefined"
     />
     <div
-      className="cloud1"
+      className="cloud1 undefined"
     />
     <div
-      className="cloud2"
+      className="cloud2 undefined"
     />
   </div>
 </section>

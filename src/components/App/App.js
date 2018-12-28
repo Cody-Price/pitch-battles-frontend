@@ -106,6 +106,24 @@ class App extends Component {
     }
   };
 
+  logout = () => {
+    this.setState({
+      loadingAnimal: "duck",
+      user: undefined,
+      webToken: undefined,
+      newAcheivements: [],
+      newFastestTimes: [],
+      fetchError: false,
+      gameActive: false,
+      instrument: undefined,
+      activePage: "",
+      badLogin: false,
+      signUpSuccessful: false,
+      badSignUp: false,
+      loading: false
+    });
+  };
+
   // -- NAVIGATOR -- //
   toggleGame = (gameActive, instrument) => {
     console.log(gameActive, instrument);
@@ -191,6 +209,7 @@ class App extends Component {
                 changeAvatar={this.changeAvatar}
                 changePassword={this.changePassword}
                 navigate={this.navigate}
+                logout={this.logout}
               />
             )}
             }

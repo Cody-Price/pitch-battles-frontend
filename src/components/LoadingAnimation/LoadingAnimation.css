@@ -9,9 +9,19 @@
   height: 150px;
   position: relative;
   overflow: hidden;
+  border-radius: 50%;
+}
+
+.loading-animation.true {
   background: url(./images/cloudbg.png);
   background-size: cover;
-  border-radius: 50%;
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+.loading-animation.false {
+  animation: bridge 3s linear infinite;
+  z-index: 1;
 }
 
 .circle-border {
@@ -239,7 +249,7 @@
   }
 }
 
-.walkway {
+.walkway.true {
   width: 450px;
   height: 150px;
   background: url(./images/walkway.png);
@@ -248,10 +258,11 @@
   image-rendering: pixelated;
   z-index: 4;
   margin-top: 0.5rem;
+  animation: walkway 8s linear infinite;
 }
 
-.walkway.true {
-  animation: walkway 8s linear infinite;
+.walkway.false {
+  display: none;
 }
 
 @keyframes walkway {
@@ -266,7 +277,7 @@
 
 .cat {
   position: absolute;
-  top: 36px;
+  top: 40px;
   left: 52px;
   animation: catwalk 1s linear infinite;
   height: 48px;
@@ -317,7 +328,7 @@
   }
 }
 
-.cloud1 {
+.cloud1.true {
   position: absolute;
   width: 450px;
   height: 150px;
@@ -325,6 +336,10 @@
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 12s linear infinite;
+}
+
+.cloud1.false {
+  display: none;
 }
 
 @keyframes cloud1 {
@@ -338,7 +353,7 @@
   }
 }
 
-.cloud2 {
+.cloud2.true {
   position: absolute;
   width: 450px;
   height: 150px;
@@ -346,6 +361,10 @@
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 20s linear infinite;
+}
+
+.cloud2.false {
+  display: none;
 }
 
 @keyframes cloud2 {
@@ -356,5 +375,24 @@
   100% {
     left: -300px;
     top: 10px;
+  }
+}
+
+@keyframes bridge {
+  0% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/bridge2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+
+  100% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
   }
 }
