@@ -31,6 +31,7 @@ class Login extends Component {
         >
           <div className="login-email-icon" />
           <input
+            className="login-email-input"
             placeholder="email"
             type="email"
             name="email"
@@ -39,6 +40,7 @@ class Login extends Component {
           />
           <div className="login-pw-icon" />
           <input
+            className="login-password-input"
             placeholder="password"
             type="password"
             name="password"
