@@ -51,11 +51,13 @@
 .login-form-button,
 .signup-form-switch-button,
 .forgot-my-password-link {
+  position: relative;
   margin: 1rem 0;
   font-family: "chronotype";
   font-size: 1.1rem;
   padding-top: 4px;
   border-radius: 1px;
+  z-index: 3000;
 }
 
 .signup-form-switch-button {
@@ -99,7 +101,7 @@
   left: -800px;
   transition: 0.3s;
   right: 0;
-  top: 65px;
+  top: 90px;
 }
 
 .login-warning.true {
@@ -121,7 +123,7 @@
 .forgot-my-password-link {
   display: block;
   position: relative;
-  margin: auto;
+  margin: 3rem auto;
   background: none;
   border: 0;
   height: 1.3rem;

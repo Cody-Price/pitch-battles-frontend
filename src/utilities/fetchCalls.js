@@ -50,5 +50,5 @@ export const postGameUserUpdate = async (update, user) => {
 export const forgotMyPasswordCall = async email => {
   // const url
   // return response
-  return true;
+  return Promise.resolve(true);
 };
