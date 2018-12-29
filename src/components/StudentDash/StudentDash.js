@@ -6,6 +6,8 @@ import { instruments } from "../../utilities/instruments";
 import { timesHelper } from "../../utilities/timesHelper";
 import { badgeHelper } from "../../utilities/badgeHelper";
 
+import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
+
 class StudentDash extends Component {
   constructor() {
     super();
@@ -16,6 +18,10 @@ class StudentDash extends Component {
       noInstrumentError: false
     };
   }
+
+  // componentDidMount() {
+  //   this.props.getUpdatedUserData();
+  // }
 
   handleInstrumentDropdown = () => {
     this.setState({
@@ -58,7 +64,7 @@ class StudentDash extends Component {
       );
     });
 
-    let badges = this.props.user.badges.filter(badge => {
+    let badges = this.props.user.attributes.badges.data.filter(badge => {
       return badge[Object.keys(badge)[0]];
     });
 
@@ -85,7 +91,7 @@ class StudentDash extends Component {
       );
     });
 
-    const times = this.props.user.fastest_times.map(time => {
+    const times = this.props.user.attributes.fastest_times.data.map(time => {
       return (
         <div
           key={Object.keys(time)}
@@ -100,75 +106,79 @@ class StudentDash extends Component {
 
     return (
       <main className="student-dash">
-        <section className="student-dash-wrapper">
-          <header className="student-dash-header">
-            <div
-              className="avatar-circle"
-              onClick={() => {
-                this.props.navigate("student account");
-              }}
-            />
-            <div className="student-dash-avatar-backer">
+        {!this.props.user && <LoadingAnimation />}
+        {this.props.user && (
+          <section className="student-dash-wrapper">
+            <header className="student-dash-header">
               <div
-                className={`student-dash-avatar ${
-                  avatars[this.props.user.avatar]
-                }`}
+                className="avatar-circle"
+                onClick={() => {
+                  this.props.navigate("student account");
+                }}
               />
-              <h3 className="account-link-text">account page</h3>
-            </div>
-            <section className="header-data">
-              <h2 className="student-name">
-                {this.props.user.first_name} {this.props.user.last_name}
+              <div className="student-dash-avatar-backer">
+                <div
+                  className={`student-dash-avatar ${
+                    avatars[this.props.user.avatar]
+                  }`}
+                />
+                <h3 className="account-link-text">account page</h3>
+              </div>
+              <section className="header-data">
+                <h2 className="student-name">
+                  {this.props.user.first_name} {this.props.user.last_name}
+                </h2>
+                <h2 className="student-class-link">{this.props.user.class}</h2>
+              </section>
+              <button
+                onClick={() => {
+                  this.props.navigate("onboarding");
+                }}
+                className="onboarding-link"
+              />
+            </header>
+            <section className="new-game-section">
+              <button className="start-game" onClick={this.handleNewGame}>
+                to battle!
+              </button>
+              <h2
+                className={`no-instrument-warning ${
+                  this.state.noInstrumentError
+                }`}
+              >
+                you must select an instrument before playing...
               </h2>
-              <h2 className="student-class-link">{this.props.user.class}</h2>
+              <h2 className="instrument-label">instrument:</h2>
+              <h3
+                onClick={this.handleInstrumentDropdown}
+                className="instrument-dropdown"
+              >
+                {this.state.instrument}
+              </h3>
+              <div
+                onClick={this.handleInstrumentDropdown}
+                className={`deploy-arrow ${this.state.dropdownDeploy}`}
+              />
+              <ul
+                className={`instrument-dropdown-list ${
+                  this.state.dropdownDeploy
+                }`}
+              >
+                {instrumentList}
+              </ul>
             </section>
-            <button
-              onClick={() => {
-                this.props.navigate("onboarding");
-              }}
-              className="onboarding-link"
-            />
-          </header>
-          <section className="new-game-section">
-            <button className="start-game" onClick={this.handleNewGame}>
-              to battle!
-            </button>
-            <h2
-              className={`no-instrument-warning ${
-                this.state.noInstrumentError
-              }`}
-            >
-              you must select an instrument before playing...
-            </h2>
-            <h2 className="instrument-label">instrument:</h2>
-            <h3
-              onClick={this.handleInstrumentDropdown}
-              className="instrument-dropdown"
-            >
-              {this.state.instrument}
-            </h3>
-            <div
-              onClick={this.handleInstrumentDropdown}
-              className={`deploy-arrow ${this.state.dropdownDeploy}`}
-            />
-            <ul
-              className={`instrument-dropdown-list ${
-                this.state.dropdownDeploy
-              }`}
-            >
-              {instrumentList}
-            </ul>
+            <section className="student-dash-stats">
+              <h2 className="total-games-played">
+                total battles fought:{" "}
+                <span>{this.props.user.attributes.games_played.data}</span>
+              </h2>
+              <h2 className="fastest-times">fastest times:</h2>
+              <div className="times-row">{times}</div>
+              <h2 className="most-recent-badges">most recent badges:</h2>
+              <div className="badge-row">{badges}</div>
+            </section>
           </section>
-          <section className="student-dash-stats">
-            <h2 className="total-games-played">
-              total battles fought: <span>{this.props.user.games_played}</span>
-            </h2>
-            <h2 className="fastest-times">fastest times:</h2>
-            <div className="times-row">{times}</div>
-            <h2 className="most-recent-badges">most recent badges:</h2>
-            <div className="badge-row">{badges}</div>
-          </section>
-        </section>
+        )}
       </main>
     );
   }

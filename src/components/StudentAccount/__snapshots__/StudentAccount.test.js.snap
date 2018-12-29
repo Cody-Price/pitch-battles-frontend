@@ -50,81 +50,89 @@ exports[`StudentAccount should match the snapshot 1`] = `
       changeProfile={[MockFunction]}
       user={
         Object {
+          "attributes": Object {
+            "badges": Object {
+              "data": Array [
+                Object {
+                  "level_one": true,
+                },
+                Object {
+                  "level_one_perfect": true,
+                },
+                Object {
+                  "level_two": true,
+                },
+                Object {
+                  "level_two_perfect": true,
+                },
+                Object {
+                  "level_three": true,
+                },
+                Object {
+                  "level_three_perfect": false,
+                },
+                Object {
+                  "level_four": true,
+                },
+                Object {
+                  "level_four_perfect": false,
+                },
+                Object {
+                  "all_perfect": false,
+                },
+                Object {
+                  "five_games": true,
+                },
+                Object {
+                  "ten_games": true,
+                },
+                Object {
+                  "twenty_games": true,
+                },
+                Object {
+                  "fifty_games": true,
+                },
+                Object {
+                  "one_hundred_games": true,
+                },
+                Object {
+                  "two_hundred_games": false,
+                },
+                Object {
+                  "five_hundred_games": false,
+                },
+                Object {
+                  "one_thousand_games": false,
+                },
+              ],
+            },
+            "fastest_times": Object {
+              "data": Array [
+                Object {
+                  "level_one": 11.01,
+                },
+                Object {
+                  "level_two": 15.24,
+                },
+                Object {
+                  "level_three": 24.64,
+                },
+                Object {
+                  "level_four": 30.17,
+                },
+                Object {
+                  "all": 83.16,
+                },
+              ],
+            },
+            "games_played": Object {
+              "data": 115,
+            },
+          },
           "avatar": 9,
-          "badges": Array [
-            Object {
-              "level_one": true,
-            },
-            Object {
-              "level_one_perfect": true,
-            },
-            Object {
-              "level_two": true,
-            },
-            Object {
-              "level_two_perfect": true,
-            },
-            Object {
-              "level_three": true,
-            },
-            Object {
-              "level_three_perfect": false,
-            },
-            Object {
-              "level_four": true,
-            },
-            Object {
-              "level_four_perfect": false,
-            },
-            Object {
-              "all_perfect": false,
-            },
-            Object {
-              "five_games": true,
-            },
-            Object {
-              "ten_games": true,
-            },
-            Object {
-              "twenty_games": true,
-            },
-            Object {
-              "fifty_games": true,
-            },
-            Object {
-              "one_hundred_games": true,
-            },
-            Object {
-              "two_hundred_games": false,
-            },
-            Object {
-              "five_hundred_games": false,
-            },
-            Object {
-              "one_thousand_games": false,
-            },
-          ],
           "class": "6th-grade band",
           "email": "cmanly@gmail.com",
-          "fastest_times": Array [
-            Object {
-              "level_one": 11.01,
-            },
-            Object {
-              "level_two": 15.24,
-            },
-            Object {
-              "level_three": 24.64,
-            },
-            Object {
-              "level_four": 30.17,
-            },
-            Object {
-              "all": 83.16,
-            },
-          ],
           "first_name": "Chet",
-          "games_played": 115,
           "last_name": "Stanley",
           "role": 0,
         }

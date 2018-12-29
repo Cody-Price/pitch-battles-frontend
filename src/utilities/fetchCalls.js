@@ -30,7 +30,25 @@ export const signUp = async body => {
   return await response.json();
 };
 
-export const postGameUserUpdate = async (update, user) => {
+export const userFetch = async webToken => {
+  const url = "https://pitch-battles-api.herokuapp.com/api/v1/dashboard/";
+
+  const options = {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      Authorization: `bearer ${webToken}`,
+      "Content-Type": "application/json"
+    }
+  };
+
+  console.log(options);
+
+  const response = await fetch(url, options);
+  return await response.json();
+};
+
+export const postGameUserUpdate = async (update, webToken) => {
   const url = "https://pitch-battles-api.herokuapp.com/api/v1/users";
 
   const body = update;
@@ -43,8 +61,7 @@ export const postGameUserUpdate = async (update, user) => {
       "Content-Type": "application/json"
     }
   };
-  console.log(url, options, user);
-  return user;
+  return;
 };
 
 export const forgotMyPasswordCall = async email => {

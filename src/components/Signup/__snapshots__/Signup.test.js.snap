@@ -50,7 +50,7 @@ exports[`Signup should render like snapshot 1`] = `
     />
     <input
       className="signup-password-input"
-      name="passwordOne"
+      name="password"
       onChange={[Function]}
       placeholder="password"
       type="password"
@@ -61,7 +61,7 @@ exports[`Signup should render like snapshot 1`] = `
     />
     <input
       className="signup-password-confirm-input"
-      name="passwordTwo"
+      name="password_confirmation"
       onChange={[Function]}
       placeholder="confirm password"
       type="password"

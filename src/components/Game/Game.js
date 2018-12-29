@@ -14,6 +14,7 @@ import "./Game.css";
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
 import gameAnalysis from "../../utilities/postGameAnalysis";
+
 // import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
@@ -38,7 +39,13 @@ class Game extends Component {
       victory: false,
       finalVictory: false,
       times: [],
-      perfectScores: [],
+      perfectScores: {
+        one: false,
+        two: false,
+        three: false,
+        four: false,
+        all: false
+      },
       userModal: false,
       kickedOff: false
     };
@@ -275,27 +282,47 @@ class Game extends Component {
 
   victory = () => {
     if (this.state.currentLevel === 4) {
-      this.setState({
-        finalVictory: true,
-        playerStatus: "victory"
-      });
+      this.setState(
+        {
+          finalVictory: true,
+          playerStatus: "victory"
+        },
+        this.checkPerfect
+      );
     } else {
-      this.setState({
-        victory: true,
-        playerStatus: "victory"
-      });
+      this.setState(
+        {
+          victory: true,
+          playerStatus: "victory"
+        },
+        this.checkPerfect
+      );
     }
-
-    this.checkPerfect();
   };
 
-  checkPerfect() {
+  checkPerfect = () => {
+    const helperArray = [null, "one", "two", "three", "four"];
+
+    const newPerfectScores = Object.assign({
+      ...this.state.perfectScores,
+      [helperArray[this.state.currentLevel]]: true
+    });
+
+    if (this.state.currentLevel === 4 && this.state.playerHearts.length === 3) {
+      this.setState(
+        {
+          perfectScores: newPerfectScores
+        },
+        this.processGame
+      );
+    }
+
     if (this.state.playerHearts.length === 3) {
       this.setState({
-        perfectScores: [...this.state.perfectScores, this.state.currentLevel]
+        perfectScores: newPerfectScores
       });
     }
-  }
+  };
 
   gameOver = () => {
     this.setState(
@@ -316,8 +343,8 @@ class Game extends Component {
       times: this.state.times,
       perfectScores: this.state.perfectScores
     };
-    const update = gameAnalysis.postGameAnalysis(this.props.user, gameResults);
-    console.log(update);
+
+    const update = gameAnalysis.postGameAnalysis(gameResults);
     if (!update) {
       return;
     } else {

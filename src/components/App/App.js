@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import mockUser from "../../utilities/mockUser";
 
-import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
+import {
+  login,
+  signUp,
+  postGameUserUpdate,
+  userFetch
+} from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
 import Landing from "../Landing/Landing";
@@ -43,13 +48,15 @@ class App extends Component {
     });
     try {
       const data = await login(body);
-      this.setState({
-        webToken: data.access_token,
-        user: data.user,
-        fetchError: false,
-        activePage: "onboarding",
-        loading: false
-      });
+      this.setState(
+        {
+          webToken: data.access_token,
+          fetchError: false,
+          activePage: "onboarding",
+          loading: false
+        },
+        this.getUpdatedUserData
+      );
       console.log(data);
       if (data.error) {
         this.setState({
@@ -149,21 +156,22 @@ class App extends Component {
   };
 
   processGame = async update => {
-    try {
-      const data = await postGameUserUpdate(update, this.state.user);
-      this.setState({
-        fetchError: false
-      });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-      this.setError();
-    }
+    console.log(update);
+    // try {
+    //   const data = await postGameUserUpdate(update, this.state.user);
+    //   this.setState({
+    //     fetchError: false
+    //   });
+    //   console.log(data);
+    // } catch (error) {
+    //   console.log(error);
+    //   this.setError();
+    // }
   };
 
   // -- FETCH ERROR HANDLING -- //
   setError = error => {
-    console.log(error.user_authentication);
+    console.log(error);
     this.setState({
       fetchError: true,
       loading: false
@@ -171,6 +179,18 @@ class App extends Component {
   };
 
   // -- ACCOUNT UPDATES -- //
+
+  getUpdatedUserData = async () => {
+    try {
+      const { data } = await userFetch(this.state.webToken);
+      this.setState({
+        user: data
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   changeProfile = () => {};
 
   changeAvatar = () => {};
@@ -201,6 +221,7 @@ class App extends Component {
             )}
             {this.state.activePage === "student dash" && this.state.user && (
               <StudentDash
+                getUpdatedUserData={this.getUpdatedUserData}
                 navigate={this.navigate}
                 startGame={this.toggleGame}
                 user={mockUser}

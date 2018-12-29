@@ -76,7 +76,7 @@ class Signup extends Component {
             className="signup-password-input"
             placeholder="password"
             type="password"
-            name="passwordOne"
+            name="password"
             onChange={this.handleChange}
             value={this.state.password}
           />
@@ -86,7 +86,7 @@ class Signup extends Component {
             className="signup-password-confirm-input"
             placeholder="confirm password"
             type="password"
-            name="passwordTwo"
+            name="password_confirmation"
             onChange={this.handleChange}
             value={this.state.password_confirmation}
           />
