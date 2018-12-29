@@ -39,12 +39,12 @@ class Game extends Component {
       finalVictory: false,
       times: [],
       perfectScores: [],
-      userModal: false
+      userModal: false,
+      kickedOff: false
     };
   }
 
   componentDidMount() {
-    this.kickOff();
     window.addEventListener("keyup", this.submitGuess);
   }
 
@@ -54,10 +54,10 @@ class Game extends Component {
 
   // -- GAME SETUP -- //
 
-  kickOff() {
+  kickOff = () => {
     this.setupGame();
     this.startTimer();
-  }
+  };
 
   setupGame = () => {
     const instrument = this.findInstrument();
@@ -73,7 +73,8 @@ class Game extends Component {
         monsterStatus: "idle",
         gameOver: false,
         victory: false,
-        finalVictory: false
+        finalVictory: false,
+        kickedOff: true
       },
       this.setPitch(monsterHearts)
     );
@@ -426,6 +427,14 @@ class Game extends Component {
             {this.state.monsterHit && <MonsterEffect />}
           </section>
           {this.state.gameOver && <GameOver />}
+          {!this.state.kickedOff && (
+            <button
+              className={`kickoff-btn ${this.state.kickedOff}`}
+              onClick={this.kickOff}
+            >
+              start
+            </button>
+          )}
           {this.state.currentPitch && !this.state.gameOver && (
             <Staff
               clef={this.state.clef}
