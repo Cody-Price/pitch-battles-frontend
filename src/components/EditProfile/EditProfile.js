@@ -79,7 +79,7 @@ class EditProfile extends Component {
               this.handleChange(event);
             }}
           />
-          <p className="emai-edit-label">email:</p>
+          <p className="email-edit-label">email:</p>
 
           <input
             type="email"
