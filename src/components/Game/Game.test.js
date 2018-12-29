@@ -73,15 +73,16 @@ describe("Game", () => {
         gameOver: false,
         victory: false,
         finalVictory: false,
-        running: true,
-        start: 1482363367071,
+        running: false,
+        start: 0,
         times: [],
         userModal: false,
         milliseconds: 0,
         perfectScores: [],
         currentTime: 0,
         currentLevel: 1,
-        currentPitch: "a"
+        currentPitch: "a",
+        kickedOff: true
       };
 
       wrapper.instance().setupGame();
@@ -236,6 +237,7 @@ describe("Game", () => {
     it("should call checkStatus", () => {
       const spy = jest.spyOn(wrapper.instance(), "checkStatus");
 
+      wrapper.instance().setupGame();
       wrapper.instance().submitGuess(keyEvent);
 
       expect(spy).toHaveBeenCalled();

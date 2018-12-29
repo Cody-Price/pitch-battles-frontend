@@ -46,40 +46,12 @@ exports[`Game should match the snapshot 1`] = `
           <h3
             className="timer"
           >
-            0
+            -
           </h3>
         </div>
         <Hearts
           character="monster-hearts"
-          hearts={
-            Array [
-              Object {
-                "level": 1,
-                "pitch": "b",
-                "position": "line-three",
-              },
-              Object {
-                "level": 1,
-                "pitch": "c",
-                "position": "space-three",
-              },
-              Object {
-                "level": 1,
-                "pitch": "d",
-                "position": "line-four",
-              },
-              Object {
-                "level": 1,
-                "pitch": "e",
-                "position": "space-four",
-              },
-              Object {
-                "level": 1,
-                "pitch": "f",
-                "position": "line-five",
-              },
-            ]
-          }
+          hearts={Array []}
         />
       </section>
     </header>
@@ -95,6 +67,12 @@ exports[`Game should match the snapshot 1`] = `
         status="idle"
       />
     </section>
+    <button
+      className="kickoff-btn false"
+      onClick={[Function]}
+    >
+      start
+    </button>
     <Staff
       clef="treble"
       submitGuess={[Function]}
