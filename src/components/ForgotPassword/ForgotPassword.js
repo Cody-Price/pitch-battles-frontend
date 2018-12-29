@@ -9,7 +9,8 @@ class ForgotPassword extends Component {
     this.state = {
       email: "",
       success: false,
-      error: false
+      error: false,
+      fetch: false
     };
   }
 
@@ -22,15 +23,21 @@ class ForgotPassword extends Component {
   handleSubmit = async event => {
     event.preventDefault();
 
+    this.setState({
+      fetching: true
+    });
+
     try {
       const response = await forgotMyPasswordCall(this.state.email);
-      const parsedResponse = await response.json();
+      console.log(response);
       this.setState({
-        success: true
+        success: true,
+        fetching: false,
+        error: false
       });
     } catch (error) {
-      // console.log(error.message);
-      this.setState({ error: true });
+      console.log(error.message);
+      this.setState({ error: true, fetching: false, success: false });
     }
   };
 
@@ -44,6 +51,7 @@ class ForgotPassword extends Component {
         >
           <div className="password-flexbox">
             <p className="enter-email-for-new-pw">email</p>
+            <div className="forgot-pw-lock-icon" />
             <input
               type="email"
               name="email"
@@ -54,6 +62,13 @@ class ForgotPassword extends Component {
               }}
             />
           </div>
+          <p className={`pw-sent-success ${this.state.success}`}>
+            new password sent - check your email
+          </p>
+          <p className={`pw-sent-failure ${this.state.error}`}>
+            email does not match any account
+          </p>
+
           <input
             type="submit"
             className="send-new-pw-btn"
