@@ -19,8 +19,17 @@ describe("Landing", () => {
 
   describe("landingChange", () => {
     it("should call setState", () => {
-      const expected = { login: false, signup: true };
+      const expected = { login: false, signup: true, forgotPassword: false };
       wrapper.instance().landingChange();
+
+      expect(wrapper.state()).toEqual(expected);
+    });
+  });
+
+  describe("forgotPasswordScreen", () => {
+    it("should call setState", () => {
+      const expected = { login: false, signup: false, forgotPassword: true };
+      wrapper.instance().forgotPasswordScreen();
 
       expect(wrapper.state()).toEqual(expected);
     });

@@ -22,11 +22,16 @@ exports[`Landing should match the snapshot 1`] = `
     className="login-signup-container"
   >
     <Login
+      forgotPasswordScreen={[Function]}
       landingChange={[Function]}
       status={true}
     />
     <Signup
       landingChange={[Function]}
+      status={false}
+    />
+    <ForgotPassword
+      backToLogin={[Function]}
       status={false}
     />
   </section>
