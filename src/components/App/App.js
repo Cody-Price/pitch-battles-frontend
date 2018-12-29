@@ -177,6 +177,8 @@ class App extends Component {
 
   changePassword = () => {};
 
+  forgotPassword = () => {};
+
   render() {
     return (
       <div className={`App ${this.state.loading}`}>
@@ -190,6 +192,8 @@ class App extends Component {
                 badLogin={this.state.badLogin}
                 badSignUp={this.state.badSignUp}
                 signUpSuccessful={this.state.signUpSuccessful}
+                loggingIn={this.state.loading}
+                forgotPassword={this.state.forgotPassword}
               />
             )}
             {this.state.activePage === "onboarding" && this.state.user && (

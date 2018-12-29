@@ -46,3 +46,9 @@ export const postGameUserUpdate = async (update, user) => {
   console.log(url, options, user);
   return user;
 };
+
+export const forgotMyPasswordCall = async email => {
+  // const url
+  // return response
+  return true;
+};
