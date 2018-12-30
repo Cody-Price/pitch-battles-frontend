@@ -1,14 +1,24 @@
 const postGameAnalysis = results => {
-  let allTimes;
+  let finalTimes = {
+    one: null,
+    two: null,
+    three: null,
+    four: null,
+    all: null
+  };
+
+  const timeKeys = Object.keys(finalTimes);
 
   if (results.times.length === 4) {
-    allTimes = results.times.reduce((sum, time) => {
+    const allTimes = results.times.reduce((sum, time) => {
       return (sum += time);
     }, 0);
-    results.times.push(allTimes);
-  } else {
-    allTimes = results.times;
+    finalTimes.all = allTimes;
   }
+
+  results.times.forEach((time, index) => {
+    finalTimes[timeKeys[index]] = time;
+  });
 
   let allPerfects = {
     one: false,
@@ -33,7 +43,7 @@ const postGameAnalysis = results => {
     allPerfects.all = true;
   }
 
-  return { times: results.times, perfectScores: allPerfects };
+  return { times: finalTimes, perfectScores: allPerfects };
 };
 
 const gameAnalysis = {
