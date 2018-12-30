@@ -129,7 +129,7 @@
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
-    left: 10px;
+    transform: translateX(0px) scaleX(-1);
   }
   33% {
     background: url("../pcs/char3/idle1.png");
@@ -154,7 +154,7 @@
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
-    left: 10px;
+    transform: translateX(0px) scaleX(-1);
   }
   66% {
     background: url("../pcs/char3/hit1.png");
@@ -173,7 +173,7 @@
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
-    left: 0;
+    transform: translateX(-10px) scaleX(-1);
   }
   82.01% {
     background: url("../pcs/char3/hit3.png");
@@ -186,7 +186,7 @@
     image-rendering: pixelated;
     background-size: cover;
     background-repeat: no-repeat;
-    left: 10px;
+    transform: translateX(0px) scaleX(-1);
   }
 }
 

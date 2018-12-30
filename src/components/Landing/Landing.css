@@ -157,19 +157,19 @@
 
 @keyframes landing-char1-move {
   0% {
-    right: -100px;
+    transform: translateX(2700px);
   }
   100% {
-    right: 2700px;
+    transform: translateX(-100px);
   }
 }
 
 @keyframes landing-char2-move {
   0% {
-    left: -100px;
+    transform: translateX(-100px);
   }
   100% {
-    left: 2700px;
+    transform: translateX(2700px);
   }
 }
 
@@ -261,8 +261,8 @@
 
 @keyframes background-move {
   0% {
-    top: 0;
-    left: 0;
+    transform: translate(0, 0);
+
     background: url(../Game/images/snow-bg.png);
     background-size: cover;
     image-rendering: pixelated;
@@ -273,8 +273,7 @@
     image-rendering: pixelated;
   }
   25% {
-    top: -500px;
-    left: -500px;
+    transform: translate(-500px, -500px);
   }
   35% {
     background: url(../Game/images/forestpath-bg.png);
@@ -282,8 +281,7 @@
     image-rendering: pixelated;
   }
   50% {
-    top: 0;
-    left: 0;
+    transform: translate(0, 0);
   }
   64% {
     background: url(../Game/images/forestpath-bg.png);
@@ -296,8 +294,7 @@
     image-rendering: pixelated;
   }
   75% {
-    top: -500px;
-    left: -500px;
+    transform: translate(-500px, -500px);
   }
   96% {
     background: url(../Game/images/dd-bg.png);
@@ -308,8 +305,7 @@
     background: url(../Game/images/snow-bg.png);
     background-size: cover;
     image-rendering: pixelated;
-    top: 0;
-    left: 0;
+    transform: translate(0, 0);
   }
 }
 
@@ -401,10 +397,10 @@
 
 @keyframes birb-move {
   0% {
-    bottom: -100px;
+    transform: translateY(1700px);
   }
   100% {
-    bottom: 1700px;
+    transform: translateY(-100px);
   }
 }
 
