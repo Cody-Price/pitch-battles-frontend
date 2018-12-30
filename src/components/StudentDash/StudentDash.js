@@ -5,6 +5,7 @@ import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
 import { timesHelper } from "../../utilities/timesHelper";
 import { badgeHelper } from "../../utilities/badgeHelper";
+import { fastestTimes } from "../../utilities/fastestTimes";
 
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
@@ -70,9 +71,7 @@ class StudentDash extends Component {
 
     if (badges.length > 10) {
       badges.sort((a, b) => {
-        return (
-          badgeHelper[Object.keys(b)].rank - badgeHelper[Object.keys(a)].rank
-        );
+        return b.id - a.id;
       });
       let newBadges = [];
       for (let i = 0; i < 10; i++) {
@@ -82,27 +81,33 @@ class StudentDash extends Component {
     }
 
     badges = badges.map((badge, index) => {
+      const badgeClass = badgeHelper.find(helperBadge => {
+        console.log(badge.id, helperBadge.rank);
+        return helperBadge.rank == badge.id;
+      });
+
+      console.log(badgeClass);
       return (
-        <div key={Object.keys(badge)} className={`badge ${Object.keys(badge)}`}>
-          <h4 className="badge-descriptor">
-            {badgeHelper[Object.keys(badge)].badge}
-          </h4>
+        <div key={badge.attributes.name} className={`badge ${badgeClass.name}`}>
+          <h4 className="badge-descriptor">{badge.attributes.name}</h4>
         </div>
       );
     });
 
-    const times = this.props.user.attributes.fastest_times.data.map(time => {
-      return (
-        <div
-          key={Object.keys(time)}
-          className={"time-container {$Objecy.keys(time)}"}
-        >
-          <h3 className="time-label">
-            {timesHelper[Object.keys(time)]} - {time[Object.keys(time)]}
-          </h3>
-        </div>
-      );
-    });
+    const displayTimes = fastestTimes(this.props.user);
+
+    // const times = this.props.user.attributes.fastest_times.data.map(time => {
+    //   return (
+    //     <div
+    //       key={Object.keys(time)}
+    //       className={"time-container {$Objecy.keys(time)}"}
+    //     >
+    //       <h3 className="time-label">
+    //         {timesHelper[Object.keys(time)]} - {time[Object.keys(time)]}
+    //       </h3>
+    //     </div>
+    //   );
+    // });
 
     return (
       <main className="student-dash">
@@ -122,13 +127,14 @@ class StudentDash extends Component {
               <div className="student-dash-avatar-backer">
                 <div
                   className={`student-dash-avatar ${
-                    avatars[this.props.user.avatar]
+                    avatars[this.props.user.attributes.avatar]
                   }`}
                 />
               </div>
               <section className="header-data">
                 <h2 className="student-name">
-                  {this.props.user.first_name} {this.props.user.last_name}
+                  {this.props.user.attributes.first_name}{" "}
+                  {this.props.user.attributes.last_name}
                 </h2>
                 <h2 className="student-class-link">{this.props.user.class}</h2>
               </section>
@@ -172,10 +178,10 @@ class StudentDash extends Component {
             <section className="student-dash-stats">
               <h2 className="total-games-played">
                 total battles fought:{" "}
-                <span>{this.props.user.attributes.games_played.data}</span>
+                <span>{this.props.user.attributes.total_games_played}</span>
               </h2>
               <h2 className="fastest-times">fastest times:</h2>
-              <div className="times-row">{times}</div>
+              {/* <div className="times-row">{times}</div> */}
               <h2 className="most-recent-badges">top badges:</h2>
               <div className="badge-row">{badges}</div>
             </section>
