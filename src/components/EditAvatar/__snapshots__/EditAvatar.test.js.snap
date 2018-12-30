@@ -29,6 +29,7 @@ exports[`EditAvatar should match the snapshot 1`] = `
   />
   <button
     className="change-avatar-button"
+    onClick={[Function]}
   >
     choose avatar
   </button>
