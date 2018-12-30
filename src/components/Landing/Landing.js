@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
+import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 import "./Landing.css";
 
@@ -9,12 +10,20 @@ class Landing extends Component {
     super();
     this.state = {
       login: true,
-      signup: false
+      signup: false,
+      forgotPassword: false
     };
   }
 
   landingChange = () => {
     this.setState({ login: !this.state.login, signup: !this.state.signup });
+  };
+
+  forgotPasswordScreen = () => {
+    this.setState({
+      login: !this.state.login,
+      forgotPassword: !this.state.forgotPassword
+    });
   };
 
   render() {
@@ -33,6 +42,8 @@ class Landing extends Component {
             landingChange={this.landingChange}
             status={this.state.login}
             badLogin={this.props.badLogin}
+            loggingIn={this.props.loggingIn}
+            forgotPasswordScreen={this.forgotPasswordScreen}
           />
           <Signup
             landingChange={this.landingChange}
@@ -40,6 +51,11 @@ class Landing extends Component {
             signUpUser={this.props.signUpUser}
             signUpSuccessful={this.props.signUpSuccessful}
             badSignUp={this.props.badSignUp}
+          />
+          <ForgotPassword
+            forgotPassword={this.props.forgotPassword}
+            backToLogin={this.forgotPasswordScreen}
+            status={this.state.forgotPassword}
           />
         </section>
       </main>

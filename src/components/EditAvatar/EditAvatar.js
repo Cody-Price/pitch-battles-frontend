@@ -90,7 +90,7 @@ class EditAvatar extends Component {
           className={`avatar-right-arrow ${this.state.right}`}
           onClick={this.handleRightClick}
         />
-        <button onClick={this.handleSelect} className="change-avatar-button">
+        <button onClick={this.handleSubmit} className="change-avatar-button">
           choose avatar
         </button>
       </section>

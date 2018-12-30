@@ -73,15 +73,22 @@ describe("Game", () => {
         gameOver: false,
         victory: false,
         finalVictory: false,
-        running: true,
-        start: 1482363367071,
+        running: false,
+        start: 0,
         times: [],
         userModal: false,
         milliseconds: 0,
-        perfectScores: [],
+        perfectScores: {
+          all: false,
+          four: false,
+          one: false,
+          three: false,
+          two: false
+        },
         currentTime: 0,
         currentLevel: 1,
-        currentPitch: "a"
+        currentPitch: "a",
+        kickedOff: true
       };
 
       wrapper.instance().setupGame();
@@ -236,6 +243,7 @@ describe("Game", () => {
     it("should call checkStatus", () => {
       const spy = jest.spyOn(wrapper.instance(), "checkStatus");
 
+      wrapper.instance().setupGame();
       wrapper.instance().submitGuess(keyEvent);
 
       expect(spy).toHaveBeenCalled();
@@ -638,7 +646,13 @@ describe("Game", () => {
 
   describe("checkPerfect", () => {
     it("should call setState if playersHearts.length === 3", () => {
-      const expected = [1];
+      const expected = {
+        all: false,
+        four: false,
+        one: true,
+        three: false,
+        two: false
+      };
       wrapper.instance().checkPerfect();
 
       expect(wrapper.state().perfectScores).toEqual(expected);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { login } from "../../utilities/fetchCalls";
 import "./ChangePassword.css";
+
+import { login } from "../../utilities/fetchCalls";
 
 class ChangePassword extends Component {
   constructor() {
@@ -40,7 +41,7 @@ class ChangePassword extends Component {
       return;
     }
 
-    this.props.updatePassword(this.state.newPassword);
+    this.props.changePassword(this.state.oldPassword, this.state.newPassword);
   };
 
   confirmOldPassword = async () => {
@@ -62,8 +63,6 @@ class ChangePassword extends Component {
       });
       return false;
     }
-
-    // this.props.updateWebToken(body.)
   };
 
   handleChange = event => {

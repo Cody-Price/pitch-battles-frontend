@@ -190,3 +190,22 @@
   image-rendering: pixelated;
   background-size: cover;
 }
+
+.correct-answer,
+.incorrect-answer {
+  display: none;
+  font-family: "Scriptorium";
+  color: #4776bb;
+  font-size: 2rem;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.correct-answer.true,
+.incorrect-answer.true {
+  display: block;
+}

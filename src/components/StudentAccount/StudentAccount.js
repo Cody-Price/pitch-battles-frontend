@@ -82,6 +82,7 @@ class StudentAccount extends Component {
             <ChangePassword
               user={this.props.user}
               changePassword={this.props.changePassword}
+              updateWebToken={this.props.updateWebToken}
             />
           )}
         </section>

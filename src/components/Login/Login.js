@@ -51,7 +51,16 @@ class Login extends Component {
           <p className={`${this.props.badLogin} login-warning`}>
             invalid email/password combination
           </p>
+          <p className={`${this.props.loggingIn} logging-in-message`}>
+            logging you in...
+          </p>
         </form>
+        <button
+          onClick={this.props.forgotPasswordScreen}
+          className="forgot-my-password-link"
+        >
+          forgot my password
+        </button>
         <button
           className="signup-form-switch-button"
           onClick={this.props.landingChange}

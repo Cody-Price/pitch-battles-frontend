@@ -45,7 +45,17 @@ exports[`Login should render like snapshot 1`] = `
     >
       invalid email/password combination
     </p>
+    <p
+      className="undefined logging-in-message"
+    >
+      logging you in...
+    </p>
   </form>
+  <button
+    className="forgot-my-password-link"
+  >
+    forgot my password
+  </button>
   <button
     className="signup-form-switch-button"
   >

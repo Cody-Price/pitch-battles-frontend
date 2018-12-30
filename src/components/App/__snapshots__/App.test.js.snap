@@ -13,6 +13,7 @@ exports[`App should match the snapshot 1`] = `
     <Landing
       badLogin={false}
       badSignUp={false}
+      loggingIn={false}
       loginUser={[Function]}
       signUpSuccessful={false}
       signUpUser={[Function]}

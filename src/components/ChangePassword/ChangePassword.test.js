@@ -9,17 +9,17 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe("ChangePassword", () => {
   let wrapper;
-  let mockUpdatePassword;
+  let mockChangePassword;
   let mockUpdateWebToken;
   const mockUser = { email: "email@email.com" };
 
   beforeEach(() => {
-    mockUpdatePassword = jest.fn();
+    mockChangePassword = jest.fn();
     mockUpdateWebToken = jest.fn();
     wrapper = shallow(
       <ChangePassword
         updateWebToken={mockUpdateWebToken}
-        updatePassword={mockUpdatePassword}
+        changePassword={mockChangePassword}
         user={mockUser}
       />
     );
@@ -146,7 +146,7 @@ describe("ChangePassword", () => {
       expect(spy).toReturn();
     });
 
-    it("should call updatePassword with the appropriate params", async () => {
+    it("should call changePassword with the appropriate params", async () => {
       mockPreventDefault = jest.fn();
 
       const mockEvent = {
@@ -161,7 +161,8 @@ describe("ChangePassword", () => {
         return Promise.resolve(true);
       });
 
-      const expected = "Hello";
+      const expectedOne = "What";
+      const expectedTwo = "Hello";
 
       wrapper.setState({
         newPassword: "Hello",
@@ -173,7 +174,7 @@ describe("ChangePassword", () => {
 
       await wrapper.instance().handleSubmit(mockEvent);
 
-      expect(mockUpdatePassword).toBeCalledWith(expected);
+      expect(mockChangePassword).toBeCalledWith(expectedOne, expectedTwo);
     });
 
     it("should call handleSubmit on submit", () => {

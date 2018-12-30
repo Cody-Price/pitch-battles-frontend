@@ -190,3 +190,11 @@
     opacity: 1;
   }
 }
+
+.kickoff-btn {
+  font-family: "chronotype";
+  font-size: 1.4rem;
+  border: 2px solid #333;
+  padding-top: 3px;
+  background: #e3e8d9;
+}

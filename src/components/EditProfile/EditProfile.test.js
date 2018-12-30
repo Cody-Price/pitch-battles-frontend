@@ -10,8 +10,7 @@ describe("EditProfile", () => {
   let wrapper;
   const mockUser = {
     first_name: "Haley",
-    last_name: "Jacobs",
-    email: "hjacobs@gmail.com"
+    last_name: "Jacobs"
   };
   let mockChangeProfile;
 
@@ -22,7 +21,7 @@ describe("EditProfile", () => {
     );
   });
 
-  it.skip("should match the snapshot", () => {
+  it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -65,21 +64,6 @@ describe("EditProfile", () => {
       expect(spy).toHaveBeenCalledWith(expected);
     });
 
-    it("should call handleChange on change from source 3 with the correct params", () => {
-      const spy = jest.spyOn(wrapper.instance(), "handleChange");
-      const expected = {
-        target: {
-          name: "email",
-          value: "steve@thesteves.com"
-        }
-      };
-      wrapper.instance().forceUpdate();
-
-      wrapper.find(".profile-email-input").simulate("change", expected);
-
-      expect(spy).toHaveBeenCalledWith(expected);
-    });
-
     it("should setState", () => {
       const mockEvent = {
         target: {
@@ -90,8 +74,7 @@ describe("EditProfile", () => {
 
       const expected = {
         first_name: "Steve",
-        last_name: "Jacobs",
-        email: "hjacobs@gmail.com"
+        last_name: "Jacobs"
       };
       wrapper.instance().handleChange(mockEvent);
 
@@ -109,8 +92,7 @@ describe("EditProfile", () => {
 
       wrapper.setState({
         first_name: "",
-        last_name: "",
-        email: ""
+        last_name: ""
       });
 
       wrapper.instance().forceUpdate();
@@ -125,14 +107,12 @@ describe("EditProfile", () => {
       const mockEvent = { preventDefault: mockPreventDefault };
       const expected = {
         first_name: "Kevin",
-        last_name: "Simpson",
-        email: "ksimpson@mail.com"
+        last_name: "Simpson"
       };
 
       wrapper.setState({
         first_name: "Kevin",
-        last_name: "Simpson",
-        email: "ksimpson@mail.com"
+        last_name: "Simpson"
       });
 
       wrapper.instance().handleSubmit(mockEvent);
@@ -147,8 +127,7 @@ describe("EditProfile", () => {
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
       wrapper.setState({
         first_name: "Kevin",
-        last_name: "Simpson",
-        email: "ksimpson@mail.com"
+        last_name: "Simpson"
       });
 
       wrapper.find(".edit-profile-form").simulate("submit", mockEvent);

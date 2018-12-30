@@ -206,7 +206,8 @@ exports[`StudentDash should match the snapshot 1`] = `
       <h2
         className="total-games-played"
       >
-        total battles fought: 
+        total battles fought:
+         
         <span>
           115
         </span>

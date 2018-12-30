@@ -14,6 +14,7 @@ import "./Game.css";
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
 import gameAnalysis from "../../utilities/postGameAnalysis";
+
 // import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
@@ -38,13 +39,19 @@ class Game extends Component {
       victory: false,
       finalVictory: false,
       times: [],
-      perfectScores: [],
-      userModal: false
+      perfectScores: {
+        one: false,
+        two: false,
+        three: false,
+        four: false,
+        all: false
+      },
+      userModal: false,
+      kickedOff: false
     };
   }
 
   componentDidMount() {
-    this.kickOff();
     window.addEventListener("keyup", this.submitGuess);
   }
 
@@ -54,10 +61,10 @@ class Game extends Component {
 
   // -- GAME SETUP -- //
 
-  kickOff() {
+  kickOff = () => {
     this.setupGame();
     this.startTimer();
-  }
+  };
 
   setupGame = () => {
     const instrument = this.findInstrument();
@@ -73,7 +80,8 @@ class Game extends Component {
         monsterStatus: "idle",
         gameOver: false,
         victory: false,
-        finalVictory: false
+        finalVictory: false,
+        kickedOff: true
       },
       this.setPitch(monsterHearts)
     );
@@ -274,27 +282,47 @@ class Game extends Component {
 
   victory = () => {
     if (this.state.currentLevel === 4) {
-      this.setState({
-        finalVictory: true,
-        playerStatus: "victory"
-      });
+      this.setState(
+        {
+          finalVictory: true,
+          playerStatus: "victory"
+        },
+        this.checkPerfect
+      );
     } else {
-      this.setState({
-        victory: true,
-        playerStatus: "victory"
-      });
+      this.setState(
+        {
+          victory: true,
+          playerStatus: "victory"
+        },
+        this.checkPerfect
+      );
     }
-
-    this.checkPerfect();
   };
 
-  checkPerfect() {
+  checkPerfect = () => {
+    const helperArray = [null, "one", "two", "three", "four"];
+
+    const newPerfectScores = Object.assign({
+      ...this.state.perfectScores,
+      [helperArray[this.state.currentLevel]]: true
+    });
+
+    if (this.state.currentLevel === 4 && this.state.playerHearts.length === 3) {
+      this.setState(
+        {
+          perfectScores: newPerfectScores
+        },
+        this.processGame
+      );
+    }
+
     if (this.state.playerHearts.length === 3) {
       this.setState({
-        perfectScores: [...this.state.perfectScores, this.state.currentLevel]
+        perfectScores: newPerfectScores
       });
     }
-  }
+  };
 
   gameOver = () => {
     this.setState(
@@ -315,8 +343,8 @@ class Game extends Component {
       times: this.state.times,
       perfectScores: this.state.perfectScores
     };
-    const update = gameAnalysis.postGameAnalysis(this.props.user, gameResults);
-    console.log(update);
+
+    const update = gameAnalysis.postGameAnalysis(gameResults);
     if (!update) {
       return;
     } else {
@@ -426,11 +454,21 @@ class Game extends Component {
             {this.state.monsterHit && <MonsterEffect />}
           </section>
           {this.state.gameOver && <GameOver />}
+          {!this.state.kickedOff && (
+            <button
+              className={`kickoff-btn ${this.state.kickedOff}`}
+              onClick={this.kickOff}
+            >
+              start
+            </button>
+          )}
           {this.state.currentPitch && !this.state.gameOver && (
             <Staff
               clef={this.state.clef}
               submitGuess={this.submitGuess}
               currentPitch={this.state.currentPitch.position}
+              correct={this.state.playerStatus}
+              incorrect={this.state.monsterStatus}
             />
           )}
           {this.state.victory && (

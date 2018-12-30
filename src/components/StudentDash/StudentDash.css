@@ -529,6 +529,10 @@
   transition: 0.3s;
 }
 
-.student-dash-avatar-backer:hover .account-link-text {
+.avatar-circle:hover .account-link-text {
   opacity: 1;
+}
+
+.avatar-circle:hover {
+  cursor: pointer;
 }

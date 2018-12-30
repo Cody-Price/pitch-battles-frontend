@@ -6,25 +6,31 @@ exports[`EditProfile should match the snapshot 1`] = `
 >
   <form
     className="edit-profile-form"
+    onSubmit={[Function]}
   >
+    <p
+      className="first-name-edit-label"
+    >
+      first name:
+    </p>
     <input
       className="profile-first-name-input"
       name="first_name"
+      onChange={[Function]}
       placeholder="first name"
       value="Haley"
     />
+    <p
+      className="last-name-edit-label"
+    >
+      last name:
+    </p>
     <input
       className="profile-last-name-input"
       name="last_name"
+      onChange={[Function]}
       placeholder="last name"
       value="Jacobs"
-    />
-    <input
-      className="profile-email-input"
-      name="email"
-      placeholder="email"
-      type="email"
-      value="hjacobs@gmail.com"
     />
     <button
       className="profile-submit-btn"

@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import mockUser from "../../utilities/mockUser";
 
-import { login, signUp, postGameUserUpdate } from "../../utilities/fetchCalls";
+import {
+  login,
+  signUp,
+  postGameUserUpdate,
+  userFetch,
+  changeAvatarFetch,
+  changeProfileFetch,
+  changePassword
+} from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
 import Landing from "../Landing/Landing";
@@ -43,14 +51,15 @@ class App extends Component {
     });
     try {
       const data = await login(body);
-      this.setState({
-        webToken: data.access_token,
-        user: data.user,
-        fetchError: false,
-        activePage: "onboarding",
-        loading: false
-      });
-      console.log(data);
+      this.setState(
+        {
+          webToken: data.access_token,
+          fetchError: false,
+          activePage: "onboarding",
+          loading: false
+        },
+        this.getUpdatedUserData
+      );
       if (data.error) {
         this.setState({
           badLogin: true,
@@ -88,7 +97,6 @@ class App extends Component {
 
     try {
       const data = await signUp(body);
-      console.log(data);
       if (data.error) {
         this.setState({
           badSignUp: true
@@ -126,7 +134,6 @@ class App extends Component {
 
   // -- NAVIGATOR -- //
   toggleGame = (gameActive, instrument) => {
-    console.log(gameActive, instrument);
     this.setState({
       gameActive,
       instrument
@@ -150,11 +157,13 @@ class App extends Component {
 
   processGame = async update => {
     try {
-      const data = await postGameUserUpdate(update, this.state.user);
+      console.log(update);
+      const data = await postGameUserUpdate(update, this.state.webToken);
       this.setState({
         fetchError: false
       });
       console.log(data);
+      this.getUpdatedUserData();
     } catch (error) {
       console.log(error);
       this.setError();
@@ -163,7 +172,7 @@ class App extends Component {
 
   // -- FETCH ERROR HANDLING -- //
   setError = error => {
-    console.log(error.user_authentication);
+    console.log(error);
     this.setState({
       fetchError: true,
       loading: false
@@ -171,11 +180,68 @@ class App extends Component {
   };
 
   // -- ACCOUNT UPDATES -- //
-  changeProfile = () => {};
 
-  changeAvatar = () => {};
+  getUpdatedUserData = async () => {
+    try {
+      const { data } = await userFetch(this.state.webToken);
+      this.setState({
+        user: data
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  changePassword = () => {};
+  changeProfile = async name => {
+    console.log("fires");
+    try {
+      const response = await changeProfileFetch(
+        name,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+      this.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  changeAvatar = async avatar => {
+    try {
+      const response = await changeAvatarFetch(
+        avatar,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+      this.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  updateWebToken = webToken => {
+    this.setState({
+      webToken
+    });
+  };
+
+  changePassword = async (oldPassword, newPassword) => {
+    try {
+      const response = await changePassword(
+        oldPassword,
+        newPassword,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  forgotPassword = () => {};
 
   render() {
     return (
@@ -190,6 +256,8 @@ class App extends Component {
                 badLogin={this.state.badLogin}
                 badSignUp={this.state.badSignUp}
                 signUpSuccessful={this.state.signUpSuccessful}
+                loggingIn={this.state.loading}
+                forgotPassword={this.state.forgotPassword}
               />
             )}
             {this.state.activePage === "onboarding" && this.state.user && (
@@ -197,6 +265,7 @@ class App extends Component {
             )}
             {this.state.activePage === "student dash" && this.state.user && (
               <StudentDash
+                getUpdatedUserData={this.getUpdatedUserData}
                 navigate={this.navigate}
                 startGame={this.toggleGame}
                 user={mockUser}
@@ -210,6 +279,7 @@ class App extends Component {
                 changePassword={this.changePassword}
                 navigate={this.navigate}
                 logout={this.logout}
+                updateWebToken={this.updateWebToken}
               />
             )}
             }

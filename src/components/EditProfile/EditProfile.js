@@ -7,8 +7,7 @@ class EditProfile extends Component {
 
     this.state = {
       first_name: "",
-      last_name: "",
-      email: ""
+      last_name: ""
     };
   }
 
@@ -19,8 +18,7 @@ class EditProfile extends Component {
   populateOnLoad = () => {
     this.setState({
       first_name: this.props.user.first_name,
-      last_name: this.props.user.last_name,
-      email: this.props.user.email
+      last_name: this.props.user.last_name
     });
   };
 
@@ -33,17 +31,12 @@ class EditProfile extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    if (
-      this.state.first_name === "" &&
-      this.state.last_name === "" &&
-      this.state.email === ""
-    ) {
+    if (this.state.first_name === "" && this.state.last_name === "") {
       return;
     }
     const update = {
       first_name: this.state.first_name,
-      last_name: this.state.last_name,
-      email: this.state.email
+      last_name: this.state.last_name
     };
 
     this.props.changeProfile(update);
@@ -79,18 +72,7 @@ class EditProfile extends Component {
               this.handleChange(event);
             }}
           />
-          <p className="emai-edit-label">email:</p>
 
-          <input
-            type="email"
-            name="email"
-            className="profile-email-input"
-            value={this.state.email}
-            placeholder="email"
-            onChange={event => {
-              this.handleChange(event);
-            }}
-          />
           <button type="submit" className="profile-submit-btn">
             submit new info
           </button>
