@@ -32,19 +32,6 @@ exports[`EditProfile should match the snapshot 1`] = `
       placeholder="last name"
       value="Jacobs"
     />
-    <p
-      className="email-edit-label"
-    >
-      email:
-    </p>
-    <input
-      className="profile-email-input"
-      name="email"
-      onChange={[Function]}
-      placeholder="email"
-      type="email"
-      value="hjacobs@gmail.com"
-    />
     <button
       className="profile-submit-btn"
       type="submit"
