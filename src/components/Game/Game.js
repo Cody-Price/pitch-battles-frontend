@@ -467,6 +467,8 @@ class Game extends Component {
               clef={this.state.clef}
               submitGuess={this.submitGuess}
               currentPitch={this.state.currentPitch.position}
+              correct={this.state.playerStatus}
+              incorrect={this.state.monsterStatus}
             />
           )}
           {this.state.victory && (
