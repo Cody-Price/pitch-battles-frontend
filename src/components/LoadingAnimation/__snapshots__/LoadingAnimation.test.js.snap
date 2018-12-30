@@ -21,5 +21,8 @@ exports[`LoadingAnimation should match the snapshot 1`] = `
       className="cloud2 undefined"
     />
   </div>
+  <p>
+     loading...
+  </p>
 </section>
 `;

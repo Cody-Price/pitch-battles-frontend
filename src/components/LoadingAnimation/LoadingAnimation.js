@@ -10,13 +10,13 @@ class LoadingAnimation extends Component {
     return (
       <section className="loading-animation-wrapper">
         <div className="circle-border" />
-
         <div className={`loading-animation ${animals[this.props.animals]}`}>
           <div className={this.props.animals} />
           <div className={`walkway ${animals[this.props.animals]}`} />
           <div className={`cloud1 ${animals[this.props.animals]}`} />
           <div className={`cloud2 ${animals[this.props.animals]}`} />
         </div>
+        <p> loading...</p>
       </section>
     );
   }
