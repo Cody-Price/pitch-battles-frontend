@@ -78,7 +78,13 @@ describe("Game", () => {
         times: [],
         userModal: false,
         milliseconds: 0,
-        perfectScores: [],
+        perfectScores: {
+          all: false,
+          four: false,
+          one: false,
+          three: false,
+          two: false
+        },
         currentTime: 0,
         currentLevel: 1,
         currentPitch: "a",
@@ -640,7 +646,13 @@ describe("Game", () => {
 
   describe("checkPerfect", () => {
     it("should call setState if playersHearts.length === 3", () => {
-      const expected = [1];
+      const expected = {
+        all: false,
+        four: false,
+        one: true,
+        three: false,
+        two: false
+      };
       wrapper.instance().checkPerfect();
 
       expect(wrapper.state().perfectScores).toEqual(expected);
