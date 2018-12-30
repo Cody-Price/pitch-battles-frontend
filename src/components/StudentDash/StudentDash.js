@@ -115,14 +115,16 @@ class StudentDash extends Component {
                 onClick={() => {
                   this.props.navigate("student account");
                 }}
-              />
+              >
+                {" "}
+                <h3 className="account-link-text">account page</h3>
+              </div>
               <div className="student-dash-avatar-backer">
                 <div
                   className={`student-dash-avatar ${
                     avatars[this.props.user.avatar]
                   }`}
                 />
-                <h3 className="account-link-text">account page</h3>
               </div>
               <section className="header-data">
                 <h2 className="student-name">
@@ -174,7 +176,7 @@ class StudentDash extends Component {
               </h2>
               <h2 className="fastest-times">fastest times:</h2>
               <div className="times-row">{times}</div>
-              <h2 className="most-recent-badges">most recent badges:</h2>
+              <h2 className="most-recent-badges">top badges:</h2>
               <div className="badge-row">{badges}</div>
             </section>
           </section>
