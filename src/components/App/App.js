@@ -5,7 +5,10 @@ import {
   login,
   signUp,
   postGameUserUpdate,
-  userFetch
+  userFetch,
+  changeAvatarFetch,
+  changeProfileFetch,
+  changePassword
 } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
@@ -57,7 +60,6 @@ class App extends Component {
         },
         this.getUpdatedUserData
       );
-      console.log(data);
       if (data.error) {
         this.setState({
           badLogin: true,
@@ -95,7 +97,6 @@ class App extends Component {
 
     try {
       const data = await signUp(body);
-      console.log(data);
       if (data.error) {
         this.setState({
           badSignUp: true
@@ -133,7 +134,6 @@ class App extends Component {
 
   // -- NAVIGATOR -- //
   toggleGame = (gameActive, instrument) => {
-    console.log(gameActive, instrument);
     this.setState({
       gameActive,
       instrument
@@ -156,17 +156,18 @@ class App extends Component {
   };
 
   processGame = async update => {
-    console.log(update);
-    // try {
-    //   const data = await postGameUserUpdate(update, this.state.user);
-    //   this.setState({
-    //     fetchError: false
-    //   });
-    //   console.log(data);
-    // } catch (error) {
-    //   console.log(error);
-    //   this.setError();
-    // }
+    try {
+      console.log(update);
+      const data = await postGameUserUpdate(update, this.state.webToken);
+      this.setState({
+        fetchError: false
+      });
+      console.log(data);
+      this.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+      this.setError();
+    }
   };
 
   // -- FETCH ERROR HANDLING -- //
@@ -191,11 +192,54 @@ class App extends Component {
     }
   };
 
-  changeProfile = () => {};
+  changeProfile = async name => {
+    console.log("fires");
+    try {
+      const response = await changeProfileFetch(
+        name,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+      this.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  changeAvatar = () => {};
+  changeAvatar = async avatar => {
+    try {
+      const response = await changeAvatarFetch(
+        avatar,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+      this.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  changePassword = () => {};
+  updateWebToken = webToken => {
+    this.setState({
+      webToken
+    });
+  };
+
+  changePassword = async (oldPassword, newPassword) => {
+    try {
+      const response = await changePassword(
+        oldPassword,
+        newPassword,
+        this.state.user.id,
+        this.state.webToken
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   forgotPassword = () => {};
 
@@ -235,6 +279,7 @@ class App extends Component {
                 changePassword={this.changePassword}
                 navigate={this.navigate}
                 logout={this.logout}
+                updateWebToken={this.updateWebToken}
               />
             )}
             }
