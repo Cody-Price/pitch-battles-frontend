@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./GameOver.css";
 
 class GameOver extends Component {
@@ -13,3 +15,7 @@ class GameOver extends Component {
 }
 
 export default GameOver;
+
+GameOver.propTypes = {
+  exit: PropTypes.func
+};
