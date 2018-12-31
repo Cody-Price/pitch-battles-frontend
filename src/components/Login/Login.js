@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
+import PropTypes from "prop-types";
 
 class Login extends Component {
   constructor() {
@@ -73,3 +74,12 @@ class Login extends Component {
 }
 
 export default Login;
+
+Login.propTypes = {
+  loginUser: PropTypes.func,
+  status: PropTypes.bool,
+  badLogin: PropTypes.bool,
+  logginIn: PropTypes.bool,
+  forgotPasswordScreen: PropTypes.func,
+  landingChange: PropTypes.func
+};
