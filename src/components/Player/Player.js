@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import avatars from "../../utilities/avatars";
 import "./Player.css";
 import "./CharacterAnims/Char1.css";
@@ -25,3 +27,8 @@ class Player extends Component {
 }
 
 export default Player;
+
+Player.propTypes = {
+  avatar: PropTypes.number,
+  status: PropTypes.string
+};
