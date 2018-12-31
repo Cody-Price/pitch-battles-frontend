@@ -49,6 +49,8 @@ class Game extends Component {
     };
   }
 
+  // -- LIFECYCLE METHODS -- //
+
   componentDidMount() {
     window.addEventListener("keyup", this.submitGuess);
   }
@@ -79,7 +81,9 @@ class Game extends Component {
         gameOver: false,
         victory: false,
         finalVictory: false,
-        kickedOff: true
+        kickedOff: true,
+        resetting: false,
+        exiting: false
       },
       this.setPitch(monsterHearts)
     );
@@ -117,15 +121,31 @@ class Game extends Component {
   };
 
   resetGame = () => {
-    this.setState(
-      {
-        currentLevel: 1,
-        perfectScores: [],
-        times: []
-      },
-      this.setupGame
-    );
-    this.startTimer();
+    if (
+      this.state.playerStatus === "attack" ||
+      this.state.playerStatus === "hit"
+    ) {
+      this.setState({
+        resetting: true
+      });
+      setTimeout(this.resetGame, 1300);
+    } else {
+      this.setState(
+        {
+          currentLevel: 1,
+          perfectScores: [],
+          times: [],
+          kickedOff: false,
+          currentPitch: null,
+          running: false,
+          currentTime: 0,
+          start: 0,
+          resetting: false
+        }
+        // this.setupGame
+      );
+      // this.startTimer();
+    }
   };
 
   // -- GAME STATS HANDLING -- //
@@ -227,6 +247,7 @@ class Game extends Component {
       monsterHearts: [],
       monsterStatus: "dead"
     });
+
     setTimeout(this.victory, 3000);
   };
 
@@ -282,6 +303,7 @@ class Game extends Component {
     if (this.state.currentLevel === 4) {
       this.setState(
         {
+          victory: true,
           finalVictory: true,
           playerStatus: "victory"
         },
@@ -378,29 +400,40 @@ class Game extends Component {
   };
 
   exitGame = () => {
-    this.setState(
-      {
-        currentLevel: 1,
-        playerHearts: [0, 1, 2],
-        monsterHearts: [],
-        currentTime: 0,
-        start: 0,
-        running: false,
-        milliseconds: 0,
-        playerHit: false,
-        monsterHit: false,
-        playerStatus: "idle",
-        monsterStatus: "idle",
-        currentPitch: null,
-        gameOver: false,
-        victory: false,
-        finalVictory: false,
-        times: [],
-        perfectScores: [],
-        userModal: false
-      },
-      this.props.endGame(false)
-    );
+    if (
+      this.state.playerStatus === "attack" ||
+      this.state.playerStatus === "hit"
+    ) {
+      this.setState({
+        exiting: true
+      });
+      setTimeout(this.exitGame, 1300);
+    } else {
+      this.setState(
+        {
+          currentLevel: 1,
+          playerHearts: [0, 1, 2],
+          monsterHearts: [],
+          currentTime: 0,
+          start: 0,
+          running: false,
+          milliseconds: 0,
+          playerHit: false,
+          monsterHit: false,
+          playerStatus: "idle",
+          monsterStatus: "idle",
+          currentPitch: null,
+          gameOver: false,
+          victory: false,
+          finalVictory: false,
+          times: [],
+          perfectScores: [],
+          userModal: false,
+          exiting: false
+        },
+        this.props.endGame(false)
+      );
+    }
   };
 
   render() {
@@ -420,6 +453,8 @@ class Game extends Component {
               />
             </div>
             <GameUserModal
+              resetting={this.state.resetting}
+              exiting={this.state.exiting}
               endGame={this.exitGame}
               instrument={this.props.instrument}
               status={this.state.userModal}
@@ -454,7 +489,7 @@ class Game extends Component {
             />
             {this.state.monsterHit && <MonsterEffect />}
           </section>
-          {this.state.gameOver && <GameOver />}
+          {this.state.gameOver && <GameOver exit={this.exitGame} />}
           {!this.state.kickedOff && (
             <button
               className={`kickoff-btn ${this.state.kickedOff}`}
@@ -478,6 +513,7 @@ class Game extends Component {
               finalVictory={this.state.finalVictory}
               victory={this.state.victory}
               time={this.state.times}
+              exit={this.exitGame}
             />
           )}
         </div>
