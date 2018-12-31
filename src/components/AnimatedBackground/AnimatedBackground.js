@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const AnimatedBackground = props => {
   return (
@@ -28,3 +29,7 @@ const AnimatedBackground = props => {
 };
 
 export default AnimatedBackground;
+
+AnimatedBackground.propTypes = {
+  instance: PropTypes.string
+};
