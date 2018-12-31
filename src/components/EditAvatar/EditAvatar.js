@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./EditAvatar.css";
 import avatars from "../../utilities/avatars";
+import PropTypes from "prop-types";
 
 class EditAvatar extends Component {
   constructor() {
@@ -99,3 +100,9 @@ class EditAvatar extends Component {
 }
 
 export default EditAvatar;
+
+EditAvatar.propTypes = {
+  user: PropTypes.object,
+  changeAvatar: PropTypes.func,
+  status: PropTypes.string
+};
