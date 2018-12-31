@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./GameUserModal.css";
 
 class GameUserModal extends Component {
@@ -27,3 +29,13 @@ class GameUserModal extends Component {
 }
 
 export default GameUserModal;
+
+GameUserModal.propTypes = {
+  status: PropTypes.bool,
+  username: PropTypes.string,
+  instrument: PropTypes.string,
+  resetting: PropTypes.bool,
+  exiting: PropTypes.bool,
+  reset: PropTypes.func,
+  endGame: PropTypes.func
+};
