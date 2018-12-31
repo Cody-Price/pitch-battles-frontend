@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
@@ -523,3 +524,10 @@ class Game extends Component {
 }
 
 export default Game;
+
+Game.propTypes = {
+  instrument: PropTypes.string,
+  user: PropTypes.object,
+  processGame: PropTypes.func,
+  endGame: PropTypes.func
+};
