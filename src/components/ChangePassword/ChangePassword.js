@@ -46,7 +46,7 @@ class ChangePassword extends Component {
 
   confirmOldPassword = async () => {
     const body = {
-      email: this.props.user.email,
+      email: this.props.user.attributes.email,
       password: this.state.oldPassword
     };
 

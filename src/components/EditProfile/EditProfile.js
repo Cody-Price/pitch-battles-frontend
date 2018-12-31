@@ -17,8 +17,8 @@ class EditProfile extends Component {
 
   populateOnLoad = () => {
     this.setState({
-      first_name: this.props.user.first_name,
-      last_name: this.props.user.last_name
+      first_name: this.props.user.attributes.first_name,
+      last_name: this.props.user.attributes.last_name
     });
   };
 

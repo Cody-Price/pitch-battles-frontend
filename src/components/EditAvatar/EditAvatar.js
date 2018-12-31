@@ -17,12 +17,12 @@ class EditAvatar extends Component {
   }
 
   checkAvatar = () => {
-    if (this.props.user.avatar === 1) {
+    if (this.props.user.attributes.avatar === 1) {
       this.setState({
         left: false,
         avatar: 1
       });
-    } else if (this.props.user.avatar === 10) {
+    } else if (this.props.user.attributes.avatar === 10) {
       this.setState({
         right: false,
         avatar: 10
@@ -31,7 +31,7 @@ class EditAvatar extends Component {
       this.setState({
         right: true,
         left: true,
-        avatar: this.props.user.avatar
+        avatar: this.props.user.attributes.avatar
       });
     }
   };
