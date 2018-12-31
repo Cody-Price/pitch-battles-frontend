@@ -27,14 +27,16 @@ export const fastestTimes = user => {
   console.log(user.attributes.games.data);
 
   const gamesToCheck = user.attributes.games.data.filter(game => {
-    return game.total_duration !== null;
+    return game.attributes.total_duration !== null;
   });
+
+  console.log(gamesToCheck);
 
   gamesToCheck.sort((a, b) => {
     return a.attributes.total_duration - b.attributes.total_duration;
   });
 
-  const fastestGame = user.attributes.games.data[0];
+  const fastestGame = gamesToCheck[0];
 
   console.log(fastestGame);
 
