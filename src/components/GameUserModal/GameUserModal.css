@@ -54,3 +54,23 @@
   font-size: 1.2rem;
   margin: 0;
 }
+
+.exiting-message,
+.resetting-message {
+  position: absolute;
+  /* left: -400px; */
+  top: 85px;
+  right: 0;
+  left: -300px;
+  margin: auto;
+  transition: 0.1s;
+}
+
+.resetting-message {
+  top: 101px;
+}
+
+.exiting-message.true,
+.resetting-message.true {
+  left: 0;
+}
