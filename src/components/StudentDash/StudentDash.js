@@ -20,10 +20,6 @@ class StudentDash extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.props.getUpdatedUserData();
-  // }
-
   handleInstrumentDropdown = () => {
     this.setState({
       dropdownDeploy: !this.state.dropdownDeploy
@@ -82,11 +78,9 @@ class StudentDash extends Component {
 
     badges = badges.map((badge, index) => {
       const badgeClass = badgeHelper.find(helperBadge => {
-        console.log(badge.id, helperBadge.rank);
         return helperBadge.rank == badge.id;
       });
 
-      console.log(badgeClass);
       return (
         <div key={badge.attributes.name} className={`badge ${badgeClass.name}`}>
           <h4 className="badge-descriptor">{badge.attributes.name}</h4>
@@ -96,18 +90,15 @@ class StudentDash extends Component {
 
     const displayTimes = fastestTimes(this.props.user);
 
-    // const times = this.props.user.attributes.fastest_times.data.map(time => {
-    //   return (
-    //     <div
-    //       key={Object.keys(time)}
-    //       className={"time-container {$Objecy.keys(time)}"}
-    //     >
-    //       <h3 className="time-label">
-    //         {timesHelper[Object.keys(time)]} - {time[Object.keys(time)]}
-    //       </h3>
-    //     </div>
-    //   );
-    // });
+    const times = displayTimes.map(time => {
+      return (
+        <div key={time.name} className={"time-container ${time.klass}"}>
+          <h3 className="time-label">
+            {time.name} - {time.time}
+          </h3>
+        </div>
+      );
+    });
 
     return (
       <main className="student-dash">
@@ -181,7 +172,7 @@ class StudentDash extends Component {
                 <span>{this.props.user.attributes.total_games_played}</span>
               </h2>
               <h2 className="fastest-times">fastest times:</h2>
-              {/* <div className="times-row">{times}</div> */}
+              <div className="times-row">{times}</div>
               <h2 className="most-recent-badges">top badges:</h2>
               <div className="badge-row">{badges}</div>
             </section>
