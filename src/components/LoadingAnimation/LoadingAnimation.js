@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./LoadingAnimation.css";
 
 class LoadingAnimation extends Component {
@@ -23,3 +25,7 @@ class LoadingAnimation extends Component {
 }
 
 export default LoadingAnimation;
+
+LoadingAnimation.propTypes = {
+  animals: PropTypes.string
+};
