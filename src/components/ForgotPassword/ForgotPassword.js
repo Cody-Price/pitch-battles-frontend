@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ForgotPassword.css";
+import PropTypes from "prop-types";
 
 import { forgotMyPasswordCall } from "../../utilities/fetchCalls";
 
@@ -86,3 +87,8 @@ class ForgotPassword extends Component {
 }
 
 export default ForgotPassword;
+
+ForgotPassword.propTypes = {
+  status: PropTypes.bool,
+  backToLogin: PropTypes.func
+};
