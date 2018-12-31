@@ -93,9 +93,8 @@ class StudentDash extends Component {
     const times = displayTimes.map(time => {
       return (
         <div key={time.name} className={"time-container ${time.klass}"}>
-          <h3 className="time-label">
-            {time.name} - {time.time}
-          </h3>
+          <h3 className="time-label">{time.name}</h3>
+          <h3 className="time-displayed">{time.time}</h3>
         </div>
       );
     });
