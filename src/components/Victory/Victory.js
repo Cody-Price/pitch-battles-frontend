@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Victory.css";
+import PropTypes from "prop-types";
 
 class Victory extends Component {
   handleClick = () => {
@@ -38,3 +39,11 @@ class Victory extends Component {
 }
 
 export default Victory;
+
+Victory.propTypes = {
+  finalVictory: PropTypes.bool,
+  time: PropTypes.array,
+  exit: PropTypes.func,
+  victory: PropTypes.bool,
+  levelUp: PropTypes.func
+};
