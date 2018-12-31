@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./Onboarding.css";
 import { onboardingContent } from "../../utilities/onboardingContent";
 import { dotsHelper } from "../../utilities/dotsHelper";
@@ -83,3 +85,7 @@ class Onboarding extends Component {
 }
 
 export default Onboarding;
+
+Onboarding.propTypes = {
+  navigate: PropTypes.func
+};

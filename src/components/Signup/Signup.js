@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./Signup.css";
 
 class Signup extends Component {
@@ -135,3 +137,11 @@ class Signup extends Component {
 }
 
 export default Signup;
+
+Signup.propTypes = {
+  signUpUser: PropTypes.func,
+  status: PropTypes.bool,
+  badSignUp: PropTypes.bool,
+  landingChange: PropTypes.func,
+  signUpSuccessful: PropTypes.bool
+};

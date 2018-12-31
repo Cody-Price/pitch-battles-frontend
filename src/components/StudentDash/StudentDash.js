@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./StudentDash.css";
+import PropTypes from "prop-types";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
@@ -93,9 +94,8 @@ class StudentDash extends Component {
     const times = displayTimes.map(time => {
       return (
         <div key={time.name} className={"time-container ${time.klass}"}>
-          <h3 className="time-label">
-            {time.name} - {time.time}
-          </h3>
+          <h3 className="time-label">{time.name}</h3>
+          <h3 className="time-displayed">{time.time}</h3>
         </div>
       );
     });
@@ -184,3 +184,9 @@ class StudentDash extends Component {
 }
 
 export default StudentDash;
+
+StudentDash.propTypes = {
+  user: PropTypes.object,
+  startGame: PropTypes.func,
+  navigate: PropTypes.func
+};

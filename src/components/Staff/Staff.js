@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NoteRow from "../NoteRow/NoteRow";
+import PropTypes from "prop-types";
 
 import "./Staff.css";
 
@@ -29,3 +30,11 @@ class Staff extends Component {
 }
 
 export default Staff;
+
+Staff.propTypes = {
+  correct: PropTypes.string,
+  incorrect: PropTypes.string,
+  clef: PropTypes.string,
+  currentPitch: PropTypes.string,
+  submitGuess: PropTypes.func
+};

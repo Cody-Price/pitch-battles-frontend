@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Hearts.css";
+import PropTypes from "prop-types";
 
 class Hearts extends Component {
   render() {
@@ -17,3 +18,8 @@ class Hearts extends Component {
 }
 
 export default Hearts;
+
+Hearts.propTypes = {
+  hearts: PropTypes.array,
+  character: PropTypes.string
+};

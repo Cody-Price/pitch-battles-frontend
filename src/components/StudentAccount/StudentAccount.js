@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./StudentAccount.css";
 
 import EditAvatar from "../EditAvatar/EditAvatar";
@@ -92,3 +94,13 @@ class StudentAccount extends Component {
 }
 
 export default StudentAccount;
+
+StudentAccount.propTypes = {
+  navigate: PropTypes.func,
+  logout: PropTypes.func,
+  user: PropTypes.object,
+  changeProfile: PropTypes.func,
+  changeAvatar: PropTypes.func,
+  changePassword: PropTypes.func,
+  updateWebToken: PropTypes.func
+};

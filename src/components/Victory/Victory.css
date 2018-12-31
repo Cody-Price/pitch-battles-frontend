@@ -53,3 +53,9 @@
     right: 0;
   }
 }
+
+.victory-exit-text {
+  margin-top: 5rem;
+  position: relative;
+  z-index: 1000;
+}

@@ -44,6 +44,12 @@
   top: 200px;
 }
 
+.exit-message {
+  margin-top: 150px;
+  font-family: "chronotype";
+  font-size: 1.4rem;
+}
+
 @keyframes slide-in-victory {
   0% {
     left: -300px;

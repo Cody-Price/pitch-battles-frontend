@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
@@ -64,3 +66,13 @@ class Landing extends Component {
 }
 
 export default Landing;
+
+Landing.propTypes = {
+  loginUser: PropTypes.func,
+  badLogin: PropTypes.bool,
+  logginIn: PropTypes.string,
+  signUpUser: PropTypes.func,
+  signUpSuccessful: PropTypes.bool,
+  badSignUp: PropTypes.bool,
+  forgotPassword: PropTypes.func
+};

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import "./OnboardingArticle.css";
 
@@ -18,3 +19,7 @@ class OnboardingArticle extends Component {
 }
 
 export default OnboardingArticle;
+
+OnboardingArticle.propTypes = {
+  data: PropTypes.object
+};

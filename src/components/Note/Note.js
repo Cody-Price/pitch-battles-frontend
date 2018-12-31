@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Note.css";
+import PropTypes from "prop-types";
 
 class Note extends Component {
   render() {
@@ -17,3 +18,8 @@ class Note extends Component {
 }
 
 export default Note;
+
+Note.propTypes = {
+  pitch: PropTypes.string,
+  submitGuess: PropTypes.func
+};

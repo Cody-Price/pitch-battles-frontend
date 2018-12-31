@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Note from "../Note/Note";
 import "./NoteRow.css";
+import PropTypes from "prop-types";
 
 class NoteRow extends Component {
   render() {
@@ -16,3 +17,7 @@ class NoteRow extends Component {
 }
 
 export default NoteRow;
+
+NoteRow.propTypes = {
+  submitGuess: PropTypes.func
+};
