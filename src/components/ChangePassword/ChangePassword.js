@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./ChangePassword.css";
 
 import { login } from "../../utilities/fetchCalls";
@@ -117,3 +119,9 @@ class ChangePassword extends Component {
 }
 
 export default ChangePassword;
+
+ChangePassword.propTypes = {
+  changePassword: PropTypes.func,
+  user: PropTypes.object,
+  updateWebToken: PropTypes.func
+};
