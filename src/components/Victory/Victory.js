@@ -3,7 +3,7 @@ import "./Victory.css";
 
 class Victory extends Component {
   handleClick = () => {
-    if (this.props.victory) {
+    if (this.props.victory && !this.props.finalVictory) {
       this.props.levelUp();
     }
   };
@@ -17,7 +17,7 @@ class Victory extends Component {
     return (
       <section onClick={this.handleClick} className="victory-screen">
         <h3 className="victory-text">VICTORY!</h3>
-        {this.props.victory && (
+        {!this.props.finalVictory && (
           <p className="proceed-text">Click to proceed to next level</p>
         )}
         {this.props.time[this.props.time.length - 1] !== totalTime && (
@@ -27,6 +27,11 @@ class Victory extends Component {
           level time: {this.props.time[this.props.time.length - 1] / 1000}
         </p>
         {this.props.finalVictory && <p>YOU WIN!</p>}
+        {this.props.finalVictory && (
+          <p className="victory-exit-text" onClick={this.props.exit}>
+            click here to exit...
+          </p>
+        )}
       </section>
     );
   }
