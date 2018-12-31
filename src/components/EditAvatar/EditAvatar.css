@@ -63,6 +63,7 @@
   image-rendering: pixelated;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 35px;
 }
 
 .avatar-editor-current.four {
