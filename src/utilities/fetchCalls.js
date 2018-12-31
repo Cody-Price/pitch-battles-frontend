@@ -65,13 +65,24 @@ export const postGameUserUpdate = async (update, webToken) => {
 };
 
 export const forgotMyPasswordCall = async email => {
-  // const url
-  // return response
-  return Promise.resolve(true);
+  console.log(email);
+  const url = "https://pitch-battles-api.herokuapp.com/password/forgot";
+
+  const options = {
+    body: JSON.stringify({ email: email }),
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  const response = await fetch(url, options);
+  return await response.json();
 };
 
 export const changeAvatarFetch = async (avatar, id, webToken) => {
-  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/${id}`;
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/`;
 
   const body = { avatar: avatar };
 
@@ -90,7 +101,7 @@ export const changeAvatarFetch = async (avatar, id, webToken) => {
 };
 
 export const changeProfileFetch = async (name, id, webToken) => {
-  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/${id}`;
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/`;
 
   const options = {
     body: JSON.stringify(name),
@@ -112,7 +123,7 @@ export const changePassword = async (
   id,
   webToken
 ) => {
-  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/${id}`;
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/`;
 
   const body = {
     current_password: oldPassword,
@@ -130,5 +141,7 @@ export const changePassword = async (
   };
 
   const response = await fetch(url, options);
+  const parsedResponse = await response.json();
+  console.log(parsedResponse);
   return await response.json();
 };

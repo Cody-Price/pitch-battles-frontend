@@ -22,7 +22,6 @@ class ForgotPassword extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-
     this.setState({
       fetching: true
     });

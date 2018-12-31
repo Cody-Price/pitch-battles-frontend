@@ -13,9 +13,7 @@ import "./Game.css";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
-import gameAnalysis from "../../utilities/postGameAnalysis";
-
-// import { postGameAnalysis } from "../../utilities/postGameAnalysis";
+import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
 class Game extends Component {
   constructor() {
@@ -344,7 +342,8 @@ class Game extends Component {
       perfectScores: this.state.perfectScores
     };
 
-    const update = gameAnalysis.postGameAnalysis(gameResults);
+    const update = postGameAnalysis(gameResults);
+    console.log(update);
     if (!update) {
       return;
     } else {
@@ -415,7 +414,9 @@ class Game extends Component {
             />
             <div className="avatar-border">
               <div
-                className={`header-avatar ${avatars[this.props.user.avatar]}`}
+                className={`header-avatar ${
+                  avatars[this.props.user.attributes.avatar]
+                }`}
               />
             </div>
             <GameUserModal
@@ -443,7 +444,7 @@ class Game extends Component {
           </header>
           <section className="gameplay-frame">
             <Player
-              avatar={this.props.user.avatar}
+              avatar={this.props.user.attributes.avatar}
               status={this.state.playerStatus}
             />
             {this.state.playerHit && <PlayerEffect />}

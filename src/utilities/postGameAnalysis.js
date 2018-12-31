@@ -1,5 +1,13 @@
-const postGameAnalysis = results => {
-  let finalTimes = {
+export const postGameAnalysis = results => {
+  const times = finalTimes(results.times);
+
+  const perfectScores = prepScores(results.perfectScores);
+
+  return { times, perfectScores };
+};
+
+const finalTimes = times => {
+  let preppedTimes = {
     one: null,
     two: null,
     three: null,
@@ -7,19 +15,23 @@ const postGameAnalysis = results => {
     all: null
   };
 
-  const timeKeys = Object.keys(finalTimes);
+  const timeKeys = Object.keys(preppedTimes);
 
-  if (results.times.length === 4) {
-    const allTimes = results.times.reduce((sum, time) => {
+  if (times.length === 4) {
+    const allTimes = times.reduce((sum, time) => {
       return (sum += time);
     }, 0);
-    finalTimes.all = allTimes;
+    preppedTimes.all = allTimes;
   }
 
-  results.times.forEach((time, index) => {
-    finalTimes[timeKeys[index]] = time;
+  times.forEach((time, index) => {
+    preppedTimes[timeKeys[index]] = time;
   });
 
+  return preppedTimes;
+};
+
+const prepScores = scores => {
   let allPerfects = {
     one: false,
     two: false,
@@ -28,10 +40,10 @@ const postGameAnalysis = results => {
     all: false
   };
 
-  const perfectKeys = Object.keys(results.perfectScores);
+  const perfectKeys = Object.keys(scores);
 
   perfectKeys.forEach(level => {
-    allPerfects[level] = results.perfectScores[level];
+    allPerfects[level] = scores[level];
   });
 
   if (
@@ -43,11 +55,5 @@ const postGameAnalysis = results => {
     allPerfects.all = true;
   }
 
-  return { times: finalTimes, perfectScores: allPerfects };
+  return allPerfects;
 };
-
-const gameAnalysis = {
-  postGameAnalysis
-};
-
-export default gameAnalysis;

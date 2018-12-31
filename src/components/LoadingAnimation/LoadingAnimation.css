@@ -396,3 +396,8 @@
     background-size: cover;
   }
 }
+
+.loading-animation-wrapper p {
+  font-family: "chronotype";
+  font-size: 1.2rem;
+}
