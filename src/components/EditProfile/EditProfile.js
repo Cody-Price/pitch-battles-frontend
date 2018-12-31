@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import "./EditProfile.css";
 
 class EditProfile extends Component {
@@ -83,3 +85,8 @@ class EditProfile extends Component {
 }
 
 export default EditProfile;
+
+EditProfile.propTypes = {
+  user: PropTypes.object,
+  changeProfile: PropTypes.func
+};
