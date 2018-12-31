@@ -113,6 +113,13 @@
   background-repeat: no-repeat;
 }
 
+.avatar-editor-current.twelve {
+  background: url(../Game/pcs/char12/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .avatar-editor-current.seven {
   background: url(../Game/pcs/char7/stand.png);
   image-rendering: pixelated;

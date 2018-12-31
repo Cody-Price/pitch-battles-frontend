@@ -12,6 +12,7 @@ import "./CharacterAnims/Char8.css";
 import "./CharacterAnims/Char9.css";
 import "./CharacterAnims/Char10.css";
 import "./CharacterAnims/Char11.css";
+import "./CharacterAnims/Char12.css";
 
 class Player extends Component {
   render() {
