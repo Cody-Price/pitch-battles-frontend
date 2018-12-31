@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./StudentDash.css";
+import PropTypes from "prop-types";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
@@ -183,3 +184,9 @@ class StudentDash extends Component {
 }
 
 export default StudentDash;
+
+StudentDash.propTypes = {
+  user: PropTypes.object,
+  startGame: PropTypes.func,
+  navigate: PropTypes.func
+};
