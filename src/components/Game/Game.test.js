@@ -7,6 +7,8 @@ const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+jest.mock("../../utilities/fetchCalls.js");
+
 describe("Game", () => {
   let wrapper;
   const instrument = "flute";
