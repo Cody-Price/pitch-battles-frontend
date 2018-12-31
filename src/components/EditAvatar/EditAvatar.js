@@ -22,10 +22,10 @@ class EditAvatar extends Component {
         left: false,
         avatar: 1
       });
-    } else if (this.props.user.attributes.avatar === 10) {
+    } else if (this.props.user.attributes.avatar === 11) {
       this.setState({
         right: false,
-        avatar: 10
+        avatar: 11
       });
     } else {
       this.setState({
@@ -37,10 +37,10 @@ class EditAvatar extends Component {
   };
 
   handleRightClick = () => {
-    if (this.state.avatar === 9) {
+    if (this.state.avatar === 10) {
       this.setState({
         right: false,
-        avatar: 10
+        avatar: 11
       });
     } else {
       this.setState({

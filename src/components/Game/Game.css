@@ -139,6 +139,14 @@
   height: 62px;
 }
 
+.header-avatar.eleven {
+  background: url(./pcs/char11/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
+}
+
 .hearts-and-timer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
