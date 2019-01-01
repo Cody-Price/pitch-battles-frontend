@@ -17,6 +17,10 @@
   font-family: "chronotype";
   font-size: 3rem;
   animation: slide-in-victory 0.1s linear;
+  -webkit-animation: slide-in-victory 0.1s linear;
+  -moz-animation: slide-in-victory 0.1s linear;
+  -o-animation: slide-in-victory 0.1s linear;
+
   position: absolute;
   left: 0;
   right: 0;
@@ -29,6 +33,10 @@
   padding: 1rem;
   font-size: 2rem;
   animation: slide-in-victory 0.1s linear;
+  -webkit-animation: slide-in-victory 0.1s linear;
+  -moz-animation: slide-in-victory 0.1s linear;
+  -o-animation: slide-in-victory 0.1s linear;
+
   position: absolute;
   top: 50px;
   left: 0;
@@ -45,6 +53,36 @@
 }
 
 @keyframes slide-in-victory {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0;
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-victory {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0;
+    right: 0;
+  }
+}
+
+@-moz-keyframes slide-in-victory {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0;
+    right: 0;
+  }
+}
+
+@-o-keyframes slide-in-victory {
   0% {
     left: -300px;
   }
