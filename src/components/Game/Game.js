@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import ReactTimeout from "react-timeout";
 
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
@@ -58,6 +59,7 @@ class Game extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("keyup", this.submitGuess);
+    clearInterval(this._intervalId);
   }
 
   // -- GAME SETUP -- //
@@ -109,9 +111,9 @@ class Game extends Component {
       running: true
     });
 
-    this.timer = setInterval(() => {
+    this._intervalId = setInterval(() => {
       if (!this.state.running) {
-        clearInterval(this.timer);
+        clearInterval(this._intervalId);
         return;
       }
       this.setState({
@@ -129,7 +131,7 @@ class Game extends Component {
       this.setState({
         resetting: true
       });
-      setTimeout(this.resetGame, 1300);
+      this.props.setTimeout(this.resetGame, 1300);
     } else {
       this.setState(
         {
@@ -219,7 +221,7 @@ class Game extends Component {
       monsterHit: true,
       playerHit: false
     });
-    setTimeout(this.monsterHitResolve, 1000);
+    this.props.setTimeout(this.monsterHitResolve, 1000);
   };
 
   monsterAttack = () => {
@@ -230,7 +232,7 @@ class Game extends Component {
       playerHit: true
     });
 
-    setTimeout(this.playerHitResolve, 1000);
+    this.props.setTimeout(this.playerHitResolve, 1000);
   };
 
   monsterHitResolve = () => {
@@ -249,7 +251,7 @@ class Game extends Component {
       monsterStatus: "dead"
     });
 
-    setTimeout(this.victory, 3000);
+    this.props.setTimeout(this.victory, 3000);
   };
 
   monsterHitIdle = () => {
@@ -283,7 +285,7 @@ class Game extends Component {
       monsterStatus: "idle",
       playerHearts: []
     });
-    setTimeout(this.gameOver, 3000);
+    this.props.setTimeout(this.gameOver, 3000);
   };
 
   playerHitIdle = () => {
@@ -401,40 +403,7 @@ class Game extends Component {
   };
 
   exitGame = () => {
-    if (
-      this.state.playerStatus === "attack" ||
-      this.state.playerStatus === "hit"
-    ) {
-      this.setState({
-        exiting: true
-      });
-      setTimeout(this.exitGame, 1300);
-    } else {
-      this.setState(
-        {
-          currentLevel: 1,
-          playerHearts: [0, 1, 2],
-          monsterHearts: [],
-          currentTime: 0,
-          start: 0,
-          running: false,
-          milliseconds: 0,
-          playerHit: false,
-          monsterHit: false,
-          playerStatus: "idle",
-          monsterStatus: "idle",
-          currentPitch: null,
-          gameOver: false,
-          victory: false,
-          finalVictory: false,
-          times: [],
-          perfectScores: [],
-          userModal: false,
-          exiting: false
-        },
-        this.props.endGame(false)
-      );
-    }
+    this.props.endGame(false);
   };
 
   render() {
@@ -523,7 +492,7 @@ class Game extends Component {
   }
 }
 
-export default Game;
+export default ReactTimeout(Game);
 
 Game.propTypes = {
   instrument: PropTypes.string,
