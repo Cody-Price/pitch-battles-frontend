@@ -574,6 +574,10 @@
     image-rendering: pixelated;
   }
 
+  .student-dash-header {
+    height: 120px;
+  }
+
   .new-game-section {
     margin-top: 0;
     display: block;
@@ -595,8 +599,8 @@
   }
 
   .instrument-dropdown-list {
-    left: 67px;
-    top: 105px;
+    left: 74px;
+    top: 92px;
   }
 
   .total-games-played {
