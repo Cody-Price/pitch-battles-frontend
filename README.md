@@ -14,8 +14,8 @@ It is currently in-development with the most recent alpha build hosted on Heroku
   <img src='https://user-images.githubusercontent.com/29719272/50570158-0cc55000-0d3b-11e9-91e3-bc33ab61d933.png'  alt='pitch-battles-team' />
 </div>
 
-- [Kevin Simpson](https://github.com/relasine) - lead design, lead development, game logic, test, art asset development, API consumption
-- [Haley Jacobs](https://github.com/hljacobs5) - front-end logic, test, and API consumption, teacher-facing front-end
+- [Kevin Simpson](https://github.com/relasine) - lead design, lead front-end development, game logic, test, art asset development, API consumption
+- [Haley Jacobs](https://github.com/hljacobs5) - front-end logic, test, and API consumption, teacher-facing front-end, art asset development
 - [Dylan Meskis - back-end database and API servicing](https://github.com/dmeskis/pitch_battles_be)
 
 #### Project origin
@@ -23,16 +23,6 @@ It is currently in-development with the most recent alpha build hosted on Heroku
 Kevin Simpson is a former music teacher and would often encounter students who struggled with reading pitches on the page. There have been online tools to help with this, but many had dated interfaces, lacked any kind of flair, and just weren't any fun to work with. Enter [Pitch Battles](https://relasine.github.io/pitch-battles-poc/), which began as a simple proof of concept built in React.
 
 This project would later be pitched as a part of the [cross-pollination project](http://frontend.turing.io/projects/capstone.html) at the [Turing School of Software and Design](https://turing.io/) for Mod 4 students, effectively the capstone of the intensive seven-month program that Turing offers. Pitch Battles was offered up during the brain-storming process and ultimately chosen by the project's three contributors as their selection to build.
-
-#### UI/UX
-
-This application has two separate and unique user interfaces depending on the the user type. Music students or 'learners' use a colorful fantasy design replete with animated characters and avatars, vast backgrounds, and extrapolated fights between their chosen avatar and the beasts they encounter. This design aesthetic is consistent throughout the entire learner user experience from the login page, to onboarding, dashboards, user account settings, and the game itself.
-
-<div style='align-center'>
-  <img src='https://user-images.githubusercontent.com/29719272/50570223-45b2f400-0d3e-11e9-95b9-c80bd2934607.png' alt='pitch-battles screenshot' />
-</div>
-
-The 'teacher' interface, however uses a decidedly more modern design utilizing "flat-ish' principles for a more appropriately professional experience, as its primary concern was dealing with the display, analysis, and maniuplation of student performance data. For this user-type, the interface is less a game and more a tool.
 
 #### Front End Tech Stack
 
@@ -46,12 +36,42 @@ The 'teacher' interface, however uses a decidedly more modern design utilizing "
 - [Heroku](www.heroku.com) - hosting platfrom
 - [React Timeout](https://www.npmjs.com/package/react-timeout) - for managing setTimeout logic and unmounted components
 
+#### UI/UX
+
+This application has two separate and unique user interfaces depending on the the user type. Music students or 'learners' use a colorful fantasy design replete with animated characters and avatars, vast backgrounds, and extrapolated fights between their chosen avatar and the beasts they encounter. This design aesthetic is consistent throughout the entire learner user experience from the login page, to onboarding, dashboards, user account settings, and the game itself.
+
+<div style='align-center'>
+  <img src='https://user-images.githubusercontent.com/29719272/50570223-45b2f400-0d3e-11e9-95b9-c80bd2934607.png' alt='pitch-battles screenshot' />
+</div>
+
+The 'teacher' interface, however uses a decidedly more modern design utilizing "flat-ish' principles for a more appropriately professional experience, as its primary concern was dealing with the display, analysis, and maniuplation of student performance data. For this user-type, the interface is less a game and more a tool.
+
 #### Art Asset Development
 
 As mentioned above, many of our art assets originate from a collection created by Jason Perry, aka ['finalbossblues'](https://patreon.com/finalbossblues), a digital artist specializing in 1990s-era pixel art reminiscent of video games like Chrono Trigger, Secret of Mana, and Final Fantasy.
 
-<div style='align:center'>
+<div align='center'>
   <img src='https://user-images.githubusercontent.com/29719272/50570205-fb7d4300-0d3c-11e9-820b-61166e5fbf04.png' alt='photoshop'/>
 </div>
 
 As gauche as it may seem to include Photoshop as a part of our tech stack, we probably spent as much time developing, editing, and creating the art assets we used for Pitch Battles using Photoshop as we spent writing code, which was, needless-to-say, rather substantial. All backgrounds were pieced together from tile sets that indivually took hours to create and test inside the game engine, and a few avatar sheets were edited to fit requirements. This was made all the more challenging by the fact that Photoshop was new technology to our front end team.
+
+#### Game Play
+
+Pitch Battles, at its core, is a flash card application. Players choose the instrument that they play and a curated selection of pitches is generated for them to name specific to the instrument that they play. Bass and alto clef instruments are naturally presented with a staff using the appropriate clef. The first level consists of the first five pitches that a musician will typically learn on their instrument per many of the industry standard method books ([Essential Elements](https://www.essentialelementsinteractive.com/), [Standard of Excellence](https://www.brucepearsonmusic.com/method/enhanced/)).
+
+<div align='center'>
+  <img src='https://user-images.githubusercontent.com/29719272/50574583-4d0ee780-0da8-11e9-9d75-e46787f7231a.png' alt='pitch battles game screenshot' style="width:500px;" />
+</div>
+
+Name the pitch correctly (either by clicking on the pitch name or entering it on the keyboard), and the avatar will strike the beast. It loses a heart, and the player is one step closer to victory. Reduce the beast to zero hearts and you have beaten the level and may continue to the next. The game consists of four levels, each with increasing levels of difficulty through more added pitches, which are again specific to typical arc of learned pitches on an instrument.
+
+#### Player Account Tracking
+
+Each level is timed so that students can track how long it takes for them to beat a level. These times are all stored remotely on our back-end database, which are then accessible to users with teacher-level accounts. Times are additionally rendered to the student's account page, class page, and global leaderboards.
+
+Players additionally earn achievements by meeting certain milestones, like playing 100 games or completing levels with a perfect score. The top ten of these achievements are displayed on the student dashboard. Details on each achievement can be seen by hovering over the cooresponding badge.
+
+<div align='center'>
+  <img width="600" alt="screen shot 2019-01-01 at 9 37 41 am" src="https://user-images.githubusercontent.com/29719272/50574608-e938ee80-0da8-11e9-869b-bcf20ac9a423.png">
+</div>
