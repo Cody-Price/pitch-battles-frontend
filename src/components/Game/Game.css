@@ -213,6 +213,8 @@
   border: 2px solid #333;
   padding-top: 3px;
   background: #e3e8d9;
+  z-index: 4000;
+  position: relative;
 }
 
 @media (max-width: 700px) {
@@ -222,16 +224,20 @@
   }
 
   .heart {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 
   .monster-hearts {
     margin-left: 0.5rem;
+    width: 24px;
+    align-self: start;
   }
 
   .player-hearts {
     margin-right: 0.5rem;
+    align-self: start;
+    width: 24px;
   }
 
   .hearts-and-timer {
