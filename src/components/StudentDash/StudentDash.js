@@ -77,7 +77,27 @@ class StudentDash extends Component {
       badges = newBadges;
     }
 
+    let mediaBadges = [];
+
+    if (badges.length > 4) {
+      for (let i = 0; i < 4; i++) {
+        mediaBadges.push(badges[i]);
+      }
+    }
+
     badges = badges.map((badge, index) => {
+      const badgeClass = badgeHelper.find(helperBadge => {
+        return helperBadge.rank == badge.id;
+      });
+
+      return (
+        <div key={badge.attributes.name} className={`badge ${badgeClass.name}`}>
+          <h4 className="badge-descriptor">{badge.attributes.name}</h4>
+        </div>
+      );
+    });
+
+    mediaBadges = mediaBadges.map((badge, index) => {
       const badgeClass = badgeHelper.find(helperBadge => {
         return helperBadge.rank == badge.id;
       });
@@ -175,6 +195,7 @@ class StudentDash extends Component {
               <div className="times-row">{times}</div>
               <h2 className="most-recent-badges">top badges:</h2>
               <div className="badge-row">{badges}</div>
+              <div className="mq-badge-row">{mediaBadges}</div>
             </section>
           </section>
         )}
