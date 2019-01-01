@@ -151,3 +151,41 @@
     right: 0;
   }
 }
+
+@media (max-width: 630px) {
+  .onboarding {
+    width: 340px;
+    height: 431px;
+    background: url("../Landing/landingframe3.png");
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+
+  .article-row.one {
+    left: 0;
+  }
+
+  .article-row.two {
+    left: -340px;
+  }
+
+  .article-row.three {
+    left: -680px;
+  }
+
+  .article-row.four {
+    left: -1020px;
+  }
+
+  .article-row.five {
+    left: -1360px;
+  }
+
+  .article-row.six {
+    left: -1700px;
+  }
+
+  .dots-wrapper {
+    bottom: 40px;
+  }
+}

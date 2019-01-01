@@ -12,3 +12,16 @@
 .onboarding-content {
   margin: 1rem 2rem;
 }
+
+@media (max-width: 630px) {
+  .onboarding-article {
+    margin-top: 4rem;
+    width: 340px;
+  }
+
+  .onboarding-image {
+    height: 150px;
+    width: 150px;
+    box-shadow: 1px 1px 1px #4776bb;
+  }
+}
