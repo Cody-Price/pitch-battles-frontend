@@ -12,22 +12,187 @@
 
 .boar.idle {
   animation: boar-idle infinite 2s linear;
+  -webkit-animation: boar-idle infinite 2s linear;
+  -moz-animation: boar-idle infinite 2s linear;
+  -o-animation: boar-idle infinite 2s linear;
 }
 
 .boar.attack {
   animation: boar-idle infinite 2s linear, monster-attack 1s linear;
+  -webkit-animation: boar-idle infinite 2s linear, monster-attack 1s linear;
+  -moz-animation: boar-idle infinite 2s linear, monster-attack 1s linear;
+  -o-animation: boar-idle infinite 2s linear, monster-attack 1s linear;
 }
 
 .boar.hit {
   animation: boar-idle infinite 2s linear, monster-hit 1s linear;
+  -webkit-animation: boar-idle infinite 2s linear, monster-hit 1s linear;
+  -moz-animation: boar-idle infinite 2s linear, monster-hit 1s linear;
+  -o-animation: boar-idle infinite 2s linear, monster-hit 1s linear;
 }
 
 .boar.dead {
   opacity: 0;
   animation: boar-idle infinite 2s linear, monster-dead 3s linear;
+  -webkit-animation: boar-idle infinite 2s linear, monster-dead 3s linear;
+  -moz-animation: boar-idle infinite 2s linear, monster-dead 3s linear;
+  -o-animation: boar-idle infinite 2s linear, monster-dead 3s linear;
 }
 
 @keyframes boar-idle {
+  0% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-webkit-keyframes boar-idle {
+  0% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-moz-keyframes boar-idle {
+  0% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/boar/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/boar/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/boar/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-o-keyframes boar-idle {
   0% {
     background: url("../monsters/boar/monster1.png");
     background-repeat: no-repeat;
