@@ -6,27 +6,47 @@
 
 .player.six.idle {
   animation: six-idle infinite 1.3s linear;
+  -webkit-animation: six-idle infinite 1.3s linear;
+  -moz-animation: six-idle infinite 1.3s linear;
+  -o-animation: six-idle infinite 1.3s linear;
+
 }
 
 .player.six.attack {
   animation: six-attack 0.75s linear;
+  -webkit-animation: six-attack 0.75s linear;
+  -moz-animation: six-attack 0.75s linear;
+  -o-animation: six-attack 0.75s linear;
+
 }
 
 .player.six.hit {
   animation: six-hit 0.75s linear;
+  -webkit-animation: six-hit 0.75s linear;
+  -moz-animation: six-hit 0.75s linear;
+  -o-animation: six-hit 0.75s linear;
+
   animation-delay: 0.3s;
 }
 
 .player.six.victory {
   animation: six-victory 1s linear;
-  background: url("../pcs/char6/victory3.png");
+  -webkit-animation: six-victory 1s linear;
+  -moz-animation: six-victory 1s linear;
+  -o-animation: six-victory 1s linear;
+
+  transform: scale(1);
+  background: url(../pcs/char6/victory3.png);
   background-size: cover;
   background-repeat: no-repeat;
-  transform: scale(1);
 }
 
 .player.six.dead {
   animation: six-dead 1s linear;
+  -webkit-animation: six-dead 1s linear;
+  -moz-animation: six-dead 1s linear;
+  -o-animation: six-dead 1s linear;
+
   background: url(../pcs/char6/dead.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -84,7 +104,277 @@
   }
 }
 
+@-webkit-keyframes six-idle {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes six-idle {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes six-idle {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char6/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 @keyframes six-attack {
+  0% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes six-attack {
+  0% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes six-attack {
+  0% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes six-attack {
   0% {
     background: url("../pcs/char6/attack1.png");
     image-rendering: pixelated;
@@ -190,6 +480,207 @@
   }
 }
 
+@-webkit-keyframes six-hit {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+}
+
+@-moz-keyframes six-hit {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+}
+
+@-o-keyframes six-hit {
+  0% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char6/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char6/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char6/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char6/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+}
+
 @keyframes six-victory {
   0% {
     background: url("../pcs/char6/victory1.png");
@@ -229,7 +720,241 @@
   }
 }
 
+@-webkit-keyframes six-victory {
+  0% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes six-victory {
+  0% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes six-victory {
+  0% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char6/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char6/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 @keyframes six-dead {
+  0% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes six-dead {
+  0% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes six-dead {
+  0% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char6/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char6/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char6/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes six-dead {
   0% {
     background: url("../pcs/char6/crouch1.png");
     image-rendering: pixelated;
