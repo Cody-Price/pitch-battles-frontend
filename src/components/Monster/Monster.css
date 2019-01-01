@@ -69,3 +69,12 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 700px) {
+  .monster.boar,
+  .monster.bird,
+  .monster.minotaur,
+  .monster.phoenix {
+    bottom: 40px;
+  }
+}

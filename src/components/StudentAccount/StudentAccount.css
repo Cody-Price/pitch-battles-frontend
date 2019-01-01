@@ -75,3 +75,30 @@
     right: 0;
   }
 }
+
+@media (max-width: 770px) {
+  .student-account-page {
+    width: 350px;
+    height: 570px;
+    background: url("../StudentDash/images/mq-stud-dash.png");
+    background-size: cover;
+    image-rendering: pixelated;
+    grid-template-columns: 164px 1fr;
+    grid-template-rows: 50px 1fr;
+    padding-left: 0;
+  }
+
+  .student-account-label {
+    padding: 0;
+    margin-left: 3rem;
+  }
+
+  ul.student-account-nav {
+    padding-left: 0;
+    margin-left: 1.7rem;
+  }
+
+  .student-account-active-tab {
+    padding-left: 0;
+  }
+}

@@ -411,6 +411,13 @@
   width: 700px;
 }
 
+.mq-badge-row {
+  display: none;
+  background: #4776bb;
+  width: 290px;
+  margin: 0 auto;
+}
+
 .badge {
   width: 39px;
   height: 33px;
@@ -556,4 +563,83 @@
 
 .avatar-circle:hover {
   cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .student-dash-wrapper {
+    width: 350px;
+    height: 570px;
+    background: url("./images/mq-stud-dash.png");
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+
+  .student-dash-header {
+    height: 120px;
+  }
+
+  .new-game-section {
+    margin-top: 0;
+    display: block;
+  }
+
+  .start-game {
+    margin: auto;
+    padding: 0 0.5rem;
+    height: 50px;
+  }
+
+  .instrument-label {
+    display: none;
+  }
+
+  .instrument-dropdown {
+    padding: 0;
+    margin: 1rem auto 2rem;
+  }
+
+  .instrument-dropdown-list {
+    left: 74px;
+    top: 92px;
+  }
+
+  .total-games-played {
+    margin: 1rem 0 2rem;
+    text-align: center;
+  }
+
+  .fastest-times {
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+
+  .times-row {
+    margin: 1rem auto 2rem;
+    width: 290px;
+    justify-content: space-between;
+  }
+
+  .time-container {
+    width: 42px;
+    margin: 0;
+  }
+
+  .time-label,
+  .time-displayed {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .badge-row {
+    display: none;
+  }
+
+  .mq-badge-row {
+    display: flex;
+  }
+
+  .most-recent-badges {
+    text-align: center;
+    margin: 1rem;
+  }
 }

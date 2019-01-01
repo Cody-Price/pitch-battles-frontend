@@ -168,7 +168,7 @@
   font-family: "chronotype";
   font-size: 3rem;
   line-height: 50px;
-  padding-top: 0.6rem;
+  padding-top: r0.6rem;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -213,4 +213,65 @@
   border: 2px solid #333;
   padding-top: 3px;
   background: #e3e8d9;
+  z-index: 4000;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .hearts {
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  .heart {
+    width: 20px;
+    height: 20px;
+  }
+
+  .monster-hearts {
+    margin-left: 0.5rem;
+    width: 24px;
+    align-self: start;
+  }
+
+  .player-hearts {
+    margin-right: 0.5rem;
+    align-self: start;
+    width: 24px;
+  }
+
+  .hearts-and-timer {
+    align-items: start;
+  }
+
+  .timer-frame {
+    background: url(./images/mq-clockframe.png);
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    background-size: cover;
+    margin: 1.3rem 0 0 9.5rem;
+    width: 120px;
+    height: 73px;
+    align-self: start;
+  }
+
+  .timer {
+    margin: 0.5rem 0 0 2px;
+  }
+
+  .gameplay-frame {
+    height: 230px;
+  }
+
+  .avatar-border {
+    margin-left: 4rem;
+  }
+
+  .game-avatar-circle {
+    margin-left: 3rem;
+  }
+
+  .game-user-modal {
+    z-index: 1000;
+  }
 }
