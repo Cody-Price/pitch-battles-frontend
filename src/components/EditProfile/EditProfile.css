@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 130px 1fr;
   animation: account-subsection-fade-in 0.3s linear;
+  -webkit-animation: account-subsection-fade-in 0.3s linear;
+  -o-animation: account-subsection-fade-in 0.3s linear;
+  -moz-animation: account-subsection-fade-in 0.3s linear;
 }
 
 .edit-profile-form *:focus {
@@ -65,5 +68,34 @@
   .profile-submit-btn {
     margin: 1rem 0rem;
     grid-column: 1;
+  }
+}
+
+/* -- VENDOR PREFIXES -- */
+
+@-webkit-keyframes account-subsection-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes account-subsection-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes account-subsection-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
