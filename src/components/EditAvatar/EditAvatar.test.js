@@ -9,19 +9,15 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("EditAvatar", () => {
   let wrapper;
   const mockUser = {
-    avatar: 2
+    attributes: { avatar: 2 }
   };
-  const mockStatus = true;
+  const mockStatus = "true";
   let changeAvatar;
 
   beforeEach(() => {
     changeAvatar = jest.fn();
     wrapper = shallow(
-      <EditAvatar
-        user={mockUser}
-        status={mockStatus}
-        changeAvatar={changeAvatar}
-      />
+      <EditAvatar user={mockUser} status={"true"} changeAvatar={changeAvatar} />
     );
   });
 
@@ -32,7 +28,7 @@ describe("EditAvatar", () => {
   describe("checkAvatar", () => {
     it("should call setState if the user has avatar 1 on-load", () => {
       wrapper = shallow(
-        <EditAvatar user={{ avatar: 1 }} status={mockStatus} />
+        <EditAvatar user={{ attributes: { avatar: 1 } }} status={mockStatus} />
       );
 
       const expected = {
@@ -44,14 +40,18 @@ describe("EditAvatar", () => {
       expect(wrapper.state()).toEqual(expected);
     });
 
-    it("should call setState if the user has avatar 10 on-load", () => {
+    it("should call setState if the user has avatar 12 on-load", () => {
       wrapper = shallow(
-        <EditAvatar user={{ avatar: 10 }} status={mockStatus} />
+        <EditAvatar
+          status={true}
+          user={{ attributes: { avatar: 10 } }}
+          status={mockStatus}
+        />
       );
 
       const expected = {
         left: true,
-        avatar: 10,
+        avatar: 12,
         right: false
       };
     });
@@ -79,13 +79,13 @@ describe("EditAvatar", () => {
 
     it("should call setState if avatar is 9", () => {
       wrapper.setState({
-        avatar: 9
+        avatar: 11
       });
 
       const expected = {
         right: false,
         left: true,
-        avatar: 10
+        avatar: 12
       };
 
       wrapper.instance().handleRightClick();
