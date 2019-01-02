@@ -129,7 +129,7 @@ exports[`StudentAccount should match the snapshot 1`] = `
               "data": 115,
             },
           },
-          "avatar": 9,
+          "avatar": 1,
           "class": "6th-grade band",
           "email": "cmanly@gmail.com",
           "first_name": "Chet",
