@@ -21,8 +21,8 @@
   background: url(./landingframe3.png);
   background-size: cover;
   image-rendering: pixelated;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 }
 
