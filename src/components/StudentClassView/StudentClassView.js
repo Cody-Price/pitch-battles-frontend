@@ -145,21 +145,35 @@ class StudentClassView extends Component {
             <section className="most-games-badges-row">
               <article className="most-games game-badge">
                 <h3 className="most-games-badges-label">most games</h3>
-                {this.state.classStats.most_games.user[0].first_name && (
+                {this.state.classStats.most_games.user.data[0].attributes
+                  .first_name && (
                   <p className="class-view-most-student">
-                    {this.state.classStats.most_games.user[0].first_name}{" "}
-                    {this.state.classStats.most_games.user[0].last_name} -{" "}
-                    {this.state.classStats.most_games.games_played}
+                    {
+                      this.state.classStats.most_games.user.data[0].attributes
+                        .first_name
+                    }{" "}
+                    {
+                      this.state.classStats.most_games.user.data[0].attributes
+                        .last_name
+                    }{" "}
+                    - {this.state.classStats.most_games.games_played}
                   </p>
                 )}
               </article>
               <article className="most-badges game-badge">
                 <h3 className="most-games-badges-label">most badges</h3>
-                {this.state.classStats.most_badges.user[0].first_name && (
+                {this.state.classStats.most_badges.user.data[0].attributes
+                  .first_name && (
                   <p className="class-view-most-student">
-                    {this.state.classStats.most_badges.user[0].first_name}{" "}
-                    {this.state.classStats.most_badges.user[0].last_name} -{" "}
-                    {this.state.classStats.most_badges.badges}
+                    {
+                      this.state.classStats.most_badges.user.data[0].attributes
+                        .first_name
+                    }{" "}
+                    {
+                      this.state.classStats.most_badges.user.data[0].attributes
+                        .last_name
+                    }{" "}
+                    - {this.state.classStats.most_badges.badges}
                   </p>
                 )}
               </article>
