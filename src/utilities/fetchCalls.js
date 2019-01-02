@@ -204,3 +204,25 @@ export const leaveClassFetch = async (student_id, class_id, webToken) => {
 
   return await response.json();
 };
+
+export const resetPasswordFetch = async (password, token) => {
+  const url = `https://pitch-battles-api.herokuapp.com/password/reset`;
+
+  const body = {
+    password,
+    token
+  };
+
+  const options = {
+    body: JSON.stringify(body),
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};

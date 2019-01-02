@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
+import ResetPassword from "../ResetPassword/ResetPassword";
 
 import "./Landing.css";
 import "./LandingVendorPF.css";
@@ -14,7 +15,8 @@ class Landing extends Component {
     this.state = {
       login: true,
       signup: false,
-      forgotPassword: false
+      forgotPassword: false,
+      resetPassword: false
     };
   }
 
@@ -25,7 +27,26 @@ class Landing extends Component {
   forgotPasswordScreen = () => {
     this.setState({
       login: !this.state.login,
-      forgotPassword: !this.state.forgotPassword
+      forgotPassword: !this.state.forgotPassword,
+      resetPassword: false
+    });
+  };
+
+  resetPasswordScreen = () => {
+    this.setState({
+      login: false,
+      signup: false,
+      forgotPassword: false,
+      resetPassword: true
+    });
+  };
+
+  loginScreen = () => {
+    this.setState({
+      login: true,
+      signup: false,
+      forgotPassword: false,
+      resetPassword: false
     });
   };
 
@@ -59,6 +80,11 @@ class Landing extends Component {
             forgotPassword={this.props.forgotPassword}
             backToLogin={this.forgotPasswordScreen}
             status={this.state.forgotPassword}
+            resetPassword={this.resetPasswordScreen}
+          />
+          <ResetPassword
+            status={this.state.resetPassword}
+            toLogin={this.loginScreen}
           />
         </section>
       </main>

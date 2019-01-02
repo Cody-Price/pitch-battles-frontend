@@ -75,7 +75,9 @@ class ForgotPassword extends Component {
             value="send new password"
           />
         </form>
-        <p className="have-webToken">Click here if you have your webtoken</p>
+        <button onClick={this.props.resetPassword} className="have-reset-token">
+          I have a reset token
+        </button>
         <button
           onClick={this.props.backToLogin}
           className="backup-from-forgot-pw"

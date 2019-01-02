@@ -54,7 +54,7 @@ class StudentDash extends Component {
     try {
       await leaveClassFetch(
         this.props.user.id,
-        this.props.user.attributes.classes.data[0].id,
+        this.props.user.attributes.class.data.id,
         this.props.webToken
       );
       this.props.getUpdatedUserData();
@@ -162,18 +162,15 @@ class StudentDash extends Component {
                   {this.props.user.attributes.first_name}{" "}
                   {this.props.user.attributes.last_name}
                 </h2>
-                {this.props.user.attributes.classes.data.length > 0 && (
+                {this.props.user.attributes.class.data && (
                   <div className="student-class-dash-info">
                     <h2 className="student-class-link">
-                      {
-                        this.props.user.attributes.classes.data[0].attributes
-                          .name
-                      }
+                      {this.props.user.attributes.class.data.attributes.name}
                     </h2>
                     <button onClick={this.leaveClass}>leave class</button>
                   </div>
                 )}
-                {!this.props.user.attributes.classes.data.length && (
+                {!this.props.user.attributes.class.data && (
                   <JoinClass
                     webToken={this.props.webToken}
                     user={this.props.user}
