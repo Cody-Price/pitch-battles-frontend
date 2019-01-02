@@ -1,41 +1,54 @@
 const mockUser = {
-  first_name: "Chet",
-  last_name: "Stanley",
-  avatar: 1,
-  role: 0,
-  email: "cmanly@gmail.com",
-  class: "6th-grade band",
+  id: "1",
+  type: "user",
   attributes: {
-    games_played: { data: 115 },
-    badges: {
+    email: "simpsonkevinjohn@gmail.com",
+    first_name: "Chet",
+    last_name: "Manly",
+    avatar: 7,
+    level_one_fastest_time: 11233,
+    level_two_fastest_time: 16612,
+    level_three_fastest_time: 22819,
+    level_four_fastest_time: 31625,
+    total_games_played: 8,
+    games: {
       data: [
-        { level_one: true },
-        { level_one_perfect: true },
-        { level_two: true },
-        { level_two_perfect: true },
-        { level_three: true },
-        { level_three_perfect: false },
-        { level_four: true },
-        { level_four_perfect: false },
-        { all_perfect: false },
-        { five_games: true },
-        { ten_games: true },
-        { twenty_games: true },
-        { fifty_games: true },
-        { one_hundred_games: true },
-        { two_hundred_games: false },
-        { five_hundred_games: false },
-        { one_thousand_games: false }
+        {
+          id: "1",
+          type: "game",
+          attributes: {
+            total_duration: 1000,
+            level_one_duration: 9002,
+            level_two_duration: 1000,
+            level_three_duration: 1000,
+            level_four_duration: 1000,
+            level_one_perfect: true,
+            level_two_perfect: false,
+            level_three_perfect: false,
+            level_four_perfect: false,
+            all_perfect: false
+          }
+        }
       ]
     },
-    fastest_times: {
+    badges: {
       data: [
-        { level_one: 11.01 },
-        { level_two: 15.24 },
-        { level_three: 24.64 },
-        { level_four: 30.17 },
-        { all: 83.16 }
+        {
+          id: "1",
+          type: "badge",
+          attributes: {
+            name: "play 5 games",
+            description: "Play five games."
+          }
+        }
       ]
+    },
+    class: {
+      data: {
+        attributes: {
+          name: "5th Grade Band"
+        }
+      }
     }
   }
 };
