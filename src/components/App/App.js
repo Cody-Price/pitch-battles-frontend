@@ -18,6 +18,7 @@ import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
 import StudentAccount from "../StudentAccount/StudentAccount";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
+import StudentClassView from "../StudentClassView/StudentClassView";
 import TeacherUI from "../TeacherUI/TeacherUI";
 
 import "./App.css";
@@ -294,6 +295,9 @@ class App extends Component {
                   logout={this.logout}
                   updateWebToken={this.updateWebToken}
                 />
+              )}
+              {this.state.activePage === "student class view" && (
+                <StudentClassView navigate={this.navigate} />
               )}
             </main>
           )}

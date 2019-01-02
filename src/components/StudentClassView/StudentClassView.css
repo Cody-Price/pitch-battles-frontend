@@ -1,0 +1,129 @@
+.student-class-view-wrapper {
+  font-family: "chronotype";
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.student-class-view {
+  animation: slide-class-view 0.3s linear;
+  -webkit-animation: slide-class-view 0.3s linear;
+  -moz-animation: slide-class-view 0.3s linear;
+  -o-animation: slide-class-view 0.3s linear;
+  background: url("../Game/images/char-dash-backer.png");
+  width: 800px;
+  height: 600px;
+  background-size: cover;
+  image-rendering: pixelated;
+  margin: auto;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0.3);
+  text-align: start;
+}
+.student-class-view-header {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.class-view-back-btn {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  background: #4776bb;
+  box-shadow: 2px 2px 2px#000;
+  border: none;
+}
+
+.class-view-back-btn:hover {
+  cursor: pointer;
+}
+
+.class-view-back-btn:active {
+  box-shadow: none;
+}
+
+.class-view-back-btn:focus {
+  outline: none;
+}
+
+.student-class-view-class-name,
+.student-class-view-teacher-name {
+  margin-left: 2rem;
+}
+
+.student-class-view-class-name {
+  margin-bottom: 0.5rem;
+}
+
+.student-class-view-teacher-name {
+  margin-top: 0;
+  margin-bottom: 5rem;
+  font-size: 1.4rem;
+}
+
+.class-view-fastest-times-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2rem;
+}
+
+.class-view-fastest-times-label {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.class-view-fastest-time {
+  margin: 0 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.most-games-badges-row {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.most-games-badges-label {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes slide-class-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slide-class-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes slide-class-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-o-keyframes slide-class-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}

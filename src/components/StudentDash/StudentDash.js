@@ -164,7 +164,10 @@ class StudentDash extends Component {
                 </h2>
                 {this.props.user.attributes.class.data && (
                   <div className="student-class-dash-info">
-                    <h2 className="student-class-link">
+                    <h2
+                      className="student-class-link"
+                      onClick={() => this.props.navigate("student class view")}
+                    >
                       {this.props.user.attributes.class.data.attributes.name}
                     </h2>
                     <button onClick={this.leaveClass}>leave class</button>
