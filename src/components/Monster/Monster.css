@@ -10,6 +10,42 @@
   }
 }
 
+@-webkit-keyframes monster-attack {
+  0% {
+    left: 150px;
+  }
+  50% {
+    left: 130px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@-moz-keyframes monster-attack {
+  0% {
+    left: 150px;
+  }
+  50% {
+    left: 130px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@-0-keyframes monster-attack {
+  0% {
+    left: 150px;
+  }
+  50% {
+    left: 130px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
 @keyframes monster-hit {
   0% {
     left: 150px;
@@ -25,7 +61,187 @@
   }
 }
 
+@-webkit-keyframes monster-hit {
+  0% {
+    left: 150px;
+  }
+  33% {
+    left: 150px;
+  }
+  66% {
+    left: 170px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@-moz-keyframes monster-hit {
+  0% {
+    left: 150px;
+  }
+  33% {
+    left: 150px;
+  }
+  66% {
+    left: 170px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@-o-keyframes monster-hit {
+  0% {
+    left: 150px;
+  }
+  33% {
+    left: 150px;
+  }
+  66% {
+    left: 170px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
 @keyframes monster-dead {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  15.01% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  30.01% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.01% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.01% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.01% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  90.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes monster-dead {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  15.01% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  30.01% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.01% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.01% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.01% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  90.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes monster-dead {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  15.01% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  30.01% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.01% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.01% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  75.01% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  90.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes monster-dead {
   0% {
     opacity: 0;
   }

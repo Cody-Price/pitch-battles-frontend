@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./AnimatedBackground.css";
 
 const AnimatedBackground = props => {
   return (
     <div>
-      <div className={props.instance}>
+      <div className="animated-background">
         <div className="snow-backer" />
         <div className="landing-char1" />
         <div className="landing-char2" />

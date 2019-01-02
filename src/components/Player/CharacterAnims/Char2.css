@@ -6,19 +6,35 @@
 
 .player.two.idle {
   animation: two-idle infinite 1.3s linear;
+  -webkit-animation: two-idle infinite 1.3s linear;
+  -moz-animation: two-idle infinite 1.3s linear;
+  -o-animation: two-idle infinite 1.3s linear;
+
 }
 
 .player.two.attack {
   animation: two-attack 0.75s linear;
+  -webkit-animation: two-attack 0.75s linear;
+  -moz-animation: two-attack 0.75s linear;
+  -o-animation: two-attack 0.75s linear;
+
 }
 
 .player.two.hit {
   animation: two-hit 0.75s linear;
+  -webkit-animation: two-hit 0.75s linear;
+  -moz-animation: two-hit 0.75s linear;
+  -o-animation: two-hit 0.75s linear;
+
   animation-delay: 0.3s;
 }
 
 .player.two.victory {
   animation: two-victory 1s linear;
+  -webkit-animation: two-victory 1s linear;
+  -moz-animation: two-victory 1s linear;
+  -o-animation: two-victory 1s linear;
+
   transform: scale(1);
   background: url(../pcs/char2/victory3.png);
   background-size: cover;
@@ -27,6 +43,10 @@
 
 .player.two.dead {
   animation: two-dead 1s linear;
+  -webkit-animation: two-dead 1s linear;
+  -moz-animation: two-dead 1s linear;
+  -o-animation: two-dead 1s linear;
+
   background: url(../pcs/char2/dead.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -84,7 +104,277 @@
   }
 }
 
+@-webkit-keyframes two-idle {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes two-idle {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes two-idle {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../pcs/char2/idle3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 @keyframes two-attack {
+  0% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes two-attack {
+  0% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes two-attack {
+  0% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/attack1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/attack2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/attack3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes two-attack {
   0% {
     background: url("../pcs/char2/attack1.png");
     image-rendering: pixelated;
@@ -190,6 +480,207 @@
   }
 }
 
+@-webkit-keyframes two-hit {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transform: translateX(0px) scaleX(-1);
+  }
+}
+
+@-moz-keyframes two-hit {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -moz-transform: translateX(0px) scaleX(-1);
+  }
+}
+
+@-o-keyframes two-hit {
+  0% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+  33% {
+    background: url("../pcs/char2/idle1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../pcs/char2/idle2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50.01% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+  66% {
+    background: url("../pcs/char2/hit1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  82% {
+    background: url("../pcs/char2/hit2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(-10px) scaleX(-1);
+  }
+  82.01% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/hit3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-transform: translateX(0px) scaleX(-1);
+  }
+}
+
 @keyframes two-victory {
   0% {
     background: url("../pcs/char2/victory1.png");
@@ -229,7 +720,241 @@
   }
 }
 
+@-webkit-keyframes two-victory {
+  0% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes two-victory {
+  0% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes two-victory {
+  0% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: url("../pcs/char2/victory1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25.01% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url("../pcs/char2/victory2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  40.01% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/victory3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 @keyframes two-dead {
+  0% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes two-dead {
+  0% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-moz-keyframes two-dead {
+  0% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background: url("../pcs/char2/crouch1.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  33.01% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background: url("../pcs/char2/crouch2.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  66.01% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../pcs/char2/crouch3.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-o-keyframes two-dead {
   0% {
     background: url("../pcs/char2/crouch1.png");
     image-rendering: pixelated;

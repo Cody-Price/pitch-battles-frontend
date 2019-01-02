@@ -6,6 +6,7 @@ import Signup from "../Signup/Signup";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 
 import "./Landing.css";
+import "./LandingVendorPF.css";
 
 class Landing extends Component {
   constructor() {

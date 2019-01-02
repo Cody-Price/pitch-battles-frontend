@@ -1,5 +1,9 @@
 .player-effect {
   animation: player-claw linear 1s;
+  -webkit-animation: player-claw linear 1s;
+  -moz-animation: player-claw linear 1s;
+  -o-animation: player-claw linear 1s;
+
   width: 200px;
   height: 200px;
   position: absolute;
@@ -8,6 +12,213 @@
 }
 
 @keyframes player-claw {
+  0% {
+    background-image: none;
+  }
+  50% {
+    background-image: none;
+  }
+  50.01% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60.01% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70.01% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-webkit-keyframes player-claw {
+  0% {
+    background-image: none;
+  }
+  50% {
+    background-image: none;
+  }
+  50.01% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60.01% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70.01% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-moz-keyframes player-claw {
+  0% {
+    background-image: none;
+  }
+  50% {
+    background-image: none;
+  }
+  50.01% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60% {
+    background-image: url("./effects/claw/claw_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  60.01% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70% {
+    background-image: url("./effects/claw/claw_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  70.01% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background-image: url("./effects/claw/claw_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background-image: url("./effects/claw/claw_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background-image: url("./effects/claw/claw_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-o-keyframes player-claw {
   0% {
     background-image: none;
   }

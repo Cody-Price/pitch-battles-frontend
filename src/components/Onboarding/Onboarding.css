@@ -13,6 +13,9 @@
   overflow: hidden;
   font-size: 1.3rem;
   animation: slide-onboarding 0.3s linear;
+  -webkit-animation: slide-onboarding 0.3s linear;
+  -moz-animation: slide-onboarding 0.3s linear;
+  -o-animation: slide-onboarding 0.3s linear;
 }
 
 .article-wrapper {
@@ -144,6 +147,33 @@
 }
 
 @keyframes slide-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slide-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes slide-onboarding {
+  0% {
+    right: 4000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-o-keyframes slide-onboarding {
   0% {
     right: 4000px;
   }

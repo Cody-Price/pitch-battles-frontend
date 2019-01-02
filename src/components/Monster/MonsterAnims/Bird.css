@@ -12,22 +12,187 @@
 
 .bird.idle {
   animation: bird-idle infinite 2s linear;
+  -webkit-animation: bird-idle infinite 2s linear;
+  -moz-animation: bird-idle infinite 2s linear;
+  -o-animation: bird-idle infinite 2s linear;
 }
 
 .bird.attack {
   animation: bird-idle infinite 2s linear, monster-attack 1s linear;
+  -webkit-animation: bird-idle infinite 2s linear, monster-attack 1s linear;
+  -moz-animation: bird-idle infinite 2s linear, monster-attack 1s linear;
+  -o-animation: bird-idle infinite 2s linear, monster-attack 1s linear;
 }
 
 .bird.hit {
   animation: bird-idle infinite 2s linear, monster-hit 1s linear;
+  -webkit-animation: bird-idle infinite 2s linear, monster-hit 1s linear;
+  -moz-animation: bird-idle infinite 2s linear, monster-hit 1s linear;
+  -o-animation: bird-idle infinite 2s linear, monster-hit 1s linear;
 }
 
 .bird.dead {
   opacity: 0;
   animation: bird-idle infinite 2s linear, monster-dead 3s linear;
+  -webkit-animation: bird-idle infinite 2s linear, monster-dead 3s linear;
+  -moz-animation: bird-idle infinite 2s linear, monster-dead 3s linear;
+  -o-animation: bird-idle infinite 2s linear, monster-dead 3s linear;
 }
 
 @keyframes bird-idle {
+  0% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-webkit-keyframes bird-idle {
+  0% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-moz-keyframes bird-idle {
+  0% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url("../monsters/bird/monster2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url("../monsters/bird/monster1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url("../monsters/bird/monster3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-o-keyframes bird-idle {
   0% {
     background: url("../monsters/bird/monster1.png");
     background-repeat: no-repeat;

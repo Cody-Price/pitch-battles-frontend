@@ -21,6 +21,10 @@
 
 .loading-animation.false {
   animation: bridge 3s linear infinite;
+  -webkit-animation: bridge 3s linear infinite;
+  -moz-animation: bridge 3s linear infinite;
+  -o-animation: bridge 3s linear infinite;
+
   z-index: 1;
 }
 
@@ -43,10 +47,623 @@
   top: 40px;
   left: 50px;
   animation: duck 3s linear infinite;
+  -webkit-animation: duck 3s linear infinite;
+  -moz-animation: duck 3s linear infinite;
+  -o-animation: duck 3s linear infinite;
+
   z-index: 1000;
 }
 
 @keyframes duck {
+  0% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  87% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  89.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-webkit-keyframes duck {
+  0% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  87% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  89.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-moz-keyframes duck {
+  0% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80% {
+    background: url(./images/duck1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  80.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  81.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  82.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  83.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  84.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  85.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  86.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  87% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  88% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  89.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  90.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  91.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  92.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  93.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  94.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  95.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  96.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  97.01% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98% {
+    background: url(./images/duck2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  98.01% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99% {
+    background: url(./images/duck3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  99.01% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/duck4.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-o-keyframes duck {
   0% {
     background: url(./images/duck1.png);
     background-size: cover;
@@ -259,6 +876,9 @@
   z-index: 4;
   margin-top: 0.5rem;
   animation: walkway 8s linear infinite;
+  -webkit-animation: walkway 8s linear infinite;
+  -moz-animation: walkway 8s linear infinite;
+  -o-animation: walkway 8s linear infinite;
 }
 
 .walkway.false {
@@ -280,12 +900,145 @@
   top: 40px;
   left: 52px;
   animation: catwalk 1s linear infinite;
+  -webkit-animation: catwalk 1s linear infinite;
+  -moz-animation: catwalk 1s linear infinite;
+  -o-animation: catwalk 1s linear infinite;
+
   height: 48px;
   width: 45px;
   z-index: 5;
 }
 
 @keyframes catwalk {
+  0% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-webkit-keyframes catwalk {
+  0% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-moz-keyframes catwalk {
+  0% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25% {
+    background: url(./images/left1.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  25.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  50.01% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75% {
+    background: url(./images/left3.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  75.01% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  100% {
+    background: url(./images/left2.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+}
+
+@-o-keyframes catwalk {
   0% {
     background: url(./images/left1.png);
     background-size: cover;
@@ -336,6 +1089,9 @@
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 12s linear infinite;
+  -webkit-animation: cloud1 12s linear infinite;
+  -moz-animation: cloud1 12s linear infinite;
+  -o-animation: cloud1 12s linear infinite;
 }
 
 .cloud1.false {
@@ -361,6 +1117,9 @@
   background-size: cover;
   image-rendering: pixelated;
   animation: cloud1 20s linear infinite;
+  -webkit-animation: cloud1 20s linear infinite;
+  -moz-animation: cloud1 20s linear infinite;
+  -o-animation: cloud1 20s linear infinite;
 }
 
 .cloud2.false {
@@ -378,7 +1137,97 @@
   }
 }
 
+@-webkit-keyframes cloud2 {
+  0% {
+    left: 0;
+    top: 10px;
+  }
+  100% {
+    left: -300px;
+    top: 10px;
+  }
+}
+
+@-moz-keyframes cloud2 {
+  0% {
+    left: 0;
+    top: 10px;
+  }
+  100% {
+    left: -300px;
+    top: 10px;
+  }
+}
+
+@-o-keyframes cloud2 {
+  0% {
+    left: 0;
+    top: 10px;
+  }
+  100% {
+    left: -300px;
+    top: 10px;
+  }
+}
+
 @keyframes bridge {
+  0% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/bridge2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+
+  100% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+}
+
+@-webkit-keyframes bridge {
+  0% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/bridge2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+
+  100% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+}
+
+@-moz-keyframes bridge {
+  0% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+  50% {
+    background: url(./images/bridge2.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+
+  100% {
+    background: url(./images/bridge1.png);
+    image-rendering: pixelated;
+    background-size: cover;
+  }
+}
+
+@-o-keyframes bridge {
   0% {
     background: url(./images/bridge1.png);
     image-rendering: pixelated;

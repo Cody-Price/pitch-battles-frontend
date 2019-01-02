@@ -15,6 +15,9 @@
   font-family: "chronotype";
   text-align: start;
   animation: slide-in-student-account 0.3s linear;
+  -webkit-animation: slide-in-student-account 0.3s linear;
+  -moz-animation: slide-in-student-account 0.3s linear;
+  -o-animation: slide-in-student-account 0.3s linear;
 }
 
 .student-account-page ul {
@@ -68,6 +71,33 @@
 }
 
 @keyframes slide-in-student-account {
+  0% {
+    right: 3000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes slide-in-student-account {
+  0% {
+    right: 3000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes slide-in-student-account {
+  0% {
+    right: 3000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-o-keyframes slide-in-student-account {
   0% {
     right: 3000px;
   }

@@ -7,6 +7,9 @@ import { instruments } from "../../utilities/instruments";
 import { timesHelper } from "../../utilities/timesHelper";
 import { badgeHelper } from "../../utilities/badgeHelper";
 import { fastestTimes } from "../../utilities/fastestTimes";
+import { leaveClassFetch } from "../../utilities/fetchCalls";
+
+import JoinClass from "../JoinClass/JoinClass";
 
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
@@ -45,6 +48,19 @@ class StudentDash extends Component {
 
   clearNoInstrumentError = () => {
     this.setState({ noInstrumentError: false });
+  };
+
+  leaveClass = async () => {
+    try {
+      await leaveClassFetch(
+        this.props.user.id,
+        this.props.user.attributes.classes.data[0].id,
+        this.props.webToken
+      );
+      this.props.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
@@ -113,7 +129,7 @@ class StudentDash extends Component {
 
     const times = displayTimes.map(time => {
       return (
-        <div key={time.name} className={"time-container ${time.klass}"}>
+        <div key={time.name} className={`time-container ${time.klass}`}>
           <h3 className="time-label">{time.name}</h3>
           <h3 className="time-displayed">{time.time}</h3>
         </div>
@@ -132,7 +148,6 @@ class StudentDash extends Component {
                   this.props.navigate("student account");
                 }}
               >
-                {" "}
                 <h3 className="account-link-text">account page</h3>
               </div>
               <div className="student-dash-avatar-backer">
@@ -142,12 +157,29 @@ class StudentDash extends Component {
                   }`}
                 />
               </div>
-              <section className="header-data">
+              <section className="header-info">
                 <h2 className="student-name">
                   {this.props.user.attributes.first_name}{" "}
                   {this.props.user.attributes.last_name}
                 </h2>
-                <h2 className="student-class-link">{this.props.user.class}</h2>
+                {this.props.user.attributes.classes.data.length > 0 && (
+                  <div className="student-class-dash-info">
+                    <h2 className="student-class-link">
+                      {
+                        this.props.user.attributes.classes.data[0].attributes
+                          .name
+                      }
+                    </h2>
+                    <button onClick={this.leaveClass}>leave class</button>
+                  </div>
+                )}
+                {!this.props.user.attributes.classes.data.length && (
+                  <JoinClass
+                    webToken={this.props.webToken}
+                    user={this.props.user}
+                    getUpdatedUserData={this.props.getUpdatedUserData}
+                  />
+                )}
               </section>
               <button
                 onClick={() => {

@@ -36,3 +36,8 @@
   animation: 90s background-move infinite linear;
   background-size: cover;
 }
+
+.student-facing-ui {
+  position: relative;
+  height: 100vh;
+}
