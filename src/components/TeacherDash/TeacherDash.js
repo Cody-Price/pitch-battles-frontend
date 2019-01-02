@@ -2,14 +2,25 @@ import React, { Component } from 'react';
 import './TeacherDash.css';
 import PropTypes from "prop-types";
 import ClassCard from '../ClassCard/ClassCard';
+import mockClassGroup from '../../utilities/mockClassGroup.js';
+import TeacherClassView from '../TeacherClassView/TeacherClassView.js';
 
 class TeacherDash extends Component {
 	constructor() {
 		super();
 		this.state = {
-			currentPage: 'class cards'
+			currentPage: 'class cards',
+			classes: []
 		}
 
+	}
+
+	componentDidMount() {
+		this.generateClassCards()
+	}
+
+	generateClassCards = () => {
+		this.setState({classes: mockClassGroup})
 	}
 
 	navigate = (currentPage) => {
@@ -45,7 +56,7 @@ class TeacherDash extends Component {
 							</form>
 						</article>
 					</section>}
-					{this.state.currentPage === 'selected class' && <div></div>}
+					{this.state.currentPage === 'selected class' && <TeacherClassView />}
 					{this.state.currentPage === 'teacher account' && <div></div>}
 			</main>
 		)

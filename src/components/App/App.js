@@ -20,6 +20,7 @@ import StudentAccount from "../StudentAccount/StudentAccount";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import StudentClassView from "../StudentClassView/StudentClassView";
 import TeacherUI from "../TeacherUI/TeacherUI";
+import TeacherDash from "../TeacherDash/TeacherDash";
 
 import "./App.css";
 
@@ -311,7 +312,7 @@ class App extends Component {
           />
         )}
         {this.state.user && this.state.user.attributes.role === "teacher" && (
-          <TeacherUI webToken={this.state.webToken} />
+          <TeacherDash webToken={this.state.webToken} />
         )}
       </div>
     );
