@@ -1,84 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Game should match the snapshot 1`] = `
-<main
-  className="game-main"
->
-  <div
-    className="game-area-wrapper"
-  >
-    <header
-      className="game-header"
-    >
-      <div
-        className="game-avatar-circle"
-        onClick={[Function]}
-      />
-      <div
-        className="avatar-border"
-      >
-        <div
-          className="header-avatar nine"
-        />
-      </div>
-      <GameUserModal
-        endGame={[Function]}
-        instrument="flute"
-        reset={[Function]}
-        status={false}
-      />
-      <section
-        className="hearts-and-timer"
-      >
-        <Hearts
-          character="player-hearts"
-          hearts={
-            Array [
-              0,
-              1,
-              2,
-            ]
-          }
-        />
-        <div
-          className="timer-frame"
-        >
-          <h3
-            className="timer"
-          >
-            -
-          </h3>
-        </div>
-        <Hearts
-          character="monster-hearts"
-          hearts={Array []}
-        />
-      </section>
-    </header>
-    <section
-      className="gameplay-frame"
-    >
-      <Player
-        avatar={9}
-        status="idle"
-      />
-      <Monster
-        level={1}
-        status="idle"
-      />
-    </section>
-    <button
-      className="kickoff-btn false"
-      onClick={[Function]}
-    >
-      start
-    </button>
-    <Staff
-      clef="treble"
-      correct="idle"
-      incorrect="idle"
-      submitGuess={[Function]}
-    />
-  </div>
-</main>
+<Game
+  cancelAnimationFrame={[Function]}
+  clearImmediate={[Function]}
+  clearInterval={[Function]}
+  clearTimeout={[Function]}
+  endGame={[MockFunction]}
+  instrument="flute"
+  processGame={[MockFunction]}
+  requestAnimationFrame={[Function]}
+  setImmediate={[Function]}
+  setInterval={[Function]}
+  setTimeout={[Function]}
+  user={
+    Object {
+      "attributes": Object {
+        "badges": Object {
+          "data": Array [
+            Object {
+              "level_one": true,
+            },
+            Object {
+              "level_one_perfect": true,
+            },
+            Object {
+              "level_two": true,
+            },
+            Object {
+              "level_two_perfect": true,
+            },
+            Object {
+              "level_three": true,
+            },
+            Object {
+              "level_three_perfect": false,
+            },
+            Object {
+              "level_four": true,
+            },
+            Object {
+              "level_four_perfect": false,
+            },
+            Object {
+              "all_perfect": false,
+            },
+            Object {
+              "five_games": true,
+            },
+            Object {
+              "ten_games": true,
+            },
+            Object {
+              "twenty_games": true,
+            },
+            Object {
+              "fifty_games": true,
+            },
+            Object {
+              "one_hundred_games": true,
+            },
+            Object {
+              "two_hundred_games": false,
+            },
+            Object {
+              "five_hundred_games": false,
+            },
+            Object {
+              "one_thousand_games": false,
+            },
+          ],
+        },
+        "fastest_times": Object {
+          "data": Array [
+            Object {
+              "level_one": 11.01,
+            },
+            Object {
+              "level_two": 15.24,
+            },
+            Object {
+              "level_three": 24.64,
+            },
+            Object {
+              "level_four": 30.17,
+            },
+            Object {
+              "all": 83.16,
+            },
+          ],
+        },
+        "games_played": Object {
+          "data": 115,
+        },
+      },
+      "avatar": 1,
+      "class": "6th-grade band",
+      "email": "cmanly@gmail.com",
+      "first_name": "Chet",
+      "last_name": "Stanley",
+      "role": 0,
+    }
+  }
+/>
 `;
