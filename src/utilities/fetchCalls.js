@@ -141,7 +141,66 @@ export const changePassword = async (
   };
 
   const response = await fetch(url, options);
-  const parsedResponse = await response.json();
-  console.log(parsedResponse);
+  return await response.json();
+};
+
+export const createClassFetch = async (name, webToken) => {
+  const body = {
+    name
+  };
+
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/classes/`;
+
+  const options = {
+    body: JSON.stringify(body),
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};
+
+export const joinClassFetch = async (class_key, id, webToken) => {
+  const body = {
+    class_key
+  };
+
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/${id}/classes/`;
+
+  const options = {
+    body: JSON.stringify(body),
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};
+
+export const leaveClassFetch = async (student_id, class_id, webToken) => {
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/users/${student_id}/classes/${class_id}`;
+
+  const options = {
+    method: "DELETE",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
   return await response.json();
 };

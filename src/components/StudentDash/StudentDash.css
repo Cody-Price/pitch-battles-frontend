@@ -675,6 +675,31 @@
   cursor: pointer;
 }
 
+.student-class-dash-info {
+  position: relative;
+}
+
+.student-class-dash-info button {
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  font-family: "chronotype";
+  background: #4776bb;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 2px#000;
+  transition: 0.3s;
+  padding-top: 4px;
+}
+
+.student-class-dash-info button:active {
+  box-shadow: none;
+}
+.student-class-dash-info button:focus {
+  outline: none;
+}
+
 @media (max-width: 860px) {
   .student-dash-wrapper {
     width: 350px;

@@ -18,6 +18,7 @@ import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
 import StudentAccount from "../StudentAccount/StudentAccount";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
+import TeacherUI from "../TeacherUI/TeacherUI";
 
 import "./App.css";
 
@@ -246,8 +247,7 @@ class App extends Component {
   render() {
     return (
       <div className={`App ${this.state.loading}`}>
-        {/* <LoadingAnimation animals={this.state.loadingAnimal} /> */}
-        {!this.state.gameActive && (
+        {!this.state.gameActive && !this.state.user && (
           <section className="name-game-student-wrapper">
             <AnimatedBackground instance="main-floating-backer" />
             {!this.state.user && (
@@ -261,31 +261,42 @@ class App extends Component {
                 forgotPassword={this.state.forgotPassword}
               />
             )}
-            {this.state.activePage === "onboarding" && this.state.user && (
-              <Onboarding navigate={this.navigate} />
-            )}
-            {this.state.activePage === "student dash" && this.state.user && (
-              <StudentDash
-                getUpdatedUserData={this.getUpdatedUserData}
-                navigate={this.navigate}
-                startGame={this.toggleGame}
-                user={this.state.user}
-              />
-            )}
-            {this.state.activePage === "student account" && this.state.user && (
-              <StudentAccount
-                user={this.state.user}
-                changeProfile={this.changeProfile}
-                changeAvatar={this.changeAvatar}
-                changePassword={this.changePassword}
-                navigate={this.navigate}
-                logout={this.logout}
-                updateWebToken={this.updateWebToken}
-              />
-            )}
             }
           </section>
         )}
+        {!this.state.gameActive &&
+          this.state.user &&
+          this.state.user.attributes.role === "student" && (
+            <main className="student-facing-ui">
+              <AnimatedBackground instance="main-floating-backer" />
+
+              {this.state.activePage === "onboarding" && (
+                <Onboarding navigate={this.navigate} />
+              )}
+
+              {this.state.activePage === "student dash" && (
+                <StudentDash
+                  webToken={this.state.webToken}
+                  getUpdatedUserData={this.getUpdatedUserData}
+                  navigate={this.navigate}
+                  startGame={this.toggleGame}
+                  user={this.state.user}
+                />
+              )}
+
+              {this.state.activePage === "student account" && (
+                <StudentAccount
+                  user={this.state.user}
+                  changeProfile={this.changeProfile}
+                  changeAvatar={this.changeAvatar}
+                  changePassword={this.changePassword}
+                  navigate={this.navigate}
+                  logout={this.logout}
+                  updateWebToken={this.updateWebToken}
+                />
+              )}
+            </main>
+          )}
 
         {this.state.gameActive && (
           <Game
@@ -294,6 +305,9 @@ class App extends Component {
             endGame={this.toggleGame}
             instrument={this.state.instrument}
           />
+        )}
+        {this.state.user && this.state.user.attributes.role === "teacher" && (
+          <TeacherUI webToken={this.state.webToken} />
         )}
       </div>
     );

@@ -1,0 +1,47 @@
+.join-class-form {
+  display: flex;
+  width: 400px;
+  height: 20px;
+  margin: 0 2rem;
+}
+
+.join-class-form p {
+  margin: 3px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.join-class-form input {
+  font-family: "chronotype";
+  font-size: 1.2rem;
+}
+
+.class-key-input {
+  background: #e3e8d9;
+  border: none;
+  height: 18px;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  padding-left: 8px;
+  box-shadow: 2px 2px 2px#4776bb;
+}
+
+.class-key-input:focus {
+  outline: none;
+}
+
+.join-class-submit {
+  font-family: "chronotype";
+  font-size: 1.2rem;
+  background: #4776bb;
+  border: none;
+  box-shadow: 2px 2px 2px#000;
+  transition: 0.3s;
+  padding-top: 4px;
+}
+
+.join-class-submit:active {
+  box-shadow: none;
+}
+.join-class-submit:focus {
+  outline: none;
+}

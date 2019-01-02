@@ -1,9 +1,9 @@
 export const postGameAnalysis = results => {
   const times = finalTimes(results.times);
 
-  const perfectScores = prepScores(results.perfectScores);
+  const perfect_scores = prepScores(results.perfectScores);
 
-  return { times, perfectScores };
+  return { times, perfect_scores };
 };
 
 const finalTimes = times => {
