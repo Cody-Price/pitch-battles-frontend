@@ -19,6 +19,16 @@ exports[`GameUserModal should match the snapshot 1`] = `
   >
     triangle
   </p>
+  <p
+    className="undefined resetting-message"
+  >
+    resetting...
+  </p>
+  <p
+    className="undefined exiting-message"
+  >
+    exiting...
+  </p>
   <button
     className="reset-game-button"
     onClick={[MockFunction]}
