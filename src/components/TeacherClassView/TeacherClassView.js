@@ -25,7 +25,7 @@ class TeacherClassView extends Component {
 	render() {
 		const students = this.state.students.map(student => {
 			return <article className='class-row'>
-					<p>{student.name}</p>
+					<p>{student.first_name}{' '}{student.last_name}</p>
 					<p>{student.total_games}</p>
 					<p>{student.fastest_times[0].level_one}</p>
 					<p>{student.fastest_times[1].level_two}</p>

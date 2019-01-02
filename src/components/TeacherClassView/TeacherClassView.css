@@ -1,0 +1,10 @@
+.class-row {
+	display: grid;
+	grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.class-table {
+	width: 700px;
+	margin: auto;
+}
+
