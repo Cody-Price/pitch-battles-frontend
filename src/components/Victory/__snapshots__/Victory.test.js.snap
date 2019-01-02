@@ -11,6 +11,11 @@ exports[`Victory should match the snapshot 1`] = `
     VICTORY!
   </h3>
   <p
+    className="proceed-text"
+  >
+    Click to proceed to next level
+  </p>
+  <p
     className="level-time"
   >
     level time: 
