@@ -2,7 +2,9 @@
 
 exports[`AnimatedBackground should match the snapshot 1`] = `
 <div>
-  <div>
+  <div
+    className="animated-background"
+  >
     <div
       className="snow-backer"
     />
