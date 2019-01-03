@@ -2,6 +2,35 @@ import React, { Component } from 'react';
 import './TeacherStudentView.css';
 
 class TeacherStudentView extends Component {
+	constructor() {
+		super();
+		this.state = {
+			perfectScores: []
+		}
+	}
+
+	componentDidMount() {
+		this.findPerfects()
+	}
+
+	findPerfects = () => {
+		// const { badges } = this.props.students.attributes
+		// let perfectScores = {
+		// 	level_one_perfect: false,
+		// 	level_two_perfect: false,
+		// 	level_thre_perfect: false,
+		// 	level_four_perfect: false
+		// }
+
+		// const perfectKeys = Object.keys(perfectScores)
+		// perfectKeys.forEach(key => {
+		// 	if (badges.find(badge => {
+		// 		return badge.data.attributes.
+		// 	}))
+		// })
+
+		// this.setState({perfectScores})
+	}
 
 	render() {
 		const { attributes } = this.props.student 
@@ -16,23 +45,47 @@ class TeacherStudentView extends Component {
 					</div>
 				</header>
 				<section className='teacher-student-view-times'>
-					<div className='teacher-student-time-block'>
-						<p>Level One</p>
-						<p>{attributes.level_one_fastest_time}</p>
-					</div>
-					<div className='teacher-student-time-block'>
-						<p>Level Two</p>
-						<p>{attributes.level_two_fastest_time}</p>
-					</div>
-					<div className='teacher-student-time-block'>
-						<p>Level Three</p>
-						<p>{attributes.level_three_fastest_time}</p>
-					</div>
-					<div className='teacher-student-time-block'>
-						<p>Level Four</p>
-						<p>{attributes.level_four_fastest_time}</p>
-					</div>
+					<h3>Fastest Times</h3>
+					<section className='teacher-student-times-row'>
+						<div className='teacher-student-time-block'>
+							<p>Level One</p>
+							<p>{attributes.level_one_fastest_time}</p>
+						</div>
+						<div className='teacher-student-time-block'>
+							<p>Level Two</p>
+							<p>{attributes.level_two_fastest_time}</p>
+						</div>
+						<div className='teacher-student-time-block'>
+							<p>Level Three</p>
+							<p>{attributes.level_three_fastest_time}</p>
+						</div>
+						<div className='teacher-student-time-block'>
+							<p>Level Four</p>
+							<p>{attributes.level_four_fastest_time}</p>
+						</div>
+					</section>
 				</section>
+				{/*<section className='teacher-student-view-perfect-scores'>
+					<h3>Perfect Scores</h3>
+					<section className='teacher-student-perfect-row'>
+						<div className='teacher-student-perfect-block'>
+							<p>Level One</p>
+							<div className={`${this.state.perfectScores[0]} perfect-score`}>
+						</div>
+						<div className='teacher-student-perfect-block'>
+							<p>Level Two</p>
+							<div className={`${this.state.perfectScores[1]} perfect-score`}>
+						</div>
+						<div className='teacher-student-perfect-block'>
+							<p>Level Three</p>
+							<div className={`${this.state.perfectScores[2]} perfect-score`}>
+						</div>
+						<div className='teacher-student-perfect-block'>
+							<p>Level Four</p>
+							<div className={`${this.state.perfectScores[3]} perfect-score`}>
+						</div>
+					</section>
+				</section>*/}
 			</section>
 		)
 	}
