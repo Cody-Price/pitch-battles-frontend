@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import ClassCard from "../ClassCard/ClassCard";
 import mockClassGroup from "../../utilities/mockClassGroup.js";
 import TeacherClassView from "../TeacherClassView/TeacherClassView.js";
+import TeacherStudentView from '../TeacherStudentView/TeacherStudentView.js';
 
 import { teacherAllClassesFetch } from "../../utilities/fetchCalls";
 
@@ -14,7 +15,8 @@ class TeacherDash extends Component {
       currentPage: "class cards",
       classes: [],
       error: false,
-      selectedClass: null
+      selectedClass: null,
+      currentStudent: undefined
     };
   }
 
@@ -53,6 +55,14 @@ class TeacherDash extends Component {
       this.navigateToClassPage
     );
   };
+
+  navigateToStudentPage = () => {
+    this.navigate('selected student') 
+  }
+
+  selectStudent = (student) => {
+    this.setState({currentStudent: student}, this.navigateToStudentPage)
+  }
 
   render() {
     const classes = this.state.classes.map(klass => {
@@ -98,9 +108,11 @@ class TeacherDash extends Component {
           <TeacherClassView
             id={this.state.selectedClass}
             webToken={this.props.webToken}
+            selectStudent={this.selectStudent}
           />
         )}
         {this.state.currentPage === "teacher account" && <div />}
+        {this.state.currentPage === 'selected student' && <TeacherStudentView student={this.state.currentStudent} />}
       </main>
     );
   }
