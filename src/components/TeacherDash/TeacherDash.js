@@ -5,8 +5,12 @@ import ClassCard from "../ClassCard/ClassCard";
 import mockClassGroup from "../../utilities/mockClassGroup.js";
 import TeacherClassView from "../TeacherClassView/TeacherClassView.js";
 import TeacherStudentView from "../TeacherStudentView/TeacherStudentView.js";
+import TeacherAccount from "../TeacherAccount/TeacherAccount";
 
-import { teacherAllClassesFetch } from "../../utilities/fetchCalls";
+import {
+  teacherAllClassesFetch,
+  createClassFetch
+} from "../../utilities/fetchCalls";
 
 class TeacherDash extends Component {
   constructor() {
@@ -16,13 +20,34 @@ class TeacherDash extends Component {
       classes: [],
       error: false,
       selectedClass: null,
-      currentStudent: undefined
+      currentStudent: undefined,
+      newClassName: ""
     };
   }
 
   componentDidMount() {
     this.generateClassCards();
   }
+
+  handleChange = event => {
+    this.setState({
+      newClassName: event.target.value
+    });
+  };
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    try {
+      const data = await createClassFetch(
+        this.state.newClassName,
+        this.props.webToken
+      );
+      this.generateClassCards();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   generateClassCards = async () => {
     try {
@@ -65,39 +90,59 @@ class TeacherDash extends Component {
   };
 
   render() {
-    const classes = this.state.classes.map(klass => {
+    const classes = this.state.classes.map((klass, index) => {
       return (
-        <ClassCard key={klass.id} data={klass} classSelect={this.classSelect} />
+        <ClassCard
+          key={klass.id}
+          data={klass}
+          bgIndex={index}
+          classSelect={this.classSelect}
+          generateClassCards={this.generateClassCards}
+          webToken={this.props.webToken}
+        />
       );
     });
     return (
       <main className="teacher-dash">
         <header className="teacher-dash-header">
-          <h1>Pitch Battles for Teachers</h1>
+          <div className="teacher-dash-filter">
+            <h1>Pitch Battles for Teachers</h1>
 
-          <aside className="teacher-account-icon">
-            <div className="teacher-dash-icon">
-              <p className="teacher-dash-teacher-name">Kevin Simpson</p>
-            </div>
-          </aside>
-          <div className="student-search" />
-          <i
-            className="fas fa-user"
-            onClick={() => this.navigate("teacher account")}
-          />
+            <aside className="teacher-account-icon">
+              <div className="teacher-dash-icon">
+                <p className="teacher-dash-teacher-name">
+                  {this.props.user.attributes.first_name}{" "}
+                  {this.props.user.attributes.last_name}
+                </p>
+              </div>
+            </aside>
+            <div className="student-search" />
+            <i
+              onClick={() => this.navigate("class cards")}
+              className="fas fa-home"
+            />
+            <i
+              className="fas fa-user"
+              onClick={() => this.navigate("teacher account")}
+            />
+          </div>
         </header>
         {this.state.currentPage === "class cards" && (
           <section className="classes-container">
             {classes}
             <article className="new-class-card">
-              <h4 className="new-class-card-label">Create New Class</h4>
+              <header>
+                <div className="class-card-header-tint">
+                  <h4 className="new-class-card-label">Create New Class</h4>
+                </div>
+              </header>
               <form
                 className="create-new-class-form"
                 onSubmit={e => this.handleSubmit(e)}
               >
                 <input
-                  name="newClass"
-                  value={this.state.newClass}
+                  name="newClassName"
+                  value={this.state.newClassName}
                   placeholder="class name"
                   onChange={e => this.handleChange(e)}
                 />
@@ -113,9 +158,22 @@ class TeacherDash extends Component {
             selectStudent={this.selectStudent}
           />
         )}
-        {this.state.currentPage === "teacher account" && <div />}
+        {this.state.currentPage === "teacher account" && (
+          <TeacherAccount
+            user={this.props.user}
+            changeProfile={this.props.changeProfile}
+            webToken={this.props.webToken}
+            getUpdatedUserData={this.props.getUpdatedUserData}
+            logout={this.props.logout}
+            updateWebToken={this.props.updateWebToken}
+          />
+        )}
         {this.state.currentPage === "selected student" && (
-          <TeacherStudentView student={this.state.currentStudent} />
+          <TeacherStudentView
+            user={this.props.user}
+            navigate={this.navigateToClassPage}
+            student={this.state.currentStudent}
+          />
         )}
       </main>
     );

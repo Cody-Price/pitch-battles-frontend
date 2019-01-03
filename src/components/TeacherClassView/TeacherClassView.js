@@ -10,7 +10,8 @@ class TeacherClassView extends Component {
     super();
     this.state = {
       klass: undefined,
-      students: []
+      students: [],
+      loading: true
     };
   }
 
@@ -27,11 +28,14 @@ class TeacherClassView extends Component {
 
       this.setState({
         klass: klass.data.attributes,
-        students: klass.data.attributes.students.data
+        students: klass.data.attributes.students.data,
+        loading: false,
+        error: false
       });
     } catch (error) {
       this.setState({
-        error: true
+        error: true,
+        loading: false
       });
     }
   };
@@ -48,7 +52,15 @@ class TeacherClassView extends Component {
     });
     return (
       <section className="teacher-class-view">
-        {!this.state.klass && <LoadingAnimation animals="cat" />}
+        {this.state.loading && (
+          <LoadingAnimation message="loading..." animals="cat" />
+        )}
+        {this.state.error && (
+          <LoadingAnimation
+            message="- server error - click the home icon to go back"
+            animals="duck"
+          />
+        )}
         {this.state.klass && (
           <div className="loaded-teacher-class-view">
             <h3 className="class-name">{this.state.klass.name}</h3>

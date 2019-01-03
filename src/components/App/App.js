@@ -7,8 +7,7 @@ import {
   postGameUserUpdate,
   userFetch,
   changeAvatarFetch,
-  changeProfileFetch,
-  changePassword
+  changeProfileFetch
 } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
@@ -195,21 +194,6 @@ class App extends Component {
     }
   };
 
-  changeProfile = async name => {
-    console.log("fires");
-    try {
-      const response = await changeProfileFetch(
-        name,
-        this.state.user.id,
-        this.state.webToken
-      );
-      console.log(response);
-      this.getUpdatedUserData();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   changeAvatar = async avatar => {
     try {
       const response = await changeAvatarFetch(
@@ -229,22 +213,6 @@ class App extends Component {
       webToken
     });
   };
-
-  changePassword = async (oldPassword, newPassword) => {
-    try {
-      const response = await changePassword(
-        oldPassword,
-        newPassword,
-        this.state.user.id,
-        this.state.webToken
-      );
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  forgotPassword = () => {};
 
   render() {
     return (
@@ -295,6 +263,8 @@ class App extends Component {
                   navigate={this.navigate}
                   logout={this.logout}
                   updateWebToken={this.updateWebToken}
+                  webToken={this.state.webToken}
+                  getUpdatedUserData={this.getUpdatedUserData}
                 />
               )}
               {this.state.activePage === "student class view" && (
@@ -315,7 +285,16 @@ class App extends Component {
           />
         )}
         {this.state.user && this.state.user.attributes.role === "teacher" && (
-          <TeacherDash webToken={this.state.webToken} />
+          <TeacherDash
+            user={this.state.user}
+            webToken={this.state.webToken}
+            changeProfile={this.changeProfile}
+            changePassword={this.changePassword}
+            passwordChangeSuccessful={this.passwordChangeSuccessful}
+            getUpdatedUserData={this.getUpdatedUserData}
+            updateWebToken={this.updateWebToken}
+            logout={this.logout}
+          />
         )}
       </div>
     );

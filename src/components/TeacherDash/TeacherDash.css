@@ -43,39 +43,10 @@
 
   position: relative;
 
-  background: rgba(41, 67, 199, 1);
-  /* background: -moz-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(41, 67, 199, 1)),
-    color-stop(100%, rgba(101, 171, 236, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  ); */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2943c7', endColorstr='#65abec', GradientType=1 );
+  background: url(./images/dd-bg-long.png);
+  background-size: cover;
+  image-rendering: pixelated;
+
   color: #f2f2f2;
 }
 
@@ -107,7 +78,8 @@
   max-width: 820px;
 }
 
-.fas.fa-user {
+.fas.fa-user,
+.fas.fa-home {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -115,7 +87,21 @@
   transition: 0.3s;
 }
 
-.fas.fa-user:hover {
+.fas.fa-user:hover,
+.fas.fa-home:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.fas.fa-home {
+  right: 4rem;
+}
+
+.create-new-class-form input {
+  margin-top: 1rem;
+}
+
+.teacher-dash-filter {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
