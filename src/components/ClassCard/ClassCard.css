@@ -1,52 +1,79 @@
 .class-card,
 .new-class-card {
+  position: relative;
   width: 250px;
   border-radius: 30px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 1rem auto;
   padding-bottom: 1rem;
-  height: 150px;
+  height: 200px;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+.class-card-header-tint {
+  background: rgba(0, 0, 0, 0.5);
+  height: 60px;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .class-card-header,
-.new-class-card-label {
-  background: rgba(41, 67, 199, 1);
-  /* background: -moz-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(41, 67, 199, 1)),
-    color-stop(100%, rgba(101, 171, 236, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(41, 67, 199, 1) 0%,
-    rgba(101, 171, 236, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2943c7', endColorstr='#65abec', GradientType=1 ); */
+.new-class-card header {
+  background: url(./images/card-back-eight.png);
+  background-size: cover;
+  image-rendering: pixelated;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: #f2f2f2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0.5);
+}
+
+.new-class-card-label {
+  margin-bottom: 0;
+}
+
+.class-card-header.one {
+  background: url(./images/card-back-one.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.two {
+  background: url(./images/card-back-two.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.three {
+  background: url(./images/card-back-three.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.four {
+  background: url(./images/card-back-four.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.five {
+  background: url(./images/card-back-five.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.six {
+  background: url(./images/card-back-six.png);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.class-card-header.seven {
+  background: url(./images/card-back-seven.png);
+  background-size: cover;
+  image-rendering: pixelated;
 }
 
 .new-class-card input {
@@ -71,4 +98,40 @@
 
 .class-card-key {
   font-family: "Oswald", sans-serif;
+}
+
+.fas.fa-trash-alt {
+  width: 25px;
+  text-align: center;
+  display: block;
+  margin: 2rem auto;
+  font-size: 1.4rem;
+  color: #333;
+  transition: 0.2s;
+}
+
+.fas.fa-trash-alt:hover {
+  color: rgba(41, 67, 199, 1);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.confirm-delete-container {
+  background: #f2f2f2;
+  position: absolute;
+  width: 250px;
+  height: 125px;
+  top: 50px;
+  left: -500px;
+  right: 0;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.confirm-delete-container button {
+  margin: 0.5rem;
+}
+
+.confirm-delete-container.true {
+  left: 0;
 }
