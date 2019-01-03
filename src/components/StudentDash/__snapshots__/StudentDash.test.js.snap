@@ -14,7 +14,6 @@ exports[`StudentDash should match the snapshot 1`] = `
         className="avatar-circle"
         onClick={[Function]}
       >
-         
         <h3
           className="account-link-text"
         >
@@ -25,24 +24,34 @@ exports[`StudentDash should match the snapshot 1`] = `
         className="student-dash-avatar-backer"
       >
         <div
-          className="student-dash-avatar nine"
+          className="student-dash-avatar seven"
         />
       </div>
       <section
-        className="header-data"
+        className="header-info"
       >
         <h2
           className="student-name"
         >
           Chet
            
-          Stanley
+          Manly
         </h2>
-        <h2
-          className="student-class-link"
+        <div
+          className="student-class-dash-info"
         >
-          6th-grade band
-        </h2>
+          <h2
+            className="student-class-link"
+            onClick={[Function]}
+          >
+            5th Grade Band
+          </h2>
+          <button
+            onClick={[Function]}
+          >
+            leave class
+          </button>
+        </div>
       </section>
       <button
         className="onboarding-link"
@@ -211,7 +220,7 @@ exports[`StudentDash should match the snapshot 1`] = `
         total battles fought:
          
         <span>
-          115
+          8
         </span>
       </h2>
       <h2
@@ -223,63 +232,78 @@ exports[`StudentDash should match the snapshot 1`] = `
         className="times-row"
       >
         <div
-          className="time-container {$Objecy.keys(time)}"
-          key="level_one"
+          className="time-container level_one"
+          key="level one"
         >
           <h3
             className="time-label"
           >
             level one
-             - 
-            11.01
+          </h3>
+          <h3
+            className="time-displayed"
+          >
+            11.233
           </h3>
         </div>
         <div
-          className="time-container {$Objecy.keys(time)}"
-          key="level_two"
+          className="time-container level_two"
+          key="level two"
         >
           <h3
             className="time-label"
           >
             level two
-             - 
-            15.24
+          </h3>
+          <h3
+            className="time-displayed"
+          >
+            16.612
           </h3>
         </div>
         <div
-          className="time-container {$Objecy.keys(time)}"
-          key="level_three"
+          className="time-container level_three"
+          key="level three"
         >
           <h3
             className="time-label"
           >
             level three
-             - 
-            24.64
+          </h3>
+          <h3
+            className="time-displayed"
+          >
+            22.819
           </h3>
         </div>
         <div
-          className="time-container {$Objecy.keys(time)}"
-          key="level_four"
+          className="time-container level_four"
+          key="level four"
         >
           <h3
             className="time-label"
           >
             level four
-             - 
-            30.17
+          </h3>
+          <h3
+            className="time-displayed"
+          >
+            31.625
           </h3>
         </div>
         <div
-          className="time-container {$Objecy.keys(time)}"
-          key="all"
+          className="time-container total_time"
+          key="total time"
         >
           <h3
             className="time-label"
           >
-            all levels
-             - 
-            83.16
+            total time
+          </h3>
+          <h3
+            className="time-displayed"
+          >
+            1
           </h3>
         </div>
       </div>
@@ -292,106 +316,19 @@ exports[`StudentDash should match the snapshot 1`] = `
         className="badge-row"
       >
         <div
-          className="badge one_hundred_games"
-          key="one_hundred_games"
+          className="badge five_games"
+          key="play 5 games"
         >
           <h4
             className="badge-descriptor"
           >
-            play 100 games
-          </h4>
-        </div>
-        <div
-          className="badge level_four"
-          key="level_four"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level four: completed
-          </h4>
-        </div>
-        <div
-          className="badge fifty_games"
-          key="fifty_games"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            play 50 games
-          </h4>
-        </div>
-        <div
-          className="badge twenty_games"
-          key="twenty_games"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            play 20 games
-          </h4>
-        </div>
-        <div
-          className="badge level_three"
-          key="level_three"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level three: completed
-          </h4>
-        </div>
-        <div
-          className="badge level_two_perfect"
-          key="level_two_perfect"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level two: perfect
-          </h4>
-        </div>
-        <div
-          className="badge ten_games"
-          key="ten_games"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            play 10 games
-          </h4>
-        </div>
-        <div
-          className="badge level_two"
-          key="level_two"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level two: completed
-          </h4>
-        </div>
-        <div
-          className="badge level_one_perfect"
-          key="level_one_perfect"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level one: perfect
-          </h4>
-        </div>
-        <div
-          className="badge level_one"
-          key="level_one"
-        >
-          <h4
-            className="badge-descriptor"
-          >
-            level one: completed
+            play 5 games
           </h4>
         </div>
       </div>
+      <div
+        className="mq-badge-row"
+      />
     </section>
   </section>
 </main>

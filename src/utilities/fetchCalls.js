@@ -226,3 +226,55 @@ export const resetPasswordFetch = async (password, token) => {
 
   return await response.json();
 };
+
+export const studentClassFetch = async webToken => {
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/class_dashboard`;
+
+  const options = {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};
+
+export const teacherAllClassesFetch = async webToken => {
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/teacher_dashboard`;
+
+  const options = {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};
+
+export const teacherSpecificClassFetch = async (id, webToken) => {
+  console.log(webToken);
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/teacher_dashboard/classes/${id}`;
+
+  const options = {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};

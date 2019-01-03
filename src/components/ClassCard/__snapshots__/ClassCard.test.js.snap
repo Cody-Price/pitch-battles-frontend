@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClassCard should match the snapshot 1`] = `
+<article
+  className="class-card"
+>
+  <header
+    className="class-card-header"
+  >
+    <h3
+      className="class-card-name"
+    >
+      5th Grade Band
+    </h3>
+  </header>
+  <p
+    className="class-card-key"
+  >
+    keeeeeey
+  </p>
+  <button
+    className="class-select-button"
+    onClick={[Function]}
+  >
+    select
+  </button>
+</article>
+`;

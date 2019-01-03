@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./StudentClassView.css";
 import mockClass from "../../utilities/mockClass";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
+import { studentClassFetch } from "../../utilities/fetchCalls";
 
 class StudentClassView extends Component {
   constructor() {
@@ -9,7 +10,8 @@ class StudentClassView extends Component {
 
     this.state = {
       classStats: undefined,
-      loading: false
+      loading: true,
+      error: false
     };
   }
 
@@ -17,10 +19,19 @@ class StudentClassView extends Component {
     this.studentViewClassFetch();
   }
 
-  studentViewClassFetch = () => {
-    this.setState({
-      classStats: mockClass
-    });
+  studentViewClassFetch = async () => {
+    try {
+      const response = await studentClassFetch(this.props.webToken);
+      console.log(response);
+      this.setState({
+        classStats: response.data.attributes,
+        loading: false,
+        error: false
+      });
+    } catch (error) {
+      console.log(error);
+      this.setState({ error: true });
+    }
   };
 
   render() {
@@ -40,8 +51,9 @@ class StudentClassView extends Component {
                 {this.state.classStats.name}
               </h1>
               <h2 className="student-class-view-teacher-name">
-                teacher - {this.state.classStats.teacher.first_name}{" "}
-                {this.state.classStats.teacher.last_name}
+                teacher -{" "}
+                {this.state.classStats.teacher.data.attributes.first_name}{" "}
+                {this.state.classStats.teacher.data.attributes.last_name}
               </h2>
             </header>
             <section className="class-view-fastest-times">
@@ -50,52 +62,82 @@ class StudentClassView extends Component {
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level one</h3>
                   <p className="class-view-fastest-time-number">
-                    {this.state.classStats.fastest_times.level_one.time / 1000}
+                    {this.state.classStats.level_one_fastest_time.score / 1000}
                   </p>
                   <p className="class-view-fastest-student">
-                    {this.state.classStats.fastest_times.level_one.first_name}{" "}
-                    {this.state.classStats.fastest_times.level_one.last_name}
+                    {
+                      this.state.classStats.level_one_fastest_time.user.data[0]
+                        .attributes.first_name
+                    }{" "}
+                    {
+                      this.state.classStats.level_one_fastest_time.user.data[0]
+                        .attributes.last_name
+                    }
                   </p>
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level two</h3>
                   <p className="class-view-fastest-time-number">
-                    {this.state.classStats.fastest_times.level_two.time / 1000}
+                    {this.state.classStats.level_two_fastest_time.score / 1000}
                   </p>
                   <p className="class-view-fastest-student">
-                    {this.state.classStats.fastest_times.level_two.first_name}{" "}
-                    {this.state.classStats.fastest_times.level_two.last_name}
+                    {
+                      this.state.classStats.level_two_fastest_time.user.data[0]
+                        .attributes.first_name
+                    }{" "}
+                    {
+                      this.state.classStats.level_two_fastest_time.user.data[0]
+                        .attributes.last_name
+                    }
                   </p>
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level three</h3>
                   <p className="class-view-fastest-time-number">
-                    {this.state.classStats.fastest_times.level_three.time /
+                    {this.state.classStats.level_three_fastest_time.score /
                       1000}
                   </p>
                   <p className="class-view-fastest-student">
-                    {this.state.classStats.fastest_times.level_three.first_name}{" "}
-                    {this.state.classStats.fastest_times.level_three.last_name}
+                    {
+                      this.state.classStats.level_three_fastest_time.user
+                        .data[0].attributes.first_name
+                    }{" "}
+                    {
+                      this.state.classStats.level_three_fastest_time.user
+                        .data[0].attributes.last_name
+                    }
                   </p>
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level four</h3>
                   <p className="class-view-fastest-time-number">
-                    {this.state.classStats.fastest_times.level_four.time / 1000}
+                    {this.state.classStats.level_four_fastest_time.score / 1000}
                   </p>
                   <p className="class-view-fastest-student">
-                    {this.state.classStats.fastest_times.level_four.first_name}{" "}
-                    {this.state.classStats.fastest_times.level_four.last_name}
+                    {
+                      this.state.classStats.level_four_fastest_time.user.data[0]
+                        .attributes.first_name
+                    }{" "}
+                    {
+                      this.state.classStats.level_four_fastest_time.user.data[0]
+                        .attributes.last_name
+                    }
                   </p>
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">overall</h3>
                   <p className="class-view-fastest-time-number">
-                    {this.state.classStats.fastest_times.overall.time / 1000}
+                    {this.state.classStats.overall_fastest_time.score / 1000}
                   </p>
                   <p className="class-view-fastest-student">
-                    {this.state.classStats.fastest_times.overall.first_name}{" "}
-                    {this.state.classStats.fastest_times.overall.last_name}
+                    {
+                      this.state.classStats.overall_fastest_time.user.data[0]
+                        .attributes.first_name
+                    }{" "}
+                    {
+                      this.state.classStats.overall_fastest_time.user.data[0]
+                        .attributes.last_name
+                    }
                   </p>
                 </article>
               </div>
@@ -103,19 +145,37 @@ class StudentClassView extends Component {
             <section className="most-games-badges-row">
               <article className="most-games game-badge">
                 <h3 className="most-games-badges-label">most games</h3>
-                <p className="class-view-most-student">
-                  {this.state.classStats.most_games.first_name}{" "}
-                  {this.state.classStats.most_games.last_name} -{" "}
-                  {this.state.classStats.most_games.games}
-                </p>
+                {this.state.classStats.most_games.user.data[0].attributes
+                  .first_name && (
+                  <p className="class-view-most-student">
+                    {
+                      this.state.classStats.most_games.user.data[0].attributes
+                        .first_name
+                    }{" "}
+                    {
+                      this.state.classStats.most_games.user.data[0].attributes
+                        .last_name
+                    }{" "}
+                    - {this.state.classStats.most_games.games_played}
+                  </p>
+                )}
               </article>
               <article className="most-badges game-badge">
                 <h3 className="most-games-badges-label">most badges</h3>
-                <p className="class-view-most-student">
-                  {this.state.classStats.most_badges.first_name}{" "}
-                  {this.state.classStats.most_badges.last_name} -{" "}
-                  {this.state.classStats.most_badges.games}
-                </p>
+                {this.state.classStats.most_badges.user.data[0].attributes
+                  .first_name && (
+                  <p className="class-view-most-student">
+                    {
+                      this.state.classStats.most_badges.user.data[0].attributes
+                        .first_name
+                    }{" "}
+                    {
+                      this.state.classStats.most_badges.user.data[0].attributes
+                        .last_name
+                    }{" "}
+                    - {this.state.classStats.most_badges.badges}
+                  </p>
+                )}
               </article>
             </section>
           </article>

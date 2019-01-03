@@ -298,7 +298,10 @@ class App extends Component {
                 />
               )}
               {this.state.activePage === "student class view" && (
-                <StudentClassView navigate={this.navigate} />
+                <StudentClassView
+                  webToken={this.state.webToken}
+                  navigate={this.navigate}
+                />
               )}
             </main>
           )}

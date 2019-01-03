@@ -9,5 +9,10 @@ exports[`GameOver should match the snapshot 1`] = `
   >
     GAME OVER
   </h4>
+  <p
+    className="exit-message"
+  >
+    click here to exit...
+  </p>
 </section>
 `;

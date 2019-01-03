@@ -9,8 +9,10 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("EditProfile", () => {
   let wrapper;
   const mockUser = {
-    first_name: "Haley",
-    last_name: "Jacobs"
+    attributes: {
+      first_name: "Haley",
+      last_name: "Jacobs"
+    }
   };
   let mockChangeProfile;
 
@@ -27,8 +29,7 @@ describe("EditProfile", () => {
 
   describe("populateOnLoad", () => {
     it("should setState with props", () => {
-      const expected = mockUser;
-
+      const expected = { first_name: "Haley", last_name: "Jacobs" };
       expect(wrapper.state()).toEqual(expected);
     });
   });
