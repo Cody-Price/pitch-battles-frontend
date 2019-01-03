@@ -1,0 +1,32 @@
+.game-perfect-mark.true {
+  background: url("../TeacherStudentView/images/checkmark.png");
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  margin: auto;
+}
+.game-perfect-mark.false {
+  background: url("../TeacherStudentView/images/x-symbol.png");
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  margin: auto;
+}
+
+.game-id-code {
+  width: 19px;
+  margin-left: 1.1rem;
+  margin-right: 2.1rem;
+}
+
+.game-row {
+  display: flex;
+  margin: auto;
+  width: 900px;
+  justify-content: space-around;
+}
+.game-score,
+.game-score-label {
+  width: 70px;
+  text-align: center;
+}
