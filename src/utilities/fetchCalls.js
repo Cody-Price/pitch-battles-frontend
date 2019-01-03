@@ -117,7 +117,7 @@ export const changeProfileFetch = async (name, id, webToken) => {
   return await response.json();
 };
 
-export const changePassword = async (
+export const changePasswordFetch = async (
   oldPassword,
   newPassword,
   id,
@@ -129,6 +129,8 @@ export const changePassword = async (
     current_password: oldPassword,
     password: newPassword
   };
+
+  console.log(oldPassword, newPassword, webToken);
 
   const options = {
     body: JSON.stringify(body),
@@ -262,11 +264,27 @@ export const teacherAllClassesFetch = async webToken => {
 };
 
 export const teacherSpecificClassFetch = async (id, webToken) => {
-  console.log(webToken);
   const url = `https://pitch-battles-api.herokuapp.com/api/v1/teacher_dashboard/classes/${id}`;
 
   const options = {
     method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${webToken}`
+    }
+  };
+
+  const response = await fetch(url, options);
+
+  return await response.json();
+};
+
+export const deleteClassFetch = async (id, webToken) => {
+  const url = `https://pitch-battles-api.herokuapp.com/api/v1/classes/${id}`;
+
+  const options = {
+    method: "DELETE",
     mode: "cors",
     headers: {
       "Content-Type": "application/json",
