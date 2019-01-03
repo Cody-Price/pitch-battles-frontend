@@ -47,6 +47,12 @@ class TeacherStudentView extends Component {
     return (
       <section className="teacher-student-view">
         <header className="teacher-student-view-header">
+          <button
+            className="teacher-student-view-back-btn"
+            onClick={this.props.navigate}
+          >
+            back
+          </button>
           <section className="header-left-wrapper">
             <h2 className="teacher-student-view-name">
               {attributes.first_name} {attributes.last_name}

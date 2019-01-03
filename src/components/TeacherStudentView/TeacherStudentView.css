@@ -1,5 +1,6 @@
 .teacher-student-view {
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 .teacher-student-view-header {
   width: 400px;
@@ -89,4 +90,10 @@
 
 .game-score-label {
   font-weight: 700;
+}
+
+.teacher-student-view-back-btn {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
 }
