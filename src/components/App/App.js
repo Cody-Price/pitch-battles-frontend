@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import mockUser from "../../utilities/mockUser";
 
 import {
   login,
   signUp,
   postGameUserUpdate,
   userFetch,
-  changeAvatarFetch,
-  changeProfileFetch
+  changeAvatarFetch
 } from "../../utilities/fetchCalls";
 
 import Game from "../Game/Game";
@@ -16,9 +14,7 @@ import StudentDash from "../StudentDash/StudentDash";
 import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 import Onboarding from "../Onboarding/Onboarding";
 import StudentAccount from "../StudentAccount/StudentAccount";
-import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import StudentClassView from "../StudentClassView/StudentClassView";
-import TeacherUI from "../TeacherUI/TeacherUI";
 import TeacherDash from "../TeacherDash/TeacherDash";
 
 import "./App.css";

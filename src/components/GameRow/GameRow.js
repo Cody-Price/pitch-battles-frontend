@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./GameRow.css";
 
 import "../../utilities/gameHelper";
-import { gameHelper } from "../../utilities/gameHelper";
 
 class GameRow extends Component {
   render() {

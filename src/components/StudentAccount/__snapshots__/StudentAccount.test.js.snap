@@ -47,7 +47,6 @@ exports[`StudentAccount should match the snapshot 1`] = `
     className="student-account-active-tab"
   >
     <EditProfile
-      changeProfile={[MockFunction]}
       user={
         Object {
           "attributes": Object {
@@ -104,6 +103,7 @@ exports[`StudentAccount should match the snapshot 1`] = `
           "type": "user",
         }
       }
+      userType="student"
     />
   </section>
 </main>
