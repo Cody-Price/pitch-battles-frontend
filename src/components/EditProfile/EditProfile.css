@@ -141,17 +141,19 @@
   position: absolute;
   top: 180px;
   left: 2000px;
+  right: 0;
+  margin: auto;
   width: 100px;
   text-align: center;
   transition: 0.3s;
 }
 
 .profile-error-success-messaging.true {
-  left: 435px;
+  left: 0px;
 }
 
 .teacher.profile-error-success-messaging.true {
-  top: 169px;
+  top: 185px;
 
-  left: 405px;
+  left: 0;
 }
