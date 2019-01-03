@@ -1,0 +1,92 @@
+.teacher-student-view {
+  font-family: "Open Sans", sans-serif;
+}
+.teacher-student-view-header {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.teacher-student-view-header h2,
+.teacher-student-view-header h3 {
+  margin: 1rem;
+}
+
+.teacher-student-view-header p {
+  font-size: 1.3rem;
+}
+
+.ts-total-games {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.teacher-student-view-total-games {
+  margin-top: 0;
+}
+
+.teacher-student-view-times {
+  margin-bottom: 2rem;
+}
+.teacher-student-perfect-row {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin: auto;
+}
+.perfect-score.true {
+  background: url("./images/checkmark.png");
+  background-size: cover;
+  height: 32px;
+  width: 32px;
+  margin: auto;
+}
+.perfect-score.false {
+  background: url("./images/x-symbol.png");
+  background-size: cover;
+  height: 32px;
+  width: 32px;
+  margin: auto;
+}
+
+.teacher-student-times-row {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.teacher-student-view-perfect-scores {
+  padding-top: 1rem;
+  border-top: 2px solid #333;
+  width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.teacher-student-view-times h3,
+.teacher-student-view-perfect-scores h3 {
+  margin-bottom: 0;
+}
+
+.row-topper {
+  border-top: 2px solid #333;
+  padding-top: 1rem;
+}
+
+.game-id-label {
+  width: 19px;
+  margin-left: 1.1rem;
+  margin-right: 2.1rem;
+  font-weight: 700;
+}
+
+.game-perfect-mark-label {
+  width: 137px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+.game-score-label {
+  font-weight: 700;
+}
