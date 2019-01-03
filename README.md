@@ -16,7 +16,7 @@ It is currently in-development with the most recent alpha build hosted on Heroku
 
 - [Kevin Simpson](https://github.com/relasine) - lead design, lead front-end development, game logic, test, art asset development, API consumption
 - [Haley Jacobs](https://github.com/hljacobs5) - front-end logic, test, and API consumption, teacher-facing front-end, art asset development
-- [Dylan Meskis - back-end database and API servicing](https://github.com/dmeskis/pitch_battles_be)
+- [Dylan Meskis - back-end database, API servicing, game data analysis, schema design, firefighter](https://github.com/dmeskis/pitch_battles_be)
 
 #### Project origin
 
