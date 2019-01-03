@@ -1,0 +1,13 @@
+.teacher-account {
+  position: relative;
+}
+
+.teacher-logout-label {
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+}
+
+.teacher-logout-label:hover {
+  cursor: pointer;
+}
