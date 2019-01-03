@@ -155,7 +155,6 @@ class App extends Component {
 
   processGame = async update => {
     try {
-      console.log(update);
       const data = await postGameUserUpdate(update, this.state.webToken);
       this.setState({
         fetchError: false
@@ -170,7 +169,6 @@ class App extends Component {
 
   // -- FETCH ERROR HANDLING -- //
   setError = error => {
-    console.log(error);
     this.setState({
       fetchError: true,
       loading: false
@@ -197,7 +195,6 @@ class App extends Component {
         this.state.user.id,
         this.state.webToken
       );
-      console.log(response);
       this.getUpdatedUserData();
     } catch (error) {
       console.log(error);
