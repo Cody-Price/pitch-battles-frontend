@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ClassCard from "../ClassCard/ClassCard";
 import mockClassGroup from "../../utilities/mockClassGroup.js";
 import TeacherClassView from "../TeacherClassView/TeacherClassView.js";
-import TeacherStudentView from '../TeacherStudentView/TeacherStudentView.js';
+import TeacherStudentView from "../TeacherStudentView/TeacherStudentView.js";
 
 import { teacherAllClassesFetch } from "../../utilities/fetchCalls";
 
@@ -57,16 +57,18 @@ class TeacherDash extends Component {
   };
 
   navigateToStudentPage = () => {
-    this.navigate('selected student') 
-  }
+    this.navigate("selected student");
+  };
 
-  selectStudent = (student) => {
-    this.setState({currentStudent: student}, this.navigateToStudentPage)
-  }
+  selectStudent = student => {
+    this.setState({ currentStudent: student }, this.navigateToStudentPage);
+  };
 
   render() {
     const classes = this.state.classes.map(klass => {
-      return <ClassCard data={klass} classSelect={this.classSelect} />;
+      return (
+        <ClassCard key={klass.id} data={klass} classSelect={this.classSelect} />
+      );
     });
     return (
       <main className="teacher-dash">
@@ -112,7 +114,9 @@ class TeacherDash extends Component {
           />
         )}
         {this.state.currentPage === "teacher account" && <div />}
-        {this.state.currentPage === 'selected student' && <TeacherStudentView student={this.state.currentStudent} />}
+        {this.state.currentPage === "selected student" && (
+          <TeacherStudentView student={this.state.currentStudent} />
+        )}
       </main>
     );
   }

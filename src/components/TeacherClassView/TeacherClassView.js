@@ -3,7 +3,7 @@ import "./TeacherClassView.css";
 import mockFullClass from "../../utilities/mockFullClass.js";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { teacherSpecificClassFetch } from "../../utilities/fetchCalls";
-import StudentRow from '../StudentRow/StudentRow.js';
+import StudentRow from "../StudentRow/StudentRow.js";
 
 class TeacherClassView extends Component {
   constructor() {
@@ -39,7 +39,11 @@ class TeacherClassView extends Component {
   render() {
     const students = this.state.students.map(student => {
       return (
-        <StudentRow student={student} selectStudent={this.props.selectStudent}/>
+        <StudentRow
+          student={student}
+          key={student.id}
+          selectStudent={this.props.selectStudent}
+        />
       );
     });
     return (
