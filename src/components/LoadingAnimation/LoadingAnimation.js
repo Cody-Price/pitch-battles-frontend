@@ -18,7 +18,7 @@ class LoadingAnimation extends Component {
           <div className={`cloud1 ${animals[this.props.animals]}`} />
           <div className={`cloud2 ${animals[this.props.animals]}`} />
         </div>
-        <p> loading...</p>
+        <p>{this.props.message}</p>
       </section>
     );
   }
@@ -27,5 +27,6 @@ class LoadingAnimation extends Component {
 export default LoadingAnimation;
 
 LoadingAnimation.propTypes = {
+  message: PropTypes.string,
   animals: PropTypes.string
 };
