@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./TeacherDash.css";
 import PropTypes from "prop-types";
 import ClassCard from "../ClassCard/ClassCard";
-import mockClassGroup from "../../utilities/mockClassGroup.js";
 import TeacherClassView from "../TeacherClassView/TeacherClassView.js";
 import TeacherStudentView from "../TeacherStudentView/TeacherStudentView.js";
 import TeacherAccount from "../TeacherAccount/TeacherAccount";

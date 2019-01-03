@@ -2,42 +2,52 @@
 
 exports[`EditProfile should match the snapshot 1`] = `
 <section
-  className="edit-profile"
+  className="undefined edit-profile"
 >
   <form
-    className="edit-profile-form"
+    className="undefined edit-profile-form"
     onSubmit={[Function]}
   >
     <p
-      className="first-name-edit-label"
+      className="undefined first-name-edit-label"
     >
       first name:
     </p>
     <input
-      className="profile-first-name-input"
+      className="undefined profile-first-name-input"
       name="first_name"
       onChange={[Function]}
       placeholder="first name"
       value="Haley"
     />
     <p
-      className="last-name-edit-label"
+      className="undefined last-name-edit-label"
     >
       last name:
     </p>
     <input
-      className="profile-last-name-input"
+      className="undefined profile-last-name-input"
       name="last_name"
       onChange={[Function]}
       placeholder="last name"
       value="Jacobs"
     />
     <button
-      className="profile-submit-btn"
+      className="undefined profile-submit-btn"
       type="submit"
     >
       submit new info
     </button>
   </form>
+  <p
+    className="undefined false profile-error-success-messaging"
+  >
+    success!
+  </p>
+  <p
+    className="undefined false profile-error-success-messaging"
+  >
+    server error - please try again later
+  </p>
 </section>
 `;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeacherAccount should match the snapshot 1`] = `
+<main
+  className="teacher-account"
+>
+  <p
+    className="teacher-logout-label"
+  >
+    logout
+  </p>
+  <h3
+    className="teacher-account-label"
+  >
+    Teacher Account Info
+  </h3>
+  <EditProfile
+    userType="teacher"
+  />
+  <h3
+    className="teacher-password-label"
+  >
+    Change Password
+  </h3>
+  <ChangePassword
+    userType="teacher"
+  />
+</main>
+`;

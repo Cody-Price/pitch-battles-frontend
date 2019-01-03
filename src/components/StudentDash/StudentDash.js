@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
-import { timesHelper } from "../../utilities/timesHelper";
 import { badgeHelper } from "../../utilities/badgeHelper";
 import { fastestTimes } from "../../utilities/fastestTimes";
 import { leaveClassFetch } from "../../utilities/fetchCalls";

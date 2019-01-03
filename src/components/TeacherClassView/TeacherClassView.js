@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./TeacherClassView.css";
-import mockFullClass from "../../utilities/mockFullClass.js";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { teacherSpecificClassFetch } from "../../utilities/fetchCalls";
 import StudentRow from "../StudentRow/StudentRow.js";

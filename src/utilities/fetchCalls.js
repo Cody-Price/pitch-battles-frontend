@@ -130,8 +130,6 @@ export const changePasswordFetch = async (
     password: newPassword
   };
 
-  console.log(oldPassword, newPassword, webToken);
-
   const options = {
     body: JSON.stringify(body),
     method: "PATCH",

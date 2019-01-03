@@ -68,13 +68,14 @@ class ChangePassword extends Component {
         this.props.webToken
       );
 
-      this.setState({
-        success: true,
-        incompleteError: false,
-        incorrectPasswordError: false,
-        passwordMatchError: false
-      });
-      console.log(response);
+      if (response) {
+        this.setState({
+          success: true,
+          incompleteError: false,
+          incorrectPasswordError: false,
+          passwordMatchError: false
+        });
+      }
     } catch (error) {
       console.log(error);
       this.setState({

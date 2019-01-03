@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./StudentClassView.css";
-import mockClass from "../../utilities/mockClass";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { studentClassFetch } from "../../utilities/fetchCalls";
 

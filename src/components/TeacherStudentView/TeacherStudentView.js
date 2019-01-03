@@ -41,7 +41,7 @@ class TeacherStudentView extends Component {
     });
 
     const gameRows = this.props.student.attributes.games.data.map(game => {
-      return <GameRow game={game} />;
+      return <GameRow key={game.id} game={game} />;
     });
 
     return (
