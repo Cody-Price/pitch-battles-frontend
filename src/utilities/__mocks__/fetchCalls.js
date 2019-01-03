@@ -1,6 +1,6 @@
 import mockUser from "../../utilities/mockUser";
 import mockStudentClass from "../mockStudentClass";
-import mockTeacherClass from "../mockTeacherClass";
+import { mockTeacherClass } from "../mockTeacherClass";
 
 export const login = async body => {
   const mockResponse = { access_token: "test" };

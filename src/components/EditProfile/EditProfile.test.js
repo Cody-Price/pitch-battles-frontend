@@ -6,21 +6,22 @@ const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+jest.mock("../../utilities/fetchCalls");
+
 describe("EditProfile", () => {
   let wrapper;
   const mockUser = {
+    id: 12,
     attributes: {
       first_name: "Haley",
       last_name: "Jacobs"
     }
   };
-  let mockChangeProfile;
+
+  const mockWebToken = "123123124";
 
   beforeEach(() => {
-    mockChangeProfile = jest.fn();
-    wrapper = shallow(
-      <EditProfile user={mockUser} changeProfile={mockChangeProfile} />
-    );
+    wrapper = shallow(<EditProfile user={mockUser} webToken={mockWebToken} />);
   });
 
   it("should match the snapshot", () => {
@@ -29,7 +30,13 @@ describe("EditProfile", () => {
 
   describe("populateOnLoad", () => {
     it("should setState with props", () => {
-      const expected = { first_name: "Haley", last_name: "Jacobs" };
+      const expected = {
+        error: false,
+        first_name: "Haley",
+        last_name: "Jacobs",
+        success: false
+      };
+
       expect(wrapper.state()).toEqual(expected);
     });
   });
@@ -74,9 +81,12 @@ describe("EditProfile", () => {
       };
 
       const expected = {
+        error: false,
         first_name: "Steve",
-        last_name: "Jacobs"
+        last_name: "Jacobs",
+        success: false
       };
+
       wrapper.instance().handleChange(mockEvent);
 
       expect(wrapper.state()).toEqual(expected);
@@ -103,24 +113,6 @@ describe("EditProfile", () => {
       expect(spy).toReturn();
     });
 
-    it("should call changeProfile if state is not empty strings with the correct params", () => {
-      mockPreventDefault = jest.fn();
-      const mockEvent = { preventDefault: mockPreventDefault };
-      const expected = {
-        first_name: "Kevin",
-        last_name: "Simpson"
-      };
-
-      wrapper.setState({
-        first_name: "Kevin",
-        last_name: "Simpson"
-      });
-
-      wrapper.instance().handleSubmit(mockEvent);
-
-      expect(mockChangeProfile).toHaveBeenCalledWith(expected);
-    });
-
     it("should call handleSubmit on submit", () => {
       mockPreventDefault = jest.fn();
       const mockEvent = { preventDefault: mockPreventDefault };
@@ -132,6 +124,16 @@ describe("EditProfile", () => {
       });
 
       wrapper.find(".edit-profile-form").simulate("submit", mockEvent);
+
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it("should call changelProfileFetch", () => {
+      const spy = jest.spyOn(wrapper.instance(), "changeProfileFetch");
+      mockPreventDefault = jest.fn();
+      const mockEvent = { preventDefault: mockPreventDefault };
+
+      wrapper.instance().handleSubmit(mockEvent);
 
       expect(spy).toHaveBeenCalled();
     });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ReactTimeout from "react-timeout";
+// import ReactTimeout from "react-timeout";
 
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
@@ -17,7 +17,7 @@ import avatars from "../../utilities/avatars";
 import { instruments } from "../../utilities/instruments";
 import { postGameAnalysis } from "../../utilities/postGameAnalysis";
 
-class Game extends Component {
+export class Game extends Component {
   constructor() {
     super();
 
@@ -131,23 +131,19 @@ class Game extends Component {
       this.setState({
         resetting: true
       });
-      this.props.setTimeout(this.resetGame, 1300);
+      setTimeout(this.resetGame, 1300);
     } else {
-      this.setState(
-        {
-          currentLevel: 1,
-          perfectScores: [],
-          times: [],
-          kickedOff: false,
-          currentPitch: null,
-          running: false,
-          currentTime: 0,
-          start: 0,
-          resetting: false
-        }
-        // this.setupGame
-      );
-      // this.startTimer();
+      this.setState({
+        currentLevel: 1,
+        perfectScores: [],
+        times: [],
+        kickedOff: false,
+        currentPitch: null,
+        running: false,
+        currentTime: 0,
+        start: 0,
+        resetting: false
+      });
     }
   };
 
@@ -221,7 +217,7 @@ class Game extends Component {
       monsterHit: true,
       playerHit: false
     });
-    this.props.setTimeout(this.monsterHitResolve, 1000);
+    setTimeout(this.monsterHitResolve, 1000);
   };
 
   monsterAttack = () => {
@@ -232,7 +228,7 @@ class Game extends Component {
       playerHit: true
     });
 
-    this.props.setTimeout(this.playerHitResolve, 1000);
+    setTimeout(this.playerHitResolve, 1000);
   };
 
   monsterHitResolve = () => {
@@ -251,7 +247,7 @@ class Game extends Component {
       monsterStatus: "dead"
     });
 
-    this.props.setTimeout(this.victory, 3000);
+    setTimeout(this.victory, 3000);
   };
 
   monsterHitIdle = () => {
@@ -285,7 +281,7 @@ class Game extends Component {
       monsterStatus: "idle",
       playerHearts: []
     });
-    this.props.setTimeout(this.gameOver, 3000);
+    setTimeout(this.gameOver, 3000);
   };
 
   playerHitIdle = () => {
@@ -492,7 +488,7 @@ class Game extends Component {
   }
 }
 
-export default ReactTimeout(Game);
+export default Game;
 
 Game.propTypes = {
   instrument: PropTypes.string,
