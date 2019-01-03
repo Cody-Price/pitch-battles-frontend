@@ -1,4 +1,8 @@
 .edit-profile-form {
+  position: relative;
+  overflow: hidden;
+}
+.student.edit-profile-form {
   display: grid;
   grid-template-columns: 130px 1fr;
   animation: account-subsection-fade-in 0.3s linear;
@@ -7,11 +11,11 @@
   -moz-animation: account-subsection-fade-in 0.3s linear;
 }
 
-.edit-profile-form *:focus {
+.student.edit-profile-form *:focus {
   outline: none;
 }
 
-.profile-submit-btn {
+.student.profile-submit-btn {
   grid-column: 1/3;
   width: 150px;
   height: 23px;
@@ -23,11 +27,11 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
-.profile-submit-btn:active {
+.student.profile-submit-btn:active {
   box-shadow: none;
 }
 
-.edit-profile-form input {
+.student.edit-profile-form input {
   font-family: "chronotype";
   font-size: 1rem;
   height: 18px;
@@ -38,7 +42,7 @@
   padding-left: 8px;
 }
 
-.edit-profile-form p {
+.student.edit-profile-form p {
   padding-top: 1.3rem;
   margin: 0;
 }
@@ -53,19 +57,19 @@
 }
 
 @media (max-width: 770px) {
-  .edit-profile-form {
+  .student.edit-profile-form {
     padding-left: 1rem;
     display: block;
     grid-template-columns: 130px 1fr;
     animation: account-subsection-fade-in 0.3s linear;
   }
 
-  .edit-profile-form input {
+  .student.edit-profile-form input {
     width: 140px;
     margin-top: 0;
   }
 
-  .profile-submit-btn {
+  .student.profile-submit-btn {
     margin: 1rem 0rem;
     grid-column: 1;
   }
@@ -98,4 +102,56 @@
   100% {
     opacity: 1;
   }
+}
+
+/* TEACHER PROFILE  */
+
+.teacher.edit-profile-form {
+  width: 350px;
+  margin: auto;
+}
+
+.teacher.first-name-edit-label,
+.teacher.last-name-edit-label {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+  width: 110px;
+}
+
+.teacher.edit-profile-form input {
+  width: 200px;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.teacher.edit-profile-form button {
+  margin-top: 1.5rem;
+  width: 120px;
+}
+
+.teacher.edit-profile {
+  border-bottom: 2px solid #333;
+  padding-bottom: 2rem;
+}
+
+/* ERROR SUCCESS MESSAGING  */
+
+.profile-error-success-messaging {
+  position: absolute;
+  top: 180px;
+  left: 2000px;
+  width: 100px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.profile-error-success-messaging.true {
+  left: 435px;
+}
+
+.teacher.profile-error-success-messaging.true {
+  top: 169px;
+
+  left: 405px;
 }

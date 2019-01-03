@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 
 import "./EditProfile.css";
 
+import { changeProfileFetch } from "../../utilities/fetchCalls";
+
 class EditProfile extends Component {
   constructor() {
     super();
 
     this.state = {
       first_name: "",
-      last_name: ""
+      last_name: "",
+      success: false,
+      error: false
     };
   }
 
@@ -22,6 +26,39 @@ class EditProfile extends Component {
       first_name: this.props.user.attributes.first_name,
       last_name: this.props.user.attributes.last_name
     });
+  };
+
+  changeProfileFetch = async () => {
+    this.setState({
+      success: false,
+      error: false
+    });
+    const name = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name
+    };
+    console.log(name, this.props.user.id, this.props.webToken);
+    try {
+      const response = await changeProfileFetch(
+        name,
+        this.props.user.id,
+        this.props.webToken
+      );
+      console.log(response);
+      this.setState(
+        {
+          success: true,
+          error: false
+        },
+        this.props.getUpdatedUserData
+      );
+    } catch (error) {
+      this.setState({
+        error: true,
+        success: false
+      });
+      console.log(error);
+    }
   };
 
   handleChange = event => {
@@ -41,33 +78,37 @@ class EditProfile extends Component {
       last_name: this.state.last_name
     };
 
-    this.props.changeProfile(update);
+    this.changeProfileFetch(update);
   };
 
   render() {
     return (
-      <section className="edit-profile">
+      <section className={`${this.props.userType} edit-profile`}>
         <form
-          className="edit-profile-form"
+          className={`${this.props.userType} edit-profile-form`}
           onSubmit={event => {
             this.handleSubmit(event);
           }}
         >
-          <p className="first-name-edit-label">first name:</p>
+          <p className={`${this.props.userType} first-name-edit-label`}>
+            first name:
+          </p>
           <input
             name="first_name"
-            className="profile-first-name-input"
+            className={`${this.props.userType} profile-first-name-input`}
             value={this.state.first_name}
             placeholder="first name"
             onChange={event => {
               this.handleChange(event);
             }}
           />
-          <p className="last-name-edit-label">last name:</p>
+          <p className={`${this.props.userType} last-name-edit-label`}>
+            last name:
+          </p>
 
           <input
             name="last_name"
-            className="profile-last-name-input"
+            className={`${this.props.userType} profile-last-name-input`}
             value={this.state.last_name}
             placeholder="last name"
             onChange={event => {
@@ -75,10 +116,27 @@ class EditProfile extends Component {
             }}
           />
 
-          <button type="submit" className="profile-submit-btn">
+          <button
+            type="submit"
+            className={`${this.props.userType} profile-submit-btn`}
+          >
             submit new info
           </button>
         </form>
+        <p
+          className={`${this.props.userType} ${
+            this.state.success
+          } profile-error-success-messaging`}
+        >
+          success!
+        </p>
+        <p
+          className={`${this.props.userType} ${
+            this.state.error
+          } profile-error-success-messaging`}
+        >
+          server error - please try again later
+        </p>
       </section>
     );
   }
