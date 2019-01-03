@@ -67,19 +67,19 @@ class TeacherStudentView extends Component {
           <section className="teacher-student-times-row">
             <div className="teacher-student-time-block">
               <p>Level One</p>
-              <p>{attributes.level_one_fastest_time}</p>
+              <p>{attributes.level_one_fastest_time / 1000}</p>
             </div>
             <div className="teacher-student-time-block">
               <p>Level Two</p>
-              <p>{attributes.level_two_fastest_time}</p>
+              <p>{attributes.level_two_fastest_time / 1000}</p>
             </div>
             <div className="teacher-student-time-block">
               <p>Level Three</p>
-              <p>{attributes.level_three_fastest_time}</p>
+              <p>{attributes.level_three_fastest_time / 1000}</p>
             </div>
             <div className="teacher-student-time-block">
               <p>Level Four</p>
-              <p>{attributes.level_four_fastest_time}</p>
+              <p>{attributes.level_four_fastest_time / 1000}</p>
             </div>
           </section>
         </section>
