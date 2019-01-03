@@ -70,8 +70,10 @@ class StudentAccount extends Component {
         <section className="student-account-active-tab">
           {this.state.activePage === "edit-profile-active" && (
             <EditProfile
+              userType="student"
               user={this.props.user}
-              changeProfile={this.props.changeProfile}
+              getUpdatedUserData={this.props.getUpdatedUserData}
+              webToken={this.props.webToken}
             />
           )}
           {this.state.activePage === "edit-avatar-active" && (
@@ -83,8 +85,9 @@ class StudentAccount extends Component {
           {this.state.activePage === "change-password-active" && (
             <ChangePassword
               user={this.props.user}
-              changePassword={this.props.changePassword}
               updateWebToken={this.props.updateWebToken}
+              userType="student"
+              webToken={this.props.webToken}
             />
           )}
         </section>
