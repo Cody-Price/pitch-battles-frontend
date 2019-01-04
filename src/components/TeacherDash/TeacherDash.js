@@ -179,6 +179,11 @@ class TeacherDash extends Component {
   }
 }
 
+TeacherDash.propTypes = {
+  user: PropTypes.object,
+  webToken: PropTypes.number
+};
+
 export default TeacherDash;
 
 TeacherDash.propTypes = {

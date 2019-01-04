@@ -42,3 +42,4 @@ TeacherAccount.propTypes = {
   getUpdatedUserData: PropTypes.func,
   updateWebToken: PropTypes.func
 }
+

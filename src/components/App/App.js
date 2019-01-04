@@ -190,11 +190,7 @@ class App extends Component {
 
   changeAvatar = async avatar => {
     try {
-      const response = await changeAvatarFetch(
-        avatar,
-        this.state.user.id,
-        this.state.webToken
-      );
+      await changeAvatarFetch(avatar, this.state.user.id, this.state.webToken);
       this.getUpdatedUserData();
     } catch (error) {
       console.log(error);

@@ -140,37 +140,6 @@ describe("ChangePassword", () => {
       expect(spy).toReturn();
     });
 
-    it.skip("should call changePassword with the appropriate params", async () => {
-      mockPreventDefault = jest.fn();
-
-      const mockEvent = {
-        target: {
-          name: "oldPassword",
-          value: "I am an old password"
-        },
-        preventDefault: mockPreventDefault
-      };
-
-      const mockConfirmOldPassword = jest.fn().mockImplementation(() => {
-        return Promise.resolve(true);
-      });
-
-      const expectedOne = "What";
-      const expectedTwo = "Hello";
-
-      wrapper.setState({
-        newPassword: "Hello",
-        confirmPassword: "Hello",
-        oldPassword: "What"
-      });
-
-      wrapper.instance().confirmOldPassword = mockConfirmOldPassword;
-
-      await wrapper.instance().handleSubmit(mockEvent);
-
-      expect(mockChangePassword).toBeCalledWith(expectedOne, expectedTwo);
-    });
-
     it("should call handleSubmit on submit", () => {
       mockPreventDefault = jest.fn();
 
