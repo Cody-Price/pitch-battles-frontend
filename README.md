@@ -11,7 +11,7 @@ It is currently in-development with the most recent alpha build hosted on Heroku
 #### Developers
 
 <div align='center'>
-  <img src='https://user-images.githubusercontent.com/29719272/50570158-0cc55000-0d3b-11e9-91e3-bc33ab61d933.png'  alt='pitch-battles-team' />
+  <img src='https://user-images.githubusercontent.com/29719272/50695756-d6b5f380-0ffa-11e9-952f-efe70b2f8001.png'  alt='pitch-battles-team' />
 </div>
 
 - [Kevin Simpson](https://github.com/relasine) - lead design, lead front-end development, game logic, test, art asset development, API consumption
