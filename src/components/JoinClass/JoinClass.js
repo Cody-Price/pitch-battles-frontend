@@ -21,7 +21,7 @@ class JoinClass extends Component {
     event.preventDefault();
 
     try {
-      const data = await joinClassFetch(
+      await joinClassFetch(
         this.state.classKey,
         this.props.user.id,
         this.props.webToken
