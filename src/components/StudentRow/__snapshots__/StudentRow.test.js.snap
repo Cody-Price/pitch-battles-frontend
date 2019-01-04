@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentRow should match the snapshot 1`] = `
+<article
+  className="class-row"
+>
+  <p
+    className="student-select-clicker"
+    onClick={[Function]}
+  >
+    kevin
+     
+    simpson
+  </p>
+  <p />
+  <p>
+    1
+  </p>
+  <p>
+    2
+  </p>
+  <p>
+    3
+  </p>
+  <p>
+    4
+  </p>
+  <p>
+    Delete
+  </p>
+</article>
+`;

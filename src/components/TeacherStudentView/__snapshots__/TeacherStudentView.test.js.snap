@@ -1,3 +1,201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TeacherStudentView should match the snapshot 1`] = `undefined`;
+exports[`TeacherStudentView should match the snapshot 1`] = `
+<section
+  className="teacher-student-view"
+>
+  <header
+    className="teacher-student-view-header"
+  >
+    <button
+      className="teacher-student-view-back-btn"
+    >
+      back
+    </button>
+    <section
+      className="header-left-wrapper"
+    >
+      <h2
+        className="teacher-student-view-name"
+      >
+         
+      </h2>
+      <h3
+        className="teacher-student-view-class-name"
+      >
+        4th Grade Band
+      </h3>
+    </section>
+    <div
+      className="teacher-student-view-total-games-container"
+    >
+      <p
+        className="ts-total-games"
+      >
+        Total Games
+      </p>
+      <p
+        className="teacher-student-view-total-games"
+      />
+    </div>
+  </header>
+  <section
+    className="teacher-student-view-times"
+  >
+    <h3>
+      Fastest Times
+    </h3>
+    <section
+      className="teacher-student-times-row"
+    >
+      <div
+        className="teacher-student-time-block"
+      >
+        <p>
+          Level One
+        </p>
+        <p>
+          NaN
+        </p>
+      </div>
+      <div
+        className="teacher-student-time-block"
+      >
+        <p>
+          Level Two
+        </p>
+        <p>
+          NaN
+        </p>
+      </div>
+      <div
+        className="teacher-student-time-block"
+      >
+        <p>
+          Level Three
+        </p>
+        <p>
+          NaN
+        </p>
+      </div>
+      <div
+        className="teacher-student-time-block"
+      >
+        <p>
+          Level Four
+        </p>
+        <p>
+          NaN
+        </p>
+      </div>
+    </section>
+  </section>
+  <section
+    className="teacher-student-view-perfect-scores"
+  >
+    <h3>
+      Perfect Scores
+    </h3>
+    <section
+      className="teacher-student-perfect-row"
+    >
+      <div
+        className="teacher-student-perfect-block"
+        key="level one"
+      >
+        <p>
+          level one
+        </p>
+        <div
+          className="false perfect-score"
+        />
+      </div>
+      <div
+        className="teacher-student-perfect-block"
+        key="level two"
+      >
+        <p>
+          level two
+        </p>
+        <div
+          className="false perfect-score"
+        />
+      </div>
+      <div
+        className="teacher-student-perfect-block"
+        key="level three"
+      >
+        <p>
+          level three
+        </p>
+        <div
+          className="false perfect-score"
+        />
+      </div>
+      <div
+        className="teacher-student-perfect-block"
+        key="level four"
+      >
+        <p>
+          level four
+        </p>
+        <div
+          className="false perfect-score"
+        />
+      </div>
+    </section>
+  </section>
+  <section
+    className="game-row row-topper"
+  >
+    <p
+      className="game-id-label"
+    >
+      id
+    </p>
+    <p
+      className="game-score-label"
+    >
+      L1 Time
+    </p>
+    <p
+      className="game-perfect-mark-label"
+    >
+      L1 Perfect
+    </p>
+    <p
+      className="game-score-label"
+    >
+      L2 Time
+    </p>
+    <p
+      className="game-perfect-mark-label"
+    >
+      L2 Perfect
+    </p>
+    <p
+      className="game-score-label"
+    >
+      L3 Time
+    </p>
+    <p
+      className="game-perfect-mark-label"
+    >
+      L3 Perfect
+    </p>
+    <p
+      className="game-score-label"
+    >
+      L4 Time
+    </p>
+    <p
+      className="game-perfect-mark-label"
+    >
+      L4 Perfect
+    </p>
+  </section>
+  <section
+    className="teacher-student-game-scroll"
+  />
+</section>
+`;

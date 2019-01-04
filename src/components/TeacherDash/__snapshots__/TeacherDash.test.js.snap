@@ -1,3 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TeacherDash should match the snapshot 1`] = `undefined`;
+exports[`TeacherDash should match the snapshot 1`] = `
+<main
+  className="teacher-dash"
+>
+  <header
+    className="teacher-dash-header"
+  >
+    <div
+      className="teacher-dash-filter"
+    >
+      <h1>
+        Pitch Battles for Teachers
+      </h1>
+      <aside
+        className="teacher-account-icon"
+      >
+        <div
+          className="teacher-dash-icon"
+        >
+          <p
+            className="teacher-dash-teacher-name"
+          >
+            Haley
+             
+            Jacobs
+          </p>
+        </div>
+      </aside>
+      <div
+        className="student-search"
+      />
+      <i
+        className="fas fa-home"
+        onClick={[Function]}
+      />
+      <i
+        className="fas fa-user"
+        onClick={[Function]}
+      />
+    </div>
+  </header>
+  <section
+    className="classes-container"
+  >
+    <article
+      className="new-class-card"
+    >
+      <header>
+        <div
+          className="class-card-header-tint"
+        >
+          <h4
+            className="new-class-card-label"
+          >
+            Create New Class
+          </h4>
+        </div>
+      </header>
+      <form
+        className="create-new-class-form"
+        onSubmit={[Function]}
+      >
+        <input
+          name="newClassName"
+          onChange={[Function]}
+          placeholder="class name"
+          value=""
+        />
+        <button
+          className="new-class-button"
+        >
+          create
+        </button>
+      </form>
+    </article>
+  </section>
+</main>
+`;
