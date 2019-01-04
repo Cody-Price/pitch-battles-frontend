@@ -34,11 +34,10 @@ class TeacherAccount extends Component {
 
 export default TeacherAccount;
 
-
 TeacherAccount.propTypes = {
   logout: PropTypes.func,
   user: PropTypes.object,
-  webToken: 'string',
-  updateWebToken: PropTypes.func
+  webToken: "string",
+  updateWebToken: PropTypes.func,
   changeProfile: PropTypes.func
 };
