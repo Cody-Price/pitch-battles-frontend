@@ -240,5 +240,13 @@ export default StudentDash;
 StudentDash.propTypes = {
   user: PropTypes.object,
   startGame: PropTypes.func,
-  navigate: PropTypes.func
+  navigate: PropTypes.func,
+  getUpdatedUserData: PropTypes.func,
+  avatar: PropTypes.number,
+  id: PropTypes.number,
+  data: PropTypes.array,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string,
+  name: PropTypes.string,
+  total_games_played: PropTypes.number
 };
