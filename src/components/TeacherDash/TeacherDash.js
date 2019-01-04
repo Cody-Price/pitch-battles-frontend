@@ -188,10 +188,8 @@ export default TeacherDash;
 
 TeacherDash.propTypes = {
   webToken: PropTypes.number,
-  first_name: PropTypes.string,
-  last_name: PropTypes.string,
   user: PropTypes.object,
   changeProfile: PropTypes.func,
   getUpdatedUserData: PropTypes.func,
   logout: PropTypes.func
-}
+};
