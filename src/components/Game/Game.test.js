@@ -1,7 +1,6 @@
 import React from "react";
 import Game from "./Game";
 import mockUser from "../../utilities/mockUser";
-
 import Enzyme, { shallow } from "enzyme";
 const EnzymeAdapter = require("enzyme-adapter-react-16");
 
@@ -18,7 +17,6 @@ describe("Game", () => {
   beforeEach(() => {
     mockEndGame = jest.fn();
     mockProcessGame = jest.fn();
-    const user = mockUser;
     Date.now = jest.fn(() => 1482363367071);
     wrapper = shallow(
       <Game
@@ -90,7 +88,9 @@ describe("Game", () => {
         currentTime: 0,
         currentLevel: 1,
         currentPitch: "a",
-        kickedOff: true
+        kickedOff: true,
+        exiting: false,
+        resetting: false
       };
 
       wrapper.instance().setupGame();
@@ -209,22 +209,6 @@ describe("Game", () => {
         expected.perfectScores
       );
       expect(wrapper.instance().state.times).toEqual(expected.times);
-    });
-
-    it("should call setupGame", () => {
-      const spy = jest.spyOn(wrapper.instance(), "setupGame");
-
-      wrapper.instance().resetGame();
-
-      expect(spy).toHaveBeenCalled();
-    });
-
-    it("should call startTime", () => {
-      const spy = jest.spyOn(wrapper.instance(), "startTimer");
-
-      wrapper.instance().resetGame();
-
-      expect(spy).toHaveBeenCalled();
     });
   });
 

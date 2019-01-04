@@ -37,7 +37,6 @@ class EditProfile extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name
     };
-    console.log(name, this.props.user.id, this.props.webToken);
     try {
       const response = await changeProfileFetch(
         name,
