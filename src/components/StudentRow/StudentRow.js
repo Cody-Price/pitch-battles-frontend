@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./StudentRow.css";
+import PropTypes from 'prop-types';
 
 class StudentRow extends Component {
   render() {
@@ -24,3 +25,15 @@ class StudentRow extends Component {
 }
 
 export default StudentRow;
+
+StudentRow.propTypes = {
+  selectStudent: PropTypes.func,
+  student: PropTypes.object,
+  total_games_played: PropTypes.number,
+  level_one_fastest_time: PropTypes.number,
+  level_two_fastest_time: PropTypes.number,
+  level_three_fastest_time: PropTypes.number,
+  level_four_fastest_time: PropTypes.number,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string
+}
