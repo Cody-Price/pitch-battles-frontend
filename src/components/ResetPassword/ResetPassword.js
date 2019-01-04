@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ResetPassword.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { resetPasswordFetch } from "../../utilities/fetchCalls";
 
@@ -90,7 +90,7 @@ class ResetPassword extends Component {
           <input
             name="password"
             value={this.state.password}
-            className="reset-pw-input"
+            className="reset-pw-input pw-reset-field"
             placeholder="password"
             onChange={e => {
               this.handleChange(e);
@@ -100,7 +100,7 @@ class ResetPassword extends Component {
           <input
             name="confirmPassword"
             value={this.state.confirmPassword}
-            className="reset-pw-input"
+            className="reset-pw-input confirm-pw-reset-field"
             placeholder="confirm password"
             onChange={e => {
               this.handleChange(e);
@@ -110,7 +110,7 @@ class ResetPassword extends Component {
           <input
             name="webToken"
             value={this.state.webToken}
-            className="reset-pw-input"
+            className="reset-pw-input webtoken-pw-reset-field"
             placeholder="reset token"
             onChange={e => {
               this.handleChange(e);
@@ -140,4 +140,4 @@ export default ResetPassword;
 
 ResetPassword.propTypes = {
   toLogin: PropTypes.func
-}
+};
