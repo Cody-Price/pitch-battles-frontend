@@ -79,7 +79,7 @@ describe("App", () => {
       wrapper.setState({
         loadingAnimal: "duck",
         user: { attributes: { role: "teacher" } },
-        webToken: 23,
+        webToken: "23",
         newAcheivements: ["weee"],
         newFastestTimes: [123],
         fetchError: true,
@@ -213,17 +213,17 @@ describe("App", () => {
   describe("getUpdatedUserData", () => {
     it("should call userFetch", async () => {
       wrapper.setState({
-        webToken: 123
+        webToken: "123"
       });
 
       await wrapper.instance().getUpdatedUserData();
 
-      expect(userFetch).toHaveBeenCalledWith(123);
+      expect(userFetch).toHaveBeenCalledWith("123");
     });
 
     it("should setState", async () => {
       wrapper.setState({
-        webToken: 123
+        webToken: "123"
       });
 
       await wrapper.instance().getUpdatedUserData();
@@ -236,12 +236,12 @@ describe("App", () => {
     it("should call changeAvatarFetch", async () => {
       wrapper.setState({
         user: mockUser,
-        webToken: 123
+        webToken: "123"
       });
 
       await wrapper.instance().changeAvatar(1);
 
-      expect(changeAvatarFetch).toHaveBeenCalledWith(1, "1", 123);
+      expect(changeAvatarFetch).toHaveBeenCalledWith(1, "1", "123");
     });
   });
 });

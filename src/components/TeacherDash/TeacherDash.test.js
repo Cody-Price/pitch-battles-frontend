@@ -20,7 +20,7 @@ describe("TeacherDash", () => {
     }
   };
 
-  const mockWebToken = 123;
+  const mockWebToken = "123";
   let mockChangeProfile;
   let mockGetUpdatedUserData;
   let mockLogout;

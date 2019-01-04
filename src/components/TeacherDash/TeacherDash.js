@@ -187,7 +187,7 @@ TeacherDash.propTypes = {
 export default TeacherDash;
 
 TeacherDash.propTypes = {
-  webToken: PropTypes.number,
+  webToken: PropTypes.string,
   user: PropTypes.object,
   changeProfile: PropTypes.func,
   getUpdatedUserData: PropTypes.func,

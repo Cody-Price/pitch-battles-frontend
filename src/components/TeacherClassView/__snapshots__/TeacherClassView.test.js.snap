@@ -42,6 +42,7 @@ exports[`TeacherClassView should match the snapshot 1`] = `
       </article>
       <StudentRow
         key="3"
+        refresh={[Function]}
         student={
           Object {
             "attributes": Object {
