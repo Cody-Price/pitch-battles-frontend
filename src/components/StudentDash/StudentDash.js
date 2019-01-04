@@ -102,7 +102,7 @@ class StudentDash extends Component {
 
     badges = badges.map((badge, index) => {
       const badgeClass = badgeHelper.find(helperBadge => {
-        return helperBadge.rank === badge.id;
+        return helperBadge.rank === parseInt(badge.id);
       });
 
       return (
@@ -114,7 +114,7 @@ class StudentDash extends Component {
 
     mediaBadges = mediaBadges.map((badge, index) => {
       const badgeClass = badgeHelper.find(helperBadge => {
-        return helperBadge.rank === badge.id;
+        return helperBadge.rank === parseInt(badge.id);
       });
 
       return (
