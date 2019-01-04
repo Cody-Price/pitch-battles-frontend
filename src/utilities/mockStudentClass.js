@@ -1,4 +1,4 @@
-export const mockStudentCass = {
+export const mockStudentClass = {
   data: {
     id: "5",
     type: "class_dashboard",

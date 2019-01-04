@@ -1,5 +1,14 @@
 import React from "react";
 import App from "./App";
+import {
+  login,
+  signUp,
+  postGameUserUpdate,
+  userFetch,
+  changeAvatarFetch
+} from "../../utilities/fetchCalls";
+import mockUser from "../../utilities/mockUser";
+
 import Enzyme, { shallow } from "enzyme";
 const EnzymeAdapter = require("enzyme-adapter-react-16");
 
@@ -25,6 +34,12 @@ describe("App", () => {
 
       expect(wrapper.state().webToken).toEqual("test");
     });
+
+    it("should call login", async () => {
+      await wrapper.instance().loginUser("mockbody");
+
+      expect(login).toHaveBeenCalledWith("mockbody");
+    });
   });
 
   describe("updateWebToken", () => {
@@ -47,6 +62,16 @@ describe("App", () => {
 
       expect(wrapper.state().signUpSuccessful).toEqual(true);
     });
+
+    it("should call signUp", async () => {
+      const mockBody = {
+        role: 0
+      };
+
+      await wrapper.instance().signUpUser(mockBody);
+
+      expect(signUp).toHaveBeenCalledWith(mockBody);
+    });
   });
 
   describe("logout", () => {
@@ -54,7 +79,7 @@ describe("App", () => {
       wrapper.setState({
         loadingAnimal: "duck",
         user: { attributes: { role: "teacher" } },
-        webToken: 23,
+        webToken: "23",
         newAcheivements: ["weee"],
         newFastestTimes: [123],
         fetchError: true,
@@ -131,6 +156,17 @@ describe("App", () => {
 
       expect(wrapper.state().fetchError).toEqual(false);
     });
+
+    it("should call postGameUserUpdate", async () => {
+      const update = "update";
+      wrapper.setState({
+        webToken: 123
+      });
+
+      await wrapper.instance().processGame(update);
+
+      expect(postGameUserUpdate).toHaveBeenCalledWith(update, 123);
+    });
   });
 
   describe("setError", () => {
@@ -171,6 +207,41 @@ describe("App", () => {
       wrapper.instance().updateWebToken(expected);
 
       expect(wrapper.state().webToken).toEqual(expected);
+    });
+  });
+
+  describe("getUpdatedUserData", () => {
+    it("should call userFetch", async () => {
+      wrapper.setState({
+        webToken: "123"
+      });
+
+      await wrapper.instance().getUpdatedUserData();
+
+      expect(userFetch).toHaveBeenCalledWith("123");
+    });
+
+    it("should setState", async () => {
+      wrapper.setState({
+        webToken: "123"
+      });
+
+      await wrapper.instance().getUpdatedUserData();
+
+      expect(wrapper.state().user).toEqual(mockUser);
+    });
+  });
+
+  describe("changeAvatar", () => {
+    it("should call changeAvatarFetch", async () => {
+      wrapper.setState({
+        user: mockUser,
+        webToken: "123"
+      });
+
+      await wrapper.instance().changeAvatar(1);
+
+      expect(changeAvatarFetch).toHaveBeenCalledWith(1, "1", "123");
     });
   });
 });

@@ -207,11 +207,20 @@
   margin-left: 2rem;
 }
 
+.student-dash-wrapper button:hover {
+  cursor: pointer;
+}
+
 .student-class-link {
   grid-column: 2;
   text-align: start;
   margin-top: 0.5rem;
   margin-left: 2rem;
+}
+
+.student-class-link:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .onboarding-link {

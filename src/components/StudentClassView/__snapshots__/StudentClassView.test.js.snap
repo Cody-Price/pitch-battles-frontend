@@ -4,8 +4,193 @@ exports[`StudentClassView should match the snapshot 1`] = `
 <div
   className="student-class-view-wrapper"
 >
-  <LoadingAnimation
-    animals="cat"
-  />
+  <article
+    className="student-class-view"
+  >
+    <header
+      className="student-class-view-header"
+    >
+      <button
+        className="class-view-back-btn"
+        onClick={[Function]}
+      >
+        exit
+      </button>
+      <h1
+        className="student-class-view-class-name"
+      >
+        6th Grade Orchestra
+      </h1>
+      <h2
+        className="student-class-view-teacher-name"
+      >
+        teacher -
+         
+        Kevin
+         
+        Simpson
+      </h2>
+    </header>
+    <section
+      className="class-view-fastest-times"
+    >
+      <h3
+        className="class-view-fastest-times-label"
+      >
+        fastest times
+      </h3>
+      <div
+        className="class-view-fastest-times-row"
+      >
+        <article
+          className="class-view-fastest-time"
+        >
+          <h3
+            className="class-view-level"
+          >
+            level one
+          </h3>
+          <p
+            className="class-view-fastest-time-number"
+          >
+            9.401
+          </p>
+          <p
+            className="class-view-fastest-student"
+          >
+            Chet
+             
+            Manly
+          </p>
+        </article>
+        <article
+          className="class-view-fastest-time"
+        >
+          <h3
+            className="class-view-level"
+          >
+            level two
+          </h3>
+          <p
+            className="class-view-fastest-time-number"
+          >
+            15.412
+          </p>
+          <p
+            className="class-view-fastest-student"
+          >
+            Chet
+             
+            Manly
+          </p>
+        </article>
+        <article
+          className="class-view-fastest-time"
+        >
+          <h3
+            className="class-view-level"
+          >
+            level three
+          </h3>
+          <p
+            className="class-view-fastest-time-number"
+          >
+            21.217
+          </p>
+          <p
+            className="class-view-fastest-student"
+          >
+            Chet
+             
+            Manly
+          </p>
+        </article>
+        <article
+          className="class-view-fastest-time"
+        >
+          <h3
+            className="class-view-level"
+          >
+            level four
+          </h3>
+          <p
+            className="class-view-fastest-time-number"
+          >
+            27.623
+          </p>
+          <p
+            className="class-view-fastest-student"
+          >
+            Chet
+             
+            Manly
+          </p>
+        </article>
+        <article
+          className="class-view-fastest-time"
+        >
+          <h3
+            className="class-view-level"
+          >
+            overall
+          </h3>
+          <p
+            className="class-view-fastest-time-number"
+          >
+            33.333
+          </p>
+          <p
+            className="class-view-fastest-student"
+          >
+            Dylan
+             
+            Meskis
+          </p>
+        </article>
+      </div>
+    </section>
+    <section
+      className="most-games-badges-row"
+    >
+      <article
+        className="most-games game-badge"
+      >
+        <h3
+          className="most-games-badges-label"
+        >
+          most games
+        </h3>
+        <p
+          className="class-view-most-student"
+        >
+          Chet
+           
+          Manly
+           
+          - 
+          24
+        </p>
+      </article>
+      <article
+        className="most-badges game-badge"
+      >
+        <h3
+          className="most-games-badges-label"
+        >
+          most badges
+        </h3>
+        <p
+          className="class-view-most-student"
+        >
+          Chet
+           
+          Manly
+           
+          - 
+          12
+        </p>
+      </article>
+    </section>
+  </article>
 </div>
 `;

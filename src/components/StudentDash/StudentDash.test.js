@@ -129,5 +129,21 @@ describe("StudentDash", () => {
 
       expect(mockNavigate).toHaveBeenCalledWith(expected);
     });
+
+    it("should call navigate with the appropriate params", () => {
+      const expected = "student account";
+
+      wrapper.find(".avatar-circle").simulate("click");
+
+      expect(mockNavigate).toHaveBeenCalledWith(expected);
+    });
+
+    it("should call navigate with the appropriate params", () => {
+      const expected = "student class view";
+
+      wrapper.find(".student-class-link").simulate("click");
+
+      expect(mockNavigate).toHaveBeenCalledWith(expected);
+    });
   });
 });
