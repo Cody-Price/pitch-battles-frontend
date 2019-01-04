@@ -29,7 +29,7 @@ describe("StudentDash", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe("handleInstrumentDropdow", () => {
+  describe("handleInstrumentDropdown", () => {
     it("should set state", () => {
       const expected = true;
 
