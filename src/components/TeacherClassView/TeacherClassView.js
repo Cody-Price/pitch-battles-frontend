@@ -3,6 +3,7 @@ import "./TeacherClassView.css";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { teacherSpecificClassFetch } from "../../utilities/fetchCalls";
 import StudentRow from "../StudentRow/StudentRow.js";
+import PropTypes from 'prop-types'
 
 class TeacherClassView extends Component {
   constructor() {
@@ -24,7 +25,6 @@ class TeacherClassView extends Component {
         this.props.id,
         this.props.webToken
       );
-      console.log(klass)
       this.setState({
         klass: klass.data.attributes,
         students: klass.data.attributes.students.data,
@@ -83,3 +83,9 @@ class TeacherClassView extends Component {
 }
 
 export default TeacherClassView;
+
+TeacherClassView.propTypes = {
+  id: PropTypes.number,
+  webToken: PropTypes.string,
+  selectStudent: PropTypes.func
+}

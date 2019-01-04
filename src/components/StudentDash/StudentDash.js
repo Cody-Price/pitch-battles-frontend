@@ -238,7 +238,16 @@ class StudentDash extends Component {
 export default StudentDash;
 
 StudentDash.propTypes = {
-  user: PropTypes.object,
   startGame: PropTypes.func,
-  navigate: PropTypes.func
+  id: PropTypes.number,
+  webToken: PropTypes.string,
+  getUpdatedUserData: PropTypes.func,
+  data: PropTypes.array,
+  user: PropTypes.object,
+  navigate: PropTypes.func,
+  avatar: PropTypes.number,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string,
+  name: PropTypes.string,
+  total_games_played: PropTypes.number
 };

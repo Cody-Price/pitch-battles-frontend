@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./JoinClass.css";
+import PropTypes from 'prop-types';
 
 import { joinClassFetch } from "../../utilities/fetchCalls";
 
@@ -52,3 +53,9 @@ class JoinClass extends Component {
 }
 
 export default JoinClass;
+
+JoinClass.propTypes = {
+  id: PropTypes.number,
+  webToken: PropTypes.string,
+  getUpdatedUserData: PropTypes.func
+}

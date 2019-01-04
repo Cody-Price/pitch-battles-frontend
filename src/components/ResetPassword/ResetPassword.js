@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ResetPassword.css";
+import PropTypes from 'prop-types';
 
 import { resetPasswordFetch } from "../../utilities/fetchCalls";
 
@@ -136,3 +137,7 @@ class ResetPassword extends Component {
 }
 
 export default ResetPassword;
+
+ResetPassword.propTypes = {
+  toLogin: PropTypes.func
+}

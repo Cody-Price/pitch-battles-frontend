@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./GameRow.css";
+import PropTypes from 'prop-types';
 
 import "../../utilities/gameHelper";
 
@@ -39,3 +40,15 @@ class GameRow extends Component {
 }
 
 export default GameRow;
+
+GameRow.propTypes = {
+  game: PropTypes.object,
+  level_one_duration: PropTypes.number,
+  level_one_perfect: PropTypes.bool,
+  level_two_duration: PropTypes.number,
+  level_two_perfect: PropTypes.bool,
+  level_three_duration: PropTypes.number,
+  level_three_perfect: PropTypes.bool,
+  level_four_duration: PropTypes.number,
+  level_four_perfect: PropTypes.bool
+}

@@ -79,7 +79,7 @@ Login.propTypes = {
   loginUser: PropTypes.func,
   status: PropTypes.bool,
   badLogin: PropTypes.bool,
-  logginIn: PropTypes.bool,
+  loggingIn: PropTypes.bool,
   forgotPasswordScreen: PropTypes.func,
   landingChange: PropTypes.func
 };

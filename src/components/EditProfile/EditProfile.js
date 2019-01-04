@@ -145,5 +145,11 @@ export default EditProfile;
 
 EditProfile.propTypes = {
   user: PropTypes.object,
-  changeProfile: PropTypes.func
+  changeProfile: PropTypes.func,
+  userTypes: PropTypes.string,
+  getUpdatedUserData: PropTypes.func,
+  webToken: PropTypes.string,
+  id: PropTypes.number,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string
 };

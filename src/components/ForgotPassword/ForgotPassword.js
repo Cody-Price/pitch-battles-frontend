@@ -93,5 +93,6 @@ export default ForgotPassword;
 
 ForgotPassword.propTypes = {
   status: PropTypes.bool,
-  backToLogin: PropTypes.func
+  backToLogin: PropTypes.func,
+  resetPassword: PropTypes.func
 };

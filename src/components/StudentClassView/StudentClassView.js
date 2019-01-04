@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./StudentClassView.css";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { studentClassFetch } from "../../utilities/fetchCalls";
+import PropTypes from 'prop-types';
 
 class StudentClassView extends Component {
   constructor() {
@@ -185,3 +186,8 @@ class StudentClassView extends Component {
 }
 
 export default StudentClassView;
+
+StudentClassView.propTypes = {
+  webToken: PropTypes.string,
+  navigate: PropTypes.func,
+}

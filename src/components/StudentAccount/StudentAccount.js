@@ -101,6 +101,8 @@ export default StudentAccount;
 StudentAccount.propTypes = {
   navigate: PropTypes.func,
   logout: PropTypes.func,
+  getUpdatedUserData: PropTypes.func,
+  webToken: PropTypes.string,
   user: PropTypes.object,
   changeProfile: PropTypes.func,
   changeAvatar: PropTypes.func,

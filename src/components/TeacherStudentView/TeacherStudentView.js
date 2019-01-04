@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./TeacherStudentView.css";
+import PropTypes from 'prop-types';
 
 import GameRow from "../GameRow/GameRow";
 
@@ -113,3 +114,9 @@ class TeacherStudentView extends Component {
 }
 
 export default TeacherStudentView;
+
+TeacherStudentView.propTypes = {
+  student: PropTypes.object,
+  navigate: PropTypes.func,
+  data: PropTypes.array
+}

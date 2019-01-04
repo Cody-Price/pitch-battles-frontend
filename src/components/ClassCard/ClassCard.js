@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ClassCard.css";
+import PropTypes from 'prop-types';
 
 import { bgHelper } from "../../utilities/bgHelper";
 import { deleteClassFetch } from "../../utilities/fetchCalls";
@@ -84,3 +85,11 @@ class ClassCard extends Component {
 }
 
 export default ClassCard;
+
+ClassCard.propTypes = {
+  id: PropTypes.number,
+  webToken: PropTypes.string,
+  generateClassCards: PropTypes.func,
+  bgIndex: PropTypes.number,
+  name: PropTypes.string
+}
