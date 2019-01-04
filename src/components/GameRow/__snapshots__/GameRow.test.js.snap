@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameRow should match the snapshot 1`] = `
+<article
+  className="game-row"
+>
+  <p
+    className="game-id-code"
+  >
+    3
+  </p>
+  <p
+    className="game-score"
+  >
+    0.123
+  </p>
+  <div
+    className="game-perfect-mark true"
+  />
+  <p
+    className="game-score"
+  >
+    0.123
+  </p>
+  <div
+    className="game-perfect-mark true"
+  />
+  <p
+    className="game-score"
+  >
+    0.123
+  </p>
+  <div
+    className="game-perfect-mark true"
+  />
+  <p
+    className="game-score"
+  >
+    0.001
+  </p>
+  <div
+    className="game-perfect-mark false"
+  />
+</article>
+`;

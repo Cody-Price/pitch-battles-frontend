@@ -8,8 +8,10 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe("ClassCard", () => {
   const mockData = {
-    name: "5th Grade Band",
-    key: "keeeeeey",
+    attributes: {
+      name: "5th Grade Band",
+      key: "keeeeeey"
+    },
     id: 1
   };
   let wrapper;

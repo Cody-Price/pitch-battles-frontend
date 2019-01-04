@@ -1,3 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClassCard should match the snapshot 1`] = `undefined`;
+exports[`ClassCard should match the snapshot 1`] = `
+<article
+  className="class-card"
+>
+  <header
+    className="class-card-header undefined"
+  >
+    <div
+      className="class-card-header-tint"
+    >
+      <h3
+        className="class-card-name"
+      >
+        5th Grade Band
+      </h3>
+    </div>
+  </header>
+  <section
+    className="confirm-delete-container false"
+  >
+    <p>
+      Are you sure you want to delete this class?
+    </p>
+    <button
+      className="class-delete-btn"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+    <button
+      className="class-do-not-delete-btn"
+      onClick={[Function]}
+    >
+      go back
+    </button>
+  </section>
+  <p
+    className="class-card-key"
+  >
+    key: 
+  </p>
+  <button
+    className="class-select-button"
+    onClick={[Function]}
+  >
+    select
+  </button>
+  <i
+    className="fas fa-trash-alt"
+    onClick={[Function]}
+  />
+</article>
+`;

@@ -6,7 +6,10 @@ class StudentRow extends Component {
     const { student, selectStudent } = this.props;
     return (
       <article className="class-row">
-        <p onClick={() => selectStudent(student)}>
+        <p
+          className="student-select-clicker"
+          onClick={() => selectStudent(student)}
+        >
           {student.attributes.first_name} {student.attributes.last_name}
         </p>
         <p>{student.attributes.total_games_played}</p>
