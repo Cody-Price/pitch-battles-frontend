@@ -203,5 +203,7 @@ ChangePassword.propTypes = {
   changePassword: PropTypes.func,
   user: PropTypes.object,
   updateWebToken: PropTypes.func,
-  webToken: PropTypes.string
+  webToken: PropTypes.string,
+  id: PropTypes.number,
+  userTypes: PropTypes.string
 };
