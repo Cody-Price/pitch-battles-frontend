@@ -1,4 +1,5 @@
 import React from "react";
+import { changeProfileFetch } from "../../utilities/fetchCalls";
 
 import EditProfile from "./EditProfile";
 import Enzyme, { shallow } from "enzyme";
@@ -137,5 +138,11 @@ describe("EditProfile", () => {
 
       expect(spy).toHaveBeenCalled();
     });
+  });
+
+  it("should call changeProfileFetch", async () => {
+    await wrapper.instance().changeProfileFetch();
+
+    expect(changeProfileFetch).toHaveBeenCalled();
   });
 });
