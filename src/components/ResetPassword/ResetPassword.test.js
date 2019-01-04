@@ -16,4 +16,10 @@ describe("ResetPassword", () => {
   it("should match the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe('handleChange', () => {
+  	it('should update state', () => {
+  		
+  	})
+  })
 });

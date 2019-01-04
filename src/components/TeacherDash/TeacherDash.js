@@ -182,7 +182,7 @@ class TeacherDash extends Component {
 export default TeacherDash;
 
 TeacherDash.propTypes = {
-  webToken: PropTypes.string,
+  webToken: PropTypes.number,
   first_name: PropTypes.string,
   last_name: PropTypes.string,
   user: PropTypes.object,
