@@ -44,7 +44,11 @@ This application has two separate and unique user interfaces depending on the th
   <img src='https://user-images.githubusercontent.com/29719272/50570223-45b2f400-0d3e-11e9-95b9-c80bd2934607.png' alt='pitch-battles screenshot' />
 </div>
 
-The 'teacher' interface, however uses a decidedly more modern design utilizing "flat-ish' principles for a more appropriately professional experience, as its primary concern was dealing with the display, analysis, and maniuplation of student performance data. For this user-type, the interface is less a game and more a tool.
+The 'teacher' interface, however uses a slightly more modern design, incorporating some of the student-facing themes and assets with a simple clean design.
+
+<div style='align-center'>
+<img src=https://user-images.githubusercontent.com/29719272/50670097-6b323e80-0f86-11e9-9b4f-cf10d7b0fb44.png alt='pitch-battles teacher ui'/>
+</div>
 
 #### Art Asset Development
 
