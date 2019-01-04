@@ -21,5 +21,7 @@ class OnboardingArticle extends Component {
 export default OnboardingArticle;
 
 OnboardingArticle.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  content: PropTypes.string,
+  imageUrl: PropTypes.string
 };
