@@ -104,5 +104,6 @@ export default EditAvatar;
 EditAvatar.propTypes = {
   user: PropTypes.object,
   changeAvatar: PropTypes.func,
-  status: PropTypes.string
+  status: PropTypes.string,
+  avatar: PropTypes.number
 };
