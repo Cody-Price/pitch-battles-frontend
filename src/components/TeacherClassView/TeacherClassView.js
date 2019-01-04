@@ -24,7 +24,7 @@ class TeacherClassView extends Component {
         this.props.id,
         this.props.webToken
       );
-
+      console.log(klass)
       this.setState({
         klass: klass.data.attributes,
         students: klass.data.attributes.students.data,

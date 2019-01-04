@@ -4,9 +4,130 @@ exports[`TeacherClassView should match the snapshot 1`] = `
 <section
   className="teacher-class-view"
 >
-  <LoadingAnimation
-    animals="cat"
-    message="loading..."
-  />
+  <div
+    className="loaded-teacher-class-view"
+  >
+    <h3
+      className="class-name"
+    >
+      6th Grade Orchestra
+    </h3>
+    <section
+      className="class-table"
+    >
+      <article
+        className="class-row"
+      >
+        <p>
+          Name
+        </p>
+        <p>
+          Total
+        </p>
+        <p>
+          Level 1
+        </p>
+        <p>
+          Level 2
+        </p>
+        <p>
+          Level 3
+        </p>
+        <p>
+          Level 4
+        </p>
+        <p>
+          Delete
+        </p>
+      </article>
+      <StudentRow
+        key="3"
+        student={
+          Object {
+            "attributes": Object {
+              "avatar": 11,
+              "badges": Object {
+                "data": Array [
+                  Object {
+                    "attributes": Object {
+                      "description": "Play five games.",
+                      "name": "play 5 games",
+                    },
+                    "id": "1",
+                    "type": "badge",
+                  },
+                  Object {
+                    "attributes": Object {
+                      "description": "Complete level one.",
+                      "name": "level one: completed",
+                    },
+                    "id": "2",
+                    "type": "badge",
+                  },
+                ],
+              },
+              "class": Object {
+                "data": Object {
+                  "attributes": Object {
+                    "class_key": "K5s5qCQfHTYYldIhDcmGQg",
+                    "name": "6th Grade Orchestra",
+                  },
+                  "id": "5",
+                  "type": "klass",
+                },
+              },
+              "email": "dmeskis@gmail.com",
+              "first_name": "Dylan",
+              "games": Object {
+                "data": Array [
+                  Object {
+                    "attributes": Object {
+                      "all_perfect": true,
+                      "level_four_duration": null,
+                      "level_four_perfect": true,
+                      "level_one_duration": 11111,
+                      "level_one_perfect": true,
+                      "level_three_duration": null,
+                      "level_three_perfect": true,
+                      "level_two_duration": 22222,
+                      "level_two_perfect": true,
+                      "total_duration": 33333,
+                    },
+                    "id": "11",
+                    "type": "game",
+                  },
+                  Object {
+                    "attributes": Object {
+                      "all_perfect": false,
+                      "level_four_duration": null,
+                      "level_four_perfect": false,
+                      "level_one_duration": 11111,
+                      "level_one_perfect": true,
+                      "level_three_duration": null,
+                      "level_three_perfect": false,
+                      "level_two_duration": 22222,
+                      "level_two_perfect": false,
+                      "total_duration": 33333,
+                    },
+                    "id": "12",
+                    "type": "game",
+                  },
+                ],
+              },
+              "last_name": "Meskis",
+              "level_four_fastest_time": 0,
+              "level_one_fastest_time": 13402,
+              "level_three_fastest_time": 1234134,
+              "level_two_fastest_time": 24216,
+              "role": "student",
+              "total_games_played": 8,
+            },
+            "id": "3",
+            "type": "user",
+          }
+        }
+      />
+    </section>
+  </div>
 </section>
 `;
