@@ -35,7 +35,10 @@
     ],
     "collectCoverageFrom": [
       "src/components/**/*.js",
-      "src/utilities/*.js"
+      "src/utilities/fastestTimes.js",
+      "src/utilities/fetchCalls.js",
+      "src/utilities/postGameAnalysis.js",
+      "src/utilities/teacherBadgeHelper.js"
     ]
   }
 }
