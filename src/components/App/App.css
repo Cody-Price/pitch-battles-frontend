@@ -33,7 +33,7 @@
   width: 2500px;
   z-index: 1;
   overflow: hidden;
-  animation: 90s background-move infinite linear;
+  animation: 80s background-move infinite linear;
   background-size: cover;
 }
 
