@@ -7,10 +7,10 @@
 }
 
 .snow-backer {
-  animation: snow 90s infinite linear;
-  -webkit-animation: snow 90s infinite linear;
-  -moz-animation: snow 90s infinite linear;
-  -o-animation: snow 90s infinite linear;
+  animation: snow 80s infinite linear;
+  -webkit-animation: snow 80s infinite linear;
+  -moz-animation: snow 80s infinite linear;
+  -o-animation: snow 80s infinite linear;
 
   position: absolute;
   height: 6000px;
