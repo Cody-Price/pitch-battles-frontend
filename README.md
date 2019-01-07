@@ -79,3 +79,7 @@ Players additionally earn achievements by meeting certain milestones, like playi
 <div align='center'>
   <img width="600" alt="screen shot 2019-01-01 at 9 37 41 am" src="https://user-images.githubusercontent.com/29719272/50574608-e938ee80-0da8-11e9-869b-bcf20ac9a423.png">
 </div>
+
+#### Pitch Battles Teacher Portal
+
+Our teacher-facing-side of the application has also been built as React Native app. [You can find the repo here.](https://github.com/relasine/pitch-battles-teacher-portal)
