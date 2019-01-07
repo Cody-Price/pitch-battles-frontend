@@ -77,15 +77,15 @@ describe("EditAvatar", () => {
       expect(spy).toHaveBeenCalled();
     });
 
-    it("should call setState if avatar is 9", () => {
+    it("should call setState if avatar is 13", () => {
       wrapper.setState({
-        avatar: 11
+        avatar: 13
       });
 
       const expected = {
         right: false,
         left: true,
-        avatar: 12
+        avatar: 14
       };
 
       wrapper.instance().handleRightClick();

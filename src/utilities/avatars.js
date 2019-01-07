@@ -11,7 +11,9 @@ const avatars = [
   "nine",
   "ten",
   "eleven",
-  "twelve"
+  "twelve",
+  "thirteen",
+  "fourteen"
 ];
 
 export default avatars;

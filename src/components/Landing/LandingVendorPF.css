@@ -51,9 +51,9 @@
 .crystal10,
 .crystal11,
 .crystal12 {
-  -webkit-animation: crystals 90s infinite linear;
-  -moz-animation: crystals 90s infinite linear;
-  -o-animation: crystals 90s infinite linear;
+  -webkit-animation: crystals 80s infinite linear;
+  -moz-animation: crystals 80s infinite linear;
+  -o-animation: crystals 80s infinite linear;
 }
 
 @-webkit-keyframes landing-char1-move {

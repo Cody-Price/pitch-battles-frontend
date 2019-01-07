@@ -139,6 +139,22 @@
   height: 62px;
 }
 
+.avatar-editor-current.thirteen {
+  background: url(../Game/pcs/char13/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
+}
+
+.avatar-editor-current.fourteen {
+  background: url(../Game/pcs/char14/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
+}
+
 .avatar-left-arrow:hover,
 .avatar-right-arrow:hover {
   cursor: pointer;

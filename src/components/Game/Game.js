@@ -405,7 +405,9 @@ export class Game extends Component {
   render() {
     return (
       <main className="game-main">
-        <div className="game-area-wrapper">
+        <div
+          className={` ${avatars[this.state.currentLevel]} game-area-wrapper`}
+        >
           <header className="game-header">
             <div
               className="game-avatar-circle"

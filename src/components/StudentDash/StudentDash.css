@@ -7,10 +7,10 @@
 }
 
 .snow-backer {
-  animation: snow 90s infinite linear;
-  -webkit-animation: snow 90s infinite linear;
-  -moz-animation: snow 90s infinite linear;
-  -o-animation: snow 90s infinite linear;
+  animation: snow 80s infinite linear;
+  -webkit-animation: snow 80s infinite linear;
+  -moz-animation: snow 80s infinite linear;
+  -o-animation: snow 80s infinite linear;
 
   position: absolute;
   height: 6000px;
@@ -187,6 +187,22 @@
   image-rendering: pixelated;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.student-dash-avatar.thirteen {
+  background: url(../Game/pcs/char13/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
+}
+
+.student-dash-avatar.fourteen {
+  background: url(../Game/pcs/char14/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
 }
 
 .hearts-and-timer {

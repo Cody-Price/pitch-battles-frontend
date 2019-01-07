@@ -10,15 +10,49 @@
 }
 
 .game-area-wrapper {
-  background: url(./images/snow-bg-big.png);
+  background: url(./images/forestpath-final.png);
   max-width: 2100px;
   height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: pixelated;
+  background-position: center;
   position: relative;
   margin: auto;
   overflow: hidden;
+  transition: 0.4s;
+}
+
+.game-area-wrapper.one {
+  background: url(./images/forestpath-final.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-position: center;
+}
+
+.game-area-wrapper.two {
+  background: url(./images/underwater-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-position: center;
+}
+
+.game-area-wrapper.three {
+  background: url(./images/snow-bg-big.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-position: center;
+}
+
+.game-area-wrapper.four {
+  background: url(./images/castle-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-position: center;
 }
 
 .game-header {
@@ -157,6 +191,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 33px;
+}
+
+.header-avatar.thirteen {
+  background: url(./pcs/char13/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 59px;
+}
+
+.header-avatar.fourteen {
+  background: url(./pcs/char14/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
 }
 
 .hearts-and-timer {
