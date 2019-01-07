@@ -5,7 +5,7 @@ exports[`Game should match the snapshot 1`] = `
   className="game-main"
 >
   <div
-    className="game-area-wrapper"
+    className=" one game-area-wrapper"
   >
     <header
       className="game-header"
