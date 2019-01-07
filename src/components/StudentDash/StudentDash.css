@@ -197,6 +197,14 @@
   width: 35px;
 }
 
+.student-dash-avatar.fourteen {
+  background: url(../Game/pcs/char14/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
+}
+
 .hearts-and-timer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
