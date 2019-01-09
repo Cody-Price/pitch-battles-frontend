@@ -2,6 +2,10 @@
   position: relative;
   overflow: hidden;
 }
+
+.edit-profile {
+  position: relative;
+}
 .student.edit-profile-form {
   display: grid;
   grid-template-columns: 130px 1fr;
@@ -139,7 +143,7 @@
 
 .profile-error-success-messaging {
   position: absolute;
-  top: 180px;
+  top: 130px;
   left: 2000px;
   right: 0;
   margin: auto;

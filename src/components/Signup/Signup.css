@@ -62,6 +62,17 @@
   font-size: 1.1rem;
   padding-top: 4px;
   border-radius: 1px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sign-up-button:active,
+.return-to-login-button:active {
+  box-shadow: none;
+}
+
+.sign-up-button:focus,
+.return-to-login-button:focus {
+  outline: none;
 }
 
 .return-to-login-button {

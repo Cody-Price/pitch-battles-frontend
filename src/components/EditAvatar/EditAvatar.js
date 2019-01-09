@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./EditAvatar.css";
 import avatars from "../../utilities/avatars";
 import PropTypes from "prop-types";
+import { changeAvatarFetch } from "../../utilities/fetchCalls";
 
 class EditAvatar extends Component {
   constructor() {
@@ -10,7 +11,9 @@ class EditAvatar extends Component {
     this.state = {
       avatar: 1,
       right: true,
-      left: true
+      left: true,
+      success: false,
+      error: false
     };
   }
   componentDidMount() {
@@ -21,18 +24,24 @@ class EditAvatar extends Component {
     if (this.props.user.attributes.avatar === 1) {
       this.setState({
         left: false,
-        avatar: 1
+        avatar: 1,
+        success: false,
+        error: false
       });
     } else if (this.props.user.attributes.avatar === 14) {
       this.setState({
         right: false,
-        avatar: 14
+        avatar: 14,
+        success: false,
+        error: false
       });
     } else {
       this.setState({
         right: true,
         left: true,
-        avatar: this.props.user.attributes.avatar
+        avatar: this.props.user.attributes.avatar,
+        success: false,
+        error: false
       });
     }
   };
@@ -41,12 +50,16 @@ class EditAvatar extends Component {
     if (this.state.avatar === 13) {
       this.setState({
         right: false,
-        avatar: 14
+        avatar: 14,
+        success: false,
+        error: false
       });
     } else {
       this.setState({
         left: true,
-        avatar: this.state.avatar + 1
+        avatar: this.state.avatar + 1,
+        success: false,
+        error: false
       });
     }
   };
@@ -55,12 +68,16 @@ class EditAvatar extends Component {
     if (this.state.avatar === 2) {
       this.setState({
         left: false,
-        avatar: 1
+        avatar: 1,
+        success: false,
+        error: false
       });
     } else {
       this.setState({
         right: true,
-        avatar: this.state.avatar - 1
+        avatar: this.state.avatar - 1,
+        success: false,
+        error: false
       });
     }
   };
@@ -70,7 +87,24 @@ class EditAvatar extends Component {
       return;
     }
 
-    this.props.changeAvatar(this.state.avatar);
+    this.changeAvatar(this.state.avatar);
+  };
+
+  changeAvatar = async avatar => {
+    try {
+      await changeAvatarFetch(avatar, this.props.user.id, this.props.webToken);
+      this.setState({
+        success: true,
+        error: false
+      });
+      this.props.getUpdatedUserData();
+    } catch (error) {
+      console.log(error);
+      this.setState({
+        success: false,
+        error: true
+      });
+    }
   };
 
   render() {
@@ -94,6 +128,8 @@ class EditAvatar extends Component {
         <button onClick={this.handleSubmit} className="change-avatar-button">
           choose avatar
         </button>
+        <p className={`${this.state.success} avatar-success`}>success!</p>
+        <p className={`${this.state.error} avatar-fail`}>server error...</p>
       </section>
     );
   }

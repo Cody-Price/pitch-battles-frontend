@@ -6,19 +6,17 @@ const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+jest.mock("../../utilities/fetchCalls");
+
 describe("EditAvatar", () => {
   let wrapper;
   const mockUser = {
     attributes: { avatar: 2 }
   };
   const mockStatus = "true";
-  let changeAvatar;
 
   beforeEach(() => {
-    changeAvatar = jest.fn();
-    wrapper = shallow(
-      <EditAvatar user={mockUser} status={"true"} changeAvatar={changeAvatar} />
-    );
+    wrapper = shallow(<EditAvatar user={mockUser} status={"true"} />);
   });
 
   it("should match the snapshot", () => {
@@ -34,7 +32,9 @@ describe("EditAvatar", () => {
       const expected = {
         left: false,
         avatar: 1,
-        right: true
+        right: true,
+        success: false,
+        error: false
       };
 
       expect(wrapper.state()).toEqual(expected);
@@ -52,7 +52,9 @@ describe("EditAvatar", () => {
       const expected = {
         left: true,
         avatar: 12,
-        right: false
+        right: false,
+        error: false,
+        success: false
       };
     });
 
@@ -60,7 +62,9 @@ describe("EditAvatar", () => {
       const expected = {
         right: true,
         left: true,
-        avatar: 2
+        avatar: 2,
+        error: false,
+        success: false
       };
 
       expect(wrapper.state()).toEqual(expected);
@@ -85,7 +89,9 @@ describe("EditAvatar", () => {
       const expected = {
         right: false,
         left: true,
-        avatar: 14
+        avatar: 14,
+        success: false,
+        error: false
       };
 
       wrapper.instance().handleRightClick();
@@ -97,7 +103,9 @@ describe("EditAvatar", () => {
       const expected = {
         left: true,
         avatar: 3,
-        right: true
+        right: true,
+        success: false,
+        error: false
       };
 
       wrapper.instance().handleRightClick();
@@ -123,7 +131,9 @@ describe("EditAvatar", () => {
       const expected = {
         right: true,
         left: false,
-        avatar: 1
+        avatar: 1,
+        success: false,
+        error: false
       };
 
       wrapper.instance().handleLeftClick();
@@ -135,7 +145,9 @@ describe("EditAvatar", () => {
       const expected = {
         left: true,
         avatar: 3,
-        right: true
+        right: true,
+        success: false,
+        error: false
       };
 
       wrapper.setState({
@@ -155,18 +167,6 @@ describe("EditAvatar", () => {
       wrapper.instance().handleSubmit();
 
       expect(spy).toReturn();
-    });
-
-    it("should call changeAvatar with the correct params", () => {
-      wrapper.setState({
-        avatar: 4
-      });
-
-      const expected = 4;
-
-      wrapper.instance().handleSubmit();
-
-      expect(changeAvatar).toHaveBeenCalledWith(expected);
     });
   });
 });

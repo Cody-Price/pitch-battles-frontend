@@ -33,5 +33,15 @@ exports[`EditAvatar should match the snapshot 1`] = `
   >
     choose avatar
   </button>
+  <p
+    className="false avatar-success"
+  >
+    success!
+  </p>
+  <p
+    className="false avatar-fail"
+  >
+    server error...
+  </p>
 </section>
 `;
