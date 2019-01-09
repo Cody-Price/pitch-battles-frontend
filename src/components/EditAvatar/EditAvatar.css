@@ -226,6 +226,28 @@
   font-size: 1.3rem;
 }
 
+.avatar-success,
+.avatar-fail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.avatar-success.true,
+.avatar-fail.true {
+  opacity: 1;
+}
+
+.avatar-fail {
+}
+
 @media (max-width: 770px) {
   .avatar-right-arrow {
     right: 20px;
