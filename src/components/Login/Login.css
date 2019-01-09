@@ -60,6 +60,22 @@
   z-index: 3000;
 }
 
+.login-form-button,
+.signup-form-switch-button {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.login-form-button:active,
+.signup-form-switch-button:active {
+  box-shadow: none;
+}
+
+.login-form-button:focus,
+.signup-form-switch-button:focus,
+.forgot-my-password-link:focus {
+  outline: none;
+}
+
 .signup-form-switch-button {
   margin: 4rem 0 0 0;
 }
