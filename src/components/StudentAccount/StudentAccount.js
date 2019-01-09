@@ -80,6 +80,8 @@ class StudentAccount extends Component {
             <EditAvatar
               user={this.props.user}
               changeAvatar={this.props.changeAvatar}
+              getUpdatedUserData={this.props.getUpdatedUserData}
+              webToken={this.props.webToken}
             />
           )}
           {this.state.activePage === "change-password-active" && (
