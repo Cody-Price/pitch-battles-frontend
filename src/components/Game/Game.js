@@ -142,7 +142,10 @@ export class Game extends Component {
         running: false,
         currentTime: 0,
         start: 0,
-        resetting: false
+        resetting: false,
+        gameOver: false,
+        victory: false,
+        finalVictory: false
       });
     }
   };

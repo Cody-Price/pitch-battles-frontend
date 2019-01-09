@@ -62,6 +62,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
              
             Manly
           </p>
+          <div
+            className="avatar-class-view eleven"
+          />
         </article>
         <article
           className="class-view-fastest-time"
@@ -83,6 +86,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
              
             Manly
           </p>
+          <div
+            className="avatar-class-view eleven"
+          />
         </article>
         <article
           className="class-view-fastest-time"
@@ -104,6 +110,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
              
             Manly
           </p>
+          <div
+            className="avatar-class-view eleven"
+          />
         </article>
         <article
           className="class-view-fastest-time"
@@ -125,6 +134,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
              
             Manly
           </p>
+          <div
+            className="avatar-class-view eleven"
+          />
         </article>
         <article
           className="class-view-fastest-time"
@@ -146,6 +158,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
              
             Meskis
           </p>
+          <div
+            className="avatar-class-view eleven"
+          />
         </article>
       </div>
     </section>
@@ -170,6 +185,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
           - 
           24
         </p>
+        <div
+          className="avatar-class-view eleven"
+        />
       </article>
       <article
         className="most-badges game-badge"
@@ -189,6 +207,9 @@ exports[`StudentClassView should match the snapshot 1`] = `
           - 
           12
         </p>
+        <div
+          className="avatar-class-view eleven"
+        />
       </article>
     </section>
   </article>
