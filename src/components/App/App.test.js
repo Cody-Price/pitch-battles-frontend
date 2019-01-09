@@ -178,28 +178,6 @@ describe("App", () => {
     });
   });
 
-  describe("changeAvatar", () => {
-    it("should call getUpdatedUserData", async () => {
-      const spy = jest.spyOn(wrapper.instance(), "getUpdatedUserData");
-
-      wrapper.setState({
-        user: {
-          id: 21,
-          attributes: {
-            role: "student"
-          }
-        },
-        webToken: "hello"
-      });
-
-      wrapper.instance().forceUpdate();
-
-      await wrapper.instance().changeAvatar(1);
-
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
   describe("updateWebToken", () => {
     it("should call setState", () => {
       const expected = "hello";
@@ -229,19 +207,6 @@ describe("App", () => {
       await wrapper.instance().getUpdatedUserData();
 
       expect(wrapper.state().user).toEqual(mockUser);
-    });
-  });
-
-  describe("changeAvatar", () => {
-    it("should call changeAvatarFetch", async () => {
-      wrapper.setState({
-        user: mockUser,
-        webToken: "123"
-      });
-
-      await wrapper.instance().changeAvatar(1);
-
-      expect(changeAvatarFetch).toHaveBeenCalledWith(1, "1", "123");
     });
   });
 });
