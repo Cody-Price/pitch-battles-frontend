@@ -3,6 +3,7 @@ import "./StudentClassView.css";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { studentClassFetch } from "../../utilities/fetchCalls";
 import PropTypes from "prop-types";
+import avatars from "../../utilities/avatars";
 
 class StudentClassView extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class StudentClassView extends Component {
   studentViewClassFetch = async () => {
     try {
       const response = await studentClassFetch(this.props.webToken);
+      console.log(response);
       this.setState({
         classStats: response.data.attributes,
         loading: false,
@@ -73,6 +75,14 @@ class StudentClassView extends Component {
                         .attributes.last_name
                     }
                   </p>
+                  <div
+                    className={`avatar-class-view ${
+                      avatars[
+                        this.state.classStats.level_one_fastest_time.user
+                          .data[0].attributes.avatar
+                      ]
+                    }`}
+                  />
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level two</h3>
@@ -89,6 +99,14 @@ class StudentClassView extends Component {
                         .attributes.last_name
                     }
                   </p>
+                  <div
+                    className={`avatar-class-view ${
+                      avatars[
+                        this.state.classStats.level_two_fastest_time.user
+                          .data[0].attributes.avatar
+                      ]
+                    }`}
+                  />
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level three</h3>
@@ -106,6 +124,14 @@ class StudentClassView extends Component {
                         .data[0].attributes.last_name
                     }
                   </p>
+                  <div
+                    className={`avatar-class-view ${
+                      avatars[
+                        this.state.classStats.level_three_fastest_time.user
+                          .data[0].attributes.avatar
+                      ]
+                    }`}
+                  />
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">level four</h3>
@@ -122,6 +148,14 @@ class StudentClassView extends Component {
                         .attributes.last_name
                     }
                   </p>
+                  <div
+                    className={`avatar-class-view ${
+                      avatars[
+                        this.state.classStats.level_four_fastest_time.user
+                          .data[0].attributes.avatar
+                      ]
+                    }`}
+                  />
                 </article>
                 <article className="class-view-fastest-time">
                   <h3 className="class-view-level">overall</h3>
@@ -138,6 +172,14 @@ class StudentClassView extends Component {
                         .attributes.last_name
                     }
                   </p>
+                  <div
+                    className={`avatar-class-view ${
+                      avatars[
+                        this.state.classStats.overall_fastest_time.user.data[0]
+                          .attributes.avatar
+                      ]
+                    }`}
+                  />
                 </article>
               </div>
             </section>
@@ -158,6 +200,14 @@ class StudentClassView extends Component {
                     - {this.state.classStats.most_games.games_played}
                   </p>
                 )}
+                <div
+                  className={`avatar-class-view ${
+                    avatars[
+                      this.state.classStats.most_games.user.data[0].attributes
+                        .avatar
+                    ]
+                  }`}
+                />
               </article>
               <article className="most-badges game-badge">
                 <h3 className="most-games-badges-label">most badges</h3>
@@ -175,6 +225,14 @@ class StudentClassView extends Component {
                     - {this.state.classStats.most_badges.badges}
                   </p>
                 )}
+                <div
+                  className={`avatar-class-view ${
+                    avatars[
+                      this.state.classStats.most_badges.user.data[0].attributes
+                        .avatar
+                    ]
+                  }`}
+                />
               </article>
             </section>
           </article>

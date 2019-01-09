@@ -78,6 +78,7 @@
   margin: 0 1rem;
   text-align: center;
   font-size: 1.2rem;
+  position: relative;
 }
 
 .most-games-badges-row {
@@ -85,11 +86,19 @@
   justify-content: space-around;
   font-size: 1.4rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .most-games-badges-label {
   margin-bottom: 0.5rem;
+}
+
+.most-games.game-badge {
+  position: relative;
+}
+
+.most-badges {
+  position: relative;
 }
 
 @keyframes slide-class-onboarding {
@@ -126,4 +135,126 @@
   100% {
     right: 0;
   }
+}
+
+.avatar-class-view {
+  margin: auto;
+  height: 60px;
+  width: 33px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+  bottom: -3rem;
+}
+
+.avatar-class-view.one {
+  background: url(../Game/pcs/char1/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-class-view.two {
+  background: url(../Game/pcs/char2/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-class-view.three {
+  background: url(../Game/pcs/char3/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
+}
+
+.avatar-class-view.four {
+  background: url(../Game/pcs/char4/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-class-view.five {
+  background: url(../Game/pcs/char5/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 37px;
+}
+
+.avatar-class-view.six {
+  background: url(../Game/pcs/char6/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 37px;
+}
+
+.avatar-class-view.nine {
+  background: url(../Game/pcs/char9/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 60px;
+}
+
+.avatar-class-view.ten {
+  background: url(../Game/pcs/char10/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 60px;
+}
+
+.avatar-class-view.eleven {
+  background: url(../Game/pcs/char11/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-class-view.twelve {
+  background: url(../Game/pcs/char12/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.avatar-class-view.seven {
+  background: url(../Game/pcs/char7/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 62px;
+}
+
+.avatar-class-view.eight {
+  background: url(../Game/pcs/char8/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 43px;
+  height: 62px;
+}
+
+.avatar-class-view.thirteen {
+  background: url(../Game/pcs/char13/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
+}
+
+.avatar-class-view.fourteen {
+  background: url(../Game/pcs/char14/stand.png);
+  image-rendering: pixelated;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
 }
