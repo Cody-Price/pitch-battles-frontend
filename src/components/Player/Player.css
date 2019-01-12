@@ -9,4 +9,205 @@
   width: 144px;
   top: 55px;
   left: 10px;
+  image-rendering: pixelated;
+  background-position: 0;
+}
+
+.player.idle {
+  background-size: 576px 144px;
+
+  animation: player-four-frame infinite 1.3s steps(4);
+  -webkit-animation: player-four-frame infinite 1.3s steps(4);
+  -moz-animation: player-four-frame infinite 1.3s steps(4);
+  -o-animation: player-four-frame infinite 1.3s steps(4);
+}
+
+.player.attack {
+  background-size: 432px 144px;
+
+  animation: player-three-frame 0.75s steps(3);
+  -webkit-animation: player-three-frame 0.75s steps(3);
+  -moz-animation: player-three-frame 0.75s steps(3);
+  -o-animation: player-three-frame 0.75s steps(3);
+}
+
+.player.victory {
+  background-size: 432px 144px;
+
+  animation: player-victory-frame 1s steps(3);
+  -webkit-animation: player-victory-frame 1s steps(3);
+  -moz-animation: player-victory-frame 1s steps(3);
+  -o-animation: player-victory-frame 1s steps(3);
+
+  background-position: -287px;
+}
+
+.player.hit {
+  background-size: 864px 144px;
+
+  animation: player-six-frame 1s steps(6);
+  -webkit-animation: player-six-frame 1s steps(6);
+  -moz-animation: player-six-frame 1s steps(6);
+  -o-animation: player-six-frame 1s steps(6);
+}
+
+.player.dead {
+  background-size: 1008px 144px;
+
+  animation: player-dead-frame 3s steps(7);
+  -webkit-animation: player-dead-frame 3s steps(7);
+  -moz-animation: player-dead-frame 3s steps(7);
+  -o-animation: player-dead-frame 3s steps(7);
+  background-position: -864px;
+}
+
+.hidden-preload {
+  display: hidden;
+}
+
+/* -- PLAYER FOUR FRAME -- */
+
+@keyframes player-four-frame {
+  100% {
+    background-position: -576px;
+  }
+}
+
+@-webkit-keyframes player-four-frame {
+  100% {
+    background-position: -576px;
+  }
+}
+
+@-moz-keyframes player-four-frame {
+  100% {
+    background-position: -576px;
+  }
+}
+
+@-o-keyframes player-four-frame {
+  100% {
+    background-position: -576px;
+  }
+}
+
+/* -- PLAYER THREE FRAME --  */
+
+@keyframes player-three-frame {
+  100% {
+    background-position: -432px;
+  }
+}
+
+@-webkit-keyframes player-three-frame {
+  100% {
+    background-position: -432px;
+  }
+}
+@-moz-keyframes player-three-frame {
+  100% {
+    background-position: -432px;
+  }
+}
+
+@-o-keyframes player-three-frame {
+  100% {
+    background-position: -432px;
+  }
+}
+
+/* -- PLAYER SIX FRAME --  */
+
+@keyframes player-six-frame {
+  100% {
+    background-position: -864px;
+  }
+}
+
+@-webkit-keyframes player-six-frame {
+  100% {
+    background-position: -864px;
+  }
+}
+@-moz-keyframes player-six-frame {
+  100% {
+    background-position: -864px;
+  }
+}
+
+@-o-keyframes player-six-frame {
+  100% {
+    background-position: -864px;
+  }
+}
+
+/* -- PLAYER DEAD FRAME --  */
+
+@keyframes player-dead-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1008px;
+  }
+}
+
+@-webkit-keyframes player-dead-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1008px;
+  }
+}
+@-moz-keyframes player-dead-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1008px;
+  }
+}
+
+@-o-keyframes player-dead-frame {
+  100% {
+    background-position: -1008px;
+  }
+}
+
+/* -- PLAYER THREE FRAME --  */
+
+@keyframes player-victory-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -432px;
+  }
+}
+
+@-webkit-keyframes player-victory-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -432px;
+  }
+}
+@-moz-keyframes player-victory-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -432px;
+  }
+}
+
+@-o-keyframes player-victory-frame {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -432px;
+  }
 }

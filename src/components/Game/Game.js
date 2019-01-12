@@ -162,6 +162,10 @@ export class Game extends Component {
   };
 
   submitGuess = (event, input) => {
+    if (this.state.running === false) {
+      return;
+    }
+
     const check = this.checkStatus();
 
     if (!check) {
