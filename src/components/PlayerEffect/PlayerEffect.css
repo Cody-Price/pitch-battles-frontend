@@ -7,7 +7,7 @@
   -moz-animation-delay: 0.3s;
   -o-animation: player-claw steps(8) 0.7s;
   -o-animation-delay: 0.3s;
-
+  transform: translateZ(0);
   width: 192px;
   height: 192px;
   position: absolute;
