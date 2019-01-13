@@ -293,17 +293,20 @@
   }
 
   .heart {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .monster-hearts {
-    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
     width: 24px;
     align-self: start;
+    max-height: 200px;
   }
 
   .player-hearts {
+    margin-top: 0.5rem;
     margin-right: 0.5rem;
     align-self: start;
     width: 24px;
@@ -318,7 +321,7 @@
     background-repeat: no-repeat;
     image-rendering: pixelated;
     background-size: cover;
-    margin: 1.3rem 0 0 9.5rem;
+    margin: 1.3rem auto;
     width: 120px;
     height: 73px;
     align-self: start;
@@ -329,15 +332,15 @@
   }
 
   .gameplay-frame {
-    height: 230px;
+    height: 190px;
   }
 
   .avatar-border {
-    margin-left: 4rem;
+    display: none;
   }
 
   .game-avatar-circle {
-    margin-left: 3rem;
+    display: none;
   }
 
   .game-user-modal {
