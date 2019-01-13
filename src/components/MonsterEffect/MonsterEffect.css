@@ -1,8 +1,12 @@
 .monster-effect {
-  animation: 1s monster-slash steps(8);
-  -webkit-animation: 1s monster-slash steps(8);
-  -moz-animation: 1s monster-slash steps(8);
-  -o-animation: 1s monster-slash steps(8);
+  animation: 0.7s monster-slash steps(8);
+  animation-delay: 0.3s;
+  -webkit-animation: 0.7s monster-slash steps(8);
+  -webkit-animation-delay: 0.3s;
+  -moz-animation: 0.7s monster-slash steps(8);
+  -moz-animation-delay: 0.3s;
+  -o-animation: 0.7s monster-slash steps(8);
+  -o-animation-delay: 0.3s;
 
   width: 192px;
   height: 192px;

@@ -1,8 +1,12 @@
 .player-effect {
-  animation: player-claw steps(8) 1s;
-  -webkit-animation: player-claw steps(8) 1s;
-  -moz-animation: player-claw steps(8) 1s;
-  -o-animation: player-claw steps(8) 1s;
+  animation: player-claw steps(8) 0.7s;
+  animation-delay: 0.3s;
+  -webkit-animation: player-claw steps(8) 0.7s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation: player-claw steps(8) 0.7s;
+  -moz-animation-delay: 0.3s;
+  -o-animation: player-claw steps(8) 0.7s;
+  -o-animation-delay: 0.3s;
 
   width: 192px;
   height: 192px;
