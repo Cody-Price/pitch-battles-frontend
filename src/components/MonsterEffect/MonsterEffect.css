@@ -1,328 +1,38 @@
 .monster-effect {
-  animation: 1s monster-slash linear;
-  -webkit-animation: 1s monster-slash linear;
-  -moz-animation: 1s monster-slash linear;
-  -o-animation: 1s monster-slash linear;
+  animation: 1s monster-slash steps(8);
+  -webkit-animation: 1s monster-slash steps(8);
+  -moz-animation: 1s monster-slash steps(8);
+  -o-animation: 1s monster-slash steps(8);
 
-  width: 250px;
-  height: 250px;
+  width: 192px;
+  height: 192px;
+  background-size: 1536px 192px;
+  image-rendering: pixelated;
   position: absolute;
-  top: 20px;
-  left: 80px;
+  top: 40px;
+  left: 120px;
 }
 
 @keyframes monster-slash {
-  0% {
-    background-image: none;
-  }
-  33.33% {
-    background-image: none;
-  }
-  33.34% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  46.01% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  46.02% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  58% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  58.01% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  70% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  70.01% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  82% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
-  82.01% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
-  }
   100% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    transform: scaleX(-1);
+    background-position: -1536px;
   }
 }
 
 @-webkit-keyframes monster-slash {
-  0% {
-    background-image: none;
-  }
-  33.33% {
-    background-image: none;
-  }
-  33.34% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  46.01% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  46.02% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  58% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  58.01% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  70% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  70.01% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  82% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
-  82.01% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
-  }
   100% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -webkit-transform: scaleX(-1);
+    background-position: -1536px;
   }
 }
 
 @-moz-keyframes monster-slash {
-  0% {
-    background-image: none;
-  }
-  33.33% {
-    background-image: none;
-  }
-  33.34% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  46.01% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  46.02% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  58% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  58.01% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  70% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  70.01% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  82% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
-  82.01% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
-  }
   100% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -moz-transform: scaleX(-1);
+    background-position: -1536px;
   }
 }
 
 @-o-keyframes monster-slash {
-  0% {
-    background-image: none;
-  }
-  33.33% {
-    background-image: none;
-  }
-  33.34% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  46.01% {
-    background-image: url("./effects/slash/slash1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  46.02% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  58% {
-    background-image: url("./effects/slash/slash2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  58.01% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  70% {
-    background-image: url("./effects/slash/slash3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  70.01% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  82% {
-    background-image: url("./effects/slash/slash4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
-  82.01% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
-  }
   100% {
-    background-image: url("./effects/slash/slash5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    image-rendering: pixelated;
-    -o-transform: scaleX(-1);
+    background-position: -1536px;
   }
 }
