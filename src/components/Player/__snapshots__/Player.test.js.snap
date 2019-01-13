@@ -2,6 +2,52 @@
 
 exports[`Player should match the snapshot 1`] = `
 <div
-  className="player undefined undefined"
-/>
+  className="player  undefined"
+  style={
+    Object {
+      "backgroundImage": "url(./spritesheets/charundefined/undefined.png)",
+    }
+  }
+>
+  <div
+    className="hidden-preload"
+    style={
+      Object {
+        "backgroundImage": "url(./spritesheets/charundefined/attack.png)",
+      }
+    }
+  />
+  <div
+    className="hidden-preload"
+    style={
+      Object {
+        "backgroundImage": "url(./spritesheets/charundefined/idle.png)",
+      }
+    }
+  />
+  <div
+    className="hidden-preload"
+    style={
+      Object {
+        "backgroundImage": "url(./spritesheets/charundefined/hit.png)",
+      }
+    }
+  />
+  <div
+    className="hidden-preload"
+    style={
+      Object {
+        "backgroundImage": "url(./spritesheets/charundefined/dead.png)",
+      }
+    }
+  />
+  <div
+    className="hidden-preload"
+    style={
+      Object {
+        "backgroundImage": "url(./spritesheets/charundefined/victory.png)",
+      }
+    }
+  />
+</div>
 `;
