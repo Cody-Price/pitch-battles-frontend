@@ -34,10 +34,10 @@
 .player.victory {
   background-size: 432px 144px;
 
-  animation: player-victory-frame 1s steps(3);
-  -webkit-animation: player-victory-frame 1s steps(3);
-  -moz-animation: player-victory-frame 1s steps(3);
-  -o-animation: player-victory-frame 1s steps(3);
+  animation: player-victory-frame 0.75s steps(3);
+  -webkit-animation: player-victory-frame 0.75s steps(3);
+  -moz-animation: player-victory-frame 0.75s steps(3);
+  -o-animation: player-victory-frame 0.75s steps(3);
 
   background-position: -287px;
 }
