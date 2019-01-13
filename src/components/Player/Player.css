@@ -15,6 +15,7 @@
 
 .player.idle {
   background-size: 576px 144px;
+  background-position: 0;
 
   animation: player-four-frame infinite 1.3s steps(4);
   -webkit-animation: player-four-frame infinite 1.3s steps(4);
@@ -24,11 +25,12 @@
 
 .player.attack {
   background-size: 432px 144px;
+  background-position: 0;
 
-  animation: player-three-frame 0.75s steps(3);
-  -webkit-animation: player-three-frame 0.75s steps(3);
-  -moz-animation: player-three-frame 0.75s steps(3);
-  -o-animation: player-three-frame 0.75s steps(3);
+  animation: player-three-frame 1s steps(3);
+  -webkit-animation: player-three-frame 1s steps(3);
+  -moz-animation: player-three-frame 1s steps(3);
+  -o-animation: player-three-frame 1s steps(3);
 }
 
 .player.victory {
@@ -44,6 +46,7 @@
 
 .player.hit {
   background-size: 864px 144px;
+  background-position: 0;
 
   animation: player-six-frame 1s steps(6);
   -webkit-animation: player-six-frame 1s steps(6);
