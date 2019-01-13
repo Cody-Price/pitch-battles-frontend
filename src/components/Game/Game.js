@@ -145,7 +145,9 @@ export class Game extends Component {
         resetting: false,
         gameOver: false,
         victory: false,
-        finalVictory: false
+        finalVictory: false,
+        playerStatus: "idle",
+        monsterStatus: "idle"
       });
     }
   };
