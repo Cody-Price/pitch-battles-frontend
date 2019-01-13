@@ -2,21 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./Monster.css";
-import "./MonsterAnims/Boar.css";
-import "./MonsterAnims/Bird.css";
-import "./MonsterAnims/Phoenix.css";
-import "./MonsterAnims/Minotaur.css";
-import "./MonsterAnims/Demon.css";
-
-import monsters from "../../utilities/monsters.js";
 
 class Monster extends Component {
   render() {
-    let currentMonster = monsters[this.props.level];
-
-    return <div className={`monster ${currentMonster} ${this.props.status}`} />;
+    return (
+      <div
+        style={{
+          backgroundImage: `url(./spritesheets/monsters/monster${
+            this.props.level
+          }.png)`
+        }}
+        className={`monster ${this.props.status}`}
+      />
+    );
   }
-  1;
 }
 
 export default Monster;

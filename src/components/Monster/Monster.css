@@ -1,108 +1,138 @@
+.monster {
+  position: absolute;
+  width: 183px;
+  height: 171px;
+  background-size: 732px 171px;
+  left: 130px;
+  top: 20px;
+  animation: 1.5s monster-idle infinite steps(4);
+  opacity: 1;
+}
+
+.monster.hit {
+  animation: monster-hit 1s linear, 1.5s monster-idle infinite steps(4);
+}
+
+.monster.attack {
+  animation: monster-attack 0.75s linear, 1.5s monster-idle infinite steps(4);
+}
+
+.monster.dead {
+  animation: monster-dead 3s linear, 1.5s monster-idle infinite steps(4);
+  opacity: 0;
+}
+
+@keyframes monster-idle {
+  100% {
+    background-position: -732px;
+  }
+}
+
 @keyframes monster-attack {
   0% {
-    left: 150px;
-  }
-  50% {
     left: 130px;
   }
+  50% {
+    left: 110px;
+  }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-webkit-keyframes monster-attack {
   0% {
-    left: 150px;
-  }
-  50% {
     left: 130px;
   }
+  50% {
+    left: 110px;
+  }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-moz-keyframes monster-attack {
   0% {
-    left: 150px;
-  }
-  50% {
     left: 130px;
   }
+  50% {
+    left: 110px;
+  }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-0-keyframes monster-attack {
   0% {
-    left: 150px;
-  }
-  50% {
     left: 130px;
   }
+  50% {
+    left: 110px;
+  }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @keyframes monster-hit {
   0% {
-    left: 150px;
+    left: 130px;
   }
   33% {
-    left: 150px;
+    left: 130px;
   }
   66% {
-    left: 170px;
+    left: 150px;
   }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-webkit-keyframes monster-hit {
   0% {
-    left: 150px;
+    left: 130px;
   }
   33% {
-    left: 150px;
+    left: 130px;
   }
   66% {
-    left: 170px;
+    left: 150px;
   }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-moz-keyframes monster-hit {
   0% {
-    left: 150px;
+    left: 130px;
   }
   33% {
-    left: 150px;
+    left: 130px;
   }
   66% {
-    left: 170px;
+    left: 150px;
   }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
 @-o-keyframes monster-hit {
   0% {
-    left: 150px;
+    left: 130px;
   }
   33% {
-    left: 150px;
+    left: 130px;
   }
   66% {
-    left: 170px;
+    left: 150px;
   }
   100% {
-    left: 150px;
+    left: 130px;
   }
 }
 
@@ -287,10 +317,7 @@
 }
 
 @media (max-width: 700px) {
-  .monster.boar,
-  .monster.bird,
-  .monster.minotaur,
-  .monster.phoenix {
+  .monster {
     bottom: 40px;
   }
 }
