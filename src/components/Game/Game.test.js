@@ -26,6 +26,10 @@ describe("Game", () => {
         processGame={mockProcessGame}
       />
     );
+
+    wrapper.setState({
+      running: true
+    })
   });
 
   it("should match the snapshot", () => {
@@ -73,7 +77,7 @@ describe("Game", () => {
         gameOver: false,
         victory: false,
         finalVictory: false,
-        running: false,
+        running: true,
         start: 0,
         times: [],
         userModal: false,

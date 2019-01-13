@@ -145,7 +145,9 @@ export class Game extends Component {
         resetting: false,
         gameOver: false,
         victory: false,
-        finalVictory: false
+        finalVictory: false,
+        playerStatus: "idle",
+        monsterStatus: "idle"
       });
     }
   };
@@ -162,6 +164,10 @@ export class Game extends Component {
   };
 
   submitGuess = (event, input) => {
+    if (this.state.running === false) {
+      return;
+    }
+
     const check = this.checkStatus();
 
     if (!check) {
