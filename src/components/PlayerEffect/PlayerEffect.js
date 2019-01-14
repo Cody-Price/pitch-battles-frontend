@@ -4,7 +4,14 @@ import "./PlayerEffect.css";
 
 class PlayerEffect extends Component {
   render() {
-    return <div className="player-effect" />;
+    return (
+      <div
+        style={{
+          backgroundImage: `url(./spritesheets/effects/claw.png)`
+        }}
+        className="player-effect"
+      />
+    );
   }
 }
 

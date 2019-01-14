@@ -4,7 +4,14 @@ import "./MonsterEffect.css";
 
 class MonsterEffect extends Component {
   render() {
-    return <div className="monster-effect" />;
+    return (
+      <div
+        style={{
+          backgroundImage: `url(./spritesheets/effects/slash.png)`
+        }}
+        className="monster-effect"
+      />
+    );
   }
 }
 
