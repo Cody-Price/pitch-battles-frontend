@@ -7,9 +7,24 @@ const AnimatedBackground = props => {
     <div>
       <div className="animated-background">
         <div className="snow-backer" />
-        <div className="landing-char1" />
-        <div className="landing-char2" />
-        <div className="landing-birb" />
+        <div
+          className="landing-char1"
+          style={{
+            backgroundImage: "url(./spritesheets/elfgirl/elfgirl.png"
+          }}
+        />
+        <div
+          className="landing-char2"
+          style={{
+            backgroundImage: "url(./spritesheets/monk/monk.png"
+          }}
+        />
+        <div
+          className="landing-birb"
+          style={{
+            backgroundImage: "url(./spritesheets/bird/bird.png"
+          }}
+        />
         <div className="standing-char1" />
         <div className="standing-char2" />
         <div className="crystal1" />
