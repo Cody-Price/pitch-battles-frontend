@@ -3,5 +3,10 @@
 exports[`MonsterEffect should match the snapshot 1`] = `
 <div
   className="monster-effect"
+  style={
+    Object {
+      "backgroundImage": "url(./spritesheets/effects/slash.png)",
+    }
+  }
 />
 `;

@@ -10,12 +10,27 @@ exports[`AnimatedBackground should match the snapshot 1`] = `
     />
     <div
       className="landing-char1"
+      style={
+        Object {
+          "backgroundImage": "url(./spritesheets/elfgirl/elfgirl.png",
+        }
+      }
     />
     <div
       className="landing-char2"
+      style={
+        Object {
+          "backgroundImage": "url(./spritesheets/monk/monk.png",
+        }
+      }
     />
     <div
       className="landing-birb"
+      style={
+        Object {
+          "backgroundImage": "url(./spritesheets/bird/bird.png",
+        }
+      }
     />
     <div
       className="standing-char1"

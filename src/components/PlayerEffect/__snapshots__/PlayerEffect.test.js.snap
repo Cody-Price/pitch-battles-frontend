@@ -3,5 +3,10 @@
 exports[`PlayerEffect should match the snapshot 1`] = `
 <div
   className="player-effect"
+  style={
+    Object {
+      "backgroundImage": "url(./spritesheets/effects/claw.png)",
+    }
+  }
 />
 `;

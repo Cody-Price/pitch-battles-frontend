@@ -2,6 +2,11 @@
 
 exports[`Monster should match the snapshot 1`] = `
 <div
-  className="monster undefined undefined"
+  className="monster undefined"
+  style={
+    Object {
+      "backgroundImage": "url(./spritesheets/monsters/monsterundefined.png)",
+    }
+  }
 />
 `;

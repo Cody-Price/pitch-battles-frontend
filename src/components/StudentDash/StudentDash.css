@@ -6,20 +6,6 @@
   position: relative;
 }
 
-.snow-backer {
-  animation: snow 80s infinite linear;
-  -webkit-animation: snow 80s infinite linear;
-  -moz-animation: snow 80s infinite linear;
-  -o-animation: snow 80s infinite linear;
-
-  position: absolute;
-  height: 6000px;
-  width: 10000px;
-  background: url(../Landing/images/snow/wsheet_snow_1.png);
-  background-size: 384px 96px;
-  z-index: 10000;
-}
-
 .student-dash-floating-backer {
   position: absolute;
   height: 1500px;

@@ -54,7 +54,12 @@ class Landing extends Component {
     return (
       <main className="landing-page">
         <header className="landing-page-header">
-          <div className="logo" />
+          <div
+            className="logo"
+            style={{
+              backgroundImage: "url(./spritesheets/bard/bard.png"
+            }}
+          />
           <h1 className="game-title">
             Pitch
             <br /> Battles

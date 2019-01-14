@@ -9,6 +9,11 @@ exports[`Landing should match the snapshot 1`] = `
   >
     <div
       className="logo"
+      style={
+        Object {
+          "backgroundImage": "url(./spritesheets/bard/bard.png",
+        }
+      }
     />
     <h1
       className="game-title"

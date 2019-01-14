@@ -149,3 +149,27 @@
 .signup-successful-message.true {
   right: 0;
 }
+
+@media (max-width: 700px) {
+  .pw-icon,
+  .pw2-icon,
+  .email-icon,
+  .ln-icon,
+  .name-icon {
+    display: none;
+  }
+  .signup-form input {
+    padding-left: 0.5rem;
+  }
+  .return-to-login-button {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 3.5rem;
+    width: 4rem;
+    padding: 4px 0 3px;
+    text-align: center;
+  }
+}
