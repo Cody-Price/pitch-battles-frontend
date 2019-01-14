@@ -35,6 +35,7 @@
   overflow: hidden;
   animation: 80s background-move infinite linear;
   background-size: cover;
+  image-rendering: pixelated;
 }
 
 .student-facing-ui {
