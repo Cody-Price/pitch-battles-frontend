@@ -262,3 +262,91 @@
   background-repeat: no-repeat;
   width: 33px;
 }
+
+@media (max-width: 860px) {
+  .student-class-view {
+    width: 350px;
+    height: 570px;
+    background: url("../StudentDash/images/mq-stud-dash.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .student-class-view-header {
+    margin-top: 1.7rem;
+  }
+
+  .student-class-view-class-name {
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .class-view-fastest-times-label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .student-class-view-teacher-name {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .class-view-fastest-times-row {
+    flex-wrap: wrap;
+    margin: 0rem 1rem;
+    height: 300px;
+  }
+
+  .class-view-level {
+    margin-top: 0;
+  }
+
+  .class-view-fastest-time {
+    margin: 0;
+    width: 90px;
+    height: 140px;
+  }
+
+  .class-view-back-btn {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .class-view-level {
+    height: 16px;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .class-view-fastest-time-number {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .class-view-fastest-student,
+  .most-games-badges-label,
+  .class-view-most-student {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+  }
+
+  .class-view-most-student {
+    height: 28px;
+  }
+
+  .class-view-fastest-student {
+    height: 28px;
+  }
+
+  .avatar-class-view {
+    position: static;
+  }
+
+  .most-games-badges-row {
+    margin-top: 0;
+  }
+}

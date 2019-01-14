@@ -45,3 +45,30 @@
 .join-class-submit:focus {
   outline: none;
 }
+
+@media (max-width: 860px) {
+  .join-class-form {
+    display: block;
+    width: 180px;
+    margin-left: 1rem;
+  }
+
+  .class-key-input,
+  .join-class-submit {
+    display: block;
+  }
+
+  .join-class-submit {
+    margin: 0.5rem auto;
+    width: 75px;
+  }
+
+  input.class-key-input {
+    margin: 0;
+  }
+
+  .join-class-form p {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
