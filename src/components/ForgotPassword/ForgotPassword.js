@@ -57,6 +57,7 @@ class ForgotPassword extends Component {
               name="email"
               value={this.state.email}
               className="forgot-email-input"
+              placeholder="enter your email address"
               onChange={event => {
                 this.handleChange(event);
               }}
