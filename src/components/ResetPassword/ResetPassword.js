@@ -88,6 +88,7 @@ class ResetPassword extends Component {
           <p className="reset-pw-label">reset password</p>
           <div className="password-reset-icon-one" />
           <input
+            type="password"
             name="password"
             value={this.state.password}
             className="reset-pw-input pw-reset-field"
@@ -98,6 +99,7 @@ class ResetPassword extends Component {
           />
           <div className="password-reset-icon-two" />
           <input
+            type="password"
             name="confirmPassword"
             value={this.state.confirmPassword}
             className="reset-pw-input confirm-pw-reset-field"
