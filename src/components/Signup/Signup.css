@@ -151,6 +151,9 @@
 }
 
 @media (max-width: 700px) {
+  .signup-form.false {
+    display: none;
+  }
   .pw-icon,
   .pw2-icon,
   .email-icon,

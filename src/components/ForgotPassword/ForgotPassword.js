@@ -70,11 +70,7 @@ class ForgotPassword extends Component {
             email does not match any account
           </p>
 
-          <input
-            type="submit"
-            className="send-new-pw-btn"
-            value="send new password"
-          />
+          <button className="send-new-pw-btn">send new password</button>
         </form>
         <button onClick={this.props.resetPassword} className="have-reset-token">
           I have a reset token
