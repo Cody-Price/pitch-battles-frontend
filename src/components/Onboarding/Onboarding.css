@@ -182,13 +182,15 @@
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 700px) {
   .onboarding {
     width: 340px;
     height: 431px;
     background: url("../Landing/landingframe3.png");
     background-size: cover;
     image-rendering: pixelated;
+    margin-top: 0;
+    top: 2rem;
   }
 
   .article-row.one {
