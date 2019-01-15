@@ -1,5 +1,5 @@
 import React from "react";
-import Game from "./Game";
+import { Game } from "./Game";
 import mockUser from "../../utilities/mockUser";
 import Enzyme, { shallow } from "enzyme";
 const EnzymeAdapter = require("enzyme-adapter-react-16");
@@ -13,8 +13,10 @@ describe("Game", () => {
   const instrument = "flute";
   let mockEndGame;
   let mockProcessGame;
+  let mockSetTimeout;
 
   beforeEach(() => {
+    mockSetTimeout = jest.fn();
     mockEndGame = jest.fn();
     mockProcessGame = jest.fn();
     Date.now = jest.fn(() => 1482363367071);
@@ -24,12 +26,13 @@ describe("Game", () => {
         user={mockUser}
         endGame={mockEndGame}
         processGame={mockProcessGame}
+        setTimeout={mockSetTimeout}
       />
     );
 
     wrapper.setState({
       running: true
-    })
+    });
   });
 
   it("should match the snapshot", () => {
@@ -365,7 +368,7 @@ describe("Game", () => {
 
       wrapper.instance().playerAttack();
 
-      expect(setTimeout).toHaveBeenCalledWith(spy, 1000);
+      expect(mockSetTimeout).toHaveBeenCalledWith(spy, 1000);
     });
   });
 
@@ -396,7 +399,7 @@ describe("Game", () => {
 
       wrapper.instance().monsterAttack();
 
-      expect(setTimeout).toHaveBeenCalledWith(spy, 1000);
+      expect(mockSetTimeout).toHaveBeenCalledWith(spy, 1000);
     });
   });
 
@@ -452,7 +455,7 @@ describe("Game", () => {
 
       wrapper.instance().monsterDeath();
 
-      expect(setTimeout).toHaveBeenCalledWith(spy, 3000);
+      expect(mockSetTimeout).toHaveBeenCalledWith(spy, 3000);
     });
   });
 
@@ -555,7 +558,7 @@ describe("Game", () => {
 
       wrapper.instance().playerDeath();
 
-      expect(setTimeout).toHaveBeenCalledWith(spy, 3000);
+      expect(mockSetTimeout).toHaveBeenCalledWith(spy, 3000);
     });
   });
 
