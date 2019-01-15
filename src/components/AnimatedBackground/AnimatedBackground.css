@@ -63,7 +63,7 @@
   width: 164px;
   height: 144px;
   animation: birb-flap 1s steps(4) infinite, birb-move 20s linear infinite;
-  z-index: 100;
+  z-index: 50;
   left: 700px;
   background-size: 656px, 144px;
 }
@@ -669,7 +669,7 @@
 
   .landing-birb {
     left: 100px;
-    z-index: 80;
+    z-index: 50;
   }
 
   .crystal1,
