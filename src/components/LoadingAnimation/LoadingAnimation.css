@@ -52,6 +52,9 @@
   -o-animation: duck 3s linear infinite;
 
   z-index: 1000;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
 }
 
 @keyframes duck {
@@ -59,201 +62,241 @@
     background: url(./images/duck1.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   80% {
     background: url(./images/duck1.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   80.01% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   81% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   81.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   82% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   82.01% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   83% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   83.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   84% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   84.01% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   85% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   85.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   86% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   86.01% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   87% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   88.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   88% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   89.01% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   90% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   90.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   91% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   91.01% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   92% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   92.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   93% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   93.01% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   94% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   94.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   95% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   95.01% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   96% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   96.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   97% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   97.01% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   98% {
     background: url(./images/duck2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   98.01% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   99% {
     background: url(./images/duck3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   99.01% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   100% {
     background: url(./images/duck4.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
 }
 
@@ -903,7 +946,9 @@
   -webkit-animation: catwalk 1s linear infinite;
   -moz-animation: catwalk 1s linear infinite;
   -o-animation: catwalk 1s linear infinite;
-
+  background-size: cover;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
   height: 48px;
   width: 45px;
   z-index: 5;
@@ -914,41 +959,49 @@
     background: url(./images/left1.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   25% {
     background: url(./images/left1.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   25.01% {
     background: url(./images/left2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   50% {
     background: url(./images/left2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   50.01% {
     background: url(./images/left3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   75% {
     background: url(./images/left3.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   75.01% {
     background: url(./images/left2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
   100% {
     background: url(./images/left2.png);
     background-size: cover;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
   }
 }
 

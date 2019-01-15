@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import ReactTimeout from "react-timeout";
+import ReactTimeout from "react-timeout";
 
 import Player from "../Player/Player";
 import Monster from "../Monster/Monster";
@@ -131,7 +131,7 @@ export class Game extends Component {
       this.setState({
         resetting: true
       });
-      setTimeout(this.resetGame, 1300);
+      this.props.setTimeout(this.resetGame, 1300);
     } else {
       this.setState({
         currentLevel: 1,
@@ -226,7 +226,7 @@ export class Game extends Component {
       monsterHit: true,
       playerHit: false
     });
-    setTimeout(this.monsterHitResolve, 1000);
+    this.props.setTimeout(this.monsterHitResolve, 1000);
   };
 
   monsterAttack = () => {
@@ -237,7 +237,7 @@ export class Game extends Component {
       playerHit: true
     });
 
-    setTimeout(this.playerHitResolve, 1000);
+    this.props.setTimeout(this.playerHitResolve, 1000);
   };
 
   monsterHitResolve = () => {
@@ -256,7 +256,7 @@ export class Game extends Component {
       monsterStatus: "dead"
     });
 
-    setTimeout(this.victory, 3000);
+    this.props.setTimeout(this.victory, 3000);
   };
 
   monsterHitIdle = () => {
@@ -290,7 +290,7 @@ export class Game extends Component {
       monsterStatus: "idle",
       playerHearts: []
     });
-    setTimeout(this.gameOver, 3000);
+    this.props.setTimeout(this.gameOver, 3000);
   };
 
   playerHitIdle = () => {
@@ -499,7 +499,7 @@ export class Game extends Component {
   }
 }
 
-export default Game;
+export default ReactTimeout(Game);
 
 Game.propTypes = {
   instrument: PropTypes.string,
