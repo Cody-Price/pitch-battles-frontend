@@ -82,12 +82,7 @@ class Landing extends Component {
           onClick={this.toggleDevMessage}
         />
         <header className="landing-page-header">
-          <div
-            className="logo"
-            style={{
-              backgroundImage: "url(./spritesheets/bard/bard.png"
-            }}
-          />
+          <div className="logo" />
           <h1 className="game-title">
             Pitch
             <br /> Battles
