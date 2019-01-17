@@ -23,7 +23,8 @@ describe("Landing", () => {
         forgotPassword: false,
         login: false,
         resetPassword: false,
-        signup: true
+        signup: true,
+        showDevMessage: false
       };
       wrapper.instance().landingChange();
 
@@ -37,7 +38,8 @@ describe("Landing", () => {
         forgotPassword: true,
         login: false,
         resetPassword: false,
-        signup: false
+        signup: false,
+        showDevMessage: false
       };
       wrapper.instance().forgotPasswordScreen();
 

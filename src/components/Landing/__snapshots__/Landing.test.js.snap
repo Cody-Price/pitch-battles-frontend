@@ -4,6 +4,10 @@ exports[`Landing should match the snapshot 1`] = `
 <main
   className="landing-page"
 >
+  <button
+    className="toggle-dev-message-button"
+    onClick={[Function]}
+  />
   <header
     className="landing-page-header"
   >
@@ -45,5 +49,13 @@ exports[`Landing should match the snapshot 1`] = `
       toLogin={[Function]}
     />
   </section>
+  <p
+    className="landing-version-number"
+  >
+    ver. 
+    0.4.0
+     
+    20180117
+  </p>
 </main>
 `;
