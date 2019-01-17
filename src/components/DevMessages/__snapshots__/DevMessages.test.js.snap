@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevMessages should match the snapshop 1`] = `
+<article
+  className="dev-message"
+>
+  <button
+    className="close-dev-message"
+    onClick={[MockFunction]}
+  />
+  <h4
+    className="dev-message-title"
+  >
+    Database Reset
+  </h4>
+  <p
+    className="dev-message-date"
+  >
+    Thursday, January 17th, 2018
+  </p>
+  <p
+    className="dev-message-text"
+    key="devMessage 0"
+  >
+    Now that Pitch Battles is beginning to see some traffic, we have had to rollback and migrate our database to accomodate a growing user population. If you previously created an account, you will need to create a new one. This should be the last time this happens pending some unforeseen catastrophe.
+  </p>
+  <p
+    className="dev-message-text"
+    key="devMessage 1"
+  >
+    Additionally, we have been adding loads of small improvements to the student-facing user interface including support for iOS browsers, but we are still looking for user feedback. If you find any bugs, please send us an email at teampitchbattles@gmail.com!
+  </p>
+  <div />
+</article>
+`;
