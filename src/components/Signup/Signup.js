@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { signUp } from "../../utilities/fetchCalls";
+
 import "./Signup.css";
 
 class Signup extends Component {
@@ -12,29 +14,77 @@ class Signup extends Component {
       email: "",
       password: "",
       password_confirmation: "",
-      role: "student"
+      role: "student",
+      badSignUp: false,
+      signUpSuccessful: false,
+      fetching: false
     };
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value,
+      badSignUp: false,
+      signUpSuccessful: false
+    });
   };
 
   changeRole = role => {
-    this.setState({ role });
+    this.setState({
+      role,
+      badSignUp: false,
+      signUpSuccessful: false
+    });
   };
 
   handleSubmit = e => {
     // ADD VALIDATION //
     // Unique Email, passwords match, passwords min 6 chars //
     e.preventDefault();
-    this.props.signUpUser({
+    this.signUpUser({
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
       password: this.state.password,
       password_confirmation: this.state.password_confirmation,
       role: this.state.role
+    });
+  };
+
+  signUpUser = async body => {
+    this.setFetching();
+
+    if (body.role === "student") {
+      body.role = 0;
+    } else {
+      body.role = 1;
+    }
+
+    try {
+      const data = await signUp(body);
+      if (data.error) {
+        throw Error;
+      } else {
+        this.setState({
+          signUpSuccessful: true,
+          badSignUp: false,
+          fetching: false
+        });
+      }
+    } catch (error) {
+      this.setState({
+        badSignUp: true,
+        signUpSuccessful: false,
+        fetching: false
+      });
+    }
+  };
+
+  setFetching = () => {
+    this.setState({
+      fetching: !this.state.fetching,
+      badSignUp: false,
+      signUpSuccessful: false
     });
   };
 
@@ -114,15 +164,18 @@ class Signup extends Component {
           <button className="sign-up-button" type="submit">
             sign up
           </button>
-          <p className={`bad-signup-warning ${this.props.badSignUp}`}>
+          <p className={`bad-signup-warning ${this.state.badSignUp}`}>
             signup failed
           </p>
           <p
             className={`signup-successful-message ${
-              this.props.signUpSuccessful
+              this.state.signUpSuccessful
             }`}
           >
             signup successful - return to login
+          </p>
+          <p className={`signing-up-message ${this.state.fetching}`}>
+            signing you up...
           </p>
         </form>
         <button
@@ -139,9 +192,6 @@ class Signup extends Component {
 export default Signup;
 
 Signup.propTypes = {
-  signUpUser: PropTypes.func,
   status: PropTypes.bool,
-  badSignUp: PropTypes.bool,
-  landingChange: PropTypes.func,
-  signUpSuccessful: PropTypes.bool
+  landingChange: PropTypes.func
 };

@@ -137,7 +137,8 @@
 }
 
 .bad-signup-warning,
-.signup-successful-message {
+.signup-successful-message,
+.signing-up-message {
   position: absolute;
   margin: 0auto;
   right: -1000px;
@@ -146,7 +147,8 @@
 }
 
 .bad-signup-warning.true,
-.signup-successful-message.true {
+.signup-successful-message.true,
+.signing-up-message.true {
   right: 0;
 }
 

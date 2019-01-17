@@ -97,7 +97,9 @@ class App extends Component {
       const data = await signUp(body);
       if (data.error) {
         this.setState({
-          badSignUp: true
+          badSignUp: true,
+          fetchError: false,
+          signUpSuccessful: false
         });
       } else {
         this.setState({
