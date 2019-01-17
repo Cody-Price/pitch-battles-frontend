@@ -1,10 +1,12 @@
+import { shallow } from "enzyme";
+import React from "react";
+import Signup from "./Signup";
 const Enzyme = require("enzyme");
 const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
-import { shallow } from "enzyme";
-import React from "react";
-import Signup from "./Signup";
+
+jest.mock("../../utilities/fetchCalls");
 
 describe("Signup", () => {
   let wrapper;
