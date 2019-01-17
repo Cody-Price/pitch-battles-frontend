@@ -171,36 +171,6 @@ describe("Signup", () => {
       expect(mockPreventDefault).toHaveBeenCalled();
     });
 
-    it("should call signUpUser", () => {
-      const mockPreventDefault = jest.fn();
-
-      wrapper.setState({
-        first_name: "Kevin",
-        last_name: "Simpson",
-        email: "kevin@simpson.com",
-        password: "password!",
-        password_confirmation: "password!",
-        role: "teacher"
-      });
-
-      const expected = {
-        first_name: "Kevin",
-        last_name: "Simpson",
-        email: "kevin@simpson.com",
-        password: "password!",
-        password_confirmation: "password!",
-        role: "teacher"
-      };
-
-      const mockEvent = {
-        preventDefault: mockPreventDefault
-      };
-
-      wrapper.instance().handleSubmit(mockEvent);
-
-      expect(mockSignUpUser).toHaveBeenCalledWith(expected);
-    });
-
     it("should call handleSubmit on submit", () => {
       const spy = jest.spyOn(wrapper.instance(), "handleSubmit");
       const mockPreventDefault = jest.fn();

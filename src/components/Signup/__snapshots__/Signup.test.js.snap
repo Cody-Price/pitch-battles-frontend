@@ -97,14 +97,19 @@ exports[`Signup should render like snapshot 1`] = `
       sign up
     </button>
     <p
-      className="bad-signup-warning undefined"
+      className="bad-signup-warning false"
     >
       signup failed
     </p>
     <p
-      className="signup-successful-message undefined"
+      className="signup-successful-message false"
     >
       signup successful - return to login
+    </p>
+    <p
+      className="signing-up-message false"
+    >
+      signing you up...
     </p>
   </form>
   <button

@@ -97,7 +97,10 @@ class StudentDash extends Component {
     if (badges.length > 4) {
       for (let i = 0; i < 4; i++) {
         mediaBadges.push(badges[i]);
+        console.log(mediaBadges);
       }
+    } else {
+      mediaBadges = badges;
     }
 
     badges = badges.map((badge, index) => {

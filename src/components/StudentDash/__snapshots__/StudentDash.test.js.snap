@@ -328,7 +328,18 @@ exports[`StudentDash should match the snapshot 1`] = `
       </div>
       <div
         className="mq-badge-row"
-      />
+      >
+        <div
+          className="badge five_games"
+          key="play 5 games"
+        >
+          <h4
+            className="badge-descriptor"
+          >
+            play 5 games
+          </h4>
+        </div>
+      </div>
     </section>
   </section>
 </main>
