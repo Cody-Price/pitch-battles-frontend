@@ -1,0 +1,43 @@
+.dev-message {
+  font-family: "chronotype";
+  padding: 0.5rem;
+  position: relative;
+  animation: fade-in-dev-message 0.3s linear;
+  opacity: 100%;
+}
+
+.dev-message-title {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dev-message p {
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+}
+
+.dev-message button {
+  background: url("../Landing/images/close-btn.png");
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  width: 20px;
+  height: 18px;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.dev-message button:hover {
+  cursor: pointer;
+}
+
+@keyframes fade-in-dev-message {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

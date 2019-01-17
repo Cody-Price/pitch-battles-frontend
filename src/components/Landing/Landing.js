@@ -5,6 +5,9 @@ import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import ForgotPassword from "../ForgotPassword/ForgotPassword";
 import ResetPassword from "../ResetPassword/ResetPassword";
+import DevMessages from "../DevMessages/DevMessages";
+
+import { version } from "../../content/version";
 
 import "./Landing.css";
 import "./LandingVendorPF.css";
@@ -16,7 +19,8 @@ class Landing extends Component {
       login: true,
       signup: false,
       forgotPassword: false,
-      resetPassword: false
+      resetPassword: false,
+      showDevMessage: false
     };
   }
 
@@ -50,9 +54,33 @@ class Landing extends Component {
     });
   };
 
+  toggleDevMessage = () => {
+    if (this.state.showDevMessage) {
+      this.setState({
+        login: true,
+        signup: false,
+        forgotPassword: false,
+        resetPassword: false,
+        showDevMessage: false
+      });
+    } else {
+      this.setState({
+        login: false,
+        signup: false,
+        forgotPassword: false,
+        resetPassword: false,
+        showDevMessage: true
+      });
+    }
+  };
+
   render() {
     return (
       <main className="landing-page">
+        <button
+          className="toggle-dev-message-button"
+          onClick={this.toggleDevMessage}
+        />
         <header className="landing-page-header">
           <div
             className="logo"
@@ -91,7 +119,13 @@ class Landing extends Component {
             status={this.state.resetPassword}
             toLogin={this.loginScreen}
           />
+          {this.state.showDevMessage && (
+            <DevMessages closeDevMessage={this.toggleDevMessage} />
+          )}
         </section>
+        <p className="landing-version-number">
+          ver. {version.versionNumber} {version.date}
+        </p>
       </main>
     );
   }
