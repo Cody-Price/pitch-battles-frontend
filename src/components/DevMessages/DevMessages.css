@@ -1,6 +1,6 @@
 .dev-message {
   font-family: "chronotype";
-  padding: 1rem;
+  padding: 0.5rem;
   position: relative;
   animation: fade-in-dev-message 0.3s linear;
   opacity: 100%;
