@@ -92,6 +92,7 @@ class Landing extends Component {
             toLogin={this.loginScreen}
           />
         </section>
+        <p className="landing-version-number">ver. 0.5.0 2018-01-17</p>
       </main>
     );
   }
