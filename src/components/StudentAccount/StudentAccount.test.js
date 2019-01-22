@@ -2,11 +2,13 @@ import React from "react";
 
 import StudentAccount from "./StudentAccount";
 import Enzyme, { shallow } from "enzyme";
+import mockUser from "../../utilities/mockUser";
+
 const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-import mockUser from "../../utilities/mockUser";
+jest.mock("../../utilities/fetchCalls");
 
 describe("StudentAccount", () => {
   let wrapper;

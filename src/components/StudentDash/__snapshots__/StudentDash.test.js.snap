@@ -52,6 +52,23 @@ exports[`StudentDash should match the snapshot 1`] = `
             leave class
           </button>
         </div>
+        <aside
+          className="false leave-class-warning"
+        >
+          <p>
+            Are you sure you want to leave this class?
+          </p>
+          <button
+            onClick={[Function]}
+          >
+            leave
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            cancel
+          </button>
+        </aside>
       </section>
       <button
         className="onboarding-link"
