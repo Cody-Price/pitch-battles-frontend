@@ -343,6 +343,8 @@ export class Game extends Component {
         },
         this.processGame
       );
+    } else if (this.state.currentLevel === 4) {
+      this.processGame();
     }
 
     if (this.state.playerHearts.length === 3) {
@@ -363,6 +365,7 @@ export class Game extends Component {
   };
 
   processGame = () => {
+    console.log("procesing");
     if (!this.props.user) {
       return;
     }
