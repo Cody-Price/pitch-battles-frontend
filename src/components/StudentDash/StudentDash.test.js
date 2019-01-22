@@ -7,6 +7,8 @@ const EnzymeAdapter = require("enzyme-adapter-react-16");
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+jest.mock("../../utilities/fetchCalls");
+
 describe("StudentDash", () => {
   let wrapper;
   let mockToggleGame;
@@ -53,7 +55,8 @@ describe("StudentDash", () => {
       const expected = {
         instrument: "trumpet",
         dropdownDeploy: false,
-        noInstrumentError: false
+        noInstrumentError: false,
+        leaveClassWarning: false
       };
 
       wrapper.instance().selectInstrument("trumpet");

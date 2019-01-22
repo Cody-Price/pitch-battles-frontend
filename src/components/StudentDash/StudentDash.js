@@ -19,37 +19,55 @@ class StudentDash extends Component {
     this.state = {
       instrument: "choose your instrument...",
       dropdownDeploy: false,
-      noInstrumentError: false
+      noInstrumentError: false,
+      leaveClassWarning: false
     };
   }
 
   handleInstrumentDropdown = () => {
     this.setState({
-      dropdownDeploy: !this.state.dropdownDeploy
+      dropdownDeploy: !this.state.dropdownDeploy,
+      leaveClassWarning: false
     });
   };
 
   selectInstrument = instrument => {
     this.setState({
       instrument,
-      dropdownDeploy: false
+      dropdownDeploy: false,
+      leaveClassWarning: false
     });
   };
 
   handleNewGame = () => {
     if (this.state.instrument === "choose your instrument...") {
-      this.setState({ noInstrumentError: true });
+      this.setState({ noInstrumentError: true, leaveClassWarning: false });
       setTimeout(this.clearNoInstrumentError, 5000);
     } else {
+      this.setState({ noInstrumentError: false, leaveClassWarning: false });
+
       this.props.startGame(true, this.state.instrument);
     }
   };
 
   clearNoInstrumentError = () => {
-    this.setState({ noInstrumentError: false });
+    this.setState({ noInstrumentError: false, leaveClassWarning: false });
   };
 
-  leaveClass = async () => {
+  leaveClass = () => {
+    this.setState({
+      leaveClassWarning: !this.state.leaveClassWarning,
+      dropdownDeploy: false,
+      noInstrumentError: false
+    });
+  };
+
+  confirmLeaveClass = async () => {
+    this.setState({
+      leaveClassWarning: false,
+      dropdownDeploy: false,
+      noInstrumentError: false
+    });
     try {
       await leaveClassFetch(
         this.props.user.id,
@@ -175,6 +193,15 @@ class StudentDash extends Component {
                     <button onClick={this.leaveClass}>leave class</button>
                   </div>
                 )}
+                <aside
+                  className={`${
+                    this.state.leaveClassWarning
+                  } leave-class-warning`}
+                >
+                  <p>Are you sure you want to leave this class?</p>
+                  <button onClick={this.confirmLeaveClass}>leave</button>
+                  <button onClick={this.leaveClass}>cancel</button>
+                </aside>
                 {!this.props.user.attributes.class.data && (
                   <JoinClass
                     webToken={this.props.webToken}
