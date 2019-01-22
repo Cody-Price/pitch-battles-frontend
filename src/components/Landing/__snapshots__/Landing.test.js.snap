@@ -48,9 +48,9 @@ exports[`Landing should match the snapshot 1`] = `
     className="landing-version-number"
   >
     ver. 
-    0.4.01
+    0.4.02
      
-    20180117
+    20180121
   </p>
 </main>
 `;
